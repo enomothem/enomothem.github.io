@@ -1,0 +1,2742 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="操作系统-效率优化, 字星河">
+    <meta name="description" content="真正的改变只能发生在原则层面">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>操作系统-效率优化 | 字星河</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.2/sources/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/css/my.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+
+    
+
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">字星河</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/navigate" class="waves-effect waves-light">
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>导航</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>金石之交</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/html" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>示范田</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/js">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>开发地</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/happy">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>庆祝地</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-heart" style="zoom: 0.6;"></i>
+      
+      <span>关于我</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">字星河</div>
+        <div class="logo-desc">
+            
+            真正的改变只能发生在原则层面
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/navigate" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-location-arrow"></i>
+			
+			导航
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			金石之交
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-location-arrow"></i>
+			
+			示范田
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/js " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>开发地</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/happy " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>庆祝地</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-heart"></i>
+			
+			关于我
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/enomothem" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/enomothem" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('口令！Sent to:enomothem@outlook.com')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/23.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">操作系统-效率优化</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%95%88%E7%8E%87%E4%BC%98%E5%8C%96/">
+                                <span class="chip bg-color">效率优化</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%8A%98%E8%85%BE%E7%94%B5%E8%84%91/">
+                                <span class="chip bg-color">折腾电脑</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                操作系统
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-01-10
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-04-27
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.9k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    21 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.6/video/yg/ygsp.gif"></p>
+<h4 id="元哥教程"><a href="#元哥教程" class="headerlink" title="元哥教程"></a>元哥教程</h4><p>元哥无伤越塔，输出拉满</p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.6/video/yg/yuangewushang.gif"></p>
+<blockquote>
+<p>跑题了跑题了，回归主题</p>
+<p>！不要轻易修改注册表！ 再次强调，不要轻易修改。</p>
+</blockquote>
+<h1 id="操作系统-效率优化"><a href="#操作系统-效率优化" class="headerlink" title="操作系统-效率优化"></a>操作系统-效率优化</h1><blockquote>
+<p>以下内容就是一些折腾电脑的记录，从工具到快捷键，从没有桌面的桌面到不用快捷键只用命令打开。<br>一定要做备份！一定要做备份！一定要做备份！</p>
+</blockquote>
+<p>效率优化，顾名思义，就是使用快捷键提升效率</p>
+<blockquote>
+<p>为了解决一些经常使用的快捷键忘记的问题，为此记录以下,以便翻阅，并慢慢学习积累。</p>
+<p>虽说没什么技术含量在里面，但也是我几年使用计算机的经验，分享给大家，曾经爬过的一些坑。</p>
+</blockquote>
+<h2 id="Windows快捷键集"><a href="#Windows快捷键集" class="headerlink" title="Windows快捷键集"></a>Windows快捷键集</h2><p>说明：<strong>C</strong>=Control <strong>A</strong>=Alternate <strong>S</strong> = Space</p>
+<pre class=" language-txt"><code class="language-txt">
+F1，帮助
+
+F2，重命名
+
+F3，搜索文件
+
+F4，搜索器地址栏定位
+
+F5，重放攻击/刷新
+
+F6，浏览器地址定位
+
+F7，Dos历史命令查看专用
+
+F8，一般是同意某条款
+
+F9，音量调低
+
+F10，**A**+F10 = 菜单键
+
+F11，全屏
+
+F12，浏览器：调试   word：另存为
+
+ 
+
+ 
+
+关闭
+
+**C** + W
+
+**A** + F4
+
+**A** 然后 **S** 然后 C
+
+ 
+
+笔记本上的Home键和End键
+
+Ctl + [
+
+Ctl + ]
+
+ 
+
+ 
+
+Terminal快捷键
+
+Tab 自动补全
+
+Ctrl+a 光标移动到开始位置
+
+Ctrl+e 光标移动到最末尾
+
+Ctrl+k 删除此处至末尾的所有内容
+
+Ctrl+u 删除此处至开始的所有内容
+
+Ctrl+d 删除当前字符
+
+Ctrl+h 删除当前字符前一个字符
+
+Ctrl+w 删除此处到左边的单词
+
+Ctrl+y 粘贴由 Ctrl+u ， Ctrl+d ， Ctrl+w 删除的单词
+
+Ctrl+l 相当于clear，即清屏
+
+Ctrl+r 查找历史命令
+
+Ctrl+b 向回移动光标
+
+Ctrl+f 向前移动光标
+
+Ctrl+t 将光标位置的字符和前一个字符进行位置交换
+
+Ctrl+& 恢复 ctrl+h 或者 ctrl+d 或者 ctrl+w 删除的内容
+
+Ctrl+S 暂停屏幕输出
+
+Ctrl+Q 继续屏幕输出
+
+Ctrl+Left-Arrow 光标移动到上一个单词的词首
+
+Ctrl+Right-Arrow 光标移动到下一个单词的词尾
+
+Ctrl+p 向上显示缓存命令
+
+Ctrl+n 向下显示缓存命令
+
+Ctrl+d 关闭终端
+
+Ctrl+xx 在EOL和当前光标位置移动
+
+Ctrl+x@ 显示可能hostname补全
+
+Ctrl+c 终止进程/命令
+
+Shift +上或下 终端上下滚动
+
+Shift+PgUp/PgDn 终端上下翻页滚动
+
+Ctrl+Shift+n 新终端
+
+alt+F2 输入gnome-terminal打开终端
+
+Shift+Ctrl+T 打开新的标签页
+
+Shift+Ctrl+W 关闭标签页
+
+Shift+Ctrl+C 复制
+
+Shift+Ctrl+V 粘贴
+
+Alt+数字 切换至对应的标签页
+
+Shift+Ctrl+N 打开新的终端窗口
+
+Shift+Ctrl+Q 管壁终端窗口
+
+Shift+Ctrl+PgUp/PgDn 左移右移标签页
+
+Ctrl+PgUp/PgDn 切换标签页
+
+F1 打开帮助指南
+
+F10 激活菜单栏
+
+F11 全屏切换
+
+Alt+F 打开 “文件” 菜单（file）
+
+Alt+E 打开 “编辑” 菜单（edit）
+
+Alt+V 打开 “查看” 菜单（view）
+
+Alt+S 打开 “搜索” 菜单（search）
+
+Alt+T 打开 “终端” 菜单（terminal）
+
+Alt+H 打开 “帮助” 菜单（help）
+</code></pre>
+<h2 id="Windows截屏-录屏"><a href="#Windows截屏-录屏" class="headerlink" title="Windows截屏/录屏"></a>Windows截屏/录屏</h2><p><code>Win + Shift + S</code></p>
+<p><code>PrtSc</code></p>
+<h2 id="浏览器快捷键"><a href="#浏览器快捷键" class="headerlink" title="浏览器快捷键"></a>浏览器快捷键</h2><p>Ctrl+shift+Delete 清除缓存</p>
+<p>Ctrl+t 新建标签</p>
+<p>Ctrl+n 新建窗口</p>
+<p>Ctrl+Shift+n 无痕 （ chrome）</p>
+<h2 id="加密解密工具"><a href="#加密解密工具" class="headerlink" title="加密解密工具"></a>加密解密工具</h2><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210426224747872.png"></p>
+<p><a target="_blank" rel="noopener" href="http://www.atoolbox.net/Tool.php?Id=850">http://www.atoolbox.net/Tool.php?Id=850</a></p>
+<h2 id="Windows-干净的资源管理器"><a href="#Windows-干净的资源管理器" class="headerlink" title="Windows 干净的资源管理器"></a>Windows 干净的资源管理器</h2><p><strong>效果：</strong></p>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210120184430.png"></p>
+<blockquote>
+<p>Windows 快捷方式再见！OneDrive再见！</p>
+</blockquote>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210120180320.png"></p>
+<h3 id="OneDrive"><a href="#OneDrive" class="headerlink" title="# OneDrive"></a># OneDrive</h3><p>HKEY_CLASSES_ROOT\CLSID{<strong>018D5C66-4533-4307-9B53-224DE2ED1FE6</strong>}</p>
+<p><img src="data:image/png;base64,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"></p>
+<p>改为0</p>
+<h3 id="快捷访问"><a href="#快捷访问" class="headerlink" title="# 快捷访问"></a># 快捷访问</h3><p>HKEY_CLASSES_ROOT\CLSID{679f85cb-0220-4080-b29b-5540cc05aab6}\ShellFolder</p>
+<p>双击“<strong>Attributes</strong>”,在弹出的“编辑DWORD（32位）值”中，将数值数据从a0100000修改为a0600000，点击“确定”。</p>
+<p>a. 右键“ShellFolder”,在菜单中选择“权限” 更改所有者。</p>
+<p>b.点击所有者旁的 更改 ，如下图所示。</p>
+<p>d. 在文本框中输入Everyone，点击确定。</p>
+<p>e.将所有者更改为Everyone后，返回上一级菜单给Administrators或者Users添加“完全控制”权限，随后便可按照第三步的方式修改Attributes值。</p>
+<p>f.重启资源管理器</p>
+<p>我们打开资源管理器，会发现有一个快速访问，我不想看到它，因为快速访问会显示最近访问的路径，这对安全隐私是很不好，比如我最近访问了某某某文件，电脑被入侵后，敏感文件容易被泄露。</p>
+<p>说到这个补充一个内容</p>
+<h2 id="Windows-安全加固"><a href="#Windows-安全加固" class="headerlink" title="Windows 安全加固"></a>Windows 安全加固</h2><blockquote>
+<p>这个内容比较大，日后更新吧</p>
+</blockquote>
+<p>实现，把hosts文件设置为只读</p>
+<p>C:\WINDOWS\system32\drivers\etc路径进入hosts文件存放目录，右键属性，修改hosts的文件属性为只读，确定即可</p>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210120184209.png"></p>
+<h2 id="Windows-修改hosts文件"><a href="#Windows-修改hosts文件" class="headerlink" title="Windows 修改hosts文件"></a>Windows 修改hosts文件</h2><p>为什么要修改hosts，很简单, 因为无论你上网打的什么网站地址, 实际上最终总归是要转换成一个IP地址才能访问的,平时这个转换工作是有网络上的DNS服务器来完成的. 但是有些时候,有些网站, 由于某些原因,网络上的DNS服务器无法给出正确的或可用IP地址(天朝特别多, 大家懂的),   这个时候hosts文件就可以代劳了,你可以直接用记事本打开这文件看看就知道了, 里面一行就是一条记录, 一个IP地址接一个空格或tab, 再后面就是一个网址.<br>  它起到的作用就是直接在你本机上就把这些网址翻译成IP地址.<br>  本地预先配置的DNS数据，解析域名的时候首先试图从hosts文件获取，没有则从DNS服务器获取。</p>
+<p>此文件的三个主要用途：<br>  1，配置没有在DNS注册的域名，这对于局域网的服务有一定的价值，这是正常使用目的<br>  2，避开DNS服务实现某域名指向正确地址，防止别有用心的DNS误导<br>  3，避开DNS服务实现某域名指向错误地址，防止讨厌的广告</p>
+<h3 id="a-提取最快IP"><a href="#a-提取最快IP" class="headerlink" title="a 提取最快IP"></a>a 提取最快IP</h3><p><a target="_blank" rel="noopener" href="https://github.com.ipaddress.com/">https://github.com.ipaddress.com/</a><br><a target="_blank" rel="noopener" href="https://fastly.net.ipaddress.com/github.global.ssl.fastly.net">https://fastly.net.ipaddress.com/github.global.ssl.fastly.net</a></p>
+<h3 id="b-修改hosts"><a href="#b-修改hosts" class="headerlink" title="b 修改hosts"></a>b 修改hosts</h3><p><code>C:\Windows\System32\drivers\etc</code></p>
+<pre class=" language-txt"><code class="language-txt">#github  注释
+140.82.113.4 github.com
+199.232.69.194     github.global.ssl.fastly.net
+</code></pre>
+<h3 id="c-清除DNS缓存"><a href="#c-清除DNS缓存" class="headerlink" title="c 清除DNS缓存"></a>c 清除DNS缓存</h3><p><code>ipconfig/flushdns</code></p>
+<h2 id="Windows-微软输入法"><a href="#Windows-微软输入法" class="headerlink" title="Windows 微软输入法"></a>Windows 微软输入法</h2><p>因为我只用默认的输入法，所以其它的输入法我就不知道了。Windows切换输入法使用<code>Win + Space</code></p>
+<p>中文繁体简体之间的切换    <code>Ctrl + Shift + F</code></p>
+<p>中文英文标点之间的切换    <code>Ctrl + .</code></p>
+<p>中文和英文之间的切换        <code>Shift</code></p>
+<p>全角与半全角之间的切换    <code>Shift + Space</code></p>
+<p>U模式输入：uudw ，uuxh， uuts， uubd， uusx， uujh， uuzm和笔画输入、拆分输入（具体按u键就可以知道怎么使用了）</p>
+<p>人名输入模式：zhang 按 <code>R</code>键进入，<code>；</code>键退出，人名姓氏靠前</p>
+<p>v 模式输入：可以转换数字，时间，公式  ； <code>v1192045710</code>十一亿九千二百〇四万五千七百一十,<code>v2021.12.12</code>农历二〇二一年冬月初九</p>
+<h2 id="补充知识"><a href="#补充知识" class="headerlink" title="补充知识"></a>补充知识</h2><p>关于笑</p>
+<p>233(中）=zz（韩）=ww（日）=lol（英）=haha（世界）<br>2333333=loooooooool=hahahahahahaha=kkkkkkk=jajaja</p>
+<p>关于无语</p>
+<p>emmmm</p>
+<p>……</p>
+<p>Um…</p>
+<p>？ 疑问、反问、怀疑、不可理解、否定、反对</p>
+<p>。 结束</p>
+<p>， 待续</p>
+<p>； 待续</p>
+<p>小问号，你是否有很多朋友</p>
+<p>؟ ？</p>
+<p>¿ ？</p>
+<p>笑哭： 笑</p>
+<p>Shift + 数字 = 字符</p>
+<p>Alt + 数字 = 字符    23333~ 神奇吧 </p>
+<p>  比如在QQ聊天中</p>
+<p>按住ALT键，然后顺序按小键盘25105 ，松开ALT键。</p>
+<p>再按住ALT键，然后顺序按小键盘21916，再松开ALT键。</p>
+<p>再按住ALT键，然后顺序按小键盘27426，再松开ALT键。</p>
+<p>再按住ALT键，然后顺序按小键盘20320，再松开ALT键。</p>
+<p>最后再按ALT键+S。</p>
+<p>BIAOBAI成功了别忘了给我打赏，哈哈哈哈哈~</p>
+<blockquote>
+<p>背景：是扩展的ASCII编码或Unicode。在DOS时代，没有什么输入法，输入一些键盘上没有的特殊符号就只能用这种方式输入</p>
+</blockquote>
+<p>unicode 查询：<a target="_blank" rel="noopener" href="https://unicode-table.com/cn/search/?q=%E2%80%A1">https://unicode-table.com/cn/search/?q=%E2%80%A1</a></p>
+<h2 id="Windows-显示秒"><a href="#Windows-显示秒" class="headerlink" title="Windows 显示秒"></a>Windows 显示秒</h2><h4 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h4><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210120180040.gif"></p>
+<blockquote>
+<p>不要随意更改注册表，不过遇到我这样的人，又喜欢折腾电脑，所以根本就无所畏惧。</p>
+</blockquote>
+<p>regedit打开注册表</p>
+<p>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced</p>
+<p>然后，在 Advanced 键上右击鼠标，新建一个 DWORD 32 位值，再将该值命名为 ShowSecondsInSystemClock</p>
+<p>在新建的 ShowSecondsInSystemClock 值上双击鼠标，再在弹出的窗口中将它的值改为 1</p>
+<p>任务管理器中重启资源管理器就OK，实在不行，重启也可。</p>
+<h2 id="录制动图"><a href="#录制动图" class="headerlink" title="录制动图"></a>录制动图</h2><p>下载软件：<a target="_blank" rel="noopener" href="https://gifcam.softonic.cn/">https://gifcam.softonic.cn/</a></p>
+<p>大小：大概几k吧</p>
+<h4 id="一、使用"><a href="#一、使用" class="headerlink" title="一、使用"></a>一、使用</h4><p>打开，放大缩小和移动，这个基本操作，看我套娃操作</p>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210110115459.gif"></p>
+<p>点击录制停止保存即可，看到没有，非常的简单，非常的容易，一看就懂，还等什么，马上下载，马上体验，马上给我点赞😊</p>
+<p>当然，还有很多设置，比如帧率和色彩等等，这个自己折腾折腾就会了。</p>
+<h2 id="乱涂乱画"><a href="#乱涂乱画" class="headerlink" title="乱涂乱画"></a>乱涂乱画</h2><p>如何在桌面乱涂乱画咧</p>
+<p>下载软件：<a target="_blank" rel="noopener" href="https://zoomit.en.softonic.com/">https://zoomit.en.softonic.com/</a></p>
+<p>大小：大概几k吧</p>
+<p>下载后解压后打开就可使用。</p>
+<p>Ctrl + 1  开启</p>
+<p>Esc退出</p>
+<p>滚轮放大缩小</p>
+<p>Ctrl + 拖动    画框框</p>
+<p>鼠标点一下，开始乱涂乱画</p>
+<p>这个一般用于教学，当然也可以自己创作，主要是画了之后可以截图，比较magnificent。</p>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210110134236.png"></p>
+<h2 id="快捷方式"><a href="#快捷方式" class="headerlink" title="快捷方式"></a>快捷方式</h2><p>最新发现了一个提升效率的工作，虽然这个人人都会，但我们往往容易忽视。</p>
+<blockquote>
+<p>但你重复使用三次相同的工作时，你就应该考虑使用自动化了。</p>
+</blockquote>
+<p>实际上，我已经打开了千百次了，比如打开文件夹下的文件夹下的文件夹下的文件夹下的文件夹下的文件夹下的一个图片，我需要每次点点点。</p>
+<p>实际上，我们可以更方便的打开。</p>
+<p>比如这样，右键创建快捷方式。</p>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210110132936.png"></p>
+<p>这样，就创建了一个快捷方式了。然后我们再移动到桌面？不。添加到win里面。</p>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210110133102.png"></p>
+<p>然后每次我们按Win键，就可以打开啦，又不占桌面的空间，太outstanding了。</p>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210110133335.png"></p>
+<p>长一样啷个认嘞，修改一下icon</p>
+<p>关于icon，我们可以制作自己的icon</p>
+<p>在线网站：<a target="_blank" rel="noopener" href="http://www.bitbug.net/">http://www.bitbug.net/</a></p>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210110133916.png"></p>
+<h2 id="Dos风格"><a href="#Dos风格" class="headerlink" title="Dos风格"></a>Dos风格</h2><p>把explorer结束，然后就啥也没有了，只能通过DOS打开东西；</p>
+<pre class=" language-shell"><code class="language-shell">找到它
+C:\Users\enomothem\Desktop>tasklist | findstr "explorer"
+explorer.exe                  1364 Console                    2    115,168 K
+结束它
+C:\Users\enomothem\Desktop>taskkill /F /PID 1364
+SUCCESS: The process with PID 1364 has been terminated.
+新建
+C:\Users\enomothem\Desktop>explorer
+</code></pre>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210115131633.png"></p>
+<h2 id="DOS最实用快捷键"><a href="#DOS最实用快捷键" class="headerlink" title="DOS最实用快捷键"></a>DOS最实用快捷键</h2><p>作为一名安全研究员，这个都不会就太不应该了，想了想自己知道的确实不多，就记录下来啦</p>
+<p>最常用的</p>
+<ul>
+<li>control 任务管理器</li>
+<li>calc 计算器</li>
+<li>msconfig 启动项</li>
+<li><strong>ncpa.cpl</strong> 网卡</li>
+<li>regedit 注册表</li>
+<li>wf.msc 防火墙</li>
+<li><strong>msinfo32</strong>查看系统信息</li>
+<li>osk 虚拟键盘</li>
+<li><del>nbstat -a ip 获取指定人的电脑名称和MAC 我的没有这条命令？？</del></li>
+<li>shell:::{8E908FC9-BECC-40f6-915B-F4CA0E70D03D}  网络共享中心</li>
+<li>shell:::{BB06C0E4-D293-4f75-8A90-CB05B6477EEE} 系统</li>
+<li>shell:::{3080F90E-D7AD-11D9-BD98-0000947B0257} 窗口切换</li>
+<li>shell:::{67718415-c450-4f3c-bf8a-b487642dc39b} windows功能</li>
+</ul>
+<p>其它一些想起来再加吧。</p>
+<h2 id="DOS信息查看"><a href="#DOS信息查看" class="headerlink" title="DOS信息查看"></a>DOS信息查看</h2><blockquote>
+<p>了解自己的电脑</p>
+</blockquote>
+<ul>
+<li>wmic memorychip  查看内存条信息，方便买内存看频率，在Physical Memory前面那个。</li>
+<li>sysinfo</li>
+<li>dxdiag</li>
+<li>msinfo32</li>
+</ul>
+<h2 id="清理C盘"><a href="#清理C盘" class="headerlink" title="清理C盘"></a>清理C盘</h2><p>这是最烦的一个问题了，明明C盘满了，又不知道该输出什么东西，所以就很烦。</p>
+<p>解决方法有很多，但最彻底的方法是备份自己的东西，然后重装系统。</p>
+<p>或者加内存，否则就只能采取各种措施缓解了，好吧，既然如此，只能怎么做了。</p>
+<h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><p>输出下面路径中的文件，有一个压缩包特别大，但是没有什么用。</p>
+<p> C:\Users\user（你的user名字）\AppDate\Local\Temp</p>
+<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>使用脚本</p>
+<p>打开一个notepad，把下面的命令丢进去，然后把后缀改为.bat就ok了</p>
+<pre class=" language-bat"><code class="language-bat">@echo off     
+title 年轻人不讲武德，这样不好
+color A
+
+
+
+
+echo /-----------------
+echo /------------
+echo /---
+echo /--------
+echo /-----------------
+echo /-----
+echo /-------
+
+
+
+echo                     正在清除系统无用文件，请稍等……
+
+
+
+echo \--------
+echo \-----
+echo \--------------
+echo \-
+echo \--------
+echo \---
+echo \---------------
+echo ==================================================================================
+
+
+
+
+echo       ___                         ___           ___           ___     
+echo      /\__\                       /\  \         /\  \         /\__\    
+echo     /:/  /                      /::\  \        \:\  \       /:/ _/_   
+echo    /:/  /                      /:/\:\  \        \:\  \     /:/ /\  \  
+echo   /:/  /  ___   ___     ___   /:/ /::\  \   _____\:\  \   /:/ /::\  \ 
+echo  /:/__/  /\__\ /\  \   /\__\ /:/_/:/\:\__\ /::::::::\__\ /:/__\/\:\__\
+echo  \:\  \ /:/  / \:\  \ /:/  / \:\/:/  \/__/ \:\~~\~~\/__/ \:\  \ /:/  /
+echo   \:\  /:/  /   \:\  /:/  /   \::/__/       \:\  \        \:\  /:/  / 
+echo    \:\/:/  /     \:\/:/  /     \:\  \        \:\  \        \:\/:/  /  
+echo     \::/  /       \::/  /       \:\__\        \:\__\        \::/  /   
+echo      \/__/         \/__/         \/__/         \/__/         \/__/    
+
+echo Copyright for Enomothem rubish clean. Version 1.0
+
+echo ==================================================================================
+
+
+
+
+del /f /s /q %systemdrive%\*.tmp
+color B    
+echo 第一阶段完成
+echo 有点慢哦，等等吧
+del /f /s /q %systemdrive%\*._mp 
+color C    
+echo 第二阶段完成 
+del /f /s /q %systemdrive%\*.log 
+color D   
+echo 第三阶段完成
+del /f /s /q %systemdrive%\*.gid 
+color E  
+echo 第四阶段完成   
+del /f /s /q %systemdrive%\*.chk
+color F  
+echo 第五阶段完成
+del /f /s /q %systemdrive%\*.old 
+color 1   
+echo 第六阶段完成  
+del /f /s /q %systemdrive%\recycled\*.* 
+color A   
+echo 第七阶段完成  
+del /f /s /q %windir%\*.bak 
+color B
+echo 第八阶段完成     
+del /f /s /q %windir%\prefetch\*.*  
+color C
+echo 第九阶段完成    
+rd /s /q %windir%\temp & md %windir%\temp 
+color D
+echo 第十阶段完成     
+del /f /q %userprofile%\COOKIES s\*.*
+color E
+echo 第十一阶段完成
+del /f /q %userprofile%\recent\*.*      
+color F
+echo 第十二阶段完成
+del /f /s /q "%userprofile%\Local Settings\Temporary Internet Files\*.*"    
+color B
+echo 第十三阶段完成  
+del /f /s /q "%userprofile%\Local Settings\Temp\*.*"      
+color C
+echo 第十四阶段完成
+del /f /s /q "%userprofile%\recent\*.*"         
+color A
+echo 第十五阶段完成
+echo ======================================================================================
+
+
+                           
+                                                                                    
+                                                                                    
+
+echo       ___                         ___           ___           ___     
+echo      /\__\                       /\  \         /\  \         /\__\    
+echo     /:/  /                      /::\  \        \:\  \       /:/ _/_   
+echo    /:/  /                      /:/\:\  \        \:\  \     /:/ /\  \  
+echo   /:/  /  ___   ___     ___   /:/ /::\  \   _____\:\  \   /:/ /::\  \ 
+echo  /:/__/  /\__\ /\  \   /\__\ /:/_/:/\:\__\ /::::::::\__\ /:/__\/\:\__\
+echo  \:\  \ /:/  / \:\  \ /:/  / \:\/:/  \/__/ \:\~~\~~\/__/ \:\  \ /:/  /
+echo   \:\  /:/  /   \:\  /:/  /   \::/__/       \:\  \        \:\  /:/  / 
+echo    \:\/:/  /     \:\/:/  /     \:\  \        \:\  \        \:\/:/  /  
+echo     \::/  /       \::/  /       \:\__\        \:\__\        \::/  /   
+echo      \/__/         \/__/         \/__/         \/__/         \/__/    
+
+
+
+echo ========================================================================================
+echo 干净！ 
+echo Finger heart ~    
+echo. & pause   
+</code></pre>
+<h2 id="查看CPU温度"><a href="#查看CPU温度" class="headerlink" title="查看CPU温度"></a>查看CPU温度</h2><p>推荐一个非常好用的CPU温度显示工具，不是很大，非常的方便</p>
+<p># CoreTemp <a target="_blank" rel="noopener" href="https://www.alcpu.com/CoreTemp/">https://www.alcpu.com/CoreTemp/</a></p>
+<p>下载后，打开，在地址栏也有显示哦</p>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210120185813.png"></p>
+<p>当然，鲁大师也可以看，还有其它的软件我就不列举了，只推荐这个</p>
+<h2 id="附页：DOS-CLSID"><a href="#附页：DOS-CLSID" class="headerlink" title="附页：DOS-CLSID"></a>附页：DOS-CLSID</h2><p><strong>CLSID</strong>大全：</p>
+<pre class=" language-shell"><code class="language-shell">
+
+
+添加网络位置
+
+shell:::{D4480A50-BA28-11d1-8E75-00C04FA31A86}
+
+管理工具
+
+shell:::{D20EA4E1-3957-11d2-A40B-0C5020524153}
+
+所有控制面板项
+
+shell:::{21EC2020-3AEA-1069-A2DD-08002B30309D}
+
+所有设置
+
+shell:::{5ED4F38C-D3FF-4D61-B506-6820320AEBFE}
+
+所有任务
+
+shell:::{ED7BA470-8E54-465E-825C-99712043E01C}
+
+应用
+
+shell:::{4234d49b-0245-4df3-b780-3893943456e1}
+
+AppSuggestedLocations
+
+shell:::{c57a6066-66a3-4d91-9eb9-41532179f0a5}
+
+ActiveX缓存文件夹
+
+shell:::{88C6C381-2E85-11D0-94DE-444553540000}
+
+自动播放
+
+shell:::{9C60DE1E-E5FC-40f4-A487-460851A8D915}
+
+备份和还原（Windows7）
+
+shell:::{B98A2BEA-7D42-4558-8BD1-832F41BAC6FD}
+
+BitLocker驱动器加密
+
+shell:::{D9EF8727-CAC2-4e60-809E-86F80A666C91}
+
+蓝牙设备
+
+shell:::{28803F59-3A75-4058-995F-4EE5503B023C}
+
+Briefcase
+
+shell:::{85BBD920-42A0-1069-A2E4-08002B30309D}
+
+Cabinet Shell文件夹
+
+shell:::{0CD7A5C0-9F37-11CE-AE65-08002B2E1262}
+
+CLSID_AppInstanceFolder
+
+shell:::{64693913-1c21-4f30-a98f-4e52906d3b56}
+
+CLSID_DBFolder
+
+shell:::{b2952b16-0e07-4e5a-b993-58c52cb94cae}
+
+CLSID_DBFolderBoth
+
+shell:::{1bef2128-2f96-4500-ba7c-098dc0049cb2}
+
+CLSID_SearchHome
+
+shell:::{9343812e-1c37-4a49-a12e-4b2d810d956b}
+
+CLSID_StartMenuCommandingProviderFolder
+
+shell:::{a00ee528-ebd9-48b8-944a-8942113d46ac}
+
+CLSID_StartMenuLauncherProviderFolder
+
+shell:::{98F275B4-4FFF-11E0-89E2-7B86DFD72085}
+
+CLSID_StartMenuPathCompleteProviderFolder
+
+shell:::{e345f35f-9397-435c-8f95-4e922c26259e}
+
+CLSID_StartMenuProviderFolder
+
+shell:::{daf95313-e44d-46af-be1b-cbacea2c3065}
+
+命令文件夹
+
+shell:::{437ff9c0-a07f-4fa0-af80-84b6c6440a16}
+
+Common Places FS Folder
+
+shell:::{d34a6ca6-62c2-4c34-8a7c-14709c1ad938}
+
+CompressedFolder
+
+shell:::{E88DCCE0-B7B3-11d1-A9F0-00AA0060FA31}
+
+连接到
+
+shell:::{38A98528-6CBF-4CA9-8DC0-B1E1D10F7B1B}
+
+控制面板
+
+shell:::{26EE0668-A00A-44D7-9371-BEB064C98683}
+
+控制面板
+
+shell:::{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}
+
+凭据管理器
+
+shell:::{1206F5F1-0569-412C-8FEC-3204630DFB70}
+
+默认程序
+
+shell:::{17cd9488-1228-4b2f-88ce-4298e93e0966}
+
+Delegate folder that appears in Computer
+
+shell:::{b155bdf8-02f0-451e-9a26-ae317cfd7779}
+
+Delegate folder that appears in Users Files Folder
+
+shell:::{DFFACDC5-679F-4156-8947-C5C76BC0B67F}
+
+桌面
+
+shell:::{00021400-0000-0000-C000-000000000046}
+
+设备中心初始化
+
+shell:::{C2B136E2-D50E-405C-8784-363C582BF43E}
+
+DevicePairingFolder Initialization
+
+shell:::{AEE2420F-D50E-405C-8784-363C582BF45A}
+
+设备和打印机
+
+shell:::{A8A91A66-3A7D-4424-8D24-04E180695C7A}
+
+显示
+
+shell:::{C555438B-3C23-4769-A71F-B6D3D9B6053A}
+
+DLNA Content Directory Data Source
+
+shell:::{D2035EDF-75CB-4EF1-95A7-410D9EE17170}
+
+DXP
+
+shell:::{8FD8B88D-30E1-4F25-AC2B-553D3D65F0EA}
+
+轻松使用设置中心
+
+shell:::{D555645E-D4F8-4c29-A827-D93C859C4F2A}
+
+E-mail
+
+shell:::{2559a1f5-21d7-11d4-bdaf-00c04f60b9f0}
+
+增强存储数据源
+
+shell:::{9113A02D-00A3-46B9-BC5F-9C04DADDD5D7}
+
+Explorer Browser Results Folder
+
+shell:::{418c8b64-5463-461d-88e0-75e2afa3c6fa}
+
+收藏夹
+
+shell:::{323CA680-C24D-4099-B94D-446DD2D7249E}
+
+文件备份目录
+
+shell:::{877ca5ac-cb41-4842-9c69-9136e42d47e2}
+
+文件夹选项
+
+shell:::{6DFD7C5C-2451-11d3-A299-00C04F8EF6AF}
+
+文件历史记录
+
+shell:::{F6B6E965-E9B2-444B-9286-10C9152EDBC5}
+
+FileHistoryDataSource
+
+shell:::{2F6CE85C-F9EE-43CA-90C7-8A9BD53A2467}
+
+文件夹快捷方式
+
+shell:::{0AFACED1-E828-11D1-9187-B532F1E9575D}
+
+字体设置
+
+shell:::{93412589-74D4-4E4E-AD0E-E0CB621440FD}
+
+字体
+
+shell:::{BD84B380-8CA2-1069-AB1D-08000948F534}
+
+Frequent folders
+
+shell:::{3936E9E4-D92C-4EEE-A85A-BC16D5EA0819}
+
+Fusion Cache
+
+shell:::{1D2680C9-0E2A-469d-B787-065558BC7D43}
+
+游戏
+
+shell:::{ED228FDF-9EA8-4870-83b1-96b02CFE0D52}
+
+获得程序
+
+shell:::{15eae92e-f17a-4431-9f28-805e482dafd4}
+
+历史
+
+shell:::{FF393560-C2A7-11CF-BFF4-444553540000}
+
+Homegroup
+
+shell:::{6785BFAC-9D2D-4be5-B7E2-59937E8FB80A}
+
+HomeGroup
+
+shell:::{67CA7650-96E6-4FDD-BB43-A8E774F73A57}
+
+Homegroup
+
+shell:::{B4FB3F98-C1EA-428d-A78A-D1F5659CBA93}
+
+IE History and Feeds Shell Data Source for Windows Search
+
+shell:::{11016101-E366-4D22-BC06-4ADA335C892B}
+
+IE RSS Feeds Folder
+
+shell:::{9a096bb5-9dc3-4d1c-8526-c3cbf991ea4e}
+
+已安装更新
+
+shell:::{d450a8a1-9568-45c7-9c0e-b4f9fb4537bd}
+
+语言
+
+shell:::{BF782CC9-5A52-4A17-806C-2A894FFEEAC5}
+
+LayoutFolder
+
+shell:::{328B0346-7EAF-4BBE-A479-7CB88A095F5B}
+
+库
+
+shell:::{031E4825-7B94-4dc3-B131-E946B44C8DD5}
+
+Libraries delegate folder that appears in Users Files Folder
+
+shell:::{896664F7-12E1-490f-8782-C0835AFD98FC}
+
+库文件夹
+
+shell:::{a5a3563a-5755-4a6f-854e-afa3230b199f}
+
+Location Folder
+
+shell:::{267cf8a9-f4e3-41e6-95b1-af881be130ff}
+
+管理无线网络
+
+shell:::{1FA9085F-25A2-489B-85D4-86326EEDCD87}
+
+媒体服务器
+
+shell:::{289AF617-1CC3-42A6-926C-E6A863F0E3BA}
+
+Microsoft FTP Folder
+
+shell:::{63da6ec0-2e98-11cf-8d82-444553540000}
+
+Microsoft Office Outlook
+
+shell:::{89D83576-6BD1-4c86-9454-BEB04E94C819}
+
+我的文档
+
+shell:::{450D8FBA-AD25-11D0-98A8-0800361B1103}
+
+网络
+
+shell:::{208D2C60-3AEA-1069-A2D7-08002B30309D}
+
+网络
+
+shell:::{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}
+
+网络和共享中心
+
+shell:::{8E908FC9-BECC-40f6-915B-F4CA0E70D03D}
+
+网络连接
+
+shell:::{7007ACC7-3202-11D1-AAD2-00805FC1270E}
+
+网络连接
+
+shell:::{992CFFA0-F557-101A-88EC-00DD010CCC48}
+
+通知区域图标
+
+shell:::{05d7b0f4-2121-4eff-bf6b-ed3f69b894d9}
+
+离线文件
+
+shell:::{BD7A2E7B-21CB-41b2-A086-B309680C6B7E}
+
+离线文件夹
+
+shell:::{AFDB1F70-2A4C-11d2-9039-00C04F8EEB3E}
+
+OneDrive
+
+shell:::{018D5C66-4533-4307-9B53-224DE2ED1FE6}
+
+个性化
+
+shell:::{ED834ED6-4B5A-4bfe-8F11-A626DCB6A921}
+
+照片
+
+shell:::{45e8e0e8-7ae9-41ad-a9e8-594972716684}
+
+可移动设备
+
+shell:::{35786D3C-B075-49b9-88DD-029876E11C01}
+
+电源选项
+
+shell:::{025A5937-A6BE-4686-A844-36FE4BEC8B6D}
+
+Previous Versions
+
+shell:::{9DB7A13C-F208-4981-8353-73CC61AE2783}
+
+Previous Versions Results Delegate Folder
+
+shell:::{a3c3d402-e56c-4033-95f7-4885e80b0111}
+
+Previous Versions Results Folder
+
+shell:::{f8c2ab3b-17bc-41da-9758-339d7dbf2d88}
+
+打印机
+
+shell:::{2227A280-3AEA-1069-A2DE-08002B30309D}
+
+打印机
+
+shell:::{863aa9fd-42df-457b-8e4d-0de1b8015c60}
+
+printhood delegate folder
+
+shell:::{ed50fc29-b964-48a9-afb3-15ebb9b97f36}
+
+程序和功能
+
+shell:::{7b81be6a-ce2b-4676-a29e-eb907a5126c5}
+
+公用
+
+shell:::{4336a54d-038b-4685-ab02-99bb52d3fb8b}
+
+最近的文件夹
+
+shell:::{22877a6d-37a1-461a-91b0-dbda5aaebc99}
+
+Recent Items Instance Folder
+
+shell:::{4564b25e-30cd-4787-82ba-39e73a750b14}
+
+恢复
+
+shell:::{9FE63AFD-59CF-4419-9775-ABCC3849F861}
+
+回收站
+
+shell:::{645FF040-5081-101B-9F08-00AA002F954E}
+
+远程桌面连接
+
+shell:::{241D7C96-F8BF-4F85-B01F-E2B043341A4B}
+
+可移动设备
+
+shell:::{F5FB2C77-0E2F-4A16-A381-3E560C68BC83}
+
+可移移除储设备
+
+shell:::{a6482830-08eb-41e2-84c1-73920c2badb9}
+
+Results Folder
+
+shell:::{2965e715-eb66-4719-b53f-1672673bbefa}
+
+运行
+
+shell:::{2559a1f3-21d7-11d4-bdaf-00c04f60b9f0}
+
+搜索
+
+shell:::{04731B67-D933-450a-90E6-4ACD2E9408FE}
+
+搜索
+
+shell:::{2559a1f0-21d7-11d4-bdaf-00c04f60b9f0}
+
+Search Connector Folder
+
+shell:::{72b36e70-8700-42d6-a7f7-c9ab3323ee51}
+
+安全和维护
+
+shell:::{BB64F8A7-BEE7-4E1A-AB8D-7D8273F7FDB6}
+
+设定程序访问和计算机的默认值
+
+shell:::{2559a1f7-21d7-11d4-bdaf-00c04f60b9f0}
+
+Shell DocObject Viewer
+
+shell:::{E7E4BC40-E76A-11CE-A9BB-00AA004AE837}
+
+Shell File System Folder
+
+shell:::{0E5AAE11-A475-4c5b-AB00-C66DE400274E}
+
+Shell File System Folder
+
+shell:::{F3364BA0-65B9-11CE-A9BA-00AA004AE837}
+
+显示桌面
+
+shell:::{3080F90D-D7AD-11D9-BD98-0000947B0257}
+
+语音识别
+
+shell:::{58E3C745-D971-4081-9034-86E34B30836A}
+
+开始菜单
+
+shell:::{48e7caab-b918-4e58-a94d-505519c795dc}
+
+存储空间
+
+shell:::{F942C606-0914-47AB-BE56-1321B8035096}
+
+StreamBackedFolder
+
+shell:::{EDC978D6-4D53-4b2f-A265-5805674BE568}
+
+Subscription Folder
+
+shell:::{F5175861-2688-11d0-9C5E-00AA00A45957}
+
+窗口间切换
+
+shell:::{3080F90E-D7AD-11D9-BD98-0000947B0257}
+
+同步中心
+
+shell:::{9C73F5E5-7AE7-4E32-A8E8-8D23B85255BF}
+
+Sync Center Conflict Delegate Folder
+
+shell:::{E413D040-6788-4C22-957E-175D1C513A34}
+
+Sync Center Conflict Folder
+
+shell:::{289978AC-A101-4341-A817-21EBA7FD046D}
+
+Sync Results Delegate Folder
+
+shell:::{BC48B32F-5910-47F5-8570-5074A8A5636A}
+
+Sync Results Folder
+
+shell:::{71D99464-3B6B-475C-B241-E15883207529}
+
+Sync Setup Delegate Folder
+
+shell:::{F1390A9A-A3F4-4E5D-9C5F-98F3BD8D935C}
+
+Sync Setup Folder
+
+shell:::{2E9E59C0-B437-4981-A647-9C34B9B90891}
+
+系统
+
+shell:::{BB06C0E4-D293-4f75-8A90-CB05B6477EEE}
+
+系统还原
+
+shell:::{3f6bc534-dfa1-4ab4-ae54-ef25a74e0107}
+
+任务栏设置
+
+shell:::{0DF44EAA-FF21-4412-828E-260A8728E7F1}
+
+临时Internet文件
+
+shell:::{7BD29E00-76C1-11CF-9DD0-00A0C9034933}
+
+临时Internet文件
+
+shell:::{7BD29E01-76C1-11CF-9DD0-00A0C9034933}
+
+The Internet
+
+shell:::{871C5380-42A0-1069-A2EA-08002B30309D}
+
+设备
+
+shell:::{5b934b42-522b-4c34-bbfe-37a3ef7b9c90}
+
+此电脑
+
+shell:::{20D04FE0-3AEA-1069-A2D8-08002B30309D}
+
+此电脑
+
+shell:::{5E5F29CE-E0A8-49D3-AF32-7A7BDC173478}
+
+疑难解答
+
+shell:::{C58C4893-3BE0-4B45-ABB5-A63E4B8C8651}
+
+用户账户
+
+shell:::{60632754-c523-4b62-b45c-4172da012619}
+
+用户账户
+
+hell:::{7A9D77BD-5403-11d2-8785-2E0420524153}
+
+User Pinned
+
+shell:::{1f3427c8-5c10-4210-aa03-2ee45287d668}
+
+UsersFiles
+
+shell:::{59031a47-3f72-44a7-89c5-5595fe6b30ee}
+
+Windows Defender
+
+shell:::{D8559EB9-20C0-410E-BEDA-7ED416AECC2A}
+
+Windows功能
+
+shell:::{67718415-c450-4f3c-bf8a-b487642dc39b}
+
+Windows防火墙
+
+shell:::{4026492F-2F69-46B8-B9BF-5654FC07E423}
+
+Windows移动中心
+
+shell:::{5ea4f148-308c-46d7-98a9-49041b1dd468}
+
+Windows 安全
+
+shell:::{2559a1f2-21d7-11d4-bdaf-00c04f60b9f0}
+
+工作文件夹
+
+shell:::{ECDB0924-4208-451E-8EE0-373C0956DE16}
+
+WWan Shell Folder
+
+shell:::{87630419-6216-4ff8-a1f0-143562d16d5c}
+</code></pre>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Enomothem</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://enomothem.cn/posts/793a.html">http://enomothem.cn/posts/793a.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Enomothem</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%95%88%E7%8E%87%E4%BC%98%E5%8C%96/">
+                                    <span class="chip bg-color">效率优化</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%8A%98%E8%85%BE%E7%94%B5%E8%84%91/">
+                                    <span class="chip bg-color">折腾电脑</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'XRvQLu0XdtO7vmFLVb3cpbj0-MdYXbMMI',
+        appKey: 'L6nqKIkPxGwG54kCbMTyGoiI',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'robohash',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/2a92.html">
+                    <div class="card-image">
+                        
+                        <img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210503200048812.png" class="responsive-img" alt="Linux-Shell基础">
+                        
+                        <span class="card-title">Linux-Shell基础</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Linux/" class="post-category">
+                                    Linux
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/shell/">
+                        <span class="chip bg-color">shell</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/6a1.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/11.jpg" class="responsive-img" alt="Mysql数据库之华圣重工">
+                        
+                        <span class="card-title">Mysql数据库之华圣重工</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Mysql/" class="post-category">
+                                    Mysql
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Mysql/">
+                        <span class="chip bg-color">Mysql</span>
+                    </a>
+                    
+                    <a href="/tags/Project/">
+                        <span class="chip bg-color">Project</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('100')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround. 将 === PRE 改为CODE即可复制，解决换行问题
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 字星河<br />'
+            + '文章作者: Enomothem<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+			
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2018";
+                    var startMonth = "6";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "站龄 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "站龄 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+			
+			<br>
+			
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2018-2021</span>
+            
+            <a href="/about" target="_blank">by&nbsp;Enomothem</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">213.5k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                <i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+			
+            <br>
+
+            
+			
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/enomothem" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:enomothem@outlook.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://public.zsxq.com/groups/51288182112544.html" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://public.zsxq.com/groups/51288182112544.html" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=251051821" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 251051821" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/js/matery.js"></script>
+    <!--动态线条背景-->
+    <script type="text/javascript" color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/instantpage/instantpage.js" type="module"></script>
+    
+<!-- 雪花snow 樱花sakura -->
+ <!--   <script src="/js/sakura.js"></script>  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+
+</html>
+

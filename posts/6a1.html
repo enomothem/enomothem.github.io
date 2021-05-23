@@ -1,0 +1,2809 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="Mysql数据库之华圣重工, 字星河">
+    <meta name="description" content="真正的改变只能发生在原则层面">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Mysql数据库之华圣重工 | 字星河</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.2/sources/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/css/my.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+
+    
+
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">字星河</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/navigate" class="waves-effect waves-light">
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>导航</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>金石之交</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/html" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>示范田</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/js">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>开发地</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/happy">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>庆祝地</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-heart" style="zoom: 0.6;"></i>
+      
+      <span>关于我</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">字星河</div>
+        <div class="logo-desc">
+            
+            真正的改变只能发生在原则层面
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/navigate" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-location-arrow"></i>
+			
+			导航
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			金石之交
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-location-arrow"></i>
+			
+			示范田
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/js " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>开发地</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/happy " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>庆祝地</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-heart"></i>
+			
+			关于我
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/enomothem" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/enomothem" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = 'aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('口令！Sent to:enomothem@outlook.com')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/11.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Mysql数据库之华圣重工</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Mysql/">
+                                <span class="chip bg-color">Mysql</span>
+                            </a>
+                        
+                            <a href="/tags/Project/">
+                                <span class="chip bg-color">Project</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Mysql/" class="post-category">
+                                Mysql
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-01-09
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-02-03
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    13 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Mysql数据库之华圣重工"><a href="#Mysql数据库之华圣重工" class="headerlink" title="Mysql数据库之华圣重工"></a>Mysql数据库之华圣重工</h1><blockquote>
+<p><font color="red">严重的提醒</font>：使用前请先使用数据库，使用数据库，使用数据库！</p>
+</blockquote>
+<blockquote>
+<p>否则你将无厘头的一直报错，一直报错，一直报错。</p>
+<p>虽然说这是最基本的，但很容易忽视。</p>
+</blockquote>
+<p>如下</p>
+<p><code>1064 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near</code> </p>
+<blockquote>
+<p><font color="red">严重的提醒：</font>一定不要使用关键字，一定不要使用保留字！</p>
+<p>否则你会无厘头的一直报错，一直报错，一直报错。</p>
+<p>关键字和保留字请看附页。</p>
+</blockquote>
+<p>如下</p>
+<p><code>1064 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near</code></p>
+<h2 id="Ax-创建数据库和数据表及表结构"><a href="#Ax-创建数据库和数据表及表结构" class="headerlink" title="Ax 创建数据库和数据表及表结构"></a>Ax 创建数据库和数据表及表结构</h2><p>华圣集团有一个项目，新成立了一个重工的子公司，现需要对员工的数据进行录入，新建一个数据库，并导入信息，你是数据库管理员，完成以下需求。</p>
+<p>创建数据库huasheng_zg(华圣重工)，表member（员工信息表），将以下数据放入其中。</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>数据类型</th>
+<th>备注</th>
+<th>是否主键</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>eon_id</td>
+<td>varchar(20)</td>
+<td>华圣ID号</td>
+<td>是</td>
+</tr>
+<tr>
+<td>eon_name</td>
+<td>varchar(20)</td>
+<td>名字</td>
+<td>否</td>
+</tr>
+<tr>
+<td>eon_sex</td>
+<td>varchar(10)</td>
+<td>性别</td>
+<td>否</td>
+</tr>
+<tr>
+<td>eon_birthday</td>
+<td>date</td>
+<td>出生年月</td>
+<td>否</td>
+</tr>
+<tr>
+<td>eon_class</td>
+<td>varchar(10)</td>
+<td>所在部门</td>
+<td>否</td>
+</tr>
+</tbody></table>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210107210224.png"></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 创建数据库</span>
+
+<span class="token keyword">create</span> <span class="token keyword">database</span> huasheng_zg<span class="token punctuation">;</span>
+<span class="token keyword">use</span> huasheng_zg<span class="token punctuation">;</span>
+
+
+<span class="token comment" spellcheck="true">-- 创建表、添加字段</span>
+
+<span class="token keyword">create</span> <span class="token keyword">table</span> member<span class="token punctuation">(</span>
+eon_id             <span class="token keyword">int</span>                <span class="token keyword">comment</span>  <span class="token string">"华圣ID"</span><span class="token punctuation">,</span>
+eon_name         <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>        <span class="token keyword">comment</span>  <span class="token string">"名字"</span><span class="token punctuation">,</span>
+eon_sex             <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>        <span class="token keyword">comment</span>  <span class="token string">"性别"</span><span class="token punctuation">,</span>
+eon_brithday     <span class="token keyword">date</span>                <span class="token keyword">comment</span>  <span class="token string">"出生年月"</span><span class="token punctuation">,</span>
+eon_class           <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>        <span class="token keyword">comment</span>  <span class="token string">"所在部门"</span><span class="token punctuation">,</span>
+<span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span><span class="token punctuation">(</span>eon_id<span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token keyword">charset</span><span class="token operator">=</span>utf8<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="Bx-录入员工数据"><a href="#Bx-录入员工数据" class="headerlink" title="Bx 录入员工数据"></a>Bx 录入员工数据</h2><h3 id="a-添加记录"><a href="#a-添加记录" class="headerlink" title="a 添加记录"></a>a 添加记录</h3><p>经过长期的招人，公司招聘以下人员，使用SQL语句录入到member表中。</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Gender</th>
+<th>Birthday</th>
+<th>Department</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>106</td>
+<td>Eon</td>
+<td>男</td>
+<td>2000-10-04</td>
+<td>CEO</td>
+</tr>
+<tr>
+<td>100</td>
+<td>唐三</td>
+<td>男</td>
+<td>2000-02-28</td>
+<td>秘书</td>
+</tr>
+<tr>
+<td>108</td>
+<td>Pgg</td>
+<td>男</td>
+<td>2000-12-30</td>
+<td>信息安全部</td>
+</tr>
+<tr>
+<td>110</td>
+<td>白给</td>
+<td>未知</td>
+<td>2000-01-01</td>
+<td>矛盾纠纷兼法务办公室</td>
+</tr>
+<tr>
+<td>109</td>
+<td>笑笑</td>
+<td>女</td>
+<td>2000-11-12</td>
+<td>财务部</td>
+</tr>
+<tr>
+<td>199</td>
+<td>唐五</td>
+<td>女</td>
+<td>2000-02-21</td>
+<td>唐门</td>
+</tr>
+</tbody></table>
+<pre class=" language-sql"><code class="language-sql">
+<span class="token comment" spellcheck="true">-- 添加数据</span>
+
+<span class="token keyword">insert</span> member <span class="token keyword">value</span>
+<span class="token punctuation">(</span><span class="token string">"106"</span><span class="token punctuation">,</span> <span class="token string">"Eon"</span> <span class="token punctuation">,</span> <span class="token string">"男"</span>  <span class="token punctuation">,</span> <span class="token string">"2000-10-04"</span><span class="token punctuation">,</span> <span class="token string">"CEO"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"100"</span><span class="token punctuation">,</span> <span class="token string">"唐三"</span> <span class="token punctuation">,</span> <span class="token string">"男"</span>  <span class="token punctuation">,</span> <span class="token string">"2000-02-28"</span><span class="token punctuation">,</span> <span class="token string">"秘书"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"108"</span><span class="token punctuation">,</span> <span class="token string">"Pgg"</span> <span class="token punctuation">,</span> <span class="token string">"男"</span>  <span class="token punctuation">,</span> <span class="token string">"2000-12-30"</span><span class="token punctuation">,</span> <span class="token string">"信息安全部"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"110"</span><span class="token punctuation">,</span> <span class="token string">"白给"</span> <span class="token punctuation">,</span> <span class="token string">"未知"</span><span class="token punctuation">,</span> <span class="token string">"2000-01-01"</span><span class="token punctuation">,</span> <span class="token string">"矛盾纠纷兼法务办公室"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"109"</span><span class="token punctuation">,</span> <span class="token string">"笑笑"</span> <span class="token punctuation">,</span> <span class="token string">"女"</span>  <span class="token punctuation">,</span> <span class="token string">"2000-11-12"</span><span class="token punctuation">,</span> <span class="token string">"财务部"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"199"</span><span class="token punctuation">,</span> <span class="token string">"唐五"</span> <span class="token punctuation">,</span> <span class="token string">"女"</span>  <span class="token punctuation">,</span> <span class="token string">"2000-02-21"</span><span class="token punctuation">,</span> <span class="token string">"唐门"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210109122719.png"></p>
+<h3 id="b-查询"><a href="#b-查询" class="headerlink" title="b 查询"></a>b 查询</h3><p>现在，财务部门需要查看所有人的华圣ID号和名字还有所在部门</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> eon_id<span class="token punctuation">,</span>eon_name<span class="token punctuation">,</span>eon_class <span class="token keyword">from</span> member<span class="token punctuation">;</span>
+</code></pre>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210109122804.png"></p>
+<h3 id="c-去重查询"><a href="#c-去重查询" class="headerlink" title="c 去重查询"></a>c 去重查询</h3><p>粗心的数据库管理员重复输入了Eon的信息，导致出现了两个Eon。</p>
+<p>现在要查看去重部门字段之后的member表的eon_class字段。</p>
+<p>最后，把重复多余的记录删除</p>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210109123004.png"></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">distinct</span> eon_class <span class="token keyword">from</span> member<span class="token punctuation">;</span>
+<span class="token keyword">delete</span> <span class="token keyword">from</span> member <span class="token keyword">where</span> eon_id <span class="token operator">=</span> <span class="token string">"105"</span><span class="token punctuation">;</span>
+</code></pre>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210108004520.png"></p>
+<h3 id="d-排序查询"><a href="#d-排序查询" class="headerlink" title="d 排序查询"></a>d 排序查询</h3><p>公司想给员工按照生日的顺序提醒信息部门送去生日祝福。</p>
+<p>分别使用升序和降序对出生日期进行查看，只查看姓名、生日字段</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true"># 一直查不出来，原来我birthday打错了，将错就错吧。</span>
+<span class="token comment" spellcheck="true">-- 升</span>
+<span class="token keyword">select</span> eon_name<span class="token punctuation">,</span>eon_brithday <span class="token keyword">from</span> member <span class="token keyword">order</span> <span class="token keyword">by</span> eon_brithday <span class="token keyword">asc</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">-- 反（降序）</span>
+<span class="token keyword">select</span> eon_name<span class="token punctuation">,</span>eon_brithday <span class="token keyword">from</span> member <span class="token keyword">order</span> <span class="token keyword">by</span> eon_brithday <span class="token keyword">desc</span><span class="token punctuation">;</span>
+<span class="token operator">+</span><span class="token comment" spellcheck="true">----------+--------------+</span>
+<span class="token operator">|</span> eon_name <span class="token operator">|</span> eon_brithday <span class="token operator">|</span>
+<span class="token operator">+</span><span class="token comment" spellcheck="true">----------+--------------+</span>
+<span class="token operator">|</span> 白给     <span class="token operator">|</span> <span class="token number">2000</span><span class="token operator">-</span><span class="token number">01</span><span class="token operator">-</span><span class="token number">01</span>   <span class="token operator">|</span>
+<span class="token operator">|</span> 唐五     <span class="token operator">|</span> <span class="token number">2000</span><span class="token operator">-</span><span class="token number">02</span><span class="token operator">-</span><span class="token number">21</span>   <span class="token operator">|</span>
+<span class="token operator">|</span> 唐三     <span class="token operator">|</span> <span class="token number">2000</span><span class="token operator">-</span><span class="token number">02</span><span class="token operator">-</span><span class="token number">28</span>   <span class="token operator">|</span>
+<span class="token operator">|</span> Eon      <span class="token operator">|</span> <span class="token number">2000</span><span class="token operator">-</span><span class="token number">10</span><span class="token operator">-</span><span class="token number">04</span>   <span class="token operator">|</span>
+<span class="token operator">|</span> 笑笑     <span class="token operator">|</span> <span class="token number">2000</span><span class="token operator">-</span><span class="token number">11</span><span class="token operator">-</span><span class="token number">12</span>   <span class="token operator">|</span>
+<span class="token operator">|</span> Pgg      <span class="token operator">|</span> <span class="token number">2000</span><span class="token operator">-</span><span class="token number">12</span><span class="token operator">-</span><span class="token number">30</span>   <span class="token operator">|</span>
+<span class="token operator">+</span><span class="token comment" spellcheck="true">----------+--------------+</span>
+<span class="token number">6</span> <span class="token keyword">rows</span> <span class="token operator">in</span> <span class="token keyword">set</span> <span class="token punctuation">(</span><span class="token number">0.04</span> sec<span class="token punctuation">)</span>
+
+<span class="token operator">+</span><span class="token comment" spellcheck="true">----------+--------------+</span>
+<span class="token operator">|</span> eon_name <span class="token operator">|</span> eon_brithday <span class="token operator">|</span>
+<span class="token operator">+</span><span class="token comment" spellcheck="true">----------+--------------+</span>
+<span class="token operator">|</span> Pgg      <span class="token operator">|</span> <span class="token number">2000</span><span class="token operator">-</span><span class="token number">12</span><span class="token operator">-</span><span class="token number">30</span>   <span class="token operator">|</span>
+<span class="token operator">|</span> 笑笑     <span class="token operator">|</span> <span class="token number">2000</span><span class="token operator">-</span><span class="token number">11</span><span class="token operator">-</span><span class="token number">12</span>   <span class="token operator">|</span>
+<span class="token operator">|</span> Eon      <span class="token operator">|</span> <span class="token number">2000</span><span class="token operator">-</span><span class="token number">10</span><span class="token operator">-</span><span class="token number">04</span>   <span class="token operator">|</span>
+<span class="token operator">|</span> 唐三     <span class="token operator">|</span> <span class="token number">2000</span><span class="token operator">-</span><span class="token number">02</span><span class="token operator">-</span><span class="token number">28</span>   <span class="token operator">|</span>
+<span class="token operator">|</span> 唐五     <span class="token operator">|</span> <span class="token number">2000</span><span class="token operator">-</span><span class="token number">02</span><span class="token operator">-</span><span class="token number">21</span>   <span class="token operator">|</span>
+<span class="token operator">|</span> 白给     <span class="token operator">|</span> <span class="token number">2000</span><span class="token operator">-</span><span class="token number">01</span><span class="token operator">-</span><span class="token number">01</span>   <span class="token operator">|</span>
+<span class="token operator">+</span><span class="token comment" spellcheck="true">----------+--------------+</span>
+<span class="token number">6</span> <span class="token keyword">rows</span> <span class="token operator">in</span> <span class="token keyword">set</span> <span class="token punctuation">(</span><span class="token number">0.05</span> sec<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="Cx-增加位置表"><a href="#Cx-增加位置表" class="headerlink" title="Cx 增加位置表"></a>Cx 增加位置表</h2><p>为了更详细的知道员工的所在位置信息，新增一个位置表（location）。</p>
+<p>使Eon_ID字段设置为主键，并且自增</p>
+<h3 id="a-表结构"><a href="#a-表结构" class="headerlink" title="a 表结构"></a>a 表结构</h3><table>
+<thead>
+<tr>
+<th>字段名字</th>
+<th>类型</th>
+<th>备注</th>
+<th>是否主键</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Eon_id</td>
+<td>int unsigned</td>
+<td>华圣ID</td>
+<td>是，自增</td>
+</tr>
+<tr>
+<td>Eon_floor</td>
+<td>varchar(20)</td>
+<td>楼层</td>
+<td>否</td>
+</tr>
+<tr>
+<td>Eon_ad_office</td>
+<td>varchar(20)</td>
+<td>办公室</td>
+<td>否</td>
+</tr>
+</tbody></table>
+<pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 创建位置表、添加字段</span>
+
+<span class="token keyword">create</span> <span class="token keyword">table</span> location<span class="token punctuation">(</span>
+Eon_id               <span class="token keyword">int</span> unsigned    <span class="token keyword">AUTO_INCREMENT</span>    <span class="token keyword">comment</span>  <span class="token string">"华圣ID"</span><span class="token punctuation">,</span>
+Eon_floor           <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>                  <span class="token keyword">comment</span>  <span class="token string">"楼层"</span><span class="token punctuation">,</span>
+Eon_ad_office       <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>                    <span class="token keyword">comment</span>  <span class="token string">"办公室"</span><span class="token punctuation">,</span>
+<span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span><span class="token punctuation">(</span>Eon_id<span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token keyword">charset</span><span class="token operator">=</span>utf8<span class="token punctuation">;</span>
+</code></pre>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210109123658.png"></p>
+<h3 id="b-记录"><a href="#b-记录" class="headerlink" title="b 记录"></a>b 记录</h3><table>
+<thead>
+<tr>
+<th>Eon_ID</th>
+<th>楼层</th>
+<th>办公室</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>100</td>
+<td>1F</td>
+<td>1032</td>
+</tr>
+<tr>
+<td>106</td>
+<td>2F</td>
+<td>2069</td>
+</tr>
+<tr>
+<td>108</td>
+<td>3F</td>
+<td>3001</td>
+</tr>
+<tr>
+<td>109</td>
+<td>4F</td>
+<td>4052</td>
+</tr>
+<tr>
+<td>110</td>
+<td>4F</td>
+<td>4053</td>
+</tr>
+<tr>
+<td>199</td>
+<td>1F</td>
+<td>1032</td>
+</tr>
+</tbody></table>
+<pre class=" language-sql"><code class="language-sql"> <span class="token comment" spellcheck="true">-- 添加数据</span>
+ 
+<span class="token keyword">insert</span> location <span class="token keyword">value</span>
+<span class="token punctuation">(</span><span class="token string">"100"</span><span class="token punctuation">,</span><span class="token string">"1F"</span><span class="token punctuation">,</span><span class="token string">"1032"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"106"</span><span class="token punctuation">,</span><span class="token string">"2F"</span><span class="token punctuation">,</span><span class="token string">"2069"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"108"</span><span class="token punctuation">,</span><span class="token string">"3F"</span><span class="token punctuation">,</span><span class="token string">"3001"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"109"</span><span class="token punctuation">,</span><span class="token string">"4F"</span><span class="token punctuation">,</span><span class="token string">"4052"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"110"</span><span class="token punctuation">,</span><span class="token string">"4F"</span><span class="token punctuation">,</span><span class="token string">"4053"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"199"</span><span class="token punctuation">,</span><span class="token string">"1F"</span><span class="token punctuation">,</span><span class="token string">"1032"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210109124113.png"></p>
+<h3 id="C-子查询"><a href="#C-子查询" class="headerlink" title="C 子查询"></a>C 子查询</h3><p>有人向前台询问笑笑的办公室位置，通过数据库查询笑笑所在楼层及办公室</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 子查询</span>
+
+<span class="token keyword">select</span> Eon_floor<span class="token punctuation">,</span>Eon_ad_office <span class="token keyword">from</span> location
+<span class="token keyword">where</span>  eon_id <span class="token operator">=</span> <span class="token punctuation">(</span>
+<span class="token keyword">select</span> eon_id <span class="token keyword">from</span> member <span class="token keyword">where</span> eon_name <span class="token operator">=</span> <span class="token string">"笑笑"</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210109130313.png"></p>
+<p>现在急需一批搬运工</p>
+<p>查询所有男生所在楼层和办公室位置</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> Eon_floor<span class="token punctuation">,</span>Eon_ad_office <span class="token keyword">from</span> location
+<span class="token keyword">where</span>  eon_id <span class="token operator">in</span> <span class="token punctuation">(</span>
+<span class="token keyword">select</span> eon_id <span class="token keyword">from</span> member <span class="token keyword">where</span> eon_sex <span class="token operator">=</span> <span class="token string">"男"</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210109130811.png"></p>
+<p>左思右想，怎么少了一个人，原来是白给。</p>
+<h3 id="d-内连接查询"><a href="#d-内连接查询" class="headerlink" title="d 内连接查询"></a>d 内连接查询</h3><p>这样太麻烦了，为此使用语句将所有人对应的ID、姓名、部门以及楼层和办公室位置升序的方式查询出来，然后打印成一张表。</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 内连接</span>
+
+<span class="token keyword">select</span> member<span class="token punctuation">.</span>eon_id<span class="token punctuation">,</span>member<span class="token punctuation">.</span>eon_name<span class="token punctuation">,</span>member<span class="token punctuation">.</span>eon_class<span class="token punctuation">,</span>location<span class="token punctuation">.</span>Eon_floor<span class="token punctuation">,</span>location<span class="token punctuation">.</span>Eon_ad_office <span class="token keyword">from</span> member
+<span class="token keyword">inner</span> <span class="token keyword">join</span> location <span class="token keyword">on</span> member<span class="token punctuation">.</span>eon_id <span class="token operator">=</span> location<span class="token punctuation">.</span>Eon_id<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/*
+    简洁写法
+*/</span>
+
+mysql<span class="token operator">></span> <span class="token keyword">select</span> m<span class="token punctuation">.</span>eon_id<span class="token punctuation">,</span>m<span class="token punctuation">.</span>eon_name<span class="token punctuation">,</span>m<span class="token punctuation">.</span>eon_class<span class="token punctuation">,</span>l<span class="token punctuation">.</span>Eon_floor<span class="token punctuation">,</span>l<span class="token punctuation">.</span>Eon_ad_office <span class="token keyword">from</span> member m <span class="token keyword">inner</span> <span class="token keyword">join</span> location l <span class="token keyword">on</span> m<span class="token punctuation">.</span>eon_id <span class="token operator">=</span> l<span class="token punctuation">.</span>Eon_id<span class="token punctuation">;</span>
+<span class="token operator">+</span><span class="token comment" spellcheck="true">--------+----------+----------------------+-----------+---------------+</span>
+<span class="token operator">|</span> eon_id <span class="token operator">|</span> eon_name <span class="token operator">|</span> eon_class            <span class="token operator">|</span> Eon_floor <span class="token operator">|</span> Eon_ad_office <span class="token operator">|</span>
+<span class="token operator">+</span><span class="token comment" spellcheck="true">--------+----------+----------------------+-----------+---------------+</span>
+<span class="token operator">|</span> <span class="token number">100</span>    <span class="token operator">|</span> 唐三      <span class="token operator">|</span> 秘书                 <span class="token operator">|</span> 1F        <span class="token operator">|</span> <span class="token number">1032</span>          <span class="token operator">|</span>
+<span class="token operator">|</span> <span class="token number">106</span>    <span class="token operator">|</span> Eon      <span class="token operator">|</span> CEO                  <span class="token operator">|</span> 2F        <span class="token operator">|</span> <span class="token number">2069</span>          <span class="token operator">|</span>
+<span class="token operator">|</span> <span class="token number">108</span>    <span class="token operator">|</span> Pgg      <span class="token operator">|</span> 信息安全部             <span class="token operator">|</span> 3F        <span class="token operator">|</span> <span class="token number">3001</span>          <span class="token operator">|</span>
+<span class="token operator">|</span> <span class="token number">109</span>    <span class="token operator">|</span> 笑笑      <span class="token operator">|</span> 财务部                <span class="token operator">|</span> 4F        <span class="token operator">|</span> <span class="token number">4052</span>          <span class="token operator">|</span>
+<span class="token operator">|</span> <span class="token number">110</span>    <span class="token operator">|</span> 白给      <span class="token operator">|</span> 矛盾纠纷兼法务办公室    <span class="token operator">|</span> 4F        <span class="token operator">|</span> <span class="token number">4053</span>          <span class="token operator">|</span>
+<span class="token operator">|</span> <span class="token number">199</span>    <span class="token operator">|</span> 唐五      <span class="token operator">|</span> 唐门                 <span class="token operator">|</span> 1F        <span class="token operator">|</span> <span class="token number">1032</span>          <span class="token operator">|</span>
+<span class="token operator">+</span><span class="token comment" spellcheck="true">--------+----------+----------------------+-----------+---------------+</span>
+<span class="token number">6</span> <span class="token keyword">rows</span> <span class="token operator">in</span> <span class="token keyword">set</span> <span class="token punctuation">(</span><span class="token number">0.05</span> sec<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 也就是在分别在member和location后面添加别称，然后每次描述字段的时候就可以使用别称了</span>
+
+<span class="token comment" spellcheck="true"># 排序</span>
+
+mysql<span class="token operator">></span> <span class="token keyword">select</span> m<span class="token punctuation">.</span>eon_id<span class="token punctuation">,</span>m<span class="token punctuation">.</span>eon_name<span class="token punctuation">,</span>m<span class="token punctuation">.</span>eon_class<span class="token punctuation">,</span>l<span class="token punctuation">.</span>Eon_floor<span class="token punctuation">,</span>l<span class="token punctuation">.</span>Eon_ad_office <span class="token keyword">from</span> member m <span class="token keyword">inner</span> <span class="token keyword">join</span> location l <span class="token keyword">on</span> m<span class="token punctuation">.</span>eon_id <span class="token operator">=</span> l<span class="token punctuation">.</span>Eon_id <span class="token keyword">order</span> <span class="token keyword">by</span> Eon_ad_office <span class="token keyword">asc</span><span class="token punctuation">;</span>
+</code></pre>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210109133359.png"></p>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210109135123.png" alt="排序"></p>
+<h2 id="Fx-附页：关键字和保留字"><a href="#Fx-附页：关键字和保留字" class="headerlink" title="Fx 附页：关键字和保留字"></a>Fx 附页：关键字和保留字</h2><p>A</p>
+<ul>
+<li><code>ACCESSIBLE</code> (R)</li>
+<li><code>ACCOUNT</code>; added in 5.7.6 (nonreserved)</li>
+<li><code>ACTION</code></li>
+<li><code>ADD</code> (R)</li>
+<li><code>AFTER</code></li>
+<li><code>AGAINST</code></li>
+<li><code>AGGREGATE</code></li>
+<li><code>ALGORITHM</code></li>
+<li><code>ALL</code> (R)</li>
+<li><code>ALTER</code> (R)</li>
+<li><code>ALWAYS</code>; added in 5.7.6 (nonreserved)</li>
+<li><code>ANALYSE</code></li>
+<li><code>ANALYZE</code> (R)</li>
+<li><code>AND</code> (R)</li>
+<li><code>ANY</code></li>
+<li><code>AS</code> (R)</li>
+<li><code>ASC</code> (R)</li>
+<li><code>ASCII</code></li>
+<li><code>ASENSITIVE</code> (R)</li>
+<li><code>AT</code></li>
+<li><code>AUTOEXTEND_SIZE</code></li>
+<li><code>AUTO_INCREMENT</code></li>
+<li><code>AVG</code></li>
+<li><code>AVG_ROW_LENGTH</code></li>
+</ul>
+<p>B</p>
+<ul>
+<li><code>BACKUP</code></li>
+<li><code>BEFORE</code> (R)</li>
+<li><code>BEGIN</code></li>
+<li><code>BETWEEN</code> (R)</li>
+<li><code>BIGINT</code> (R)</li>
+<li><code>BINARY</code> (R)</li>
+<li><code>BINLOG</code></li>
+<li><code>BIT</code></li>
+<li><code>BLOB</code> (R)</li>
+<li><code>BLOCK</code></li>
+<li><code>BOOL</code></li>
+<li><code>BOOLEAN</code></li>
+<li><code>BOTH</code> (R)</li>
+<li><code>BTREE</code></li>
+<li><code>BY</code> (R)</li>
+<li><code>BYTE</code></li>
+</ul>
+<p>C</p>
+<ul>
+<li><code>CACHE</code></li>
+<li><code>CALL</code> (R)</li>
+<li><code>CASCADE</code> (R)</li>
+<li><code>CASCADED</code></li>
+<li><code>CASE</code> (R)</li>
+<li><code>CATALOG_NAME</code></li>
+<li><code>CHAIN</code></li>
+<li><code>CHANGE</code> (R)</li>
+<li><code>CHANGED</code></li>
+<li><code>CHANNEL</code>; added in 5.7.6 (nonreserved)</li>
+<li><code>CHAR</code> (R)</li>
+<li><code>CHARACTER</code> (R)</li>
+<li><code>CHARSET</code></li>
+<li><code>CHECK</code> (R)</li>
+<li><code>CHECKSUM</code></li>
+<li><code>CIPHER</code></li>
+<li><code>CLASS_ORIGIN</code></li>
+<li><code>CLIENT</code></li>
+<li><code>CLOSE</code></li>
+<li><code>COALESCE</code></li>
+<li><code>CODE</code></li>
+<li><code>COLLATE</code> (R)</li>
+<li><code>COLLATION</code></li>
+<li><code>COLUMN</code> (R)</li>
+<li><code>COLUMNS</code></li>
+<li><code>COLUMN_FORMAT</code></li>
+<li><code>COLUMN_NAME</code></li>
+<li><code>COMMENT</code></li>
+<li><code>COMMIT</code></li>
+<li><code>COMMITTED</code></li>
+<li><code>COMPACT</code></li>
+<li><code>COMPLETION</code></li>
+<li><code>COMPRESSED</code></li>
+<li><code>COMPRESSION</code>; added in 5.7.8 (nonreserved)</li>
+<li><code>CONCURRENT</code></li>
+<li><code>CONDITION</code> (R)</li>
+<li><code>CONNECTION</code></li>
+<li><code>CONSISTENT</code></li>
+<li><code>CONSTRAINT</code> (R)</li>
+<li><code>CONSTRAINT_CATALOG</code></li>
+<li><code>CONSTRAINT_NAME</code></li>
+<li><code>CONSTRAINT_SCHEMA</code></li>
+<li><code>CONTAINS</code></li>
+<li><code>CONTEXT</code></li>
+<li><code>CONTINUE</code> (R)</li>
+<li><code>CONVERT</code> (R)</li>
+<li><code>CPU</code></li>
+<li><code>CREATE</code> (R)</li>
+<li><code>CROSS</code> (R)</li>
+<li><code>CUBE</code></li>
+<li><code>CURRENT</code></li>
+<li><code>CURRENT_DATE</code> (R)</li>
+<li><code>CURRENT_TIME</code> (R)</li>
+<li><code>CURRENT_TIMESTAMP</code> (R)</li>
+<li><code>CURRENT_USER</code> (R)</li>
+<li><code>CURSOR</code> (R)</li>
+<li><code>CURSOR_NAME</code></li>
+</ul>
+<p>D</p>
+<ul>
+<li><code>DATA</code></li>
+<li><code>DATABASE</code> (R)</li>
+<li><code>DATABASES</code> (R)</li>
+<li><code>DATAFILE</code></li>
+<li><code>DATE</code></li>
+<li><code>DATETIME</code></li>
+<li><code>DAY</code></li>
+<li><code>DAY_HOUR</code> (R)</li>
+<li><code>DAY_MICROSECOND</code> (R)</li>
+<li><code>DAY_MINUTE</code> (R)</li>
+<li><code>DAY_SECOND</code> (R)</li>
+<li><code>DEALLOCATE</code></li>
+<li><code>DEC</code> (R)</li>
+<li><code>DECIMAL</code> (R)</li>
+<li><code>DECLARE</code> (R)</li>
+<li><code>DEFAULT</code> (R)</li>
+<li><code>DEFAULT_AUTH</code></li>
+<li><code>DEFINER</code></li>
+<li><code>DELAYED</code> (R)</li>
+<li><code>DELAY_KEY_WRITE</code></li>
+<li><code>DELETE</code> (R)</li>
+<li><code>DESC</code> (R)</li>
+<li><code>DESCRIBE</code> (R)</li>
+<li><code>DES_KEY_FILE</code></li>
+<li><code>DETERMINISTIC</code> (R)</li>
+<li><code>DIAGNOSTICS</code></li>
+<li><code>DIRECTORY</code></li>
+<li><code>DISABLE</code></li>
+<li><code>DISCARD</code></li>
+<li><code>DISK</code></li>
+<li><code>DISTINCT</code> (R)</li>
+<li><code>DISTINCTROW</code> (R)</li>
+<li><code>DIV</code> (R)</li>
+<li><code>DO</code></li>
+<li><code>DOUBLE</code> (R)</li>
+<li><code>DROP</code> (R)</li>
+<li><code>DUAL</code> (R)</li>
+<li><code>DUMPFILE</code></li>
+<li><code>DUPLICATE</code></li>
+<li><code>DYNAMIC</code></li>
+</ul>
+<p>E</p>
+<ul>
+<li><code>EACH</code> (R)</li>
+<li><code>ELSE</code> (R)</li>
+<li><code>ELSEIF</code> (R)</li>
+<li><code>ENABLE</code></li>
+<li><code>ENCLOSED</code> (R)</li>
+<li><code>ENCRYPTION</code>; added in 5.7.11 (nonreserved)</li>
+<li><code>END</code></li>
+<li><code>ENDS</code></li>
+<li><code>ENGINE</code></li>
+<li><code>ENGINES</code></li>
+<li><code>ENUM</code></li>
+<li><code>ERROR</code></li>
+<li><code>ERRORS</code></li>
+<li><code>ESCAPE</code></li>
+<li><code>ESCAPED</code> (R)</li>
+<li><code>EVENT</code></li>
+<li><code>EVENTS</code></li>
+<li><code>EVERY</code></li>
+<li><code>EXCHANGE</code></li>
+<li><code>EXECUTE</code></li>
+<li><code>EXISTS</code> (R)</li>
+<li><code>EXIT</code> (R)</li>
+<li><code>EXPANSION</code></li>
+<li><code>EXPIRE</code></li>
+<li><code>EXPLAIN</code> (R)</li>
+<li><code>EXPORT</code></li>
+<li><code>EXTENDED</code></li>
+<li><code>EXTENT_SIZE</code></li>
+</ul>
+<p>F</p>
+<ul>
+<li><code>FALSE</code> (R)</li>
+<li><code>FAST</code></li>
+<li><code>FAULTS</code></li>
+<li><code>FETCH</code> (R)</li>
+<li><code>FIELDS</code></li>
+<li><code>FILE</code></li>
+<li><code>FILE_BLOCK_SIZE</code>; added in 5.7.6 (nonreserved)</li>
+<li><code>FILTER</code>; added in 5.7.3 (nonreserved)</li>
+<li><code>FIRST</code></li>
+<li><code>FIXED</code></li>
+<li><code>FLOAT</code> (R)</li>
+<li><code>FLOAT4</code> (R)</li>
+<li><code>FLOAT8</code> (R)</li>
+<li><code>FLUSH</code></li>
+<li><code>FOLLOWS</code>; added in 5.7.2 (nonreserved)</li>
+<li><code>FOR</code> (R)</li>
+<li><code>FORCE</code> (R)</li>
+<li><code>FOREIGN</code> (R)</li>
+<li><code>FORMAT</code></li>
+<li><code>FOUND</code></li>
+<li><code>FROM</code> (R)</li>
+<li><code>FULL</code></li>
+<li><code>FULLTEXT</code> (R)</li>
+<li><code>FUNCTION</code></li>
+</ul>
+<p>G</p>
+<ul>
+<li><code>GENERAL</code></li>
+<li><code>GENERATED</code> (R); added in 5.7.6 (reserved)</li>
+<li><code>GEOMETRY</code></li>
+<li><code>GEOMETRYCOLLECTION</code></li>
+<li><code>GET</code> (R)</li>
+<li><code>GET_FORMAT</code></li>
+<li><code>GLOBAL</code></li>
+<li><code>GRANT</code> (R)</li>
+<li><code>GRANTS</code></li>
+<li><code>GROUP</code> (R)</li>
+<li><code>GROUP_REPLICATION</code>; added in 5.7.6 (nonreserved)</li>
+</ul>
+<p>H</p>
+<ul>
+<li><code>HANDLER</code></li>
+<li><code>HASH</code></li>
+<li><code>HAVING</code> (R)</li>
+<li><code>HELP</code></li>
+<li><code>HIGH_PRIORITY</code> (R)</li>
+<li><code>HOST</code></li>
+<li><code>HOSTS</code></li>
+<li><code>HOUR</code></li>
+<li><code>HOUR_MICROSECOND</code> (R)</li>
+<li><code>HOUR_MINUTE</code> (R)</li>
+<li><code>HOUR_SECOND</code> (R)</li>
+</ul>
+<p>I</p>
+<ul>
+<li><code>IDENTIFIED</code></li>
+<li><code>IF</code> (R)</li>
+<li><code>IGNORE</code> (R)</li>
+<li><code>IGNORE_SERVER_IDS</code></li>
+<li><code>IMPORT</code></li>
+<li><code>IN</code> (R)</li>
+<li><code>INDEX</code> (R)</li>
+<li><code>INDEXES</code></li>
+<li><code>INFILE</code> (R)</li>
+<li><code>INITIAL_SIZE</code></li>
+<li><code>INNER</code> (R)</li>
+<li><code>INOUT</code> (R)</li>
+<li><code>INSENSITIVE</code> (R)</li>
+<li><code>INSERT</code> (R)</li>
+<li><code>INSERT_METHOD</code></li>
+<li><code>INSTALL</code></li>
+<li><code>INSTANCE</code>; added in 5.7.11 (nonreserved)</li>
+<li><code>INT</code> (R)</li>
+<li><code>INT1</code> (R)</li>
+<li><code>INT2</code> (R)</li>
+<li><code>INT3</code> (R)</li>
+<li><code>INT4</code> (R)</li>
+<li><code>INT8</code> (R)</li>
+<li><code>INTEGER</code> (R)</li>
+<li><code>INTERVAL</code> (R)</li>
+<li><code>INTO</code> (R)</li>
+<li><code>INVOKER</code></li>
+<li><code>IO</code></li>
+<li><code>IO_AFTER_GTIDS</code> (R)</li>
+<li><code>IO_BEFORE_GTIDS</code> (R)</li>
+<li><code>IO_THREAD</code></li>
+<li><code>IPC</code></li>
+<li><code>IS</code> (R)</li>
+<li><code>ISOLATION</code></li>
+<li><code>ISSUER</code></li>
+<li><code>ITERATE</code> (R)</li>
+</ul>
+<p>J</p>
+<ul>
+<li><code>JOIN</code> (R)</li>
+<li><code>JSON</code>; added in 5.7.8 (nonreserved)</li>
+</ul>
+<p>K</p>
+<ul>
+<li><code>KEY</code> (R)</li>
+<li><code>KEYS</code> (R)</li>
+<li><code>KEY_BLOCK_SIZE</code></li>
+<li><code>KILL</code> (R)</li>
+</ul>
+<p>L</p>
+<ul>
+<li><code>LANGUAGE</code></li>
+<li><code>LAST</code></li>
+<li><code>LEADING</code> (R)</li>
+<li><code>LEAVE</code> (R)</li>
+<li><code>LEAVES</code></li>
+<li><code>LEFT</code> (R)</li>
+<li><code>LESS</code></li>
+<li><code>LEVEL</code></li>
+<li><code>LIKE</code> (R)</li>
+<li><code>LIMIT</code> (R)</li>
+<li><code>LINEAR</code> (R)</li>
+<li><code>LINES</code> (R)</li>
+<li><code>LINESTRING</code></li>
+<li><code>LIST</code></li>
+<li><code>LOAD</code> (R)</li>
+<li><code>LOCAL</code></li>
+<li><code>LOCALTIME</code> (R)</li>
+<li><code>LOCALTIMESTAMP</code> (R)</li>
+<li><code>LOCK</code> (R)</li>
+<li><code>LOCKS</code></li>
+<li><code>LOGFILE</code></li>
+<li><code>LOGS</code></li>
+<li><code>LONG</code> (R)</li>
+<li><code>LONGBLOB</code> (R)</li>
+<li><code>LONGTEXT</code> (R)</li>
+<li><code>LOOP</code> (R)</li>
+<li><code>LOW_PRIORITY</code> (R)</li>
+</ul>
+<p>M</p>
+<ul>
+<li><code>MASTER</code></li>
+<li><code>MASTER_AUTO_POSITION</code></li>
+<li><code>MASTER_BIND</code> (R)</li>
+<li><code>MASTER_CONNECT_RETRY</code></li>
+<li><code>MASTER_DELAY</code></li>
+<li><code>MASTER_HEARTBEAT_PERIOD</code></li>
+<li><code>MASTER_HOST</code></li>
+<li><code>MASTER_LOG_FILE</code></li>
+<li><code>MASTER_LOG_POS</code></li>
+<li><code>MASTER_PASSWORD</code></li>
+<li><code>MASTER_PORT</code></li>
+<li><code>MASTER_RETRY_COUNT</code></li>
+<li><code>MASTER_SERVER_ID</code></li>
+<li><code>MASTER_SSL</code></li>
+<li><code>MASTER_SSL_CA</code></li>
+<li><code>MASTER_SSL_CAPATH</code></li>
+<li><code>MASTER_SSL_CERT</code></li>
+<li><code>MASTER_SSL_CIPHER</code></li>
+<li><code>MASTER_SSL_CRL</code></li>
+<li><code>MASTER_SSL_CRLPATH</code></li>
+<li><code>MASTER_SSL_KEY</code></li>
+<li><code>MASTER_SSL_VERIFY_SERVER_CERT</code> (R)</li>
+<li><code>MASTER_TLS_VERSION</code>; added in 5.7.10 (nonreserved)</li>
+<li><code>MASTER_USER</code></li>
+<li><code>MATCH</code> (R)</li>
+<li><code>MAXVALUE</code> (R)</li>
+<li><code>MAX_CONNECTIONS_PER_HOUR</code></li>
+<li><code>MAX_QUERIES_PER_HOUR</code></li>
+<li><code>MAX_ROWS</code></li>
+<li><code>MAX_SIZE</code></li>
+<li><code>MAX_STATEMENT_TIME</code>; added in 5.7.4 (nonreserved); removed in 5.7.8</li>
+<li><code>MAX_UPDATES_PER_HOUR</code></li>
+<li><code>MAX_USER_CONNECTIONS</code></li>
+<li><code>MEDIUM</code></li>
+<li><code>MEDIUMBLOB</code> (R)</li>
+<li><code>MEDIUMINT</code> (R)</li>
+<li><code>MEDIUMTEXT</code> (R)</li>
+<li><code>MEMORY</code></li>
+<li><code>MERGE</code></li>
+<li><code>MESSAGE_TEXT</code></li>
+<li><code>MICROSECOND</code></li>
+<li><code>MIDDLEINT</code> (R)</li>
+<li><code>MIGRATE</code></li>
+<li><code>MINUTE</code></li>
+<li><code>MINUTE_MICROSECOND</code> (R)</li>
+<li><code>MINUTE_SECOND</code> (R)</li>
+<li><code>MIN_ROWS</code></li>
+<li><code>MOD</code> (R)</li>
+<li><code>MODE</code></li>
+<li><code>MODIFIES</code> (R)</li>
+<li><code>MODIFY</code></li>
+<li><code>MONTH</code></li>
+<li><code>MULTILINESTRING</code></li>
+<li><code>MULTIPOINT</code></li>
+<li><code>MULTIPOLYGON</code></li>
+<li><code>MUTEX</code></li>
+<li><code>MYSQL_ERRNO</code></li>
+</ul>
+<p>N</p>
+<ul>
+<li><code>NAME</code></li>
+<li><code>NAMES</code></li>
+<li><code>NATIONAL</code></li>
+<li><code>NATURAL</code> (R)</li>
+<li><code>NCHAR</code></li>
+<li><code>NDB</code></li>
+<li><code>NDBCLUSTER</code></li>
+<li><code>NEVER</code>; added in 5.7.4 (nonreserved)</li>
+<li><code>NEW</code></li>
+<li><code>NEXT</code></li>
+<li><code>NO</code></li>
+<li><code>NODEGROUP</code></li>
+<li><code>NONBLOCKING</code>; removed in 5.7.6</li>
+<li><code>NONE</code></li>
+<li><code>NOT</code> (R)</li>
+<li><code>NO_WAIT</code></li>
+<li><code>NO_WRITE_TO_BINLOG</code> (R)</li>
+<li><code>NULL</code> (R)</li>
+<li><code>NUMBER</code></li>
+<li><code>NUMERIC</code> (R)</li>
+<li><code>NVARCHAR</code></li>
+</ul>
+<p>O</p>
+<ul>
+<li><code>OFFSET</code></li>
+<li><code>OLD_PASSWORD</code>; removed in 5.7.5</li>
+<li><code>ON</code> (R)</li>
+<li><code>ONE</code></li>
+<li><code>ONLY</code></li>
+<li><code>OPEN</code></li>
+<li><code>OPTIMIZE</code> (R)</li>
+<li><code>OPTIMIZER_COSTS</code> (R); added in 5.7.5 (reserved)</li>
+<li><code>OPTION</code> (R)</li>
+<li><code>OPTIONALLY</code> (R)</li>
+<li><code>OPTIONS</code></li>
+<li><code>OR</code> (R)</li>
+<li><code>ORDER</code> (R)</li>
+<li><code>OUT</code> (R)</li>
+<li><code>OUTER</code> (R)</li>
+<li><code>OUTFILE</code> (R)</li>
+<li><code>OWNER</code></li>
+</ul>
+<p>P</p>
+<ul>
+<li><code>PACK_KEYS</code></li>
+<li><code>PAGE</code></li>
+<li><code>PARSER</code></li>
+<li><code>PARSE_GCOL_EXPR</code>; added in 5.7.6 (reserved); became nonreserved in 5.7.8</li>
+<li><code>PARTIAL</code></li>
+<li><code>PARTITION</code> (R)</li>
+<li><code>PARTITIONING</code></li>
+<li><code>PARTITIONS</code></li>
+<li><code>PASSWORD</code></li>
+<li><code>PHASE</code></li>
+<li><code>PLUGIN</code></li>
+<li><code>PLUGINS</code></li>
+<li><code>PLUGIN_DIR</code></li>
+<li><code>POINT</code></li>
+<li><code>POLYGON</code></li>
+<li><code>PORT</code></li>
+<li><code>PRECEDES</code>; added in 5.7.2 (nonreserved)</li>
+<li><code>PRECISION</code> (R)</li>
+<li><code>PREPARE</code></li>
+<li><code>PRESERVE</code></li>
+<li><code>PREV</code></li>
+<li><code>PRIMARY</code> (R)</li>
+<li><code>PRIVILEGES</code></li>
+<li><code>PROCEDURE</code> (R)</li>
+<li><code>PROCESSLIST</code></li>
+<li><code>PROFILE</code></li>
+<li><code>PROFILES</code></li>
+<li><code>PROXY</code></li>
+<li><code>PURGE</code> (R)</li>
+</ul>
+<p>Q</p>
+<ul>
+<li><code>QUARTER</code></li>
+<li><code>QUERY</code></li>
+<li><code>QUICK</code></li>
+</ul>
+<p>R</p>
+<ul>
+<li><code>RANGE</code> (R)</li>
+<li><code>READ</code> (R)</li>
+<li><code>READS</code> (R)</li>
+<li><code>READ_ONLY</code></li>
+<li><code>READ_WRITE</code> (R)</li>
+<li><code>REAL</code> (R)</li>
+<li><code>REBUILD</code></li>
+<li><code>RECOVER</code></li>
+<li><code>REDOFILE</code></li>
+<li><code>REDO_BUFFER_SIZE</code></li>
+<li><code>REDUNDANT</code></li>
+<li><code>REFERENCES</code> (R)</li>
+<li><code>REGEXP</code> (R)</li>
+<li><code>RELAY</code></li>
+<li><code>RELAYLOG</code></li>
+<li><code>RELAY_LOG_FILE</code></li>
+<li><code>RELAY_LOG_POS</code></li>
+<li><code>RELAY_THREAD</code></li>
+<li><code>RELEASE</code> (R)</li>
+<li><code>RELOAD</code></li>
+<li><code>REMOVE</code></li>
+<li><code>RENAME</code> (R)</li>
+<li><code>REORGANIZE</code></li>
+<li><code>REPAIR</code></li>
+<li><code>REPEAT</code> (R)</li>
+<li><code>REPEATABLE</code></li>
+<li><code>REPLACE</code> (R)</li>
+<li><code>REPLICATE_DO_DB</code>; added in 5.7.3 (nonreserved)</li>
+<li><code>REPLICATE_DO_TABLE</code>; added in 5.7.3 (nonreserved)</li>
+<li><code>REPLICATE_IGNORE_DB</code>; added in 5.7.3 (nonreserved)</li>
+<li><code>REPLICATE_IGNORE_TABLE</code>; added in 5.7.3 (nonreserved)</li>
+<li><code>REPLICATE_REWRITE_DB</code>; added in 5.7.3 (nonreserved)</li>
+<li><code>REPLICATE_WILD_DO_TABLE</code>; added in 5.7.3 (nonreserved)</li>
+<li><code>REPLICATE_WILD_IGNORE_TABLE</code>; added in 5.7.3 (nonreserved)</li>
+<li><code>REPLICATION</code></li>
+<li><code>REQUIRE</code> (R)</li>
+<li><code>RESET</code></li>
+<li><code>RESIGNAL</code> (R)</li>
+<li><code>RESTORE</code></li>
+<li><code>RESTRICT</code> (R)</li>
+<li><code>RESUME</code></li>
+<li><code>RETURN</code> (R)</li>
+<li><code>RETURNED_SQLSTATE</code></li>
+<li><code>RETURNS</code></li>
+<li><code>REVERSE</code></li>
+<li><code>REVOKE</code> (R)</li>
+<li><code>RIGHT</code> (R)</li>
+<li><code>RLIKE</code> (R)</li>
+<li><code>ROLLBACK</code></li>
+<li><code>ROLLUP</code></li>
+<li><code>ROTATE</code>; added in 5.7.11 (nonreserved)</li>
+<li><code>ROUTINE</code></li>
+<li><code>ROW</code></li>
+<li><code>ROWS</code></li>
+<li><code>ROW_COUNT</code></li>
+<li><code>ROW_FORMAT</code></li>
+<li><code>RTREE</code></li>
+</ul>
+<p>S</p>
+<ul>
+<li><code>SAVEPOINT</code></li>
+<li><code>SCHEDULE</code></li>
+<li><code>SCHEMA</code> (R)</li>
+<li><code>SCHEMAS</code> (R)</li>
+<li><code>SCHEMA_NAME</code></li>
+<li><code>SECOND</code></li>
+<li><code>SECOND_MICROSECOND</code> (R)</li>
+<li><code>SECURITY</code></li>
+<li><code>SELECT</code> (R)</li>
+<li><code>SENSITIVE</code> (R)</li>
+<li><code>SEPARATOR</code> (R)</li>
+<li><code>SERIAL</code></li>
+<li><code>SERIALIZABLE</code></li>
+<li><code>SERVER</code></li>
+<li><code>SESSION</code></li>
+<li><code>SET</code> (R)</li>
+<li><code>SHARE</code></li>
+<li><code>SHOW</code> (R)</li>
+<li><code>SHUTDOWN</code></li>
+<li><code>SIGNAL</code> (R)</li>
+<li><code>SIGNED</code></li>
+<li><code>SIMPLE</code></li>
+<li><code>SLAVE</code></li>
+<li><code>SLOW</code></li>
+<li><code>SMALLINT</code> (R)</li>
+<li><code>SNAPSHOT</code></li>
+<li><code>SOCKET</code></li>
+<li><code>SOME</code></li>
+<li><code>SONAME</code></li>
+<li><code>SOUNDS</code></li>
+<li><code>SOURCE</code></li>
+<li><code>SPATIAL</code> (R)</li>
+<li><code>SPECIFIC</code> (R)</li>
+<li><code>SQL</code> (R)</li>
+<li><code>SQLEXCEPTION</code> (R)</li>
+<li><code>SQLSTATE</code> (R)</li>
+<li><code>SQLWARNING</code> (R)</li>
+<li><code>SQL_AFTER_GTIDS</code></li>
+<li><code>SQL_AFTER_MTS_GAPS</code></li>
+<li><code>SQL_BEFORE_GTIDS</code></li>
+<li><code>SQL_BIG_RESULT</code> (R)</li>
+<li><code>SQL_BUFFER_RESULT</code></li>
+<li><code>SQL_CACHE</code></li>
+<li><code>SQL_CALC_FOUND_ROWS</code> (R)</li>
+<li><code>SQL_NO_CACHE</code></li>
+<li><code>SQL_SMALL_RESULT</code> (R)</li>
+<li><code>SQL_THREAD</code></li>
+<li><code>SQL_TSI_DAY</code></li>
+<li><code>SQL_TSI_HOUR</code></li>
+<li><code>SQL_TSI_MINUTE</code></li>
+<li><code>SQL_TSI_MONTH</code></li>
+<li><code>SQL_TSI_QUARTER</code></li>
+<li><code>SQL_TSI_SECOND</code></li>
+<li><code>SQL_TSI_WEEK</code></li>
+<li><code>SQL_TSI_YEAR</code></li>
+<li><code>SSL</code> (R)</li>
+<li><code>STACKED</code></li>
+<li><code>START</code></li>
+<li><code>STARTING</code> (R)</li>
+<li><code>STARTS</code></li>
+<li><code>STATS_AUTO_RECALC</code></li>
+<li><code>STATS_PERSISTENT</code></li>
+<li><code>STATS_SAMPLE_PAGES</code></li>
+<li><code>STATUS</code></li>
+<li><code>STOP</code></li>
+<li><code>STORAGE</code></li>
+<li><code>STORED</code> (R); added in 5.7.6 (reserved)</li>
+<li><code>STRAIGHT_JOIN</code> (R)</li>
+<li><code>STRING</code></li>
+<li><code>SUBCLASS_ORIGIN</code></li>
+<li><code>SUBJECT</code></li>
+<li><code>SUBPARTITION</code></li>
+<li><code>SUBPARTITIONS</code></li>
+<li><code>SUPER</code></li>
+<li><code>SUSPEND</code></li>
+<li><code>SWAPS</code></li>
+<li><code>SWITCHES</code></li>
+</ul>
+<p>T</p>
+<ul>
+<li><code>TABLE</code> (R)</li>
+<li><code>TABLES</code></li>
+<li><code>TABLESPACE</code></li>
+<li><code>TABLE_CHECKSUM</code></li>
+<li><code>TABLE_NAME</code></li>
+<li><code>TEMPORARY</code></li>
+<li><code>TEMPTABLE</code></li>
+<li><code>TERMINATED</code> (R)</li>
+<li><code>TEXT</code></li>
+<li><code>THAN</code></li>
+<li><code>THEN</code> (R)</li>
+<li><code>TIME</code></li>
+<li><code>TIMESTAMP</code></li>
+<li><code>TIMESTAMPADD</code></li>
+<li><code>TIMESTAMPDIFF</code></li>
+<li><code>TINYBLOB</code> (R)</li>
+<li><code>TINYINT</code> (R)</li>
+<li><code>TINYTEXT</code> (R)</li>
+<li><code>TO</code> (R)</li>
+<li><code>TRAILING</code> (R)</li>
+<li><code>TRANSACTION</code></li>
+<li><code>TRIGGER</code> (R)</li>
+<li><code>TRIGGERS</code></li>
+<li><code>TRUE</code> (R)</li>
+<li><code>TRUNCATE</code></li>
+<li><code>TYPE</code></li>
+<li><code>TYPES</code></li>
+</ul>
+<p>U</p>
+<ul>
+<li><code>UNCOMMITTED</code></li>
+<li><code>UNDEFINED</code></li>
+<li><code>UNDO</code> (R)</li>
+<li><code>UNDOFILE</code></li>
+<li><code>UNDO_BUFFER_SIZE</code></li>
+<li><code>UNICODE</code></li>
+<li><code>UNINSTALL</code></li>
+<li><code>UNION</code> (R)</li>
+<li><code>UNIQUE</code> (R)</li>
+<li><code>UNKNOWN</code></li>
+<li><code>UNLOCK</code> (R)</li>
+<li><code>UNSIGNED</code> (R)</li>
+<li><code>UNTIL</code></li>
+<li><code>UPDATE</code> (R)</li>
+<li><code>UPGRADE</code></li>
+<li><code>USAGE</code> (R)</li>
+<li><code>USE</code> (R)</li>
+<li><code>USER</code></li>
+<li><code>USER_RESOURCES</code></li>
+<li><code>USE_FRM</code></li>
+<li><code>USING</code> (R)</li>
+<li><code>UTC_DATE</code> (R)</li>
+<li><code>UTC_TIME</code> (R)</li>
+<li><code>UTC_TIMESTAMP</code> (R)</li>
+</ul>
+<p>V</p>
+<ul>
+<li><code>VALIDATION</code>; added in 5.7.5 (nonreserved)</li>
+<li><code>VALUE</code></li>
+<li><code>VALUES</code> (R)</li>
+<li><code>VARBINARY</code> (R)</li>
+<li><code>VARCHAR</code> (R)</li>
+<li><code>VARCHARACTER</code> (R)</li>
+<li><code>VARIABLES</code></li>
+<li><code>VARYING</code> (R)</li>
+<li><code>VIEW</code></li>
+<li><code>VIRTUAL</code> (R); added in 5.7.6 (reserved)</li>
+</ul>
+<p>W</p>
+<ul>
+<li><code>WAIT</code></li>
+<li><code>WARNINGS</code></li>
+<li><code>WEEK</code></li>
+<li><code>WEIGHT_STRING</code></li>
+<li><code>WHEN</code> (R)</li>
+<li><code>WHERE</code> (R)</li>
+<li><code>WHILE</code> (R)</li>
+<li><code>WITH</code> (R)</li>
+<li><code>WITHOUT</code>; added in 5.7.5 (nonreserved)</li>
+<li><code>WORK</code></li>
+<li><code>WRAPPER</code></li>
+<li><code>WRITE</code> (R)</li>
+</ul>
+<p>X</p>
+<ul>
+<li><code>X509</code></li>
+<li><code>XA</code></li>
+<li><code>XID</code>; added in 5.7.5 (nonreserved)</li>
+<li><code>XML</code></li>
+<li><code>XOR</code> (R)</li>
+</ul>
+<p>Y</p>
+<ul>
+<li><code>YEAR</code></li>
+<li><code>YEAR_MONTH</code> (R)</li>
+</ul>
+<p>Z</p>
+<ul>
+<li><code>ZEROFILL</code> (R)</li>
+</ul>
+<h3 id="MySQL-5-7-New-Keywords-and-Reserved-Words"><a href="#MySQL-5-7-New-Keywords-and-Reserved-Words" class="headerlink" title="MySQL 5.7 New Keywords and Reserved Words"></a>MySQL 5.7 New Keywords and Reserved Words</h3><p>A</p>
+<ul>
+<li><code>ACCOUNT</code></li>
+<li><code>ALWAYS</code></li>
+</ul>
+<p>C</p>
+<ul>
+<li><code>CHANNEL</code></li>
+<li><code>COMPRESSION</code></li>
+</ul>
+<p>E</p>
+<ul>
+<li><code>ENCRYPTION</code></li>
+</ul>
+<p>F</p>
+<ul>
+<li><code>FILE_BLOCK_SIZE</code></li>
+<li><code>FILTER</code></li>
+<li><code>FOLLOWS</code></li>
+</ul>
+<p>G</p>
+<ul>
+<li><code>GENERATED</code> (R)</li>
+<li><code>GROUP_REPLICATION</code></li>
+</ul>
+<p>I</p>
+<ul>
+<li><code>INSTANCE</code></li>
+</ul>
+<p>J</p>
+<ul>
+<li><code>JSON</code></li>
+</ul>
+<p>M</p>
+<ul>
+<li><code>MASTER_TLS_VERSION</code></li>
+</ul>
+<p>N</p>
+<ul>
+<li><code>NEVER</code></li>
+</ul>
+<p>O</p>
+<ul>
+<li><code>OPTIMIZER_COSTS</code> (R)</li>
+</ul>
+<p>P</p>
+<ul>
+<li><code>PARSE_GCOL_EXPR</code></li>
+<li><code>PRECEDES</code></li>
+</ul>
+<p>R</p>
+<ul>
+<li><code>REPLICATE_DO_DB</code></li>
+<li><code>REPLICATE_DO_TABLE</code></li>
+<li><code>REPLICATE_IGNORE_DB</code></li>
+<li><code>REPLICATE_IGNORE_TABLE</code></li>
+<li><code>REPLICATE_REWRITE_DB</code></li>
+<li><code>REPLICATE_WILD_DO_TABLE</code></li>
+<li><code>REPLICATE_WILD_IGNORE_TABLE</code></li>
+<li><code>ROTATE</code></li>
+</ul>
+<p>S</p>
+<ul>
+<li><code>STACKED</code></li>
+<li><code>STORED</code> (R)</li>
+</ul>
+<p>V</p>
+<ul>
+<li><code>VALIDATION</code></li>
+<li><code>VIRTUAL</code> (R)</li>
+</ul>
+<p>W</p>
+<ul>
+<li><code>WITHOUT</code></li>
+</ul>
+<p>X</p>
+<ul>
+<li><code>XID</code></li>
+</ul>
+<h3 id="MySQL-5-7-Removed-Keywords-and-Reserved-Words"><a href="#MySQL-5-7-Removed-Keywords-and-Reserved-Words" class="headerlink" title="MySQL 5.7 Removed Keywords and Reserved Words"></a>MySQL 5.7 Removed Keywords and Reserved Words</h3><p>The following list shows the keywords and reserved words that are removed in MySQL 5.7, compared to MySQL 5.6. Reserved keywords are marked with (R).</p>
+<ul>
+<li><code>OLD_PASSWORD</code></li>
+</ul>
+<h2 id="Rx-参考"><a href="#Rx-参考" class="headerlink" title="Rx 参考"></a>Rx 参考</h2><p>[1] <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/5.7/en/keywords.html">https://dev.mysql.com/doc/refman/5.7/en/keywords.html</a></p>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Enomothem</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://enomothem.cn/posts/6a1.html">http://enomothem.cn/posts/6a1.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Enomothem</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Mysql/">
+                                    <span class="chip bg-color">Mysql</span>
+                                </a>
+                            
+                                <a href="/tags/Project/">
+                                    <span class="chip bg-color">Project</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'XRvQLu0XdtO7vmFLVb3cpbj0-MdYXbMMI',
+        appKey: 'L6nqKIkPxGwG54kCbMTyGoiI',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'robohash',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/793a.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/23.jpg" class="responsive-img" alt="操作系统-效率优化">
+                        
+                        <span class="card-title">操作系统-效率优化</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    操作系统
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%88%E7%8E%87%E4%BC%98%E5%8C%96/">
+                        <span class="chip bg-color">效率优化</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8A%98%E8%85%BE%E7%94%B5%E8%84%91/">
+                        <span class="chip bg-color">折腾电脑</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/66d8.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/21.jpg" class="responsive-img" alt="English-review">
+                        
+                        <span class="card-title">English-review</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/English/" class="post-category">
+                                    English
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/English/">
+                        <span class="chip bg-color">English</span>
+                    </a>
+                    
+                    <a href="/tags/Review/">
+                        <span class="chip bg-color">Review</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('100')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround. 将 === PRE 改为CODE即可复制，解决换行问题
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 字星河<br />'
+            + '文章作者: Enomothem<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+			
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2018";
+                    var startMonth = "6";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "站龄 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "站龄 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+			
+			<br>
+			
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2018-2021</span>
+            
+            <a href="/about" target="_blank">by&nbsp;Enomothem</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">213.5k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                <i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+			
+            <br>
+
+            
+			
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/enomothem" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:enomothem@outlook.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://public.zsxq.com/groups/51288182112544.html" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://public.zsxq.com/groups/51288182112544.html" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=251051821" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 251051821" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/js/matery.js"></script>
+    <!--动态线条背景-->
+    <script type="text/javascript" color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/instantpage/instantpage.js" type="module"></script>
+    
+<!-- 雪花snow 樱花sakura -->
+ <!--   <script src="/js/sakura.js"></script>  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+
+</html>
+
