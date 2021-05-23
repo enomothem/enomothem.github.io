@@ -31,33 +31,6 @@
     
     
     <entry>
-      <title>Docker-container</title>
-      <link href="posts/264c.html"/>
-      <url>posts/264c.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Ax-Docker-container-usage"><a href="#Ax-Docker-container-usage" class="headerlink" title="Ax Docker container usage"></a>Ax Docker container usage</h2><h4 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h4><pre class=" language-bash"><code class="language-bash">$ docker run -it ubuntu /bin/bash</code></pre><ul><li><strong>-i</strong>: interaction</li><li><strong>-t</strong>: Terminal</li><li><strong>-b</strong>: backplatform run</li><li><strong>ubuntu</strong>: ubuntu image</li><li><strong>/bin/bash</strong>：shell path</li></ul><blockquote><p>PS:<code>exit</code> command quit interaction terminal</p></blockquote><h4 id="Show"><a href="#Show" class="headerlink" title="Show"></a>Show</h4><pre class=" language-bash"><code class="language-bash">$ docker <span class="token function">ps</span> -a</code></pre><h4 id="ON-OFF"><a href="#ON-OFF" class="headerlink" title="ON/OFF"></a>ON/OFF</h4><pre class=" language-sh"><code class="language-sh">$ docker start id        # start container$ docker stop id        # stop container$ docker restart id        # restart container</code></pre><h4 id="Enter-into"><a href="#Enter-into" class="headerlink" title="Enter into"></a>Enter into</h4><ul><li><strong>docker attach</strong>     ——&gt; exit stop container</li><li><strong>docker exec</strong></li></ul><pre class=" language-sh"><code class="language-sh">$ docker attach id$ docker exec -it id /bin/bash</code></pre><h2 id="Bx-Expert-and-Import"><a href="#Bx-Expert-and-Import" class="headerlink" title="Bx Expert and Import"></a>Bx Expert and Import</h2><h4 id="Expert"><a href="#Expert" class="headerlink" title="Expert"></a>Expert</h4><pre class=" language-sh"><code class="language-sh">$ docker export id > ubuntu.tar</code></pre><h4 id="Import"><a href="#Import" class="headerlink" title="Import"></a>Import</h4><pre class=" language-sh"><code class="language-sh">$ cat docker/ubuntu.tar | docker import - test/ubuntu:v1$ docker import http://example.com/exampleimage.tgz example/imagerepo</code></pre><h2 id="Cx-Delete-container"><a href="#Cx-Delete-container" class="headerlink" title="Cx Delete container"></a>Cx Delete container</h2><pre class=" language-sh"><code class="language-sh">$ docker rm -f id</code></pre><h4 id="all"><a href="#all" class="headerlink" title="all"></a>all</h4><pre class=" language-sh"><code class="language-sh">$ docker container prune</code></pre><h2 id="Dx-Open-Web-application"><a href="#Dx-Open-Web-application" class="headerlink" title="Dx Open Web application"></a>Dx Open Web application</h2><pre class=" language-sh"><code class="language-sh">$ docker pull training/webapp$ docker run -d -P training/webapp python app.py</code></pre><h4 id="Port"><a href="#Port" class="headerlink" title="Port"></a>Port</h4><pre class=" language-sh"><code class="language-sh">$ docker run -d -p 5000:5000 training/webapp python app.py</code></pre><h4 id="Show-Port"><a href="#Show-Port" class="headerlink" title="Show Port"></a>Show Port</h4><pre class=" language-sh"><code class="language-sh">$ docker port id or name</code></pre><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      
-      
-      <categories>
-          
-          <category> Docker </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> docker </tag>
-            
-            <tag> container </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Docker-vulscan</title>
       <link href="posts/8aec.html"/>
       <url>posts/8aec.html</url>
@@ -77,6 +50,33 @@
             <tag> docker </tag>
             
             <tag> vulscan </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Docker-container</title>
+      <link href="posts/264c.html"/>
+      <url>posts/264c.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Ax-Docker-container-usage"><a href="#Ax-Docker-container-usage" class="headerlink" title="Ax Docker container usage"></a>Ax Docker container usage</h2><h4 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h4><pre class=" language-bash"><code class="language-bash">$ docker run -it ubuntu /bin/bash</code></pre><ul><li><strong>-i</strong>: interaction</li><li><strong>-t</strong>: Terminal</li><li><strong>-b</strong>: backplatform run</li><li><strong>ubuntu</strong>: ubuntu image</li><li><strong>/bin/bash</strong>：shell path</li></ul><blockquote><p>PS:<code>exit</code> command quit interaction terminal</p></blockquote><h4 id="Show"><a href="#Show" class="headerlink" title="Show"></a>Show</h4><pre class=" language-bash"><code class="language-bash">$ docker <span class="token function">ps</span> -a</code></pre><h4 id="ON-OFF"><a href="#ON-OFF" class="headerlink" title="ON/OFF"></a>ON/OFF</h4><pre class=" language-sh"><code class="language-sh">$ docker start id        # start container$ docker stop id        # stop container$ docker restart id        # restart container</code></pre><h4 id="Enter-into"><a href="#Enter-into" class="headerlink" title="Enter into"></a>Enter into</h4><ul><li><strong>docker attach</strong>     ——&gt; exit stop container</li><li><strong>docker exec</strong></li></ul><pre class=" language-sh"><code class="language-sh">$ docker attach id$ docker exec -it id /bin/bash</code></pre><h2 id="Bx-Expert-and-Import"><a href="#Bx-Expert-and-Import" class="headerlink" title="Bx Expert and Import"></a>Bx Expert and Import</h2><h4 id="Expert"><a href="#Expert" class="headerlink" title="Expert"></a>Expert</h4><pre class=" language-sh"><code class="language-sh">$ docker export id > ubuntu.tar</code></pre><h4 id="Import"><a href="#Import" class="headerlink" title="Import"></a>Import</h4><pre class=" language-sh"><code class="language-sh">$ cat docker/ubuntu.tar | docker import - test/ubuntu:v1$ docker import http://example.com/exampleimage.tgz example/imagerepo</code></pre><h2 id="Cx-Delete-container"><a href="#Cx-Delete-container" class="headerlink" title="Cx Delete container"></a>Cx Delete container</h2><pre class=" language-sh"><code class="language-sh">$ docker rm -f id</code></pre><h4 id="all"><a href="#all" class="headerlink" title="all"></a>all</h4><pre class=" language-sh"><code class="language-sh">$ docker container prune</code></pre><h2 id="Dx-Open-Web-application"><a href="#Dx-Open-Web-application" class="headerlink" title="Dx Open Web application"></a>Dx Open Web application</h2><pre class=" language-sh"><code class="language-sh">$ docker pull training/webapp$ docker run -d -P training/webapp python app.py</code></pre><h4 id="Port"><a href="#Port" class="headerlink" title="Port"></a>Port</h4><pre class=" language-sh"><code class="language-sh">$ docker run -d -p 5000:5000 training/webapp python app.py</code></pre><h4 id="Show-Port"><a href="#Show-Port" class="headerlink" title="Show Port"></a>Show Port</h4><pre class=" language-sh"><code class="language-sh">$ docker port id or name</code></pre><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      
+      
+      <categories>
+          
+          <category> Docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+            <tag> container </tag>
             
         </tags>
       
@@ -1036,35 +1036,6 @@
     
     
     <entry>
-      <title>Linux-watch监视命令的命令</title>
-      <link href="posts/9670.html"/>
-      <url>posts/9670.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Ax-watch命令使用"><a href="#Ax-watch命令使用" class="headerlink" title="Ax watch命令使用"></a>Ax watch命令使用</h2><p>用于监视命令的输出</p><p><code>watch -n 1 'ls -l'</code></p><p>在cmd中上传一个文件到这个ls中，可以看到立马就出现了，因为这是每隔一秒就刷新的。</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210002914.png"></p><p>但是这样，我们不容易看出哪个是变化的，可以加入参数 -d 使其变色。</p><p><code>watch -d 'COMMAND'</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210003725.png"></p><h2 id="Bx-参考"><a href="#Bx-参考" class="headerlink" title="Bx 参考"></a>Bx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-            <tag> shell </tag>
-            
-            <tag> watch </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Linux-日志</title>
       <link href="posts/9563.html"/>
       <url>posts/9563.html</url>
@@ -1086,6 +1057,35 @@
             <tag> shell </tag>
             
             <tag> logger </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux-watch监视命令的命令</title>
+      <link href="posts/9670.html"/>
+      <url>posts/9670.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Ax-watch命令使用"><a href="#Ax-watch命令使用" class="headerlink" title="Ax watch命令使用"></a>Ax watch命令使用</h2><p>用于监视命令的输出</p><p><code>watch -n 1 'ls -l'</code></p><p>在cmd中上传一个文件到这个ls中，可以看到立马就出现了，因为这是每隔一秒就刷新的。</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210002914.png"></p><p>但是这样，我们不容易看出哪个是变化的，可以加入参数 -d 使其变色。</p><p><code>watch -d 'COMMAND'</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210003725.png"></p><h2 id="Bx-参考"><a href="#Bx-参考" class="headerlink" title="Bx 参考"></a>Bx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> shell </tag>
+            
+            <tag> watch </tag>
             
         </tags>
       
