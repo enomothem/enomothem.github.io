@@ -31,33 +31,6 @@
     
     
     <entry>
-      <title>Docker-container</title>
-      <link href="posts/264c.html"/>
-      <url>posts/264c.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Ax-Docker-container-usage"><a href="#Ax-Docker-container-usage" class="headerlink" title="Ax Docker container usage"></a>Ax Docker container usage</h2><h4 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h4><pre class=" language-bash"><code class="language-bash">$ docker run -it ubuntu /bin/bash</code></pre><ul><li><strong>-i</strong>: interaction</li><li><strong>-t</strong>: Terminal</li><li><strong>-b</strong>: backplatform run</li><li><strong>ubuntu</strong>: ubuntu image</li><li><strong>/bin/bash</strong>：shell path</li></ul><blockquote><p>PS:<code>exit</code> command quit interaction terminal</p></blockquote><h4 id="Show"><a href="#Show" class="headerlink" title="Show"></a>Show</h4><pre class=" language-bash"><code class="language-bash">$ docker <span class="token function">ps</span> -a</code></pre><h4 id="ON-OFF"><a href="#ON-OFF" class="headerlink" title="ON/OFF"></a>ON/OFF</h4><pre class=" language-sh"><code class="language-sh">$ docker start id        # start container$ docker stop id        # stop container$ docker restart id        # restart container</code></pre><h4 id="Enter-into"><a href="#Enter-into" class="headerlink" title="Enter into"></a>Enter into</h4><ul><li><strong>docker attach</strong>     ——&gt; exit stop container</li><li><strong>docker exec</strong></li></ul><pre class=" language-sh"><code class="language-sh">$ docker attach id$ docker exec -it id /bin/bash</code></pre><h2 id="Bx-Expert-and-Import"><a href="#Bx-Expert-and-Import" class="headerlink" title="Bx Expert and Import"></a>Bx Expert and Import</h2><h4 id="Expert"><a href="#Expert" class="headerlink" title="Expert"></a>Expert</h4><pre class=" language-sh"><code class="language-sh">$ docker export id > ubuntu.tar</code></pre><h4 id="Import"><a href="#Import" class="headerlink" title="Import"></a>Import</h4><pre class=" language-sh"><code class="language-sh">$ cat docker/ubuntu.tar | docker import - test/ubuntu:v1$ docker import http://example.com/exampleimage.tgz example/imagerepo</code></pre><h2 id="Cx-Delete-container"><a href="#Cx-Delete-container" class="headerlink" title="Cx Delete container"></a>Cx Delete container</h2><pre class=" language-sh"><code class="language-sh">$ docker rm -f id</code></pre><h4 id="all"><a href="#all" class="headerlink" title="all"></a>all</h4><pre class=" language-sh"><code class="language-sh">$ docker container prune</code></pre><h2 id="Dx-Open-Web-application"><a href="#Dx-Open-Web-application" class="headerlink" title="Dx Open Web application"></a>Dx Open Web application</h2><pre class=" language-sh"><code class="language-sh">$ docker pull training/webapp$ docker run -d -P training/webapp python app.py</code></pre><h4 id="Port"><a href="#Port" class="headerlink" title="Port"></a>Port</h4><pre class=" language-sh"><code class="language-sh">$ docker run -d -p 5000:5000 training/webapp python app.py</code></pre><h4 id="Show-Port"><a href="#Show-Port" class="headerlink" title="Show Port"></a>Show Port</h4><pre class=" language-sh"><code class="language-sh">$ docker port id or name</code></pre><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      
-      
-      <categories>
-          
-          <category> Docker </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> docker </tag>
-            
-            <tag> container </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Docker-vulscan</title>
       <link href="posts/8aec.html"/>
       <url>posts/8aec.html</url>
@@ -77,6 +50,33 @@
             <tag> docker </tag>
             
             <tag> vulscan </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Docker-container</title>
+      <link href="posts/264c.html"/>
+      <url>posts/264c.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Ax-Docker-container-usage"><a href="#Ax-Docker-container-usage" class="headerlink" title="Ax Docker container usage"></a>Ax Docker container usage</h2><h4 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h4><pre class=" language-bash"><code class="language-bash">$ docker run -it ubuntu /bin/bash</code></pre><ul><li><strong>-i</strong>: interaction</li><li><strong>-t</strong>: Terminal</li><li><strong>-b</strong>: backplatform run</li><li><strong>ubuntu</strong>: ubuntu image</li><li><strong>/bin/bash</strong>：shell path</li></ul><blockquote><p>PS:<code>exit</code> command quit interaction terminal</p></blockquote><h4 id="Show"><a href="#Show" class="headerlink" title="Show"></a>Show</h4><pre class=" language-bash"><code class="language-bash">$ docker <span class="token function">ps</span> -a</code></pre><h4 id="ON-OFF"><a href="#ON-OFF" class="headerlink" title="ON/OFF"></a>ON/OFF</h4><pre class=" language-sh"><code class="language-sh">$ docker start id        # start container$ docker stop id        # stop container$ docker restart id        # restart container</code></pre><h4 id="Enter-into"><a href="#Enter-into" class="headerlink" title="Enter into"></a>Enter into</h4><ul><li><strong>docker attach</strong>     ——&gt; exit stop container</li><li><strong>docker exec</strong></li></ul><pre class=" language-sh"><code class="language-sh">$ docker attach id$ docker exec -it id /bin/bash</code></pre><h2 id="Bx-Expert-and-Import"><a href="#Bx-Expert-and-Import" class="headerlink" title="Bx Expert and Import"></a>Bx Expert and Import</h2><h4 id="Expert"><a href="#Expert" class="headerlink" title="Expert"></a>Expert</h4><pre class=" language-sh"><code class="language-sh">$ docker export id > ubuntu.tar</code></pre><h4 id="Import"><a href="#Import" class="headerlink" title="Import"></a>Import</h4><pre class=" language-sh"><code class="language-sh">$ cat docker/ubuntu.tar | docker import - test/ubuntu:v1$ docker import http://example.com/exampleimage.tgz example/imagerepo</code></pre><h2 id="Cx-Delete-container"><a href="#Cx-Delete-container" class="headerlink" title="Cx Delete container"></a>Cx Delete container</h2><pre class=" language-sh"><code class="language-sh">$ docker rm -f id</code></pre><h4 id="all"><a href="#all" class="headerlink" title="all"></a>all</h4><pre class=" language-sh"><code class="language-sh">$ docker container prune</code></pre><h2 id="Dx-Open-Web-application"><a href="#Dx-Open-Web-application" class="headerlink" title="Dx Open Web application"></a>Dx Open Web application</h2><pre class=" language-sh"><code class="language-sh">$ docker pull training/webapp$ docker run -d -P training/webapp python app.py</code></pre><h4 id="Port"><a href="#Port" class="headerlink" title="Port"></a>Port</h4><pre class=" language-sh"><code class="language-sh">$ docker run -d -p 5000:5000 training/webapp python app.py</code></pre><h4 id="Show-Port"><a href="#Show-Port" class="headerlink" title="Show Port"></a>Show Port</h4><pre class=" language-sh"><code class="language-sh">$ docker port id or name</code></pre><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      
+      
+      <categories>
+          
+          <category> Docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+            <tag> container </tag>
             
         </tags>
       
@@ -1036,35 +1036,6 @@
     
     
     <entry>
-      <title>Linux-watch监视命令的命令</title>
-      <link href="posts/9670.html"/>
-      <url>posts/9670.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Ax-watch命令使用"><a href="#Ax-watch命令使用" class="headerlink" title="Ax watch命令使用"></a>Ax watch命令使用</h2><p>用于监视命令的输出</p><p><code>watch -n 1 'ls -l'</code></p><p>在cmd中上传一个文件到这个ls中，可以看到立马就出现了，因为这是每隔一秒就刷新的。</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210002914.png"></p><p>但是这样，我们不容易看出哪个是变化的，可以加入参数 -d 使其变色。</p><p><code>watch -d 'COMMAND'</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210003725.png"></p><h2 id="Bx-参考"><a href="#Bx-参考" class="headerlink" title="Bx 参考"></a>Bx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-            <tag> shell </tag>
-            
-            <tag> watch </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Linux-日志</title>
       <link href="posts/9563.html"/>
       <url>posts/9563.html</url>
@@ -1086,6 +1057,35 @@
             <tag> shell </tag>
             
             <tag> logger </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux-watch监视命令的命令</title>
+      <link href="posts/9670.html"/>
+      <url>posts/9670.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Ax-watch命令使用"><a href="#Ax-watch命令使用" class="headerlink" title="Ax watch命令使用"></a>Ax watch命令使用</h2><p>用于监视命令的输出</p><p><code>watch -n 1 'ls -l'</code></p><p>在cmd中上传一个文件到这个ls中，可以看到立马就出现了，因为这是每隔一秒就刷新的。</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210002914.png"></p><p>但是这样，我们不容易看出哪个是变化的，可以加入参数 -d 使其变色。</p><p><code>watch -d 'COMMAND'</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210003725.png"></p><h2 id="Bx-参考"><a href="#Bx-参考" class="headerlink" title="Bx 参考"></a>Bx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> shell </tag>
+            
+            <tag> watch </tag>
             
         </tags>
       
@@ -1446,35 +1446,6 @@
     
     
     <entry>
-      <title>Linux-shell编写mysql脚本</title>
-      <link href="posts/a9c6.html"/>
-      <url>posts/a9c6.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="Linux-shell编写mysql脚本"><a href="#Linux-shell编写mysql脚本" class="headerlink" title="Linux-shell编写mysql脚本"></a><a href="">Linux-shell编写mysql脚本</a></h1><blockquote><p>声明：以下代码中 &lt;&lt;表示 &lt;&lt; 因为会导致乱码 ，这漏洞真实多。。</p></blockquote><h2 id="Ax-编写脚本创建数据库、表"><a href="#Ax-编写脚本创建数据库、表" class="headerlink" title="Ax 编写脚本创建数据库、表"></a>Ax 编写脚本创建数据库、表</h2><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">#!/bin/bash</span><span class="token comment" spellcheck="true"># 创建数据库表</span><span class="token keyword">USER</span><span class="token operator">=</span><span class="token string">"root"</span>PASS<span class="token operator">=</span><span class="token string">"xxx"</span>mysql <span class="token operator">-</span>u $<span class="token keyword">USER</span>  <span class="token operator">-</span>p$PASS <span class="token operator">&lt;&lt;</span>EOF <span class="token number">2</span><span class="token operator">></span> <span class="token operator">/</span>dev<span class="token operator">/</span><span class="token boolean">null</span><span class="token keyword">create</span> <span class="token keyword">database</span> students<span class="token punctuation">;</span>EOF<span class="token punctuation">[</span> $? <span class="token operator">-</span>eq <span class="token number">0</span> <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> echo Created DB <span class="token operator">||</span> echo DB already existmysql <span class="token operator">-</span>u $<span class="token keyword">USER</span> <span class="token operator">-</span>p$PASS students <span class="token operator">&lt;&lt;</span>EOF <span class="token number">2</span><span class="token operator">></span> <span class="token operator">/</span>dev<span class="token operator">/</span><span class="token boolean">null</span><span class="token keyword">create</span> <span class="token keyword">table</span> students<span class="token punctuation">(</span>id <span class="token keyword">int</span><span class="token punctuation">,</span>name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">,</span>mark <span class="token keyword">int</span><span class="token punctuation">,</span>dept <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>EOF<span class="token punctuation">[</span> $? <span class="token operator">-</span>eq <span class="token number">0</span> <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> echo Created <span class="token keyword">table</span> students <span class="token operator">||</span> echo <span class="token keyword">Table</span> stduents already existmysql <span class="token operator">-</span>u $<span class="token keyword">USER</span> <span class="token operator">-</span>p$PASS students <span class="token operator">&lt;</span>\<span class="token operator">&lt;</span>EOF<span class="token keyword">delete</span> <span class="token keyword">from</span> students<span class="token punctuation">;</span>EOF</code></pre><p>运行脚本</p><p><code>bash create_db.sh</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203180544.png"></p><p>创建数据库表成功</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203180636.png"></p><h2 id="Bx-编写脚本插入数据"><a href="#Bx-编写脚本插入数据" class="headerlink" title="Bx 编写脚本插入数据"></a>Bx 编写脚本插入数据</h2><p>作为csv文件的数据，创建一个csv文件添加数据。</p><pre class=" language-csv"><code class="language-csv">1,Navin M,98,CS2,kavya M,70,CS3,Nawaz O,80,CS4,Hari S,80,EC5,Alex M,50,EC6,Neenu J,70,EC7,Bob A,30,EC8,Anu M,90,AE9,Sruthi,89,AE10,Andrew,89,AE</code></pre><p>编写第二个脚本，插入数据</p><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">#!/bin/bash</span><span class="token comment" spellcheck="true"># 插入数据</span><span class="token keyword">USER</span><span class="token operator">=</span><span class="token string">"root"</span>PASS<span class="token operator">=</span><span class="token string">"xxx"</span><span class="token keyword">if</span> <span class="token punctuation">[</span> $<span class="token comment" spellcheck="true"># -ne 1 ];</span><span class="token keyword">then</span>       echo $<span class="token number">0</span> DATAFILE       echo       <span class="token keyword">exit</span> <span class="token number">2</span>fi<span class="token keyword">data</span><span class="token operator">=</span>$<span class="token number">1</span><span class="token keyword">while</span> <span class="token keyword">read</span> line<span class="token punctuation">;</span><span class="token keyword">do</span>          oldIFS<span class="token operator">=</span>$IFS          IFS<span class="token operator">=</span><span class="token punctuation">,</span>          <span class="token keyword">values</span><span class="token operator">=</span><span class="token punctuation">(</span>$line<span class="token punctuation">)</span>          <span class="token keyword">values</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"\"</span><span class="token punctuation">`</span>echo ${<span class="token keyword">values</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>} <span class="token operator">|</span> tr <span class="token string">' '</span> '<span class="token comment" spellcheck="true">#'`\""</span>          <span class="token keyword">values</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"\"`echo ${values[3]}`\""</span>                      query<span class="token operator">=</span><span class="token punctuation">`</span>echo ${<span class="token keyword">values</span><span class="token punctuation">[</span>@<span class="token punctuation">]</span>} <span class="token operator">|</span> tr ' <span class="token comment" spellcheck="true">#' ', ' `</span>          IFS<span class="token operator">=</span>$oldIFS          mysql <span class="token operator">-</span>u $<span class="token keyword">USER</span> <span class="token operator">-</span>p$PASS students <span class="token operator">&lt;</span>\<span class="token operator">&lt;</span>EOF<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> students <span class="token keyword">VALUES</span><span class="token punctuation">(</span>$query<span class="token punctuation">)</span><span class="token punctuation">;</span>EOFdone<span class="token operator">&lt;</span> $<span class="token keyword">data</span>echo Wrote <span class="token keyword">data</span> <span class="token keyword">into</span> DB</code></pre><p>运行第二个脚本</p><pre class=" language-shell"><code class="language-shell">$ chmod +x write_to_db.sh$ ./write_to_db.sh data.csv</code></pre><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203191859.png"></p><h2 id="Cx-编写脚本查询数据"><a href="#Cx-编写脚本查询数据" class="headerlink" title="Cx 编写脚本查询数据"></a>Cx 编写脚本查询数据</h2><p>编写查询脚本</p><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">#! /bin/bash</span><span class="token comment" spellcheck="true"># 查询</span><span class="token keyword">USER</span><span class="token operator">=</span><span class="token string">"root"</span>PASS<span class="token operator">=</span><span class="token string">"xxx"</span>depts<span class="token operator">=</span><span class="token punctuation">`</span>mysql <span class="token operator">-</span>u $<span class="token keyword">USER</span> <span class="token operator">-</span>p$PASS students <span class="token operator">&lt;</span>\<span class="token operator">&lt;</span>EOF <span class="token operator">|</span> tail <span class="token operator">-</span>n  <span class="token operator">+</span><span class="token number">2</span><span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> dept <span class="token keyword">FROM</span> students<span class="token punctuation">;</span>EOF<span class="token punctuation">`</span><span class="token keyword">for</span> <span class="token number">d</span> <span class="token operator">in</span> $depts<span class="token punctuation">;</span><span class="token keyword">do</span>echo Department : $<span class="token number">d</span>result<span class="token operator">=</span><span class="token string">"`mysql -u $USER -p$PASS students &lt;&lt;EOFSET @i:=0;SELECT @i:=@i+1 as rank,name,mark FROM students WHERE dept="</span>$<span class="token number">d</span><span class="token string">" ORDER BY mark DESC;EOF`"</span>echo <span class="token string">"$result"</span>echodone</code></pre><p>运行查询脚本</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203193512.png"></p><p>进入数据库验证一下</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203194302.png"></p><h2 id="Dx-参考"><a href="#Dx-参考" class="headerlink" title="Dx 参考"></a>Dx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-            <tag> shell </tag>
-            
-            <tag> mysql </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Linux-系统信息收集</title>
       <link href="posts/f7f.html"/>
       <url>posts/f7f.html</url>
@@ -1496,6 +1467,35 @@
             <tag> shell </tag>
             
             <tag> 系统信息 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux-shell编写mysql脚本</title>
+      <link href="posts/a9c6.html"/>
+      <url>posts/a9c6.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Linux-shell编写mysql脚本"><a href="#Linux-shell编写mysql脚本" class="headerlink" title="Linux-shell编写mysql脚本"></a><a href="">Linux-shell编写mysql脚本</a></h1><blockquote><p>声明：以下代码中 &lt;&lt;表示 &lt;&lt; 因为会导致乱码 ，这漏洞真实多。。</p></blockquote><h2 id="Ax-编写脚本创建数据库、表"><a href="#Ax-编写脚本创建数据库、表" class="headerlink" title="Ax 编写脚本创建数据库、表"></a>Ax 编写脚本创建数据库、表</h2><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">#!/bin/bash</span><span class="token comment" spellcheck="true"># 创建数据库表</span><span class="token keyword">USER</span><span class="token operator">=</span><span class="token string">"root"</span>PASS<span class="token operator">=</span><span class="token string">"xxx"</span>mysql <span class="token operator">-</span>u $<span class="token keyword">USER</span>  <span class="token operator">-</span>p$PASS <span class="token operator">&lt;&lt;</span>EOF <span class="token number">2</span><span class="token operator">></span> <span class="token operator">/</span>dev<span class="token operator">/</span><span class="token boolean">null</span><span class="token keyword">create</span> <span class="token keyword">database</span> students<span class="token punctuation">;</span>EOF<span class="token punctuation">[</span> $? <span class="token operator">-</span>eq <span class="token number">0</span> <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> echo Created DB <span class="token operator">||</span> echo DB already existmysql <span class="token operator">-</span>u $<span class="token keyword">USER</span> <span class="token operator">-</span>p$PASS students <span class="token operator">&lt;&lt;</span>EOF <span class="token number">2</span><span class="token operator">></span> <span class="token operator">/</span>dev<span class="token operator">/</span><span class="token boolean">null</span><span class="token keyword">create</span> <span class="token keyword">table</span> students<span class="token punctuation">(</span>id <span class="token keyword">int</span><span class="token punctuation">,</span>name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">,</span>mark <span class="token keyword">int</span><span class="token punctuation">,</span>dept <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>EOF<span class="token punctuation">[</span> $? <span class="token operator">-</span>eq <span class="token number">0</span> <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> echo Created <span class="token keyword">table</span> students <span class="token operator">||</span> echo <span class="token keyword">Table</span> stduents already existmysql <span class="token operator">-</span>u $<span class="token keyword">USER</span> <span class="token operator">-</span>p$PASS students <span class="token operator">&lt;</span>\<span class="token operator">&lt;</span>EOF<span class="token keyword">delete</span> <span class="token keyword">from</span> students<span class="token punctuation">;</span>EOF</code></pre><p>运行脚本</p><p><code>bash create_db.sh</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203180544.png"></p><p>创建数据库表成功</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203180636.png"></p><h2 id="Bx-编写脚本插入数据"><a href="#Bx-编写脚本插入数据" class="headerlink" title="Bx 编写脚本插入数据"></a>Bx 编写脚本插入数据</h2><p>作为csv文件的数据，创建一个csv文件添加数据。</p><pre class=" language-csv"><code class="language-csv">1,Navin M,98,CS2,kavya M,70,CS3,Nawaz O,80,CS4,Hari S,80,EC5,Alex M,50,EC6,Neenu J,70,EC7,Bob A,30,EC8,Anu M,90,AE9,Sruthi,89,AE10,Andrew,89,AE</code></pre><p>编写第二个脚本，插入数据</p><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">#!/bin/bash</span><span class="token comment" spellcheck="true"># 插入数据</span><span class="token keyword">USER</span><span class="token operator">=</span><span class="token string">"root"</span>PASS<span class="token operator">=</span><span class="token string">"xxx"</span><span class="token keyword">if</span> <span class="token punctuation">[</span> $<span class="token comment" spellcheck="true"># -ne 1 ];</span><span class="token keyword">then</span>       echo $<span class="token number">0</span> DATAFILE       echo       <span class="token keyword">exit</span> <span class="token number">2</span>fi<span class="token keyword">data</span><span class="token operator">=</span>$<span class="token number">1</span><span class="token keyword">while</span> <span class="token keyword">read</span> line<span class="token punctuation">;</span><span class="token keyword">do</span>          oldIFS<span class="token operator">=</span>$IFS          IFS<span class="token operator">=</span><span class="token punctuation">,</span>          <span class="token keyword">values</span><span class="token operator">=</span><span class="token punctuation">(</span>$line<span class="token punctuation">)</span>          <span class="token keyword">values</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"\"</span><span class="token punctuation">`</span>echo ${<span class="token keyword">values</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>} <span class="token operator">|</span> tr <span class="token string">' '</span> '<span class="token comment" spellcheck="true">#'`\""</span>          <span class="token keyword">values</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"\"`echo ${values[3]}`\""</span>                      query<span class="token operator">=</span><span class="token punctuation">`</span>echo ${<span class="token keyword">values</span><span class="token punctuation">[</span>@<span class="token punctuation">]</span>} <span class="token operator">|</span> tr ' <span class="token comment" spellcheck="true">#' ', ' `</span>          IFS<span class="token operator">=</span>$oldIFS          mysql <span class="token operator">-</span>u $<span class="token keyword">USER</span> <span class="token operator">-</span>p$PASS students <span class="token operator">&lt;</span>\<span class="token operator">&lt;</span>EOF<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> students <span class="token keyword">VALUES</span><span class="token punctuation">(</span>$query<span class="token punctuation">)</span><span class="token punctuation">;</span>EOFdone<span class="token operator">&lt;</span> $<span class="token keyword">data</span>echo Wrote <span class="token keyword">data</span> <span class="token keyword">into</span> DB</code></pre><p>运行第二个脚本</p><pre class=" language-shell"><code class="language-shell">$ chmod +x write_to_db.sh$ ./write_to_db.sh data.csv</code></pre><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203191859.png"></p><h2 id="Cx-编写脚本查询数据"><a href="#Cx-编写脚本查询数据" class="headerlink" title="Cx 编写脚本查询数据"></a>Cx 编写脚本查询数据</h2><p>编写查询脚本</p><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">#! /bin/bash</span><span class="token comment" spellcheck="true"># 查询</span><span class="token keyword">USER</span><span class="token operator">=</span><span class="token string">"root"</span>PASS<span class="token operator">=</span><span class="token string">"xxx"</span>depts<span class="token operator">=</span><span class="token punctuation">`</span>mysql <span class="token operator">-</span>u $<span class="token keyword">USER</span> <span class="token operator">-</span>p$PASS students <span class="token operator">&lt;</span>\<span class="token operator">&lt;</span>EOF <span class="token operator">|</span> tail <span class="token operator">-</span>n  <span class="token operator">+</span><span class="token number">2</span><span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> dept <span class="token keyword">FROM</span> students<span class="token punctuation">;</span>EOF<span class="token punctuation">`</span><span class="token keyword">for</span> <span class="token number">d</span> <span class="token operator">in</span> $depts<span class="token punctuation">;</span><span class="token keyword">do</span>echo Department : $<span class="token number">d</span>result<span class="token operator">=</span><span class="token string">"`mysql -u $USER -p$PASS students &lt;&lt;EOFSET @i:=0;SELECT @i:=@i+1 as rank,name,mark FROM students WHERE dept="</span>$<span class="token number">d</span><span class="token string">" ORDER BY mark DESC;EOF`"</span>echo <span class="token string">"$result"</span>echodone</code></pre><p>运行查询脚本</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203193512.png"></p><p>进入数据库验证一下</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203194302.png"></p><h2 id="Dx-参考"><a href="#Dx-参考" class="headerlink" title="Dx 参考"></a>Dx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> shell </tag>
+            
+            <tag> mysql </tag>
             
         </tags>
       
@@ -2381,11 +2381,11 @@
     
     
     <entry>
-      <title>Mysql数据库之彻底删除</title>
-      <link href="posts/1adb.html"/>
-      <url>posts/1adb.html</url>
+      <title>Mysql数据库之安装</title>
+      <link href="posts/579.html"/>
+      <url>posts/579.html</url>
       
-        <content type="html"><![CDATA[<h1 id="Mysql数据库之彻底卸载"><a href="#Mysql数据库之彻底卸载" class="headerlink" title="Mysql数据库之彻底卸载"></a>Mysql数据库之彻底卸载</h1><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/t0197520a0763752dbb.jpg"></p><h2 id="Xa-场景"><a href="#Xa-场景" class="headerlink" title="Xa 场景"></a>Xa 场景</h2><blockquote><p>有时候在卸载mysql后，再次安装总会出错，这时我们就需要彻底的把它删除，干干净净的。</p></blockquote><h4 id="Menu-目录"><a href="#Menu-目录" class="headerlink" title="Menu 目录"></a>Menu 目录</h4><ul><li>软件卸载</li><li>隐藏文件</li><li>删注册表</li></ul><h2 id="Xb-方法"><a href="#Xb-方法" class="headerlink" title="Xb 方法"></a>Xb 方法</h2><h4 id="Ax-软件卸载"><a href="#Ax-软件卸载" class="headerlink" title="Ax 软件卸载"></a>Ax 软件卸载</h4><ol><li><p><strong>快捷键<code>Ctrl + R</code>打开运行</strong></p></li><li><p><strong>输入<code>control</code>打开控制台</strong></p></li><li><p><strong>点击卸载程序</strong></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209235001737.png"></p></li><li><p><strong>搜索mysql，卸载</strong></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209235042761.png"></p></li></ol><h4 id="Bx-隐藏文件"><a href="#Bx-隐藏文件" class="headerlink" title="Bx 隐藏文件"></a>Bx 隐藏文件</h4><ol><li><p>打开隐藏文件夹</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209235217352.png"></p></li><li><p>删除隐藏目录下的MySQL</p><p><code>C:\ProgramData\MySQL</code></p></li></ol><h4 id="Cx-删注册表"><a href="#Cx-删注册表" class="headerlink" title="Cx 删注册表"></a>Cx 删注册表</h4><ol><li><p><strong>快捷键<code>Ctrl + R</code>打开运行</strong></p></li><li><p>输入<code>regedit</code>打开注册表</p></li><li><p>删除以下注册表，如果没有查到的就不用管</p><pre class=" language-html"><code class="language-html">HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Eventlog\Application\MySQLHKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\Eventlog\Application\MySQLHKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application\MySQL</code></pre></li></ol><h2 id="Xc-参考"><a href="#Xc-参考" class="headerlink" title="Xc 参考"></a>Xc 参考</h2><p>[1] <a href="https://www.cnblogs.com/hskw/p/9298108.html">https://www.cnblogs.com/hskw/p/9298108.html</a><br>[2] <a href="https://www.jb51.net/article/52806.htm">https://www.jb51.net/article/52806.htm</a></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+        <content type="html"><![CDATA[<h1 id="Mysql数据库之安装"><a href="#Mysql数据库之安装" class="headerlink" title="Mysql数据库之安装"></a>Mysql数据库之安装</h1><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/t0148bbf85c878da0b8.jpg"></p><h2 id="Ax-Introduction-介绍"><a href="#Ax-Introduction-介绍" class="headerlink" title="Ax Introduction 介绍"></a>Ax Introduction 介绍</h2><p>MySQL是世界上最受欢迎的开源数据库。无论您是快速增长的Web资产，技术ISV还是大型企业，MySQL都能经济高效地帮助您交付高性能，可扩展的数据库应用程序。</p><h2 id="Bx-Installation-安装"><a href="#Bx-Installation-安装" class="headerlink" title="Bx Installation 安装"></a>Bx Installation 安装</h2><h4 id="a-下载"><a href="#a-下载" class="headerlink" title="a 下载"></a>a 下载</h4><p><a href="https://dev.mysql.com/downloads/">https://dev.mysql.com/downloads/</a></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209230859167.png"></p><p>上面那个是web版本，所以我们选择下面的。</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209231255940.png"></p><h4 id="b-安装"><a href="#b-安装" class="headerlink" title="b 安装"></a>b 安装</h4><blockquote><p>以下没有提到的全默认。</p></blockquote><ol><li>Choosing Setup Type 选择<code>Custom</code></li><li>Select Products and Features 选择 <code>MySQL Server -&gt; MySQL Server 8.0 -&gt; MySQL Server 8.0.18-X64</code>点击绿色移动到右边 Next</li></ol><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209232022372.png"><br>3. Accounts and Roles 输入你的Root密码两次，<code>Next</code><br>4. Windows Service 步骤可以更改MySQL的服务名，取消开机自启（下面的勾勾取消）<br>5. Apply Configuration 最后一步，<code>Excute</code>=&gt;<code>Finish</code></p><h4 id="C-环境变量"><a href="#C-环境变量" class="headerlink" title="C 环境变量"></a>C 环境变量</h4><p>我的电脑 =&gt;属性 =&gt;高级系统设置 =&gt;环境变量=&gt;系统环境变量</p><p>找到Path，编辑，新建，添加下面这个（如果不是默认的以你安装的路径为准）</p><p><code>C:\Program Files\MySQL\MySQL Server 8.0\bin</code></p><h2 id="Cx-Verification-验证"><a href="#Cx-Verification-验证" class="headerlink" title="Cx Verification 验证"></a>Cx Verification 验证</h2><h4 id="a-打开CMD-开启服务"><a href="#a-打开CMD-开启服务" class="headerlink" title="a 打开CMD,开启服务"></a>a 打开CMD,开启服务</h4><p><code>net start MySQLIk</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209233406604.png"></p><h4 id="b-连接数据库"><a href="#b-连接数据库" class="headerlink" title="b 连接数据库"></a>b 连接数据库</h4><p><code>mysql -uroot -p</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209233644081.png"></p><h2 id="Dx-References-参考"><a href="#Dx-References-参考" class="headerlink" title="Dx References 参考"></a>Dx References 参考</h2><p>[1] <a href="https://www.mysql.com/products/">https://www.mysql.com/products/</a></p><p>[2] <a href="https://www.cnblogs.com/xiaokang01/p/12092160.html">https://www.cnblogs.com/xiaokang01/p/12092160.html</a></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       
       
       <categories>
@@ -2406,11 +2406,11 @@
     
     
     <entry>
-      <title>Mysql数据库之安装</title>
-      <link href="posts/579.html"/>
-      <url>posts/579.html</url>
+      <title>Mysql数据库之彻底删除</title>
+      <link href="posts/1adb.html"/>
+      <url>posts/1adb.html</url>
       
-        <content type="html"><![CDATA[<h1 id="Mysql数据库之安装"><a href="#Mysql数据库之安装" class="headerlink" title="Mysql数据库之安装"></a>Mysql数据库之安装</h1><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/t0148bbf85c878da0b8.jpg"></p><h2 id="Ax-Introduction-介绍"><a href="#Ax-Introduction-介绍" class="headerlink" title="Ax Introduction 介绍"></a>Ax Introduction 介绍</h2><p>MySQL是世界上最受欢迎的开源数据库。无论您是快速增长的Web资产，技术ISV还是大型企业，MySQL都能经济高效地帮助您交付高性能，可扩展的数据库应用程序。</p><h2 id="Bx-Installation-安装"><a href="#Bx-Installation-安装" class="headerlink" title="Bx Installation 安装"></a>Bx Installation 安装</h2><h4 id="a-下载"><a href="#a-下载" class="headerlink" title="a 下载"></a>a 下载</h4><p><a href="https://dev.mysql.com/downloads/">https://dev.mysql.com/downloads/</a></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209230859167.png"></p><p>上面那个是web版本，所以我们选择下面的。</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209231255940.png"></p><h4 id="b-安装"><a href="#b-安装" class="headerlink" title="b 安装"></a>b 安装</h4><blockquote><p>以下没有提到的全默认。</p></blockquote><ol><li>Choosing Setup Type 选择<code>Custom</code></li><li>Select Products and Features 选择 <code>MySQL Server -&gt; MySQL Server 8.0 -&gt; MySQL Server 8.0.18-X64</code>点击绿色移动到右边 Next</li></ol><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209232022372.png"><br>3. Accounts and Roles 输入你的Root密码两次，<code>Next</code><br>4. Windows Service 步骤可以更改MySQL的服务名，取消开机自启（下面的勾勾取消）<br>5. Apply Configuration 最后一步，<code>Excute</code>=&gt;<code>Finish</code></p><h4 id="C-环境变量"><a href="#C-环境变量" class="headerlink" title="C 环境变量"></a>C 环境变量</h4><p>我的电脑 =&gt;属性 =&gt;高级系统设置 =&gt;环境变量=&gt;系统环境变量</p><p>找到Path，编辑，新建，添加下面这个（如果不是默认的以你安装的路径为准）</p><p><code>C:\Program Files\MySQL\MySQL Server 8.0\bin</code></p><h2 id="Cx-Verification-验证"><a href="#Cx-Verification-验证" class="headerlink" title="Cx Verification 验证"></a>Cx Verification 验证</h2><h4 id="a-打开CMD-开启服务"><a href="#a-打开CMD-开启服务" class="headerlink" title="a 打开CMD,开启服务"></a>a 打开CMD,开启服务</h4><p><code>net start MySQLIk</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209233406604.png"></p><h4 id="b-连接数据库"><a href="#b-连接数据库" class="headerlink" title="b 连接数据库"></a>b 连接数据库</h4><p><code>mysql -uroot -p</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209233644081.png"></p><h2 id="Dx-References-参考"><a href="#Dx-References-参考" class="headerlink" title="Dx References 参考"></a>Dx References 参考</h2><p>[1] <a href="https://www.mysql.com/products/">https://www.mysql.com/products/</a></p><p>[2] <a href="https://www.cnblogs.com/xiaokang01/p/12092160.html">https://www.cnblogs.com/xiaokang01/p/12092160.html</a></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+        <content type="html"><![CDATA[<h1 id="Mysql数据库之彻底卸载"><a href="#Mysql数据库之彻底卸载" class="headerlink" title="Mysql数据库之彻底卸载"></a>Mysql数据库之彻底卸载</h1><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/t0197520a0763752dbb.jpg"></p><h2 id="Xa-场景"><a href="#Xa-场景" class="headerlink" title="Xa 场景"></a>Xa 场景</h2><blockquote><p>有时候在卸载mysql后，再次安装总会出错，这时我们就需要彻底的把它删除，干干净净的。</p></blockquote><h4 id="Menu-目录"><a href="#Menu-目录" class="headerlink" title="Menu 目录"></a>Menu 目录</h4><ul><li>软件卸载</li><li>隐藏文件</li><li>删注册表</li></ul><h2 id="Xb-方法"><a href="#Xb-方法" class="headerlink" title="Xb 方法"></a>Xb 方法</h2><h4 id="Ax-软件卸载"><a href="#Ax-软件卸载" class="headerlink" title="Ax 软件卸载"></a>Ax 软件卸载</h4><ol><li><p><strong>快捷键<code>Ctrl + R</code>打开运行</strong></p></li><li><p><strong>输入<code>control</code>打开控制台</strong></p></li><li><p><strong>点击卸载程序</strong></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209235001737.png"></p></li><li><p><strong>搜索mysql，卸载</strong></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209235042761.png"></p></li></ol><h4 id="Bx-隐藏文件"><a href="#Bx-隐藏文件" class="headerlink" title="Bx 隐藏文件"></a>Bx 隐藏文件</h4><ol><li><p>打开隐藏文件夹</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209235217352.png"></p></li><li><p>删除隐藏目录下的MySQL</p><p><code>C:\ProgramData\MySQL</code></p></li></ol><h4 id="Cx-删注册表"><a href="#Cx-删注册表" class="headerlink" title="Cx 删注册表"></a>Cx 删注册表</h4><ol><li><p><strong>快捷键<code>Ctrl + R</code>打开运行</strong></p></li><li><p>输入<code>regedit</code>打开注册表</p></li><li><p>删除以下注册表，如果没有查到的就不用管</p><pre class=" language-html"><code class="language-html">HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Eventlog\Application\MySQLHKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\Eventlog\Application\MySQLHKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application\MySQL</code></pre></li></ol><h2 id="Xc-参考"><a href="#Xc-参考" class="headerlink" title="Xc 参考"></a>Xc 参考</h2><p>[1] <a href="https://www.cnblogs.com/hskw/p/9298108.html">https://www.cnblogs.com/hskw/p/9298108.html</a><br>[2] <a href="https://www.jb51.net/article/52806.htm">https://www.jb51.net/article/52806.htm</a></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       
       
       <categories>
