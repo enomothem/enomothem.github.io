@@ -41,8 +41,8 @@
     <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -450,6 +450,7 @@
                             <li class="bing_s">必   应</li>
                             <li class="google_s">谷   歌</li>
                             <li class="baidu_s">百   度</li>
+                            <li class="yandex_s">Yandex</li>
                         </ul>
                     </div> <input name="wd" id="kw-2" maxlength="100" autocomplete="off" type="text">
                 </div>
@@ -566,7 +567,51 @@
                 </div>
             </div>
         </div>
+
+         <script> 
+ /*选择搜索引擎*/
+  $('.Select-box ul').hover(function () { $(this).css('height', 'auto') }, function () { $(this).css('height', '40px') });
+  $('.Select-box-2 ul').hover(function () { $(this).css('height', 'auto') }, function () { $(this).css('height', '46px') });
+  $('.Select-box li').click(function () { var _tihs = $(this).attr('class'); var _html = $(this).html(); if (_tihs == 'baidu_s') 
+  { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; }
+   if (_tihs == 'google_s') 
+   { _tihs = 'https://www.google.com/search'; _name = 'q'; } 
+   if (_tihs == 'bing_s')
+   { _tihs = 'https://www.yandex.com/search'; _name = 'q'; }
+   if (_tihs == 'yandex_s')
+   { _tihs = 'https://www.yandex.com/search'; _name = 'q'; }  
+   $('.baidu form').attr('action', _tihs);
+   $('.this_s').html(_html); $('#kw').attr('name', _name); 
+   $('.Select-box ul').css('height', '40px') }
+  ); 
+  $('.Select-box-2 li').click(function () { var _tihs = $(this).attr('class'); var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } 
+  if (_tihs == 'google_s') 
+  { _tihs = 'https://www.google.com/search'; _name = 'q'; } 
+  if (_tihs == 'bing_s') 
+  { _tihs = 'https://www.yandex.com/search'; _name = 'q'; } 
+  if (_tihs == 'yandex_s') 
+  { _tihs = 'https://www.yandex.com/search'; _name = 'q'; } 
+  $('.baidu form').attr('action', _tihs);
+  $('.this_s').html(_html); 
+  $('#kw-2').attr('name', _name); 
+  $('.Select-box-2 ul').css('height', '48px') }); 
+  //清空输入框内容 
+  $('.qingkong').click(function () { cls(); $(this).css('display', 'none') }); function cls() { var sum = 0; var t = document.getElementsByTagName("INPUT"); for (var i = 0; i < t.length; i++) { if (t[i].type == 'text') { ++sum; t[i].value = "";//清空 } } } 
+  //清空输入框按钮的显示和隐藏 
+  function if_btn() { var btn_obj = document.getElementById("kw") || document.getElementById("kw-2"); var cls_btn = document.getElementById("qingkong"); var btn_obj_val; var times; 
+  //当元素获得焦点时 
+  if (btn_obj == '' || btn_obj == null) { return false; 
+  //如果没有找到这个元素，则将函数返回，不继续执行 
+  } btn_obj.onfocus = function () { times = setInterval(function ()
+  { btn_obj_val = btn_obj.value; if (btn_obj_val != 0) { cls_btn.style.display = "block"; } 
+  else 
+  { cls_btn.style.display = "none"; } }, 200); } 
+  //元素失去焦点时 btn_obj.onblur = function () { clearInterval(times); } } </script>
+
+/*
         <script> /*选择搜索引擎*/ $('.Select-box ul').hover(function () { $(this).css('height', 'auto') }, function () { $(this).css('height', '40px') }); $('.Select-box-2 ul').hover(function () { $(this).css('height', 'auto') }, function () { $(this).css('height', '46px') }); $('.Select-box li').click(function () { var _tihs = $(this).attr('class'); var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } if (_tihs == 'google_s') { _tihs = 'https://www.google.com/search'; _name = 'q'; } if (_tihs == 'bing_s') { _tihs = 'https://www.bing.com/search'; _name = 'q'; } $('.baidu form').attr('action', _tihs); $('.this_s').html(_html); $('#kw').attr('name', _name); $('.Select-box ul').css('height', '40px') }); $('.Select-box-2 li').click(function () { var _tihs = $(this).attr('class'); var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } if (_tihs == 'google_s') { _tihs = 'https://www.google.com/search'; _name = 'q'; } if (_tihs == 'bing_s') { _tihs = 'https://www.bing.com/search'; _name = 'q'; } $('.baidu form').attr('action', _tihs); $('.this_s').html(_html); $('#kw-2').attr('name', _name); $('.Select-box-2 ul').css('height', '48px') }); //清空输入框内容 $('.qingkong').click(function () { cls(); $(this).css('display', 'none') }); function cls() { var sum = 0; var t = document.getElementsByTagName("INPUT"); for (var i = 0; i < t.length; i++) { if (t[i].type == 'text') { ++sum; t[i].value = "";//清空 } } } //清空输入框按钮的显示和隐藏 function if_btn() { var btn_obj = document.getElementById("kw") || document.getElementById("kw-2"); var cls_btn = document.getElementById("qingkong"); var btn_obj_val; var times; //当元素获得焦点时 if (btn_obj == '' || btn_obj == null) { return false; //如果没有找到这个元素，则将函数返回，不继续执行 } btn_obj.onfocus = function () { times = setInterval(function () { btn_obj_val = btn_obj.value; if (btn_obj_val != 0) { cls_btn.style.display = "block"; } else { cls_btn.style.display = "none"; } }, 200); } //元素失去焦点时 btn_obj.onblur = function () { clearInterval(times); } } </script>
+*/
+
     </div>
 </div>
 <style>
@@ -853,6 +898,10 @@
 <script>
     $('.bg-cover').css('background-image', 'url(https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/sunset.jpg)');
 </script>
+
+
+
+
 
 
 
