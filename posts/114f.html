@@ -616,21 +616,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-02
+                    2021-06-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    136
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -652,7 +652,7 @@
             <div id="articleContent">
                 <h2 id="Ax-find命令使用"><a href="#Ax-find命令使用" class="headerlink" title="Ax find命令使用"></a>Ax find命令使用</h2><p>沿着文件层次结构向下遍历，匹配符合条件的文件，执行相应的操作。</p>
 <p>find [-H] [-L] [-P] [-D debugopts] [-Olevel] [starting-point…] [expression]</p>
-<h3 id="a-版本号"><a href="#a-版本号" class="headerlink" title="a 版本号"></a>a 版本号</h3><p><code>find --version</code> or <code>find -version</code></p>
+<h3 id="a-版本号"><a href="#a-版本号" class="headerlink" title="a  版本号"></a>a  版本号</h3><p><code>find --version</code> or <code>find -version</code></p>
 <pre class=" language-sh"><code class="language-sh">find (GNU findutils) 4.7.0
 Copyright (C) 2019 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
@@ -662,8 +662,84 @@ There is NO WARRANTY, to the extent permitted by law.
 Written by Eric B. Decker, James Youngman, and Kevin Dalley.
 Features enabled: D_TYPE O_NOFOLLOW(enabled) LEAF_OPTIMISATION FTS(FTS_CWDFD) CBO(level=2)
 </code></pre>
-<p>b</p>
+<h3 id="b-命令格式"><a href="#b-命令格式" class="headerlink" title="b  命令格式"></a>b  命令格式</h3><p>路径表示方法</p>
+<ul>
+<li>   ~ 表示$HOME目录</li>
+<li>​    <strong>.</strong> 表示当前目录</li>
+<li>​    / 表示根目录</li>
+</ul>
+<pre class=" language-shell"><code class="language-shell">-name&nbsp;&nbsp;&nbsp;filename &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查找名为filename的文件
+-perm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#按执行权限来查找
+-user&nbsp;&nbsp;&nbsp;&nbsp;username&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;#按文件属主来查找
+-group groupname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   #按组来查找
+-mtime&nbsp;&nbsp;&nbsp;-n +n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#按文件更改时间来查找文件，-n指n天以内，+n指n天以前
+-atime&nbsp;&nbsp;&nbsp;&nbsp;-n +n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#按文件访问时间来查找文件，-n指n天以内，+n指n天以前
+-ctime&nbsp;&nbsp;&nbsp;&nbsp;-n +n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#按文件创建时间来查找文件，-n指n天以内，+n指n天以前
+-nogroup &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查无有效属组的文件，即文件的属组在/etc/groups中不存在
+-nouser &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查无有效属主的文件，即文件的属主在/etc/passwd中不存
+-type&nbsp;&nbsp;&nbsp;&nbsp;b/d/c/p/l/f &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查是块设备、目录、字符设备、管道、符号链接、普通文件
+-size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n[c] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查长度为n块[或n字节]的文件
+-mount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查文件时不跨越文件系统mount点
+-follow &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#如果遇到符号链接文件，就跟踪链接所指的文件
+-prune &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#忽略某个目录
+</code></pre>
+<h3 id="c-按名字查找"><a href="#c-按名字查找" class="headerlink" title="c  按名字查找"></a>c  按名字查找</h3><p>   在当前目录及子目录中，查找大写字母开头的txt文件<br>   <code>$ find . -name '[A-Z]*.txt' -print</code>　</p>
+<p>   在/etc及其子目录中，查找host开头的文件<br>   <code>$ find /etc -name 'host*' -print</code> 　</p>
+<p>   在$HOME目录及其子目录中，查找所有文件 　　<br>   <code>$ find ~ -name '*' -print</code> </p>
+<p>  在当前目录及子目录中，查找不是out开头的txt文件 　　<br>   <code>$ find . -name "out*" -prune -o -name "*.txt" -print</code> </p>
+<h3 id="d-按目录查找"><a href="#d-按目录查找" class="headerlink" title="d  按目录查找"></a>d  按目录查找</h3><p>在当前目录除democracy之外的子目录内搜索*.eon文件 </p>
+<p><code>find . -path "./democracy" -prune -o -name "*.eon" -print</code></p>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210609170529996.png"></p>
+<p>在当前目录查找出democracy和science之外的目录中的.eon文件</p>
+<p><code>find . \( -path "./democracy" -o -path "./science" \)  -a  -prune -o -name "*.eon" -print</code></p>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210609172842798.png"></p>
+<h3 id="e-按权限找"><a href="#e-按权限找" class="headerlink" title="e  按权限找"></a>e  按权限找</h3><p><code>find . -perm 755 -print</code></p>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210609185658606.png"></p>
+<h3 id="f-按类型找"><a href="#f-按类型找" class="headerlink" title="f 按类型找"></a>f 按类型找</h3><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210609185829807.png"></p>
+<h3 id="g-按时间找"><a href="#g-按时间找" class="headerlink" title="g  按时间找"></a>g  按时间找</h3><pre class=" language-shell"><code class="language-shell">  # 查找2天内被更改过的文件 
+   $ find . -mtime -2 -type f -print 　　
+
+  # 查找2天前被更改过的文件 
+  $ find . -mtime +2 -type f -print 　　
+
+  # 查找一天内被访问的文件 
+  $ find . -atime -1 -type f -print 　　
+
+  # 查找一天前被访问的文件 
+  $ find . -atime +1 -type f -print 　　
+
+  # 查找一天内状态被改变的文件 
+  $ find . -ctime -1 -type f -print 　　
+
+ #  查找一天前状态被改变的文件 
+  $ find . -ctime +1 -type f -print 　　
+
+  # 查找10分钟以前状态被改变的文件 
+  $ find . -cmin +10 -type f -print 
+</code></pre>
+<h3 id="h-按大小"><a href="#h-按大小" class="headerlink" title="h 按大小"></a>h 按大小</h3><pre class=" language-shell"><code class="language-shell">  # 查找超过1M的文件 
+  $ find / -size +1M -type f -print 　　
+
+  # 查找等于6字节的文件 
+  $ find . -size 6c -print 　　
+
+  # 查找小于32k的文件 
+  $ find . -size -32k -print 
+</code></pre>
+<p>执行命令</p>
+<p>   1）查找 del.txt 并删除，删除前提示确认<br>   <code>$ find . -name 'del.txt' -ok rm {} \;</code> </p>
+<p>   2） 查找 aa.txt 并备份为aa.txt.bak<br>   <code>$ find . -name 'aa.txt' -exec cp {} {}.bak \;</code></p>
+<p>   3）查当前目录下的所有普通文件<br>   <code># find . -type f -exec ls -l {} \;</code></p>
+<ol start="4">
+<li>在 /logs 目录中查找更改时间在5日以前的文件并删除它们<br><code>$ find logs -type f -mtime +5 -exec  -ok  rm {} \;</code></li>
+</ol>
+<p>  5）查询当天修改过的文件<br>     <code># find  ./  -mtime  -1  -type f  -exec  ls -l  {} \;</code></p>
+<ol start="6">
+<li>查询文件并询问是否要显示</li>
+</ol>
+<p>​    <code># find  ./  -mtime  -1  -type f  -ok  ls -l  {} \;</code> </p>
 <h2 id="Bx-参考"><a href="#Bx-参考" class="headerlink" title="Bx 参考"></a>Bx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p>
+<p>[2] <a target="_blank" rel="noopener" href="https://blog.csdn.net/l_liangkk/article/details/81294260">https://blog.csdn.net/l_liangkk/article/details/81294260</a></p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
                 
             </div>
@@ -1170,68 +1246,9 @@ Features enabled: D_TYPE O_NOFOLLOW(enabled) LEAF_OPTIMISATION FTS(FTS_CWDFD) CB
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
-            <div class="card">
-                <a href="/posts/114f.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/15.jpg" class="responsive-img" alt="Linux-find命令查找文件">
-                        
-                        <span class="card-title">Linux-find命令查找文件</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-01
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
-                    </a>
-                    
-                    <a href="/tags/shell/">
-                        <span class="chip bg-color">shell</span>
-                    </a>
-                    
-                    <a href="/tags/find/">
-                        <span class="chip bg-color">find</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/posts/d95c.html">
                     <div class="card-image">
@@ -1249,9 +1266,9 @@ Features enabled: D_TYPE O_NOFOLLOW(enabled) LEAF_OPTIMISATION FTS(FTS_CWDFD) CB
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-01
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1277,6 +1294,58 @@ Features enabled: D_TYPE O_NOFOLLOW(enabled) LEAF_OPTIMISATION FTS(FTS_CWDFD) CB
                     
                     <a href="/tags/cat/">
                         <span class="chip bg-color">cat</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/f365.html">
+                    <div class="card-image">
+                        
+                        <img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509122542428.png" class="responsive-img" alt="Metasploit-Android attack">
+                        
+                        <span class="card-title">Metasploit-Android attack</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" class="post-category">
+                                    渗透测试
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Metasploit/">
+                        <span class="chip bg-color">Metasploit</span>
+                    </a>
+                    
+                    <a href="/tags/android/">
+                        <span class="chip bg-color">android</span>
                     </a>
                     
                 </div>
@@ -1561,7 +1630,7 @@ Features enabled: D_TYPE O_NOFOLLOW(enabled) LEAF_OPTIMISATION FTS(FTS_CWDFD) CB
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">213.8k</span>&nbsp;字
+                class="white-color">214.8k</span>&nbsp;字
             
             
             
