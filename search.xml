@@ -89,33 +89,6 @@
     
     
     <entry>
-      <title>Docker-vulscan</title>
-      <link href="posts/8aec.html"/>
-      <url>posts/8aec.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Ax-安装v3版本的漏洞扫描器"><a href="#Ax-安装v3版本的漏洞扫描器" class="headerlink" title="Ax 安装v3版本的漏洞扫描器"></a>Ax 安装v3版本的漏洞扫描器</h2><p>pull 拉取下载镜像</p><p><code>docker&nbsp;pull&nbsp;leishianquan/awvs-nessus:v03</code></p><p>启动</p><p><code>docker&nbsp;run&nbsp;-it&nbsp;-d&nbsp;-p&nbsp;13443:3443&nbsp;-p&nbsp;8834:8834&nbsp;leishianquan/awvs-nessus:v03</code></p><p>需要注意的是访问Nessus需要进入容器启动Nessus&nbsp;服务：</p><p>查看容器</p><p><code>Docker ps –a</code></p><p>启动容器</p><p><code>Docker start 容器id</code></p><p>进入容器</p><p><code>Docker exec –it 容器id /bin/bash</code></p><p>启动nessus服务</p><p><code>/etc/init.d/nessusd start</code></p><p>￼</p><p>破解awvs：<br><code>cp /home/license_info.json /home/acunetix/.acunetix/data/license/</code><br>Nessus:</p><pre class=" language-txt"><code class="language-txt">https://127.0.0.1:8834/#/nessus username:leishinessus password:leishianquan</code></pre><p>Awvs13.0.200625101：</p><pre class=" language-txt"><code class="language-txt">https://127.0.0.1:13443/awvs13 username: leishi@leishi.comawvs13 password:&nbsp;Leishi123</code></pre><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      
-      
-      <categories>
-          
-          <category> Docker </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> docker </tag>
-            
-            <tag> vulscan </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Docker-container</title>
       <link href="posts/264c.html"/>
       <url>posts/264c.html</url>
@@ -135,6 +108,33 @@
             <tag> docker </tag>
             
             <tag> container </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Docker-vulscan</title>
+      <link href="posts/8aec.html"/>
+      <url>posts/8aec.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Ax-安装v3版本的漏洞扫描器"><a href="#Ax-安装v3版本的漏洞扫描器" class="headerlink" title="Ax 安装v3版本的漏洞扫描器"></a>Ax 安装v3版本的漏洞扫描器</h2><p>pull 拉取下载镜像</p><p><code>docker&nbsp;pull&nbsp;leishianquan/awvs-nessus:v03</code></p><p>启动</p><p><code>docker&nbsp;run&nbsp;-it&nbsp;-d&nbsp;-p&nbsp;13443:3443&nbsp;-p&nbsp;8834:8834&nbsp;leishianquan/awvs-nessus:v03</code></p><p>需要注意的是访问Nessus需要进入容器启动Nessus&nbsp;服务：</p><p>查看容器</p><p><code>Docker ps –a</code></p><p>启动容器</p><p><code>Docker start 容器id</code></p><p>进入容器</p><p><code>Docker exec –it 容器id /bin/bash</code></p><p>启动nessus服务</p><p><code>/etc/init.d/nessusd start</code></p><p>￼</p><p>破解awvs：<br><code>cp /home/license_info.json /home/acunetix/.acunetix/data/license/</code><br>Nessus:</p><pre class=" language-txt"><code class="language-txt">https://127.0.0.1:8834/#/nessus username:leishinessus password:leishianquan</code></pre><p>Awvs13.0.200625101：</p><pre class=" language-txt"><code class="language-txt">https://127.0.0.1:13443/awvs13 username: leishi@leishi.comawvs13 password:&nbsp;Leishi123</code></pre><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      
+      
+      <categories>
+          
+          <category> Docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+            <tag> vulscan </tag>
             
         </tags>
       
@@ -224,31 +224,6 @@
     
     
     <entry>
-      <title>HTML学习笔记-网页基础框架</title>
-      <link href="posts/8eb2.html"/>
-      <url>posts/8eb2.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="一、实验步骤模板"><a href="#一、实验步骤模板" class="headerlink" title="一、实验步骤模板"></a>一、实验步骤模板</h2><h3 id="1-实验步骤"><a href="#1-实验步骤" class="headerlink" title="1.实验步骤"></a>1.实验步骤</h3><p>1.1 打开记事本程序或者安装Notepad++应用程序。</p><p>1.2 输入能够生成如课本P69中图2-37所示页面的HTML源代码，分别保存为study.html、title.html、chapter.html、chap1.html~chap8.html文件。</p><p>1.3 双击study.html文件，在浏览器中查看结果。</p><p>1.4 参考代码</p><p>1.4.1 页面布局</p><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>frameset</span> <span class="token attr-name">rows</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>*,482<span class="token punctuation">"</span></span> <span class="token attr-name">border</span><span class="token attr-value"><span class="token punctuation">=</span>0</span><span class="token punctuation">></span></span>  &lt;frame src="top.html" noresize marginwidth =5 name="win003">     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>frameset</span> <span class="token attr-name">cols</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>25%,*<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>frame</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>chapter.html<span class="token punctuation">"</span></span> <span class="token attr-name">scrolling</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>no<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>win001<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>frame</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>chap1.html<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>win002<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>frameset</span><span class="token punctuation">></span></span>   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>frameset</span><span class="token punctuation">></span></span></code></pre><p>1.4.2  form表单提交</p><pre class=" language-html"><code class="language-html">用户名：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 密码：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">password</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>登录<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>注册<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre><p>1.4.3 超链接</p><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>chap1.html<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>win002<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>第一章 Web编程基础知识<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>chap2.html<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>win002<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>第二章 Web程序开发与运行环境<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span></code></pre><h3 id="2-程序运行结果"><a href="#2-程序运行结果" class="headerlink" title="2.程序运行结果"></a>2.程序运行结果</h3><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/clip_image002.jpg"></p><h3 id="3-实验要求及提示-可选"><a href="#3-实验要求及提示-可选" class="headerlink" title="3.实验要求及提示(可选)"></a>3.实验要求及提示(可选)</h3><p>（1）  设计课本P69页面中图2-37所示的《Web程序设计》课程网站的“教学内容”</p><p>框架页面</p><p>（2）  在“教学内容”页面中，左边为各章标题，每章标题都是超链接，单击章标 </p><p>题后，将在右边显示该章的教学内容</p><h2 id="二、正文"><a href="#二、正文" class="headerlink" title="二、正文"></a>二、正文</h2><h3 id="Ax-准备工作"><a href="#Ax-准备工作" class="headerlink" title="Ax 准备工作"></a>Ax 准备工作</h3><ul><li>实验模板一代码</li><li>Sublime Text3 编辑器</li></ul><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413065014153.png"></p><p>此次使用Sublime编辑器编写代码，使用该软件打开项目文件夹即可看到目录下的所有HTML文件。</p><p>首先，打开Sublime编辑器，点击<code>文件</code>，再选择打开<code>文件夹</code>，选择桌面上的实验模板一及代码，根据自己文件所在的目录。</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413065408220.png"></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413065611192.png"></p><p>就可以看到目录结构了</p><h3 id="Bx-编写代码"><a href="#Bx-编写代码" class="headerlink" title="Bx 编写代码"></a>Bx 编写代码</h3><h4 id="chap1-8-html"><a href="#chap1-8-html" class="headerlink" title="chap1-8.html"></a>chap1-8.html</h4><p>然后再依次在body标签内编写chap1.html一直到chap8.html的内容。</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413065759611.png"></p><p>准备好内容依次编辑。</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413070219248.png"></p><h4 id="chapter-html"><a href="#chapter-html" class="headerlink" title="chapter.html"></a>chapter.html</h4><p>打开chapter.html，给前面的八个内容修改标题</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413070800191.png"></p><h4 id="study-html"><a href="#study-html" class="headerlink" title="study.html"></a>study.html</h4><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413071824690.png"></p><h3 id="Cx-运行结果"><a href="#Cx-运行结果" class="headerlink" title="Cx 运行结果"></a>Cx 运行结果</h3><p>使用浏览器访问study.html文件查看效果</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413072214190.png"></p><p>效果如下：</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413072257626.png"></p><p>完成。</p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      
-      
-      <categories>
-          
-          <category> Html </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 网页设计 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Javascript学习笔记</title>
       <link href="posts/851f.html"/>
       <url>posts/851f.html</url>
@@ -266,6 +241,31 @@
         <tags>
             
             <tag> date </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HTML学习笔记-网页基础框架</title>
+      <link href="posts/8eb2.html"/>
+      <url>posts/8eb2.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、实验步骤模板"><a href="#一、实验步骤模板" class="headerlink" title="一、实验步骤模板"></a>一、实验步骤模板</h2><h3 id="1-实验步骤"><a href="#1-实验步骤" class="headerlink" title="1.实验步骤"></a>1.实验步骤</h3><p>1.1 打开记事本程序或者安装Notepad++应用程序。</p><p>1.2 输入能够生成如课本P69中图2-37所示页面的HTML源代码，分别保存为study.html、title.html、chapter.html、chap1.html~chap8.html文件。</p><p>1.3 双击study.html文件，在浏览器中查看结果。</p><p>1.4 参考代码</p><p>1.4.1 页面布局</p><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>frameset</span> <span class="token attr-name">rows</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>*,482<span class="token punctuation">"</span></span> <span class="token attr-name">border</span><span class="token attr-value"><span class="token punctuation">=</span>0</span><span class="token punctuation">></span></span>  &lt;frame src="top.html" noresize marginwidth =5 name="win003">     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>frameset</span> <span class="token attr-name">cols</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>25%,*<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>frame</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>chapter.html<span class="token punctuation">"</span></span> <span class="token attr-name">scrolling</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>no<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>win001<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>frame</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>chap1.html<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>win002<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>frameset</span><span class="token punctuation">></span></span>   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>frameset</span><span class="token punctuation">></span></span></code></pre><p>1.4.2  form表单提交</p><pre class=" language-html"><code class="language-html">用户名：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 密码：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">password</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>登录<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>注册<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre><p>1.4.3 超链接</p><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>chap1.html<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>win002<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>第一章 Web编程基础知识<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>chap2.html<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>win002<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>第二章 Web程序开发与运行环境<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span></code></pre><h3 id="2-程序运行结果"><a href="#2-程序运行结果" class="headerlink" title="2.程序运行结果"></a>2.程序运行结果</h3><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/clip_image002.jpg"></p><h3 id="3-实验要求及提示-可选"><a href="#3-实验要求及提示-可选" class="headerlink" title="3.实验要求及提示(可选)"></a>3.实验要求及提示(可选)</h3><p>（1）  设计课本P69页面中图2-37所示的《Web程序设计》课程网站的“教学内容”</p><p>框架页面</p><p>（2）  在“教学内容”页面中，左边为各章标题，每章标题都是超链接，单击章标 </p><p>题后，将在右边显示该章的教学内容</p><h2 id="二、正文"><a href="#二、正文" class="headerlink" title="二、正文"></a>二、正文</h2><h3 id="Ax-准备工作"><a href="#Ax-准备工作" class="headerlink" title="Ax 准备工作"></a>Ax 准备工作</h3><ul><li>实验模板一代码</li><li>Sublime Text3 编辑器</li></ul><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413065014153.png"></p><p>此次使用Sublime编辑器编写代码，使用该软件打开项目文件夹即可看到目录下的所有HTML文件。</p><p>首先，打开Sublime编辑器，点击<code>文件</code>，再选择打开<code>文件夹</code>，选择桌面上的实验模板一及代码，根据自己文件所在的目录。</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413065408220.png"></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413065611192.png"></p><p>就可以看到目录结构了</p><h3 id="Bx-编写代码"><a href="#Bx-编写代码" class="headerlink" title="Bx 编写代码"></a>Bx 编写代码</h3><h4 id="chap1-8-html"><a href="#chap1-8-html" class="headerlink" title="chap1-8.html"></a>chap1-8.html</h4><p>然后再依次在body标签内编写chap1.html一直到chap8.html的内容。</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413065759611.png"></p><p>准备好内容依次编辑。</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413070219248.png"></p><h4 id="chapter-html"><a href="#chapter-html" class="headerlink" title="chapter.html"></a>chapter.html</h4><p>打开chapter.html，给前面的八个内容修改标题</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413070800191.png"></p><h4 id="study-html"><a href="#study-html" class="headerlink" title="study.html"></a>study.html</h4><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413071824690.png"></p><h3 id="Cx-运行结果"><a href="#Cx-运行结果" class="headerlink" title="Cx 运行结果"></a>Cx 运行结果</h3><p>使用浏览器访问study.html文件查看效果</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413072214190.png"></p><p>效果如下：</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210413072257626.png"></p><p>完成。</p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      
+      
+      <categories>
+          
+          <category> Html </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网页设计 </tag>
             
         </tags>
       
@@ -1094,35 +1094,6 @@
     
     
     <entry>
-      <title>Linux-日志</title>
-      <link href="posts/9563.html"/>
-      <url>posts/9563.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Ax-记录文件及目录访问"><a href="#Ax-记录文件及目录访问" class="headerlink" title="Ax 记录文件及目录访问"></a>Ax 记录文件及目录访问</h2><p>下载inotifywait命令,跟踪目录和文件的变化。</p><p><code>apt install inotify-tools</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210120214.png"></p><p>使用方法</p><p><code>inotifywait -m -r -e create,move,delete /opt -q</code></p><p>-m 持续监视</p><p>-r 递归</p><p>-e 指定列表</p><p>-q 减少冗余信息</p><table><thead><tr><th>事件</th><th>描述</th></tr></thead><tbody><tr><td>访问 access</td><td>读取文件</td></tr><tr><td>修改 modify</td><td>文件内容修改</td></tr><tr><td>属性 attrib</td><td>文件元数据被修改</td></tr><tr><td>移动 move</td><td>文件被移动</td></tr><tr><td>创建 create</td><td>生成新的文件</td></tr><tr><td>打开 open</td><td>打开文件操作</td></tr><tr><td>关闭 close</td><td>关闭文件操作</td></tr><tr><td>输出 delete</td><td>文件被输出</td></tr></tbody></table><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210121535.png"></p><p>命令太长了，没事，写一个脚本</p><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># /bin/bash</span><span class="token comment" spellcheck="true"># 跟踪文件</span>path<span class="token operator">=</span><span class="token variable">$1</span>inotifywait -m -r -e create,move,delete <span class="token variable">$path</span> -q</code></pre><p>使用方法，加上路径就好了</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210122444.png"></p><h2 id="Bx-管理日志文件"><a href="#Bx-管理日志文件" class="headerlink" title="Bx 管理日志文件"></a>Bx 管理日志文件</h2><p>使用logrotate管理日志文件，跟踪系统内服务出现的一些事件。但是时间长了，日志文件会越来越大，我们可以限定它的大小。这种方法叫轮替（rotation）也正是命令logrotate名字的由来。</p><p>配置文件位于/var/logrotate下</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210123953.png"></p><p>例如apache2文件日志信息</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210124608.png"></p><h2 id="Cx-用syslog记录日志"><a href="#Cx-用syslog记录日志" class="headerlink" title="Cx 用syslog记录日志"></a>Cx 用syslog记录日志</h2><p>Linux系统，守护进程sylogd使用syslog协议负责在/var/log创建并写入日志。</p><p>一些重要的日志文件</p><table><thead><tr><th>日志文件</th><th>描述</th></tr></thead><tbody><tr><td>/var/log/boot.log</td><td>系统启动</td></tr><tr><td>/var/log/httpd</td><td>Apache web服务器日志</td></tr><tr><td>/var/log/messages</td><td>发布内核启动信息</td></tr><tr><td>/var/log/auth.log</td><td>用户认证日志</td></tr><tr><td>/var/log/dmesg</td><td>系统启动信息</td></tr><tr><td>/var/log/mail.log</td><td>邮件服务器日志</td></tr><tr><td>/var/log/Xorg.0.log</td><td>X服务器日志</td></tr></tbody></table><h4 id="a-向日志文件-vaar-log-message写入日志信息"><a href="#a-向日志文件-vaar-log-message写入日志信息" class="headerlink" title="a 向日志文件/vaar/log/message写入日志信息"></a>a 向日志文件/vaar/log/message写入日志信息</h4><p><code>logger This is a test log line</code></p><p><code>tail -n 1 /var/log/messages</code></p><p>这个日志是通用日志文件，如果使用logger命令，将记录在此文件中</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210132931.png"></p><p>b 记录特定的标记（tag）</p><p><code>logger -t TAG this is a message</code></p><p><code>tail -n 1 /var/log/messages</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210133516.png"></p><p>根据标记可以放入指定的日志下，在/etc/rsyslog.d目录下可以查看相关配置</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210133411.png"></p><p>3.要将另一个日志文件中的最后一行记录到系统日志中，可以使用：</p><p><code>logger -f /var/log/source.log</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210134324.png"></p><h2 id="Dx-参考"><a href="#Dx-参考" class="headerlink" title="Dx 参考"></a>Dx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-            <tag> shell </tag>
-            
-            <tag> logger </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Linux-watch监视命令的命令</title>
       <link href="posts/9670.html"/>
       <url>posts/9670.html</url>
@@ -1144,6 +1115,35 @@
             <tag> shell </tag>
             
             <tag> watch </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux-日志</title>
+      <link href="posts/9563.html"/>
+      <url>posts/9563.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Ax-记录文件及目录访问"><a href="#Ax-记录文件及目录访问" class="headerlink" title="Ax 记录文件及目录访问"></a>Ax 记录文件及目录访问</h2><p>下载inotifywait命令,跟踪目录和文件的变化。</p><p><code>apt install inotify-tools</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210120214.png"></p><p>使用方法</p><p><code>inotifywait -m -r -e create,move,delete /opt -q</code></p><p>-m 持续监视</p><p>-r 递归</p><p>-e 指定列表</p><p>-q 减少冗余信息</p><table><thead><tr><th>事件</th><th>描述</th></tr></thead><tbody><tr><td>访问 access</td><td>读取文件</td></tr><tr><td>修改 modify</td><td>文件内容修改</td></tr><tr><td>属性 attrib</td><td>文件元数据被修改</td></tr><tr><td>移动 move</td><td>文件被移动</td></tr><tr><td>创建 create</td><td>生成新的文件</td></tr><tr><td>打开 open</td><td>打开文件操作</td></tr><tr><td>关闭 close</td><td>关闭文件操作</td></tr><tr><td>输出 delete</td><td>文件被输出</td></tr></tbody></table><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210121535.png"></p><p>命令太长了，没事，写一个脚本</p><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># /bin/bash</span><span class="token comment" spellcheck="true"># 跟踪文件</span>path<span class="token operator">=</span><span class="token variable">$1</span>inotifywait -m -r -e create,move,delete <span class="token variable">$path</span> -q</code></pre><p>使用方法，加上路径就好了</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210122444.png"></p><h2 id="Bx-管理日志文件"><a href="#Bx-管理日志文件" class="headerlink" title="Bx 管理日志文件"></a>Bx 管理日志文件</h2><p>使用logrotate管理日志文件，跟踪系统内服务出现的一些事件。但是时间长了，日志文件会越来越大，我们可以限定它的大小。这种方法叫轮替（rotation）也正是命令logrotate名字的由来。</p><p>配置文件位于/var/logrotate下</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210123953.png"></p><p>例如apache2文件日志信息</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210124608.png"></p><h2 id="Cx-用syslog记录日志"><a href="#Cx-用syslog记录日志" class="headerlink" title="Cx 用syslog记录日志"></a>Cx 用syslog记录日志</h2><p>Linux系统，守护进程sylogd使用syslog协议负责在/var/log创建并写入日志。</p><p>一些重要的日志文件</p><table><thead><tr><th>日志文件</th><th>描述</th></tr></thead><tbody><tr><td>/var/log/boot.log</td><td>系统启动</td></tr><tr><td>/var/log/httpd</td><td>Apache web服务器日志</td></tr><tr><td>/var/log/messages</td><td>发布内核启动信息</td></tr><tr><td>/var/log/auth.log</td><td>用户认证日志</td></tr><tr><td>/var/log/dmesg</td><td>系统启动信息</td></tr><tr><td>/var/log/mail.log</td><td>邮件服务器日志</td></tr><tr><td>/var/log/Xorg.0.log</td><td>X服务器日志</td></tr></tbody></table><h4 id="a-向日志文件-vaar-log-message写入日志信息"><a href="#a-向日志文件-vaar-log-message写入日志信息" class="headerlink" title="a 向日志文件/vaar/log/message写入日志信息"></a>a 向日志文件/vaar/log/message写入日志信息</h4><p><code>logger This is a test log line</code></p><p><code>tail -n 1 /var/log/messages</code></p><p>这个日志是通用日志文件，如果使用logger命令，将记录在此文件中</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210132931.png"></p><p>b 记录特定的标记（tag）</p><p><code>logger -t TAG this is a message</code></p><p><code>tail -n 1 /var/log/messages</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210133516.png"></p><p>根据标记可以放入指定的日志下，在/etc/rsyslog.d目录下可以查看相关配置</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210133411.png"></p><p>3.要将另一个日志文件中的最后一行记录到系统日志中，可以使用：</p><p><code>logger -f /var/log/source.log</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210134324.png"></p><h2 id="Dx-参考"><a href="#Dx-参考" class="headerlink" title="Dx 参考"></a>Dx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> shell </tag>
+            
+            <tag> logger </tag>
             
         </tags>
       
@@ -1317,9 +1317,9 @@
             
             <tag> 0day </tag>
             
-            <tag> chrome </tag>
-            
             <tag> CVE-2021-21148 </tag>
+            
+            <tag> chrome </tag>
             
         </tags>
       
