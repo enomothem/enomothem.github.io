@@ -103,11 +103,25 @@
   <li class="hide-on-med-and-down nav-item">
     
     <a href="/archives" class="waves-effect waves-light">
+
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
       <span>Time</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/album">
+          
+          <i class="fas fa-file-alt" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>album</span>
+        </a>
+      </li>
+      
+    </ul>
     
   </li>
   
@@ -271,12 +285,26 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/archives" class="waves-effect waves-light">
+		<a href="javascript:;">
 			
-			    <i class="fa-fw fas fa-archive"></i>
+				<i class="fa-fw fas fa-archive"></i>
 			
 			Time
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/album " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file-alt" style="position: absolute;left:50px" ></i>
+			      
+		          <span>album</span>
+                  </a>
+                </li>
+              
+            </ul>
           
         </li>
         
@@ -497,18 +525,19 @@
 
 
 <script>
-    $('.bg-cover').css('background-image', 'url(https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/spaceman.jpg)');
+    $('.bg-cover').css('background-image', 'url(https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/100zn.png)');
 </script>
 
 <!--
 // https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/banner/0.jpg  经典
-// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/galaxy.jpg    星河 2021         1月1 日 - 1月7 日
-// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/green.jpg     绿色          2月1 日 - 2月7 日
-// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/spacea.jpg    宇宙         2月7 日 - 5月14日
-// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/sunlight-tree.jpg 阳光-树    5月14日 - 5月19日
-// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/romance1.png  流星       6月1日 - 6月7日
-// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/love-sea.jpg  海边         6月8日 - 6月14日
-// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/spaceman.jpg  宇航员       6月15日 - 6月21日
+// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/galaxy.jpg              星河 2021         1月1 日 - 1月7 日
+// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/green.jpg               绿色              2月1 日 - 2月7 日
+// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/spacea.jpg              宇宙              2月7 日 - 5月14日
+// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/sunlight-tree.jpg       阳光-树           5月14日 - 5月19日
+// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/romance1.png            流星              6月1日 - 6月7日
+// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/love-sea.jpg            海边              6月8日 - 6月14日
+// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/spaceman.jpg            宇航员            6月15日 - 6月21日
+// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/100zn.png               100周年           7月1日 - 7月7日
 -->
 
     </div>
@@ -701,7 +730,7 @@
         },
         xAxis: {
             type: 'category',
-            data: ["2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12","2021-01","2021-02","2021-03","2021-04","2021-05","2021-06"]
+            data: ["2020-07","2020-08","2020-09","2020-10","2020-11","2020-12","2021-01","2021-02","2021-03","2021-04","2021-05","2021-06","2021-07"]
         },
         yAxis: {
             type: 'value',
@@ -711,7 +740,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,1,24,9,37,14,7,1,2],
+                data: [0,0,0,0,1,24,9,37,14,7,1,2,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -753,7 +782,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"IS","value":5},{"name":"C语言","value":3},{"name":"Docker","value":6},{"name":"English","value":9},{"name":"渗透测试","value":13},{"name":"搭建博客","value":12},{"name":"Html","value":1},{"name":"Javascript","value":1},{"name":"Java","value":1},{"name":"Linux","value":27},{"name":"Mysql","value":5},{"name":"PHP编程","value":2},{"name":"SecTools","value":4},{"name":"Root","value":1},{"name":"Web漏洞","value":3},{"name":"操作系统","value":3},{"name":"网络技术","value":2},{"name":"高等数学","value":2}],
+                data: [{"name":"IS","value":5},{"name":"C语言","value":3},{"name":"Docker","value":6},{"name":"English","value":9},{"name":"渗透测试","value":13},{"name":"Html","value":1},{"name":"搭建博客","value":12},{"name":"Javascript","value":1},{"name":"Java","value":1},{"name":"Linux","value":27},{"name":"Mysql","value":5},{"name":"PHP编程","value":2},{"name":"SecTools","value":4},{"name":"Root","value":1},{"name":"Web漏洞","value":3},{"name":"操作系统","value":3},{"name":"网络技术","value":2},{"name":"高等数学","value":2}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -777,7 +806,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Linux","shell","个人博客搭建","English","Pentesting","docker","Mysql","阅读理解","考研英语","Root"]
+                data: ["Linux","shell","个人博客搭建","English","Pentesting","docker","Mysql","阅读理解","Root","考研英语"]
             }
         ],
         yAxis: [
@@ -1101,14 +1130,14 @@
             
             
             
-            <a href="/tags/Q-A/">
-                <span class="chip center-align waves-effect waves-light chip-default">Q&A</span>
+            <a href="/tags/install/">
+                <span class="chip center-align waves-effect waves-light chip-default">install</span>
             </a>
             
             
             
-            <a href="/tags/install/">
-                <span class="chip center-align waves-effect waves-light chip-default">install</span>
+            <a href="/tags/Q-A/">
+                <span class="chip center-align waves-effect waves-light chip-default">Q&A</span>
             </a>
             
             
@@ -1131,12 +1160,6 @@
             
             
             
-            <a href="/tags/image/">
-                <span class="chip center-align waves-effect waves-light chip-default">image</span>
-            </a>
-            
-            
-            
             
             
             <a href="/tags/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3/">
@@ -1147,6 +1170,12 @@
             
             <a href="/tags/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD/">
                 <span class="chip center-align waves-effect waves-light chip-default">考研英语</span>
+            </a>
+            
+            
+            
+            <a href="/tags/image/">
+                <span class="chip center-align waves-effect waves-light chip-default">image</span>
             </a>
             
             
@@ -1163,14 +1192,14 @@
             
             
             
-            <a href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-                <span class="chip center-align waves-effect waves-light chip-default">个人博客搭建</span>
+            <a href="/tags/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/">
+                <span class="chip center-align waves-effect waves-light chip-default">网页设计</span>
             </a>
             
             
             
-            <a href="/tags/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/">
-                <span class="chip center-align waves-effect waves-light chip-default">网页设计</span>
+            <a href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                <span class="chip center-align waves-effect waves-light chip-default">个人博客搭建</span>
             </a>
             
             
@@ -1227,26 +1256,20 @@
             
             
             
-            <a href="/tags/cron/">
-                <span class="chip center-align waves-effect waves-light chip-default">cron</span>
-            </a>
-            
-            
-            
             <a href="/tags/curl/">
                 <span class="chip center-align waves-effect waves-light chip-default">curl</span>
             </a>
             
             
             
-            <a href="/tags/cat/">
-                <span class="chip center-align waves-effect waves-light chip-default">cat</span>
+            <a href="/tags/cron/">
+                <span class="chip center-align waves-effect waves-light chip-default">cron</span>
             </a>
             
             
             
-            <a href="/tags/find/">
-                <span class="chip center-align waves-effect waves-light chip-default">find</span>
+            <a href="/tags/cat/">
+                <span class="chip center-align waves-effect waves-light chip-default">cat</span>
             </a>
             
             
@@ -1263,6 +1286,12 @@
             
             
             
+            <a href="/tags/find/">
+                <span class="chip center-align waves-effect waves-light chip-default">find</span>
+            </a>
+            
+            
+            
             <a href="/tags/fork/">
                 <span class="chip center-align waves-effect waves-light chip-default">fork</span>
             </a>
@@ -1275,8 +1304,8 @@
             
             
             
-            <a href="/tags/import/">
-                <span class="chip center-align waves-effect waves-light chip-default">import</span>
+            <a href="/tags/iptables/">
+                <span class="chip center-align waves-effect waves-light chip-default">iptables</span>
             </a>
             
             
@@ -1293,14 +1322,14 @@
             
             
             
-            <a href="/tags/mysql/">
-                <span class="chip center-align waves-effect waves-light chip-default">mysql</span>
+            <a href="/tags/import/">
+                <span class="chip center-align waves-effect waves-light chip-default">import</span>
             </a>
             
             
             
-            <a href="/tags/iptables/">
-                <span class="chip center-align waves-effect waves-light chip-default">iptables</span>
+            <a href="/tags/mysql/">
+                <span class="chip center-align waves-effect waves-light chip-default">mysql</span>
             </a>
             
             
@@ -1311,14 +1340,14 @@
             
             
             
-            <a href="/tags/watch/">
-                <span class="chip center-align waves-effect waves-light chip-default">watch</span>
+            <a href="/tags/wall/">
+                <span class="chip center-align waves-effect waves-light chip-default">wall</span>
             </a>
             
             
             
-            <a href="/tags/wall/">
-                <span class="chip center-align waves-effect waves-light chip-default">wall</span>
+            <a href="/tags/watch/">
+                <span class="chip center-align waves-effect waves-light chip-default">watch</span>
             </a>
             
             
@@ -1341,14 +1370,14 @@
             
             
             
-            <a href="/tags/logger/">
-                <span class="chip center-align waves-effect waves-light chip-default">logger</span>
+            <a href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">
+                <span class="chip center-align waves-effect waves-light chip-default">图像处理</span>
             </a>
             
             
             
-            <a href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">
-                <span class="chip center-align waves-effect waves-light chip-default">图像处理</span>
+            <a href="/tags/logger/">
+                <span class="chip center-align waves-effect waves-light chip-default">logger</span>
             </a>
             
             
@@ -1359,8 +1388,8 @@
             
             
             
-            <a href="/tags/%E7%94%B5%E6%BA%90%E7%AE%A1%E7%90%86/">
-                <span class="chip center-align waves-effect waves-light chip-default">电源管理</span>
+            <a href="/tags/%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/">
+                <span class="chip center-align waves-effect waves-light chip-default">系统信息</span>
             </a>
             
             
@@ -1377,12 +1406,6 @@
             
             
             
-            <a href="/tags/%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/">
-                <span class="chip center-align waves-effect waves-light chip-default">系统信息</span>
-            </a>
-            
-            
-            
             <a href="/tags/Metasploit/">
                 <span class="chip center-align waves-effect waves-light chip-default">Metasploit</span>
             </a>
@@ -1391,6 +1414,12 @@
             
             <a href="/tags/android/">
                 <span class="chip center-align waves-effect waves-light chip-default">android</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E7%94%B5%E6%BA%90%E7%AE%A1%E7%90%86/">
+                <span class="chip center-align waves-effect waves-light chip-default">电源管理</span>
             </a>
             
             
@@ -1437,14 +1466,14 @@
             
             
             
-            <a href="/tags/nmap/">
-                <span class="chip center-align waves-effect waves-light chip-default">nmap</span>
+            <a href="/tags/dnsub/">
+                <span class="chip center-align waves-effect waves-light chip-default">dnsub</span>
             </a>
             
             
             
-            <a href="/tags/portscan/">
-                <span class="chip center-align waves-effect waves-light chip-default">portscan</span>
+            <a href="/tags/subdomain/">
+                <span class="chip center-align waves-effect waves-light chip-default">subdomain</span>
             </a>
             
             
@@ -1455,14 +1484,14 @@
             
             
             
-            <a href="/tags/dnsub/">
-                <span class="chip center-align waves-effect waves-light chip-default">dnsub</span>
+            <a href="/tags/nmap/">
+                <span class="chip center-align waves-effect waves-light chip-default">nmap</span>
             </a>
             
             
             
-            <a href="/tags/subdomain/">
-                <span class="chip center-align waves-effect waves-light chip-default">subdomain</span>
+            <a href="/tags/portscan/">
+                <span class="chip center-align waves-effect waves-light chip-default">portscan</span>
             </a>
             
             
@@ -1503,6 +1532,12 @@
             
             
             
+            <a href="/tags/cloud/">
+                <span class="chip center-align waves-effect waves-light chip-default">cloud</span>
+            </a>
+            
+            
+            
             <a href="/tags/Pentesting/">
                 <span class="chip center-align waves-effect waves-light chip-default">Pentesting</span>
             </a>
@@ -1521,26 +1556,8 @@
             
             
             
-            <a href="/tags/cloud/">
-                <span class="chip center-align waves-effect waves-light chip-default">cloud</span>
-            </a>
-            
-            
-            
             <a href="/tags/CVE-2010-2883/">
                 <span class="chip center-align waves-effect waves-light chip-default">CVE-2010-2883</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Information-Security/">
-                <span class="chip center-align waves-effect waves-light chip-default">Information Security</span>
-            </a>
-            
-            
-            
-            <a href="/tags/CVE-2019-0708/">
-                <span class="chip center-align waves-effect waves-light chip-default">CVE-2019-0708</span>
             </a>
             
             
@@ -1559,6 +1576,18 @@
             
             <a href="/tags/Jboss/">
                 <span class="chip center-align waves-effect waves-light chip-default">Jboss</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Information-Security/">
+                <span class="chip center-align waves-effect waves-light chip-default">Information Security</span>
+            </a>
+            
+            
+            
+            <a href="/tags/CVE-2019-0708/">
+                <span class="chip center-align waves-effect waves-light chip-default">CVE-2019-0708</span>
             </a>
             
             
@@ -1599,23 +1628,11 @@
             
             
             
-            <a href="/tags/Ensp/">
-                <span class="chip center-align waves-effect waves-light chip-default">Ensp</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Cloud/">
-                <span class="chip center-align waves-effect waves-light chip-default">Cloud</span>
-            </a>
-            
-            
-            
-            
-            
             <a href="/tags/TCP-IP/">
                 <span class="chip center-align waves-effect waves-light chip-default">TCP/IP</span>
             </a>
+            
+            
             
             
             
@@ -1627,6 +1644,18 @@
             
             <a href="/tags/%E7%8E%84%E5%AD%A6/">
                 <span class="chip center-align waves-effect waves-light chip-default">玄学</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Ensp/">
+                <span class="chip center-align waves-effect waves-light chip-default">Ensp</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Cloud/">
+                <span class="chip center-align waves-effect waves-light chip-default">Cloud</span>
             </a>
             
             

@@ -103,11 +103,25 @@
   <li class="hide-on-med-and-down nav-item">
     
     <a href="/archives" class="waves-effect waves-light">
+
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
       <span>Time</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/album">
+          
+          <i class="fas fa-file-alt" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>album</span>
+        </a>
+      </li>
+      
+    </ul>
     
   </li>
   
@@ -271,12 +285,26 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/archives" class="waves-effect waves-light">
+		<a href="javascript:;">
 			
-			    <i class="fa-fw fas fa-archive"></i>
+				<i class="fa-fw fas fa-archive"></i>
 			
 			Time
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/album " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file-alt" style="position: absolute;left:50px" ></i>
+			      
+		          <span>album</span>
+                  </a>
+                </li>
+              
+            </ul>
           
         </li>
         
@@ -491,18 +519,19 @@
 
 
 <script>
-    $('.bg-cover').css('background-image', 'url(https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/spaceman.jpg)');
+    $('.bg-cover').css('background-image', 'url(https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/100zn.png)');
 </script>
 
 <!--
 // https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/banner/0.jpg  经典
-// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/galaxy.jpg    星河 2021         1月1 日 - 1月7 日
-// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/green.jpg     绿色          2月1 日 - 2月7 日
-// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/spacea.jpg    宇宙         2月7 日 - 5月14日
-// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/sunlight-tree.jpg 阳光-树    5月14日 - 5月19日
-// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/romance1.png  流星       6月1日 - 6月7日
-// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/love-sea.jpg  海边         6月8日 - 6月14日
-// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/spaceman.jpg  宇航员       6月15日 - 6月21日
+// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/galaxy.jpg              星河 2021         1月1 日 - 1月7 日
+// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/green.jpg               绿色              2月1 日 - 2月7 日
+// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/spacea.jpg              宇宙              2月7 日 - 5月14日
+// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/sunlight-tree.jpg       阳光-树           5月14日 - 5月19日
+// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/romance1.png            流星              6月1日 - 6月7日
+// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/love-sea.jpg            海边              6月8日 - 6月14日
+// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/spaceman.jpg            宇航员            6月15日 - 6月21日
+// https://cdn.jsdelivr.net/gh/enomothem/cdn@master/img/100zn.png               100周年           7月1日 - 7月7日
 -->
 
     </div>
@@ -850,53 +879,6 @@ Ax 说明Database Back
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/9c22.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/5.jpg" class="responsive-img" alt="SQLi Payload List">
-                            
-                            <span class="card-title">SQLi Payload List</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                SQL Injection Payload ListAx SQL Injection IntroductionWhat is SQL injection (SQLi)?SQL injection is a web security vuln
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Web%E6%BC%8F%E6%B4%9E/" class="post-category">
-                                    Web漏洞
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/SQLi/">
-                            <span class="chip bg-color">SQLi</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
                     <a href="/posts/d946.html">
                         <div class="card-image">
                             
@@ -937,6 +919,53 @@ Ax 说明Database Back
                         
                         <a href="/tags/XSS/">
                             <span class="chip bg-color">XSS</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/9c22.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/5.jpg" class="responsive-img" alt="SQLi Payload List">
+                            
+                            <span class="card-title">SQLi Payload List</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                SQL Injection Payload ListAx SQL Injection IntroductionWhat is SQL injection (SQLi)?SQL injection is a web security vuln
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Web%E6%BC%8F%E6%B4%9E/" class="post-category">
+                                    Web漏洞
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/SQLi/">
+                            <span class="chip bg-color">SQLi</span>
                         </a>
                         
                     </div>
