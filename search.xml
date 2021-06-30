@@ -4,35 +4,6 @@
   
     
     <entry>
-      <title>Linux-cat命令</title>
-      <link href="posts/d95c.html"/>
-      <url>posts/d95c.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Ax-cat命令使用"><a href="#Ax-cat命令使用" class="headerlink" title="Ax cat命令使用"></a>Ax cat命令使用</h2><p>用于读取、显示或拼接文件内容，或通过标准输出和数据组合起来，可以很轻松的将需要输出的东西输出重定向到别的新的文件中。</p><p><code>cat file1 file2 file3</code></p><p>打印单个文件：</p><p><code>cat file</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210601200411507.png"></p><p>打印多个文件：</p><p><code>cat  file1 file2</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210601201042737.png"></p><p>使用管道符将文件和标准输入中的信息拼接在一起，使用 &gt; 重定向到文件</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210601202217301.png"></p><p>-n 显示行号</p><p>-s 压缩空格</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210601202537812.png"></p><p>-T 将制表符显示为^|</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210601203304881.png"></p><h2 id="Bx-参考"><a href="#Bx-参考" class="headerlink" title="Bx 参考"></a>Bx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-            <tag> shell </tag>
-            
-            <tag> cat </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Linux-find命令查找文件</title>
       <link href="posts/114f.html"/>
       <url>posts/114f.html</url>
@@ -54,6 +25,35 @@
             <tag> shell </tag>
             
             <tag> find </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux-cat命令</title>
+      <link href="posts/d95c.html"/>
+      <url>posts/d95c.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Ax-cat命令使用"><a href="#Ax-cat命令使用" class="headerlink" title="Ax cat命令使用"></a>Ax cat命令使用</h2><p>用于读取、显示或拼接文件内容，或通过标准输出和数据组合起来，可以很轻松的将需要输出的东西输出重定向到别的新的文件中。</p><p><code>cat file1 file2 file3</code></p><p>打印单个文件：</p><p><code>cat file</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210601200411507.png"></p><p>打印多个文件：</p><p><code>cat  file1 file2</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210601201042737.png"></p><p>使用管道符将文件和标准输入中的信息拼接在一起，使用 &gt; 重定向到文件</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210601202217301.png"></p><p>-n 显示行号</p><p>-s 压缩空格</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210601202537812.png"></p><p>-T 将制表符显示为^|</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210601203304881.png"></p><h2 id="Bx-参考"><a href="#Bx-参考" class="headerlink" title="Bx 参考"></a>Bx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> shell </tag>
+            
+            <tag> cat </tag>
             
         </tags>
       
@@ -1317,9 +1317,9 @@
             
             <tag> 0day </tag>
             
-            <tag> CVE-2021-21148 </tag>
-            
             <tag> chrome </tag>
+            
+            <tag> CVE-2021-21148 </tag>
             
         </tags>
       
@@ -2439,11 +2439,11 @@
     
     
     <entry>
-      <title>Mysql数据库之安装</title>
-      <link href="posts/579.html"/>
-      <url>posts/579.html</url>
+      <title>Mysql数据库之彻底删除</title>
+      <link href="posts/1adb.html"/>
+      <url>posts/1adb.html</url>
       
-        <content type="html"><![CDATA[<h1 id="Mysql数据库之安装"><a href="#Mysql数据库之安装" class="headerlink" title="Mysql数据库之安装"></a>Mysql数据库之安装</h1><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/t0148bbf85c878da0b8.jpg"></p><h2 id="Ax-Introduction-介绍"><a href="#Ax-Introduction-介绍" class="headerlink" title="Ax Introduction 介绍"></a>Ax Introduction 介绍</h2><p>MySQL是世界上最受欢迎的开源数据库。无论您是快速增长的Web资产，技术ISV还是大型企业，MySQL都能经济高效地帮助您交付高性能，可扩展的数据库应用程序。</p><h2 id="Bx-Installation-安装"><a href="#Bx-Installation-安装" class="headerlink" title="Bx Installation 安装"></a>Bx Installation 安装</h2><h4 id="a-下载"><a href="#a-下载" class="headerlink" title="a 下载"></a>a 下载</h4><p><a href="https://dev.mysql.com/downloads/">https://dev.mysql.com/downloads/</a></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209230859167.png"></p><p>上面那个是web版本，所以我们选择下面的。</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209231255940.png"></p><h4 id="b-安装"><a href="#b-安装" class="headerlink" title="b 安装"></a>b 安装</h4><blockquote><p>以下没有提到的全默认。</p></blockquote><ol><li>Choosing Setup Type 选择<code>Custom</code></li><li>Select Products and Features 选择 <code>MySQL Server -&gt; MySQL Server 8.0 -&gt; MySQL Server 8.0.18-X64</code>点击绿色移动到右边 Next</li></ol><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209232022372.png"><br>3. Accounts and Roles 输入你的Root密码两次，<code>Next</code><br>4. Windows Service 步骤可以更改MySQL的服务名，取消开机自启（下面的勾勾取消）<br>5. Apply Configuration 最后一步，<code>Excute</code>=&gt;<code>Finish</code></p><h4 id="C-环境变量"><a href="#C-环境变量" class="headerlink" title="C 环境变量"></a>C 环境变量</h4><p>我的电脑 =&gt;属性 =&gt;高级系统设置 =&gt;环境变量=&gt;系统环境变量</p><p>找到Path，编辑，新建，添加下面这个（如果不是默认的以你安装的路径为准）</p><p><code>C:\Program Files\MySQL\MySQL Server 8.0\bin</code></p><h2 id="Cx-Verification-验证"><a href="#Cx-Verification-验证" class="headerlink" title="Cx Verification 验证"></a>Cx Verification 验证</h2><h4 id="a-打开CMD-开启服务"><a href="#a-打开CMD-开启服务" class="headerlink" title="a 打开CMD,开启服务"></a>a 打开CMD,开启服务</h4><p><code>net start MySQLIk</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209233406604.png"></p><h4 id="b-连接数据库"><a href="#b-连接数据库" class="headerlink" title="b 连接数据库"></a>b 连接数据库</h4><p><code>mysql -uroot -p</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209233644081.png"></p><h2 id="Dx-References-参考"><a href="#Dx-References-参考" class="headerlink" title="Dx References 参考"></a>Dx References 参考</h2><p>[1] <a href="https://www.mysql.com/products/">https://www.mysql.com/products/</a></p><p>[2] <a href="https://www.cnblogs.com/xiaokang01/p/12092160.html">https://www.cnblogs.com/xiaokang01/p/12092160.html</a></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+        <content type="html"><![CDATA[<h1 id="Mysql数据库之彻底卸载"><a href="#Mysql数据库之彻底卸载" class="headerlink" title="Mysql数据库之彻底卸载"></a>Mysql数据库之彻底卸载</h1><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/t0197520a0763752dbb.jpg"></p><h2 id="Xa-场景"><a href="#Xa-场景" class="headerlink" title="Xa 场景"></a>Xa 场景</h2><blockquote><p>有时候在卸载mysql后，再次安装总会出错，这时我们就需要彻底的把它删除，干干净净的。</p></blockquote><h4 id="Menu-目录"><a href="#Menu-目录" class="headerlink" title="Menu 目录"></a>Menu 目录</h4><ul><li>软件卸载</li><li>隐藏文件</li><li>删注册表</li></ul><h2 id="Xb-方法"><a href="#Xb-方法" class="headerlink" title="Xb 方法"></a>Xb 方法</h2><h4 id="Ax-软件卸载"><a href="#Ax-软件卸载" class="headerlink" title="Ax 软件卸载"></a>Ax 软件卸载</h4><ol><li><p><strong>快捷键<code>Ctrl + R</code>打开运行</strong></p></li><li><p><strong>输入<code>control</code>打开控制台</strong></p></li><li><p><strong>点击卸载程序</strong></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209235001737.png"></p></li><li><p><strong>搜索mysql，卸载</strong></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209235042761.png"></p></li></ol><h4 id="Bx-隐藏文件"><a href="#Bx-隐藏文件" class="headerlink" title="Bx 隐藏文件"></a>Bx 隐藏文件</h4><ol><li><p>打开隐藏文件夹</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209235217352.png"></p></li><li><p>删除隐藏目录下的MySQL</p><p><code>C:\ProgramData\MySQL</code></p></li></ol><h4 id="Cx-删注册表"><a href="#Cx-删注册表" class="headerlink" title="Cx 删注册表"></a>Cx 删注册表</h4><ol><li><p><strong>快捷键<code>Ctrl + R</code>打开运行</strong></p></li><li><p>输入<code>regedit</code>打开注册表</p></li><li><p>删除以下注册表，如果没有查到的就不用管</p><pre class=" language-html"><code class="language-html">HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Eventlog\Application\MySQLHKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\Eventlog\Application\MySQLHKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application\MySQL</code></pre></li></ol><h2 id="Xc-参考"><a href="#Xc-参考" class="headerlink" title="Xc 参考"></a>Xc 参考</h2><p>[1] <a href="https://www.cnblogs.com/hskw/p/9298108.html">https://www.cnblogs.com/hskw/p/9298108.html</a><br>[2] <a href="https://www.jb51.net/article/52806.htm">https://www.jb51.net/article/52806.htm</a></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       
       
       <categories>
@@ -2464,11 +2464,11 @@
     
     
     <entry>
-      <title>Mysql数据库之彻底删除</title>
-      <link href="posts/1adb.html"/>
-      <url>posts/1adb.html</url>
+      <title>Mysql数据库之安装</title>
+      <link href="posts/579.html"/>
+      <url>posts/579.html</url>
       
-        <content type="html"><![CDATA[<h1 id="Mysql数据库之彻底卸载"><a href="#Mysql数据库之彻底卸载" class="headerlink" title="Mysql数据库之彻底卸载"></a>Mysql数据库之彻底卸载</h1><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/t0197520a0763752dbb.jpg"></p><h2 id="Xa-场景"><a href="#Xa-场景" class="headerlink" title="Xa 场景"></a>Xa 场景</h2><blockquote><p>有时候在卸载mysql后，再次安装总会出错，这时我们就需要彻底的把它删除，干干净净的。</p></blockquote><h4 id="Menu-目录"><a href="#Menu-目录" class="headerlink" title="Menu 目录"></a>Menu 目录</h4><ul><li>软件卸载</li><li>隐藏文件</li><li>删注册表</li></ul><h2 id="Xb-方法"><a href="#Xb-方法" class="headerlink" title="Xb 方法"></a>Xb 方法</h2><h4 id="Ax-软件卸载"><a href="#Ax-软件卸载" class="headerlink" title="Ax 软件卸载"></a>Ax 软件卸载</h4><ol><li><p><strong>快捷键<code>Ctrl + R</code>打开运行</strong></p></li><li><p><strong>输入<code>control</code>打开控制台</strong></p></li><li><p><strong>点击卸载程序</strong></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209235001737.png"></p></li><li><p><strong>搜索mysql，卸载</strong></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209235042761.png"></p></li></ol><h4 id="Bx-隐藏文件"><a href="#Bx-隐藏文件" class="headerlink" title="Bx 隐藏文件"></a>Bx 隐藏文件</h4><ol><li><p>打开隐藏文件夹</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209235217352.png"></p></li><li><p>删除隐藏目录下的MySQL</p><p><code>C:\ProgramData\MySQL</code></p></li></ol><h4 id="Cx-删注册表"><a href="#Cx-删注册表" class="headerlink" title="Cx 删注册表"></a>Cx 删注册表</h4><ol><li><p><strong>快捷键<code>Ctrl + R</code>打开运行</strong></p></li><li><p>输入<code>regedit</code>打开注册表</p></li><li><p>删除以下注册表，如果没有查到的就不用管</p><pre class=" language-html"><code class="language-html">HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Eventlog\Application\MySQLHKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Services\Eventlog\Application\MySQLHKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application\MySQL</code></pre></li></ol><h2 id="Xc-参考"><a href="#Xc-参考" class="headerlink" title="Xc 参考"></a>Xc 参考</h2><p>[1] <a href="https://www.cnblogs.com/hskw/p/9298108.html">https://www.cnblogs.com/hskw/p/9298108.html</a><br>[2] <a href="https://www.jb51.net/article/52806.htm">https://www.jb51.net/article/52806.htm</a></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+        <content type="html"><![CDATA[<h1 id="Mysql数据库之安装"><a href="#Mysql数据库之安装" class="headerlink" title="Mysql数据库之安装"></a>Mysql数据库之安装</h1><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/t0148bbf85c878da0b8.jpg"></p><h2 id="Ax-Introduction-介绍"><a href="#Ax-Introduction-介绍" class="headerlink" title="Ax Introduction 介绍"></a>Ax Introduction 介绍</h2><p>MySQL是世界上最受欢迎的开源数据库。无论您是快速增长的Web资产，技术ISV还是大型企业，MySQL都能经济高效地帮助您交付高性能，可扩展的数据库应用程序。</p><h2 id="Bx-Installation-安装"><a href="#Bx-Installation-安装" class="headerlink" title="Bx Installation 安装"></a>Bx Installation 安装</h2><h4 id="a-下载"><a href="#a-下载" class="headerlink" title="a 下载"></a>a 下载</h4><p><a href="https://dev.mysql.com/downloads/">https://dev.mysql.com/downloads/</a></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209230859167.png"></p><p>上面那个是web版本，所以我们选择下面的。</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209231255940.png"></p><h4 id="b-安装"><a href="#b-安装" class="headerlink" title="b 安装"></a>b 安装</h4><blockquote><p>以下没有提到的全默认。</p></blockquote><ol><li>Choosing Setup Type 选择<code>Custom</code></li><li>Select Products and Features 选择 <code>MySQL Server -&gt; MySQL Server 8.0 -&gt; MySQL Server 8.0.18-X64</code>点击绿色移动到右边 Next</li></ol><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209232022372.png"><br>3. Accounts and Roles 输入你的Root密码两次，<code>Next</code><br>4. Windows Service 步骤可以更改MySQL的服务名，取消开机自启（下面的勾勾取消）<br>5. Apply Configuration 最后一步，<code>Excute</code>=&gt;<code>Finish</code></p><h4 id="C-环境变量"><a href="#C-环境变量" class="headerlink" title="C 环境变量"></a>C 环境变量</h4><p>我的电脑 =&gt;属性 =&gt;高级系统设置 =&gt;环境变量=&gt;系统环境变量</p><p>找到Path，编辑，新建，添加下面这个（如果不是默认的以你安装的路径为准）</p><p><code>C:\Program Files\MySQL\MySQL Server 8.0\bin</code></p><h2 id="Cx-Verification-验证"><a href="#Cx-Verification-验证" class="headerlink" title="Cx Verification 验证"></a>Cx Verification 验证</h2><h4 id="a-打开CMD-开启服务"><a href="#a-打开CMD-开启服务" class="headerlink" title="a 打开CMD,开启服务"></a>a 打开CMD,开启服务</h4><p><code>net start MySQLIk</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209233406604.png"></p><h4 id="b-连接数据库"><a href="#b-连接数据库" class="headerlink" title="b 连接数据库"></a>b 连接数据库</h4><p><code>mysql -uroot -p</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201209233644081.png"></p><h2 id="Dx-References-参考"><a href="#Dx-References-参考" class="headerlink" title="Dx References 参考"></a>Dx References 参考</h2><p>[1] <a href="https://www.mysql.com/products/">https://www.mysql.com/products/</a></p><p>[2] <a href="https://www.cnblogs.com/xiaokang01/p/12092160.html">https://www.cnblogs.com/xiaokang01/p/12092160.html</a></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
       
       
       <categories>
