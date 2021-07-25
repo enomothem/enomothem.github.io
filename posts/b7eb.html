@@ -195,6 +195,13 @@
         </a>
       </li>
       
+      <li>
+        <a href="/kt">
+          
+          <span>空调房</span>
+        </a>
+      </li>
+      
     </ul>
     
   </li>
@@ -364,6 +371,14 @@
 				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
 			      
 		          <span>Celebrate</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/kt " style="margin-left:75px">
+				  
+		          <span>空调房</span>
                   </a>
                 </li>
               
@@ -635,21 +650,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-27
+                    2021-07-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    39k
+                    39.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    142 分
+                    144 分
                 </div>
                 
 
@@ -1037,15 +1052,20 @@
 <p>官方：<a target="_blank" rel="noopener" href="https://redis.io/">https://redis.io/</a></p>
 <p>漏洞：未授权访问</p>
 <p>Redis因配置不当可以未授权访问（窃取数据、反弹shell、数据备份操作主从复制、命令执行）。攻击者无需认证访问到内部数据，可导致敏感信息泄露，也可以恶意执行flushall来清空所有数据。攻击者可通过EVAL执行lua代码，或通过数据备份功能往磁盘写入后门文件。</p>
+<p>Redis因配置不当可以导致未授权访问，被攻击者恶意利用。当前流行的针对Redis未授权访问的一种新型攻击方式，在特定条件下，如果Redis以root身份运行，黑客可以给root账户写入SSH公钥文件，直接通过SSH登录受害服务器，可导致服务器权限被获取和数据删除、泄露或加密勒索事件发生，严重危害业务正常服务。</p>
+<p>原因：</p>
+<p>Redis 默认情况下，会绑定在 0.0.0.0:6379，这样将会将 Redis 服务暴露到公网上，如果在没有开启认证的情况下，可以导致任意用户在可以访问目标服务器的情况下未授权访问 Redis 以及读取 Redis 的数据。攻击者在未授权访问 Redis 的情况下可以利用 Redis 的相关方法，可以成功在 Redis 服务器上写入公钥，进而可以使用对应私钥直接登录目标服务器。</p>
 <h4 id="1-redis未授权访问"><a href="#1-redis未授权访问" class="headerlink" title="1.redis未授权访问"></a>1.redis未授权访问</h4><p><strong>漏洞描述</strong></p>
 <p>redis默认没有口令可能会造成未授权访问造成信息泄露，若redis为高权限账户运行，可能导致服务器权限丢失等。</p>
-<p><strong>安全建议</strong></p>
-<p>1.禁用一些高危命令</p>
+<h4 id="2-危害"><a href="#2-危害" class="headerlink" title="2.危害"></a>2.危害</h4><p>数据库数据泄露<br>Redis 作为数据库，保存着各种各样的数据，如果存在未授权访问的情况，将会导致数据的泄露，其中包含保存的用户信息等。<br>代码执行<br>Redis可以嵌套Lua脚本的特性将会导致代码执行, 危害同其他服务器端的代码执行<br>一旦攻击者能够在服务器端执行任意代码, 攻击方式将会变得多且复杂, 这是非常危险的。<br>通过Lua代码攻击者可以调用 redis.sha1hex() 函数，恶意利用 Redis 服务器进行 SHA-1 的破解。<br>敏感信息泄露<br>通过 Redis 的 INFO 命令, 可以查看服务器相关的参数和敏感信息, 为攻击者的后续渗透做铺垫。</p>
+<h4 id="3-安全建议"><a href="#3-安全建议" class="headerlink" title="3.安全建议"></a>3.安全建议</h4><p>1.禁用一些高危命令</p>
 <p>　　常见如：flushdb，flushall，config，keys 等</p>
 <p>2.以低权限运行 Redis 服务</p>
 <p>3.为 Redis 添加密码验证</p>
 <p>4.禁止外网访问 Redis</p>
 <p>5.保证 authorized_keys 文件的安全</p>
+<p>Redis未授权访问漏洞是一个出现广泛并且危害巨大的漏洞，会直接导致整个服务器沦陷，要预防则需要做到：</p>
+<p>（1）禁止使用 root 权限启动 redis 服务；<br>（2）对 redis 访问启用密码认证，尤其不能使用空密码；<br>（3）添加 IP 访问限制；<br>（4）尽可能不对公网直接开放 SSH 服务。</p>
 <h3 id="4-Alibaba-Fastjson-系列漏洞"><a href="#4-Alibaba-Fastjson-系列漏洞" class="headerlink" title="4.Alibaba Fastjson 系列漏洞"></a>4.Alibaba Fastjson 系列漏洞</h3><blockquote>
 <p>Fastjson是一个Java库，可用于将Java对象转换为其JSON表示形式。它也可以用于将JSON字符串转换为等效的Java对象。Fastjson可以与任意Java对象一起使用，包括您没有源代码的预先存在的对象。</p>
 <p>Github:<a target="_blank" rel="noopener" href="https://github.com/alibaba/fastjson">https://github.com/alibaba/fastjson</a></p>
@@ -1152,270 +1172,225 @@
 <h3 id="Wireshark使用"><a href="#Wireshark使用" class="headerlink" title="Wireshark使用"></a>Wireshark使用</h3><h2 id="Ex-面试整合-The-interview-summary"><a href="#Ex-面试整合-The-interview-summary" class="headerlink" title="Ex 面试整合 The interview summary"></a>Ex 面试整合 <em>The interview summary</em></h2><p>知道创宇研发技能表 <a target="_blank" rel="noopener" href="http://blog.knownsec.com/Knownsec_RD_Checklist/">http://blog.knownsec.com/Knownsec_RD_Checklist/</a>  </p>
 <p>hvv行动的，分为初、中、高级，蓝队和红队</p>
 <h3 id="蓝-初级面"><a href="#蓝-初级面" class="headerlink" title="蓝-初级面"></a>蓝-初级面</h3><hr>
-<h4 id="SSRF-和-CSRF"><a href="#SSRF-和-CSRF" class="headerlink" title="SSRF 和 CSRF"></a>SSRF 和 CSRF</h4><p>SSRF 攻击者利用服务器伪造URL请求发送给用户 。指的是由攻击者构造的攻击链接传给服务端执行造成的漏洞，一般用来在外网探测或攻击内网服务<br>CSRF 攻击者利用客户端的Cookie伪造用户请求服务器<br>防范：服务器端对用户的URL和身份进行检查</p>
-<h4 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h4><p>原理：用户的输入被浏览器解析成了网页代码                防范： 转义关键字，过滤特殊字符<br>类型 反射、存储、DOM</p>
-<h4 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h4><p>原理：用户的输入被数据库解析器当作了sql语句并执行  防范：转义关键字，过滤特殊字符<br>类型 Boolean、Time、报错[floor()]<br>绕过[bypass] 大小写、双写、内联注释、空格 ++  思路：对一些特殊字符识别一下，看一下哪些字符没有被截断，然后用工具fuzz一下，跑出库名来</p>
-<h4 id="常见的中间件漏洞"><a href="#常见的中间件漏洞" class="headerlink" title="常见的中间件漏洞"></a>常见的中间件漏洞</h4><p>Struts2远程代码执行<br>Jboss反序列化漏洞<br>Weblogic 反序列化漏洞 利用T3协议<br>Monodb 未授权访问</p>
-<h4 id="常见的网站服务器容器"><a href="#常见的网站服务器容器" class="headerlink" title="常见的网站服务器容器"></a><strong>常见的网站服务器容器</strong></h4><p>IIS、Apache、nginx、Lighttpd、Tomcat</p>
-<h4 id="拿到一个待检测的站，你觉得应该先做什么？"><a href="#拿到一个待检测的站，你觉得应该先做什么？" class="headerlink" title="拿到一个待检测的站，你觉得应该先做什么？"></a>拿到一个待检测的站，你觉得应该先做什么？</h4><p><strong>信息收集</strong><br>a、获取域名的whois信息,获取注册者邮箱姓名电话等，丢社工库里看看有没有泄露密码，然后尝试用泄露的密码进行登录后台。用邮箱做关键词进行丢进搜索引擎。利用搜索到的关联信息找出其他邮箱进而得到常用社交账号。社工找出社交账号，里面或许会找出管理员设置密码的习惯 。利用已有信息生成专用字典。</p>
+<p>SSRF 和 CSRF</p>
+<p>SSRF 攻击者利用服务器伪造URL请求发送给用户 。指的是由攻击者构造的攻击链接传给服务端执行造成的漏洞，一般用来在外网探测或攻击内网服务<br>CSRF 攻击者利用客户端的Cookie伪造用户请求服务器<br>防范：服务器端对用户的URL和身份进行检查</p>
+<p>XSS </p>
+<p>原理：用户的输入被浏览器解析成了网页代码                防范： 转义关键字，过滤特殊字符<br>类型 反射、存储、DOM</p>
+<p>SQL</p>
+<p>原理：用户的输入被数据库解析器当作了sql语句并执行  防范：转义关键字，过滤特殊字符<br>类型 Boolean、Time、报错[floor()]<br>绕过[bypass] 大小写、双写、内联注释、空格 ++  思路：对一些特殊字符识别一下，看一下哪些字符没有被截断，然后用工具fuzz一下，跑出库名来</p>
+<p>常见的中间件漏洞</p>
+<p>Struts2远程代码执行<br>Jboss反序列化漏洞<br>Weblogic 反序列化漏洞 利用T3协议<br>Monodb 未授权访问</p>
+<p>常见的网站服务器容器</p>
+<p>IIS、Apache、nginx、Lighttpd、Tomcat</p>
+<p>拿到一个待检测的站，你觉得应该先做什么？</p>
+<p>信息收集<br>a、获取域名的whois信息,获取注册者邮箱姓名电话等，丢社工库里看看有没有泄露密码，然后尝试用泄露的密码进行登录后台。用邮箱做关键词进行丢进搜索引擎。利用搜索到的关联信息找出其他邮箱进而得到常用社交账号。社工找出社交账号，里面或许会找出管理员设置密码的习惯 。利用已有信息生成专用字典。</p>
 <p>b、查询服务器旁站以及子域名站点，因为主站一般比较难，所以先看看旁站有没有通用性的cms或者其他漏洞。</p>
 <p>c、查看服务器操作系统版本，web中间件，看看是否存在已知的漏洞，比如IIS，APACHE,NGINX的解析漏洞</p>
 <p>d、查看IP，进行IP地址端口扫描，对响应的端口进行漏洞探测，比如 rsync,心脏出血，mysql,ftp,ssh弱口令等。</p>
 <p>e、扫描网站目录结构，看看是否可以遍历目录，或者敏感文件泄漏，比如php探针<br>f、google hack 进一步探测网站的信息，后台，敏感文件</p>
-<p><strong>漏洞扫描</strong><br>开始检测漏洞，如XSS,XSRF,sql注入，代码执行，命令执行，越权访问，目录读取，任意文件读取，下载，文件包含，远程命令执行，弱口令，上传，编辑器漏洞，暴力破解等</p>
-<p><strong>漏洞利用</strong><br>利用以上的方式拿到webshell，或者其他权限</p>
-<p><strong>权限提升</strong><br>提权服务器，比如windows下mysql的udf提权，serv-u提权，windows低版本的漏洞，如iis6,pr,巴西烤肉，linux脏牛漏洞，linux内核版本漏洞提权，linux下的mysql system提权以及oracle低权限提权</p>
-<p><strong>日志清理</strong></p>
-<h4 id="Linux被入侵，如何检测木马？"><a href="#Linux被入侵，如何检测木马？" class="headerlink" title="Linux被入侵，如何检测木马？"></a>Linux被入侵，如何检测木马？</h4><p>账号：排查账号 /etc/paswwd /etc/shadow<br>系统：进程、端口、服务、远程登入、计划任务、日志文件、历史命令、系统状态<br>    进程 lsof -u root 查看用户进程 、、 fgrep ls 查看命令的进程 、、 ps -ef 查看进程 、、netstat -anp 列出所有进程<br>    端口 netstat -a<br>    服务 ps -aux 、 service –status-all 、 文件目录 /etc/init.d<br>    用户登入 last、lastb、lastlog 最后一次、失败、成功的用户 工具：whoamifuck2 githuub开源shell脚本，用户入侵检测排查工具<br>    计划任务 crontab -l<br>    日志分析 /var/log<br>    历史命令 /home/.bash_history      清除 -c<br>    系统状态 top stat glances<br>    木马查杀 chkrootkit</p>
-<h4 id="Windows中免杀马，放入到正常目录下，改了名字，修改时间，然后删除了日志，D盾也查不到，怎么办？"><a href="#Windows中免杀马，放入到正常目录下，改了名字，修改时间，然后删除了日志，D盾也查不到，怎么办？" class="headerlink" title="Windows中免杀马，放入到正常目录下，改了名字，修改时间，然后删除了日志，D盾也查不到，怎么办？"></a>Windows中免杀马，放入到正常目录下，改了名字，修改时间，然后删除了日志，D盾也查不到，怎么办？</h4><p>思路一：和备份的文件做对比，查看那些不同的文件。<br>思路二：用其它的工具，比如webshell在线查杀灭绝师太版本、Cloudwalker[牧云]</p>
-<p>思路三：使用Winhex 恢复</p>
-<h4 id="如果收到一个钓鱼、含木马的邮件，怎么办？"><a href="#如果收到一个钓鱼、含木马的邮件，怎么办？" class="headerlink" title="如果收到一个钓鱼、含木马的邮件，怎么办？"></a>如果收到一个钓鱼、含木马的邮件，怎么办？</h4><p>抑制：把邮件的附件下载到虚拟机，然后丢到沙箱里分析。<br>溯源：使用SenderPolicy Framework去查看发件人的IP地址，他其实就是一个DNS的TXT记录。<br>    Linux：dig -t txt email<br>    Windows：nslookup -type=txt email<br>    查看SPF记录，然后使用邮件发邮件，如果发件人的源IP不在IP列表，那么说明这是一封伪造邮件。<br>          使用DKIM，这是一个数字签名技术，可以通过DNS查询得到公开密钥进行验证，验证不通过，可以判断为垃圾邮件。</p>
-<h4 id="SQLmap如何跑POST类型？"><a href="#SQLmap如何跑POST类型？" class="headerlink" title="SQLmap如何跑POST类型？"></a>SQLmap如何跑POST类型？</h4><p>首先，手工判断一下，查出数据库，然后用Burpsuite抓包，获取到id=1</p>
+<p>漏洞扫描<br>开始检测漏洞，如XSS,XSRF,sql注入，代码执行，命令执行，越权访问，目录读取，任意文件读取，下载，文件包含，远程命令执行，弱口令，上传，编辑器漏洞，暴力破解等</p>
+<p>漏洞利用<br>利用以上的方式拿到webshell，或者其他权限</p>
+<p>权限提升<br>提权服务器，比如windows下mysql的udf提权，serv-u提权，windows低版本的漏洞，如iis6,pr,巴西烤肉，linux脏牛漏洞，linux内核版本漏洞提权，linux下的mysql system提权以及oracle低权限提权</p>
+<p>日志清理</p>
+<blockquote>
+<p>如果收到一个钓鱼、含木马的邮件，怎么办？</p>
+</blockquote>
+<p>抑制：把邮件的附件下载到虚拟机，然后丢到沙箱里分析。<br>溯源：使用SenderPolicy Framework去查看发件人的IP地址，他其实就是一个DNS的TXT记录。<br>    Linux：dig -t txt email<br>    Windows：nslookup -type=txt email<br>    查看SPF记录，然后使用邮件发邮件，如果发件人的源IP不在IP列表，那么说明这是一封伪造邮件。<br>          使用DKIM，这是一个数字签名技术，可以通过DNS查询得到公开密钥进行验证，验证不通过，可以判断为垃圾邮件。</p>
+<blockquote>
+<p>SQLmap如何跑POST类型？</p>
+</blockquote>
+<p>首先，手工判断一下，查出数据库，然后用Burpsuite抓包，获取到id=1</p>
 <p>然后，右键，copy to file 保存为txt文件</p>
 <p>再使用sqlmap -r txt文件</p>
 <p>爬出来就可以用payload获取到数据库 –dbs 表 –tables 列 –columns 内容 –dump</p>
-<h4 id="3-流量分析"><a href="#3-流量分析" class="headerlink" title="3.流量分析"></a>3.流量分析</h4><p>探雾hw面试题</p>
-<h4 id="1-xss原理？存储型xss如何利用？"><a href="#1-xss原理？存储型xss如何利用？" class="headerlink" title="1 . xss原理？存储型xss如何利用？"></a>1 . xss原理？存储型xss如何利用？</h4><pre class=" language-txt"><code class="language-txt">XSS 类型
-Dom（Self-XSS） 存储型 反射型
-
-存储型XSS怎么利用？
-
-XSS攻击的原理是通过修改或者添加页面上的JavaScript恶意脚本，在浏览器渲染页面的时候执行该脚本，从而实现窃取COOKIE或者调用Ajax实现其他类型的CSRF攻击
-
-CORS（浏览器同源策略）
-
-js =>ajax 去请求其他网站的东西
-
-test.com 根据浏览器的CORS策略 他只能在test.com里面请求东西 
-
-test.com 调用ajax 去访问 xxxx.com  assdasd.test.com   如果目标的CORS头 默认不放行test.com 这样 test.com 的ajax请求就不会访问其他网站 
-
-存储xss如何利用
-
-利用的方式比较多  因为存储xss  可以控制页面js的渲染 我们用js可以实现很多东西
-
-可以让手机振动
-
-返回劫持 
-
-拍照 截屏 
-</code></pre>
-<p>2.渗透测试流程</p>
-<pre class=" language-txt"><code class="language-txt">1.信息搜集 
-2.分析信息
-3.绘制思维导图 分析资产
-4. 对业务的逻辑点进行逻辑漏洞测试
-5. 对其身份验证功能的Token session进行测试
-6. 对其数据操作点进行注入测试
-7. 对其页面可控点进行xss测试
-8. 对其远程访问点进行SSRF测试
-9. 对其接口进行FUZZ 模糊测试
-10. 对其登录点进行弱口令测试
-11. 识别框架 弱框架有反序列化漏洞利用链 可寻找反序列化的点
-12. 对其文件上传功能进行任意文件上传测试
-13. 对其边界资产 例如gitlab jenkins 进行弱口令测试
-14. 对其现有CMS 查找相关漏洞利用工具 （exploit-db）等
-15. 对其端口进行扫描 查找其他相关服务测试
-16. .git .svn 源代码泄露 可以下载其源码文件 并且可以通过git 查看commit 切换分支等等
-</code></pre>
-<h4 id="3-入侵排查思路"><a href="#3-入侵排查思路" class="headerlink" title="3.入侵排查思路"></a>3.入侵排查思路</h4><pre class=" language-txt"><code class="language-txt">明确一件事情：已经被入侵，还是正在被入侵。
-
-已经被入侵
-
-一、目的已经达成，木马，后门均已销毁
-
-1. 既然知道被入侵，定位被入侵的时间点。
-2. 如果这个服务器是云服务器，对其进行快照。（目的，封存内存。）
-3. 当定位到时间点，查设备流量信息。找到木马链接信息。
-4. 查找系统内对应的日志，找到相关线索
-5. 如果日志被删除，因为机器快照已经建立。使用Winhex 对硬盘数据进行恢复。
-
-二、目的没有达成，数据正在回传。木马，后门均在服务器上运行。
-
-1.Volatility 内存取证 建立快照 提取内存 定位到shellcode 找到他的IP
-2. 如果他们使用常见的C2的工具，我们可以根据流量分析出入侵者的意图。
-3. 关闭服务器，或者在防火墙上 禁掉他们的IP。登录服务器，对shellcode进行移除。
-4. 重启以后进入安全模式，排查注册表  计划任务 服务 放大镜后门 shift后门。
-
-
-正在被入侵
-
-可能入侵者在尝试进行攻击的时候。
-
-弱口令爆破。
-
-1.弱口令爆破会产生日志，日志一定要采用远程日志系统，例如Linux的rsyslog。开启远程日志系统的好处：不怕日志被攻击者删除。
-
-2. 一定要找到入侵者的源IP，在防火墙下发阻断策略。。
-</code></pre>
-<h4 id="4-weblogic-redis未授权利用的是哪个端口"><a href="#4-weblogic-redis未授权利用的是哪个端口" class="headerlink" title="4.weblogic redis未授权利用的是哪个端口"></a>4.weblogic redis未授权利用的是哪个端口</h4><pre class=" language-txt"><code class="language-txt">Weblogic 7001
-redis 6379
-</code></pre>
-<h4 id="5-常见的端口漏洞"><a href="#5-常见的端口漏洞" class="headerlink" title="5.常见的端口漏洞"></a>5.常见的端口漏洞</h4><pre class=" language-txt"><code class="language-txt">21 ftp FTP服务端有很多  anonymous 匿名未授权访问 爆破
-22 ssh root密码爆破  后门用户 可以google查一些关于ssh后门的文章 里面的默认密码 可能会登入进去
-23 telnet  一般会发生在 路由器 或者交换机 嵌入式设备 管理端口 攻击方法 弱口令
-25 smtp   默认用户 默认密码 邮件账号爆破
-80 http   web  常见的Owasp top 10 中间件反序列化 中间件溢出  fastcgi配置不当 造成fastcgi端口泄露
-110 pop3  默认用户 默认密码 邮件账号爆破
-443 https  openssl 心脏滴血（影响范围较小） SSL/TLS低版本存在的漏洞
-135 139 445 netbios smb   MS17010 
-3389 RDP  CVE-2019-0708
-</code></pre>
-<p>6.信息收集都是收集什么</p>
-<pre class=" language-txt"><code class="language-txt">资产
-
-服务器资产 
-IP资产
-域名资产
-</code></pre>
-<p>7.常见漏洞以及自己的见解，防护手段等</p>
-<pre class=" language-txt"><code class="language-txt">sql注入 
-PHP PDo Thinkphp DB class 操作类 来预处理sql语句 这样可以避免sql注入攻击 
-使用类型判断函数 判断输入的类型是否为需要的类型
-
-</code></pre>
-<h4 id="8-发现客户被传了webshell如何处置"><a href="#8-发现客户被传了webshell如何处置" class="headerlink" title="8.发现客户被传了webshell如何处置"></a>8.发现客户被传了webshell如何处置</h4><pre class=" language-txt"><code class="language-txt">1.如何发现的？
-特征PHP:PHP的危险函数，exec eval assert([左尖括号]php7.4) create_function call_user_func system exec shell_exec 
-冰蝎的 openssl_decrypt
-PHP木马关键的函数
-2. webshell都干了些什么 该查些什么日志
-adminer.php 在/tmp、目录下有adminer的临时文件。(PHP单文件Mysql 管理工具 )
-nginx 日志 中间件日志 根据木马的名字查 继续再往上 找木马上传点
-PHP-fpm的日志  绕过disable_function 进行提权 使用GC bypass等 PHPFPM日志会有痕迹的
-mysql的 二进制日志  确定攻击者在攻击服务器的时候执行过什么语句。
-
-
-
-ps:如果中了一个免杀的webshell，日志被删除，所有的工具都查杀不出来，该怎么办
-使用Winhex 恢复
-</code></pre>
-<h4 id="9-获得了攻击者的ip如何进行溯源，获取攻击者的个人信息"><a href="#9-获得了攻击者的ip如何进行溯源，获取攻击者的个人信息" class="headerlink" title="9.获得了攻击者的ip如何进行溯源，获取攻击者的个人信息"></a>9.获得了攻击者的ip如何进行溯源，获取攻击者的个人信息</h4><pre class=" language-txt"><code class="language-txt">攻击者的IP是什么，IP的信息
-www.ipip.net
-根据IP地址 判断地址范围
-直接进行扫描 先常规渗透手段。我们可以联系机房 对机房进行社工。可能会得到一些有用的信息
-
-常规的渗透手段 ，可能入侵比较菜。
-
-红队比较菜，在自己的服务器上搭建渗透测试靶机。上面有文件上传功能。直接getshell
-
-可能被蓝队反打
-
-红队利用自己博客等服务器  进行攻击。这样ip反查域名 能得到攻击人员的花名（ID） 靠自己关系 找到他是谁
-</code></pre>
-<h4 id="10-有无其他安全产品的使用经验"><a href="#10-有无其他安全产品的使用经验" class="headerlink" title="10.有无其他安全产品的使用经验"></a>10.有无其他安全产品的使用经验</h4><pre class=" language-txt"><code class="language-txt">有
-
-
-EVE-NG  自己百度下载 配置 安装  网络拓扑模拟器 可以模拟很多安全设备  例如F5 山石防火墙 华为的防火墙
-
-ensp 华为模拟器  只能windows上使用
-</code></pre>
-<h4 id="11-如果爆发了0day改如何处理"><a href="#11-如果爆发了0day改如何处理" class="headerlink" title="11.如果爆发了0day改如何处理"></a>11.如果爆发了0day改如何处理</h4><pre class=" language-txt"><code class="language-txt">爆发0day 0day已经爆出来了 exp poc 很成熟了
-
-1. 收集提交得分
-2. 避免0day打到自己 ，如果有安全设备，自己写规则用于识别0day并且阻断
-</code></pre>
-<h4 id="12-Linux下权限维持方法"><a href="#12-Linux下权限维持方法" class="headerlink" title="12 . Linux下权限维持方法"></a>12 . Linux下权限维持方法</h4><pre class=" language-txt"><code class="language-txt">1.Crontab 定时任务 使用corntab 定时触发恶意脚本
-2. ssh 后门  进程注入 hook密码校验函数 得到管理员密码
-3. 修改管理员二进制 文件 创建软连接 使管理员在输入 ls 或者cd这种命令的时候执行我们的恶意脚本
-4. 环境变量劫持
-5. 内核后门(难度较高，需要重新编译内核并重启。优点，隐蔽性极强)
-6. pam后门
-7. /init.d/ 系统启动时默认运行的脚本
-</code></pre>
-<h4 id="13-内网代理正向与反向"><a href="#13-内网代理正向与反向" class="headerlink" title="13.内网代理正向与反向"></a>13.内网代理正向与反向</h4><pre class=" language-txt"><code class="language-txt">正向代理：直接可以从本机访问到对端的代理叫正向代理，通常用于目标主机前面没有防火墙，或者没有进行NAT地址转换的情况下使用
-
-反向代理：需要一台服务器  目标主机主动向服务器进行代理连接 ，我们本机再向服务器请求与目标主机的代理连接。同城用于目标主机前有防火墙，或者有端口限制。
-</code></pre>
-<h4 id="14-SQL注入JSON接口与白名单"><a href="#14-SQL注入JSON接口与白名单" class="headerlink" title="14.SQL注入JSON接口与白名单"></a>14.SQL注入JSON接口与白名单</h4><pre class=" language-txt"><code class="language-txt">json 传参
-{["0":"\'11222233333"]}
-\"
-</code></pre>
-<h4 id="15-redis未授权与权限获取"><a href="#15-redis未授权与权限获取" class="headerlink" title="15.redis未授权与权限获取"></a>15.redis未授权与权限获取</h4><pre class=" language-txt"><code class="language-txt">redis 未授权访问 
-6379  user_pass 
-可以向系统内写文件 构成一些安全威胁  
-
-1. 写ssh私钥 
-2. 写crontab   定时执行
-3. 写init.d    启动执行
-4. redis  docker 启动的 可以写dockerfile
-</code></pre>
-<h4 id="16-如何反查真实ip"><a href="#16-如何反查真实ip" class="headerlink" title="16.如何反查真实ip"></a>16.如何反查真实ip</h4><pre class=" language-txt"><code class="language-txt">fofa 互联网搜索引擎 
-
-1. 渗透手段  例如说ssrf 使用dnslog 就可以获取真实ip
-2. 查找历史解析  
-3. cloudflare github 可以获取真实IP
-
-
-4.fofa cert ="xxxx.com"
-5.http 如果 一个网站有icon 可以根据icon hash 来查找真实IP
-6. 前台不一样 css也不一样 可以根据CSS的信息 去fofa上找body对应的信息
-
-
-7.多地ping  这个 可以查询一个url 是否是cdn 或者是否是真实IP  多地ping 只能判断是否绑定多IP  其中多IP并不一定是CDN 也有可能是服务器负载均衡 
-
-8. nslookup 查找ns的记录 是否为cdn的记录 
-9. whois 查询 域名的DNS服务器 是否是cdn的DNS服务器
-10.如果网站有邮件功能，有可能邮件发送的地址为网站真实IP地址
-
-11 子域名绑定 测试子域可能回源
-</code></pre>
-<h4 id="17-寻找webshell"><a href="#17-寻找webshell" class="headerlink" title="17.寻找webshell"></a>17.寻找webshell</h4><pre class=" language-txt"><code class="language-txt">1.自动化查找  D盾 河马  fotify 
-2. 手动查找  windows  sublime  全文件夹查找 IDE PHPSTORM 全局查找
-    Linux  命令查找  grep -rn "eval(" *
-    webshell特征 PHP的危险函数
-    还有phar [左尖括号]?php XXXXX
-    
-</code></pre>
-<p>18.sql注入特征</p>
-<pre class=" language-txt"><code class="language-txt">1 请求里面可能会包含sql函数
-2 请求里面可能带/**
-3 sql占用系统资源情况要比往常多
-4 sql 二进制日志里面可能会有极其异常访问information_schema表名的情况
-</code></pre>
-<p>19.sql注入利用</p>
-<pre class=" language-txt"><code class="language-txt">sqlmap 查询数据
-
---os-pwn 联动msf getshell
-
-写shell
-日志写shell  （发篇文章）
-outfile函数写shell
-
-读文件
-
-读管理员hash 
-
-Linux so提权 Windows UDF提权
-
-
-sqlserver xp_cmd 执行命令 sqlmap --os-shell
-
-
-</code></pre>
-<h4 id="20-SQL二级注入。"><a href="#20-SQL二级注入。" class="headerlink" title="20.SQL二级注入。"></a>20.SQL二级注入。</h4><pre class=" language-txt"><code class="language-txt">
-</code></pre>
-<h4 id="21-日志中看到的行为分析。"><a href="#21-日志中看到的行为分析。" class="headerlink" title="21.日志中看到的行为分析。"></a>21.日志中看到的行为分析。</h4><pre class=" language-txt"><code class="language-txt">分析方法：
-蚁剑 菜刀  
-
-post一个PHP的函数  这些函数可以对文件进行操作  可以对数据库进行操作 
-如果特征编码 例如base64 rot13 通过该种编码的解码来实现流量的解密
-
-
-
-冰蝎
-
-aes-128加密
-在开始连接进行密钥协商的时候 抓取冰蝎流量密钥值
-
-通过冰蝎密钥 对加密的流量进行解密在进行行为分析
-
-
-</code></pre>
-<p>22.linux下的敏感文件？</p>
+<p>探雾hw面试题</p>
+<blockquote>
+<p>xss原理？存储型xss如何利用？</p>
+</blockquote>
+<p>XSS 类型<br>Dom（Self-XSS） 存储型 反射型</p>
+<blockquote>
+<p>存储型XSS怎么利用？</p>
+</blockquote>
+<p>XSS攻击的原理是通过修改或者添加页面上的JavaScript恶意脚本，在浏览器渲染页面的时候执行该脚本，从而实现窃取COOKIE或者调用Ajax实现其他类型的CSRF攻击</p>
+<blockquote>
+<p>CORS（浏览器同源策略）</p>
+</blockquote>
+<p>js =&gt;ajax 去请求其他网站的东西</p>
+<p>test.com 根据浏览器的CORS策略 他只能在test.com里面请求东西 </p>
+<p>test.com 调用ajax 去访问 xxxx.com  assdasd.test.com   如果目标的CORS头 默认不放行test.com 这样 test.com 的ajax请求就不会访问其他网站 </p>
+<blockquote>
+<p>存储xss如何利用</p>
+</blockquote>
+<p>利用的方式比较多  因为存储xss  可以控制页面js的渲染 我们用js可以实现很多东西</p>
+<p>可以让手机振动</p>
+<p>返回劫持 </p>
+<p>拍照 截屏 </p>
+<blockquote>
+<p>渗透测试流程</p>
+</blockquote>
+<p>1.信息搜集<br>2.分析信息<br>3.绘制思维导图 分析资产<br>4. 对业务的逻辑点进行逻辑漏洞测试<br>5. 对其身份验证功能的Token session进行测试<br>6. 对其数据操作点进行注入测试<br>7. 对其页面可控点进行xss测试<br>8. 对其远程访问点进行SSRF测试<br>9. 对其接口进行FUZZ 模糊测试<br>10. 对其登录点进行弱口令测试<br>11. 识别框架 弱框架有反序列化漏洞利用链 可寻找反序列化的点<br>12. 对其文件上传功能进行任意文件上传测试<br>13. 对其边界资产 例如gitlab jenkins 进行弱口令测试<br>14. 对其现有CMS 查找相关漏洞利用工具 （exploit-db）等<br>15. 对其端口进行扫描 查找其他相关服务测试<br>16. .git .svn 源代码泄露 可以下载其源码文件 并且可以通过git 查看commit切换分支等等</p>
+<blockquote>
+<p>入侵排查思路</p>
+</blockquote>
+<p>明确一件事情：已经被入侵，还是正在被入侵。</p>
+<p>已经被入侵</p>
+<p>一、目的已经达成，木马，后门均已销毁</p>
+<ol>
+<li>既然知道被入侵，定位被入侵的时间点。</li>
+<li>如果这个服务器是云服务器，对其进行快照。（目的，封存内存。）</li>
+<li>当定位到时间点，查设备流量信息。找到木马链接信息。</li>
+<li>查找系统内对应的日志，找到相关线索</li>
+<li>如果日志被删除，因为机器快照已经建立。使用Winhex 对硬盘数据进行恢复。</li>
+</ol>
+<p>二、目的没有达成，数据正在回传。木马，后门均在服务器上运行。</p>
+<p>1.Volatility 内存取证 建立快照 提取内存 定位到shellcode 找到他的IP<br>2. 如果他们使用常见的C2的工具，我们可以根据流量分析出入侵者的意图。<br>3. 关闭服务器，或者在防火墙上 禁掉他们的IP。登录服务器，对shellcode进行移除。<br>4. 重启以后进入安全模式，排查注册表  计划任务 服务 放大镜后门 shift后门。</p>
+<p>正在被入侵</p>
+<p>可能入侵者在尝试进行攻击的时候。<br>弱口令爆破。<br>1.弱口令爆破会产生日志，日志一定要采用远程日志系统，例如Linux的rsyslog。开启远程日志系统的好处：不怕日志被攻击者删除。</p>
+<ol start="2">
+<li>一定要找到入侵者的源IP，在防火墙下发阻断策略。。</li>
+</ol>
+<blockquote>
+<p>weblogic redis未授权利用的是哪个端口</p>
+</blockquote>
+<p>Weblogic 7001<br>redis 6379</p>
+<blockquote>
+<p>常见的端口漏洞</p>
+</blockquote>
+<p>21 ftp FTP服务端有很多  anonymous 匿名未授权访问 爆破<br>22 ssh root密码爆破  后门用户 可以google查一些关于ssh后门的文章 里面的默认密码 可能会登入进去<br>23 telnet  一般会发生在 路由器 或者交换机 嵌入式设备 管理端口 攻击方法 弱口令<br>25 smtp   默认用户 默认密码 邮件账号爆破<br>80 http   web  常见的Owasp top 10 中间件反序列化 中间件溢出  fastcgi配置不当 造成fastcgi端口泄露<br>110 pop3  默认用户 默认密码 邮件账号爆破<br>443 https  openssl 心脏滴血（影响范围较小） SSL/TLS低版本存在的漏洞<br>135 139 445 netbios smb   MS17010<br>3389 RDP  CVE-2019-0708</p>
+<blockquote>
+<p>信息收集都是收集什么</p>
+</blockquote>
+<p>资产</p>
+<p>服务器资产<br>IP资产<br>域名资产</p>
+<blockquote>
+<p>常见漏洞以及自己的见解，防护手段等</p>
+</blockquote>
+<p>sql注入<br>PHP PDo Thinkphp DB class 操作类 来预处理sql语句 这样可以避免sql注入攻击<br>使用类型判断函数 判断输入的类型是否为需要的类型</p>
+<blockquote>
+<p>发现客户被传了webshell如何处置</p>
+</blockquote>
+<p>1.如何发现的？<br>特征PHP:PHP的危险函数，exec eval assert([左尖括号]php7.4) create_function call_user_func system exec shell_exec<br>冰蝎的 openssl_decrypt<br>PHP木马关键的函数<br>2. webshell都干了些什么 该查些什么日志<br>adminer.php 在/tmp、目录下有adminer的临时文件。(PHP单文件Mysql 管理工具 )<br>nginx 日志 中间件日志 根据木马的名字查 继续再往上 找木马上传点<br>PHP-fpm的日志  绕过disable_function 进行提权 使用GC bypass等 PHPFPM日志会有痕迹的<br>mysql的 二进制日志  确定攻击者在攻击服务器的时候执行过什么语句。</p>
+<p>ps:如果中了一个免杀的webshell，日志被删除，所有的工具都查杀不出来，该怎么办<br>使用Winhex 恢复</p>
+<blockquote>
+<p>获得了攻击者的ip如何进行溯源，获取攻击者的个人信息</p>
+</blockquote>
+<p>攻击者的IP是什么，IP的信息<br><a target="_blank" rel="noopener" href="http://www.ipip.net/">www.ipip.net</a><br>根据IP地址 判断地址范围<br>直接进行扫描 先常规渗透手段。我们可以联系机房 对机房进行社工。可能会得到一些有用的信息</p>
+<p>常规的渗透手段 ，可能入侵比较菜。</p>
+<p>红队比较菜，在自己的服务器上搭建渗透测试靶机。上面有文件上传功能。直接getshell</p>
+<p>可能被蓝队反打</p>
+<p>红队利用自己博客等服务器  进行攻击。这样ip反查域名 能得到攻击人员的花名（ID） 靠自己关系 找到他是谁</p>
+<blockquote>
+<p>有无其他安全产品的使用经验</p>
+</blockquote>
+<p>有</p>
+<p>EVE-NG  自己百度下载 配置 安装  网络拓扑模拟器 可以模拟很多安全设备  例如F5 山石防火墙 华为的防火墙</p>
+<p>ensp 华为模拟器  只能windows上使用</p>
+<blockquote>
+<p>如果爆发了0day改如何处理</p>
+</blockquote>
+<p>爆发0day 0day已经爆出来了 exp poc 很成熟了</p>
+<ol>
+<li>收集提交得分</li>
+<li>避免0day打到自己 ，如果有安全设备，自己写规则用于识别0day并且阻断</li>
+</ol>
+<blockquote>
+<p>Linux下权限维持方法</p>
+</blockquote>
+<p>1.Crontab 定时任务 使用corntab 定时触发恶意脚本<br>2. ssh 后门  进程注入 hook密码校验函数 得到管理员密码<br>3. 修改管理员二进制 文件 创建软连接 使管理员在输入 ls 或者cd这种命令的时候执行我们的恶意脚本<br>4. 环境变量劫持<br>5. 内核后门(难度较高，需要重新编译内核并重启。优点，隐蔽性极强)<br>6. pam后门<br>7. /init.d/ 系统启动时默认运行的脚本</p>
+<blockquote>
+<p>内网代理正向与反向</p>
+</blockquote>
+<p>正向代理：直接可以从本机访问到对端的代理叫正向代理，通常用于目标主机前面没有防火墙，或者没有进行NAT地址转换的情况下使用</p>
+<p>反向代理：需要一台服务器  目标主机主动向服务器进行代理连接 ，我们本机再向服务器请求与目标主机的代理连接。同城用于目标主机前有防火墙，或者有端口限制。</p>
+<blockquote>
+<p>SQL注入JSON接口与白名单</p>
+</blockquote>
+<p>json 传参<br>{[“0”:”'11222233333”]}<br>"</p>
+<blockquote>
+<p>redis未授权与权限获取</p>
+</blockquote>
+<p>redis 未授权访问<br>6379  user_pass<br>可以向系统内写文件 构成一些安全威胁  </p>
+<ol>
+<li>写ssh私钥 </li>
+<li>写crontab   定时执行</li>
+<li>写init.d    启动执行</li>
+<li>redis  docker 启动的 可以写dockerfile</li>
+</ol>
+<blockquote>
+<p>如何反查真实ip</p>
+</blockquote>
+<p>fofa 互联网搜索引擎 </p>
+<ol>
+<li>渗透手段  例如说ssrf 使用dnslog 就可以获取真实ip</li>
+<li>查找历史解析  </li>
+<li>cloudflare github 可以获取真实IP</li>
+<li>fofa cert =”xxxx.com”</li>
+<li>http 如果 一个网站有icon 可以根据icon hash 来查找真实IP</li>
+<li>前台不一样 css也不一样 可以根据CSS的信息 去fofa上找body对应的信息</li>
+<li>多地ping  这个 可以查询一个url 是否是cdn 或者是否是真实IP  多地ping 只能判断是否绑定多IP  其中多IP并不一定是CDN 也有可能是服务器负载均衡 </li>
+<li>nslookup 查找ns的记录 是否为cdn的记录 </li>
+<li>whois 查询 域名的DNS服务器 是否是cdn的DNS服务器</li>
+<li>如果网站有邮件功能，有可能邮件发送的地址为网站真实IP地址<br>11 子域名绑定 测试子域可能回源</li>
+</ol>
+<blockquote>
+<p>寻找webshell</p>
+</blockquote>
+<p>1.自动化查找  D盾 河马  fotify<br>2. 手动查找  windows  sublime  全文件夹查找 IDE PHPSTORM 全局查找<br>    Linux  命令查找  grep -rn “eval(“ *<br>    webshell特征 PHP的危险函数<br>    还有phar [左尖括号]?php XXXXX</p>
+<blockquote>
+<p>sql注入特征</p>
+</blockquote>
+<p>1 请求里面可能会包含sql函数<br>2 请求里面可能带/**<br>3 sql占用系统资源情况要比往常多<br>4 sql 二进制日志里面可能会有极其异常访问information_schema表名的情况</p>
+<blockquote>
+<p>sql注入利用</p>
+</blockquote>
+<p>sqlmap 查询数据</p>
+<p>–os-pwn 联动msf getshell</p>
+<p>写shell<br>日志写shell  （发篇文章）<br>outfile函数写shell</p>
+<p>读文件</p>
+<p>读管理员hash </p>
+<p>Linux so提权 Windows UDF提权</p>
+<p>sqlserver xp_cmd 执行命令 sqlmap –os-shell</p>
+<blockquote>
+<p>SQL二级注入。</p>
+</blockquote>
+<p>二阶注入就是无法直接注入，它时指已存储（数据库、文件）的用户输入被读取后再次进入到 SQL 查询语句中导致的注入。</p>
+<p>一阶SQL注入：</p>
+<p>　　　　　　1；一阶SQL注入发生在一个HTTP请求和响应中，对系统的攻击是立即执行的；</p>
+<p>　　　　　　2；攻击者在http请求中提交非法输入；</p>
+<p>　　　　　　3；应用程序处理非法输入，使用非法输入构造SQL语句；</p>
+<p>　　　　　　4；在攻击过程中向攻击者返回结果。</p>
+<p>二阶SQL注入：</p>
+<p>　　　　　　1；攻击者在http请求中提交恶意输入；</p>
+<p>　　　　　　2；恶意输入保存在数据库中；</p>
+<p>　　　　　　3；攻击者提交第二次http请求；</p>
+<p>　　　　　　4；为处理第二次http请求，程序在检索存储在数据库中的恶意输入，构造SQL语句；</p>
+<p>　　　　　　5；如果攻击成功，在第二次请求响应中返回结果</p>
+<blockquote>
+<p>日志中看到的行为分析。</p>
+</blockquote>
+<p>分析方法：<br>蚁剑 菜刀  </p>
+<p>post一个PHP的函数  这些函数可以对文件进行操作  可以对数据库进行操作<br>如果特征编码 例如base64 rot13 通过该种编码的解码来实现流量的解密</p>
+<p>冰蝎</p>
+<p>aes-128加密<br>在开始连接进行密钥协商的时候 抓取冰蝎流量密钥值</p>
+<p>通过冰蝎密钥 对加密的流量进行解密在进行行为分析</p>
+<blockquote>
+<p>linux下的敏感文件？</p>
+</blockquote>
 <p>/etc/redhat-release  Centos 版本号<br>/proc/cpuinfo   CPU型号信息<br>/var/log/message  内核日志<br>/var/log/last   登录日志<br>/etc/sysconfig/selinux selinux状态<br>/etc/passwd  用户账户信息<br>/etc/shadow 用户密码</p>
-<h4 id="你会流量分析吗？"><a href="#你会流量分析吗？" class="headerlink" title="你会流量分析吗？"></a>你会流量分析吗？</h4><p>我会用wireshark过滤协议。</p>
-<h3 id="蓝-中级面"><a href="#蓝-中级面" class="headerlink" title="蓝-中级面"></a>蓝-中级面</h3><p>如何分析进程，有一个木马？</p>
-<h3 id="经典蓝队问题TOP10"><a href="#经典蓝队问题TOP10" class="headerlink" title="经典蓝队问题TOP10"></a>经典蓝队问题TOP10</h3><h3 id="蓝-高级面"><a href="#蓝-高级面" class="headerlink" title="蓝-高级面"></a>蓝-高级面</h3><h3 id="红-初级面"><a href="#红-初级面" class="headerlink" title="红-初级面"></a>红-初级面</h3><h3 id="红-中级面"><a href="#红-中级面" class="headerlink" title="红-中级面"></a>红-中级面</h3><h3 id="红-高级面"><a href="#红-高级面" class="headerlink" title="红-高级面"></a>红-高级面</h3><h3 id="渗透测试工程师面试"><a href="#渗透测试工程师面试" class="headerlink" title="渗透测试工程师面试"></a>渗透测试工程师面试</h3><h4 id="滴滴-DiDi"><a href="#滴滴-DiDi" class="headerlink" title="滴滴 DiDi"></a>滴滴 DiDi</h4><p>一面：<br>可能我简历写的比较少，面试官似乎有些不知道问什么，尴尬了一会儿，开头自我介绍，先问了个简单的n!，然后说如果输入的n是负数呢？<br>之后是一道数组最大连续子数组和。<br>python基础类库，requests,re，爬虫的基本流程<br>一些基本的sql语句</p>
+<blockquote>
+<p>你会流量分析吗？</p>
+</blockquote>
+<p>我会用wireshark过滤协议。</p>
+<p>如何分析进程，有一个木马？</p>
+<h3 id="经典问题"><a href="#经典问题" class="headerlink" title="经典问题"></a>经典问题</h3><blockquote>
+<p>Linux被入侵，如何检测木马？</p>
+</blockquote>
+<p>账号：排查账号 /etc/paswwd /etc/shadow<br>系统：进程、端口、服务、远程登入、计划任务、日志文件、历史命令、系统状态<br>    进程 lsof -u root 查看用户进程 、、 fgrep ls 查看命令的进程 、、 ps -ef 查看进程 、、netstat -anp 列出所有进程<br>    端口 netstat -a<br>    服务 ps -aux 、 service –status-all 、 文件目录 /etc/init.d<br>    用户登入 last、lastb、lastlog 最后一次、失败、成功的用户 工具：whoamifuck2 githuub开源shell脚本，用户入侵检测排查工具<br>    计划任务 crontab -l<br>    日志分析 /var/log<br>    历史命令 /home/.bash_history      清除 -c<br>    系统状态 top stat glances<br>    木马查杀 chkrootkit</p>
+<blockquote>
+<p>Windows中免杀马，放入到正常目录下，改了名字，修改时间，然后删除了日志，D盾也查不到，怎么办？</p>
+</blockquote>
+<p>思路一：和备份的文件做对比，查看那些不同的文件。<br>思路二：用其它的工具，比如webshell在线查杀灭绝师太版本、Cloudwalker[牧云]<br>思路三：使用Winhex 恢复</p>
+<h3 id="渗透测试工程师面试"><a href="#渗透测试工程师面试" class="headerlink" title="渗透测试工程师面试"></a>渗透测试工程师面试</h3><h4 id="滴滴-DiDi"><a href="#滴滴-DiDi" class="headerlink" title="滴滴 DiDi"></a>滴滴 DiDi</h4><p>一面：<br>可能我简历写的比较少，面试官似乎有些不知道问什么，尴尬了一会儿，开头自我介绍，先问了个简单的n!，然后说如果输入的n是负数呢？<br>之后是一道数组最大连续子数组和。<br>python基础类库，requests,re，爬虫的基本流程<br>一些基本的sql语句</p>
 <p>二面：<br>xss与sql注入的基本原理与分类<br>xss如何防御？（分前端与后端，后端需要在入口和出口都过滤）<br>app客户端与服务器通信可能出现哪些漏洞问题<br>如何防御中间人攻击？<br>https的建立过程<br>TCP三次握手的过程以及对应的状态转换<br>app客户端破解的大致流程，app解包后文件夹的基本结构<br>对称加密与非对称加密的不同，分别用在哪些方面<br>DDOS的攻击，说道syn洪流的原理<br>ddos的防御<br>滴滴客户端可能存在哪些逻辑漏洞</p>
 <p>三面：<br>三面面试官感觉比较和蔼，上来先问平时干什么，我说玩游戏，然后说到lol，问我啥段位，我说白银。然后问我为什么段位低，我说一般打得少，基本都是开黑打匹配。<br>然后问了一些其他的生活问题。<br>后来看我简历上写了关于操作系统的，于是问我操作系统各个设备模块间的关系。当时有点蒙，就和他说了下操作系统启动的大致流程，从保护模式开启开始讲，因为实模式阶段记得不是很清楚。因为没想到三面会问我技术，后来想了想，问的意思可能是说设备栈之间数据流从上到下一层层处理的过程。</p>
 <h4 id="阿里-Alibaba"><a href="#阿里-Alibaba" class="headerlink" title="阿里 Alibaba"></a>阿里 Alibaba</h4><h5 id="1-FAQ"><a href="#1-FAQ" class="headerlink" title="1.FAQ"></a>1.FAQ</h5><ol>
@@ -3288,7 +3263,7 @@ aes-128加密
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">214.8k</span>&nbsp;字
+                class="white-color">215.5k</span>&nbsp;字
             
             
             
