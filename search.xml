@@ -1094,35 +1094,6 @@
     
     
     <entry>
-      <title>Linux-watch监视命令的命令</title>
-      <link href="posts/9670.html"/>
-      <url>posts/9670.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Ax-watch命令使用"><a href="#Ax-watch命令使用" class="headerlink" title="Ax watch命令使用"></a>Ax watch命令使用</h2><p>用于监视命令的输出</p><p><code>watch -n 1 'ls -l'</code></p><p>在cmd中上传一个文件到这个ls中，可以看到立马就出现了，因为这是每隔一秒就刷新的。</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210002914.png"></p><p>但是这样，我们不容易看出哪个是变化的，可以加入参数 -d 使其变色。</p><p><code>watch -d 'COMMAND'</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210003725.png"></p><h2 id="Bx-参考"><a href="#Bx-参考" class="headerlink" title="Bx 参考"></a>Bx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-            <tag> shell </tag>
-            
-            <tag> watch </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Linux-日志</title>
       <link href="posts/9563.html"/>
       <url>posts/9563.html</url>
@@ -1144,6 +1115,35 @@
             <tag> shell </tag>
             
             <tag> logger </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux-watch监视命令的命令</title>
+      <link href="posts/9670.html"/>
+      <url>posts/9670.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Ax-watch命令使用"><a href="#Ax-watch命令使用" class="headerlink" title="Ax watch命令使用"></a>Ax watch命令使用</h2><p>用于监视命令的输出</p><p><code>watch -n 1 'ls -l'</code></p><p>在cmd中上传一个文件到这个ls中，可以看到立马就出现了，因为这是每隔一秒就刷新的。</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210002914.png"></p><p>但是这样，我们不容易看出哪个是变化的，可以加入参数 -d 使其变色。</p><p><code>watch -d 'COMMAND'</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210210003725.png"></p><h2 id="Bx-参考"><a href="#Bx-参考" class="headerlink" title="Bx 参考"></a>Bx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> shell </tag>
+            
+            <tag> watch </tag>
             
         </tags>
       
@@ -1388,35 +1388,6 @@
     
     
     <entry>
-      <title>Linux-wall终端聊天交互</title>
-      <link href="posts/280f.html"/>
-      <url>posts/280f.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="Linux-wall终端交互"><a href="#Linux-wall终端交互" class="headerlink" title="Linux-wall终端交互"></a><a href="">Linux-wall终端交互</a></h1><blockquote><p>Linux是多用户的，那么root作为管理员，可以发送消息给其它的终端用户，因为root无视普通用户禁用写入消息。</p></blockquote><h2 id="Ax-wall命令"><a href="#Ax-wall命令" class="headerlink" title="Ax wall命令"></a>Ax wall命令</h2><p>向所有当前用户发送广播消息,wall是write all的缩写</p><p>下面，我准备了电脑上两个终端，手机上一个，</p><h4 id="测试一：使用root用户向所有用户发送Hello"><a href="#测试一：使用root用户向所有用户发送Hello" class="headerlink" title="测试一：使用root用户向所有用户发送Hello"></a>测试一：使用root用户向所有用户发送Hello</h4><p><code>echo Hello | wall</code></p><p>或</p><p><code>wall “Hello”</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210205150816.png"></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210205150926.png"></p><h4 id="测试二：root用户禁用写入消息，再使用普通用户t发送消息"><a href="#测试二：root用户禁用写入消息，再使用普通用户t发送消息" class="headerlink" title="测试二：root用户禁用写入消息，再使用普通用户t发送消息"></a>测试二：root用户禁用写入消息，再使用普通用户t发送消息</h4><p>mesg n</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210205151506.png"></p><h2 id="Bx-给指定用户发送消息"><a href="#Bx-给指定用户发送消息" class="headerlink" title="Bx 给指定用户发送消息"></a>Bx 给指定用户发送消息</h2><p>发送消息给指定用户的脚本。</p><p>使用w或者who查看当前用户</p><pre class=" language-bash"><code class="language-bash">1、write + ssh登陆用户名+ttyname<span class="token punctuation">(</span>例如pts/1<span class="token punctuation">)</span> 回车2、输入信息3、EOF4、CTRL+D</code></pre><p>但是经过我多次尝试，普通用户间无法互相联系，不知何处出错，但同用户可以</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210205170748.png"></p><p>比如我用windows的cmd连一个ssh，再用xshell连同一个账户，就可以根据他们的tty来建立联系</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210206133705.png"></p><h2 id="Cx-参考"><a href="#Cx-参考" class="headerlink" title="Cx 参考"></a>Cx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><p>[2] <a href="https://www.cnblogs.com/gaojun/p/3387427.html">https://www.cnblogs.com/gaojun/p/3387427.html</a></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-            <tag> shell </tag>
-            
-            <tag> wall </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Linux-cron坐享其成</title>
       <link href="posts/5f27.html"/>
       <url>posts/5f27.html</url>
@@ -1438,6 +1409,35 @@
             <tag> shell </tag>
             
             <tag> cron </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux-wall终端聊天交互</title>
+      <link href="posts/280f.html"/>
+      <url>posts/280f.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Linux-wall终端交互"><a href="#Linux-wall终端交互" class="headerlink" title="Linux-wall终端交互"></a><a href="">Linux-wall终端交互</a></h1><blockquote><p>Linux是多用户的，那么root作为管理员，可以发送消息给其它的终端用户，因为root无视普通用户禁用写入消息。</p></blockquote><h2 id="Ax-wall命令"><a href="#Ax-wall命令" class="headerlink" title="Ax wall命令"></a>Ax wall命令</h2><p>向所有当前用户发送广播消息,wall是write all的缩写</p><p>下面，我准备了电脑上两个终端，手机上一个，</p><h4 id="测试一：使用root用户向所有用户发送Hello"><a href="#测试一：使用root用户向所有用户发送Hello" class="headerlink" title="测试一：使用root用户向所有用户发送Hello"></a>测试一：使用root用户向所有用户发送Hello</h4><p><code>echo Hello | wall</code></p><p>或</p><p><code>wall “Hello”</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210205150816.png"></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210205150926.png"></p><h4 id="测试二：root用户禁用写入消息，再使用普通用户t发送消息"><a href="#测试二：root用户禁用写入消息，再使用普通用户t发送消息" class="headerlink" title="测试二：root用户禁用写入消息，再使用普通用户t发送消息"></a>测试二：root用户禁用写入消息，再使用普通用户t发送消息</h4><p>mesg n</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210205151506.png"></p><h2 id="Bx-给指定用户发送消息"><a href="#Bx-给指定用户发送消息" class="headerlink" title="Bx 给指定用户发送消息"></a>Bx 给指定用户发送消息</h2><p>发送消息给指定用户的脚本。</p><p>使用w或者who查看当前用户</p><pre class=" language-bash"><code class="language-bash">1、write + ssh登陆用户名+ttyname<span class="token punctuation">(</span>例如pts/1<span class="token punctuation">)</span> 回车2、输入信息3、EOF4、CTRL+D</code></pre><p>但是经过我多次尝试，普通用户间无法互相联系，不知何处出错，但同用户可以</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210205170748.png"></p><p>比如我用windows的cmd连一个ssh，再用xshell连同一个账户，就可以根据他们的tty来建立联系</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210206133705.png"></p><h2 id="Cx-参考"><a href="#Cx-参考" class="headerlink" title="Cx 参考"></a>Cx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><p>[2] <a href="https://www.cnblogs.com/gaojun/p/3387427.html">https://www.cnblogs.com/gaojun/p/3387427.html</a></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> shell </tag>
+            
+            <tag> wall </tag>
             
         </tags>
       
@@ -1504,35 +1504,6 @@
     
     
     <entry>
-      <title>Linux-shell编写mysql脚本</title>
-      <link href="posts/a9c6.html"/>
-      <url>posts/a9c6.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="Linux-shell编写mysql脚本"><a href="#Linux-shell编写mysql脚本" class="headerlink" title="Linux-shell编写mysql脚本"></a><a href="">Linux-shell编写mysql脚本</a></h1><blockquote><p>声明：以下代码中 &lt;&lt;表示 &lt;&lt; 因为会导致乱码 ，这漏洞真实多。。</p></blockquote><h2 id="Ax-编写脚本创建数据库、表"><a href="#Ax-编写脚本创建数据库、表" class="headerlink" title="Ax 编写脚本创建数据库、表"></a>Ax 编写脚本创建数据库、表</h2><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">#!/bin/bash</span><span class="token comment" spellcheck="true"># 创建数据库表</span><span class="token keyword">USER</span><span class="token operator">=</span><span class="token string">"root"</span>PASS<span class="token operator">=</span><span class="token string">"xxx"</span>mysql <span class="token operator">-</span>u $<span class="token keyword">USER</span>  <span class="token operator">-</span>p$PASS <span class="token operator">&lt;&lt;</span>EOF <span class="token number">2</span><span class="token operator">></span> <span class="token operator">/</span>dev<span class="token operator">/</span><span class="token boolean">null</span><span class="token keyword">create</span> <span class="token keyword">database</span> students<span class="token punctuation">;</span>EOF<span class="token punctuation">[</span> $? <span class="token operator">-</span>eq <span class="token number">0</span> <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> echo Created DB <span class="token operator">||</span> echo DB already existmysql <span class="token operator">-</span>u $<span class="token keyword">USER</span> <span class="token operator">-</span>p$PASS students <span class="token operator">&lt;&lt;</span>EOF <span class="token number">2</span><span class="token operator">></span> <span class="token operator">/</span>dev<span class="token operator">/</span><span class="token boolean">null</span><span class="token keyword">create</span> <span class="token keyword">table</span> students<span class="token punctuation">(</span>id <span class="token keyword">int</span><span class="token punctuation">,</span>name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">,</span>mark <span class="token keyword">int</span><span class="token punctuation">,</span>dept <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>EOF<span class="token punctuation">[</span> $? <span class="token operator">-</span>eq <span class="token number">0</span> <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> echo Created <span class="token keyword">table</span> students <span class="token operator">||</span> echo <span class="token keyword">Table</span> stduents already existmysql <span class="token operator">-</span>u $<span class="token keyword">USER</span> <span class="token operator">-</span>p$PASS students <span class="token operator">&lt;</span>\<span class="token operator">&lt;</span>EOF<span class="token keyword">delete</span> <span class="token keyword">from</span> students<span class="token punctuation">;</span>EOF</code></pre><p>运行脚本</p><p><code>bash create_db.sh</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203180544.png"></p><p>创建数据库表成功</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203180636.png"></p><h2 id="Bx-编写脚本插入数据"><a href="#Bx-编写脚本插入数据" class="headerlink" title="Bx 编写脚本插入数据"></a>Bx 编写脚本插入数据</h2><p>作为csv文件的数据，创建一个csv文件添加数据。</p><pre class=" language-csv"><code class="language-csv">1,Navin M,98,CS2,kavya M,70,CS3,Nawaz O,80,CS4,Hari S,80,EC5,Alex M,50,EC6,Neenu J,70,EC7,Bob A,30,EC8,Anu M,90,AE9,Sruthi,89,AE10,Andrew,89,AE</code></pre><p>编写第二个脚本，插入数据</p><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">#!/bin/bash</span><span class="token comment" spellcheck="true"># 插入数据</span><span class="token keyword">USER</span><span class="token operator">=</span><span class="token string">"root"</span>PASS<span class="token operator">=</span><span class="token string">"xxx"</span><span class="token keyword">if</span> <span class="token punctuation">[</span> $<span class="token comment" spellcheck="true"># -ne 1 ];</span><span class="token keyword">then</span>       echo $<span class="token number">0</span> DATAFILE       echo       <span class="token keyword">exit</span> <span class="token number">2</span>fi<span class="token keyword">data</span><span class="token operator">=</span>$<span class="token number">1</span><span class="token keyword">while</span> <span class="token keyword">read</span> line<span class="token punctuation">;</span><span class="token keyword">do</span>          oldIFS<span class="token operator">=</span>$IFS          IFS<span class="token operator">=</span><span class="token punctuation">,</span>          <span class="token keyword">values</span><span class="token operator">=</span><span class="token punctuation">(</span>$line<span class="token punctuation">)</span>          <span class="token keyword">values</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"\"</span><span class="token punctuation">`</span>echo ${<span class="token keyword">values</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>} <span class="token operator">|</span> tr <span class="token string">' '</span> '<span class="token comment" spellcheck="true">#'`\""</span>          <span class="token keyword">values</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"\"`echo ${values[3]}`\""</span>                      query<span class="token operator">=</span><span class="token punctuation">`</span>echo ${<span class="token keyword">values</span><span class="token punctuation">[</span>@<span class="token punctuation">]</span>} <span class="token operator">|</span> tr ' <span class="token comment" spellcheck="true">#' ', ' `</span>          IFS<span class="token operator">=</span>$oldIFS          mysql <span class="token operator">-</span>u $<span class="token keyword">USER</span> <span class="token operator">-</span>p$PASS students <span class="token operator">&lt;</span>\<span class="token operator">&lt;</span>EOF<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> students <span class="token keyword">VALUES</span><span class="token punctuation">(</span>$query<span class="token punctuation">)</span><span class="token punctuation">;</span>EOFdone<span class="token operator">&lt;</span> $<span class="token keyword">data</span>echo Wrote <span class="token keyword">data</span> <span class="token keyword">into</span> DB</code></pre><p>运行第二个脚本</p><pre class=" language-shell"><code class="language-shell">$ chmod +x write_to_db.sh$ ./write_to_db.sh data.csv</code></pre><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203191859.png"></p><h2 id="Cx-编写脚本查询数据"><a href="#Cx-编写脚本查询数据" class="headerlink" title="Cx 编写脚本查询数据"></a>Cx 编写脚本查询数据</h2><p>编写查询脚本</p><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">#! /bin/bash</span><span class="token comment" spellcheck="true"># 查询</span><span class="token keyword">USER</span><span class="token operator">=</span><span class="token string">"root"</span>PASS<span class="token operator">=</span><span class="token string">"xxx"</span>depts<span class="token operator">=</span><span class="token punctuation">`</span>mysql <span class="token operator">-</span>u $<span class="token keyword">USER</span> <span class="token operator">-</span>p$PASS students <span class="token operator">&lt;</span>\<span class="token operator">&lt;</span>EOF <span class="token operator">|</span> tail <span class="token operator">-</span>n  <span class="token operator">+</span><span class="token number">2</span><span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> dept <span class="token keyword">FROM</span> students<span class="token punctuation">;</span>EOF<span class="token punctuation">`</span><span class="token keyword">for</span> <span class="token number">d</span> <span class="token operator">in</span> $depts<span class="token punctuation">;</span><span class="token keyword">do</span>echo Department : $<span class="token number">d</span>result<span class="token operator">=</span><span class="token string">"`mysql -u $USER -p$PASS students &lt;&lt;EOFSET @i:=0;SELECT @i:=@i+1 as rank,name,mark FROM students WHERE dept="</span>$<span class="token number">d</span><span class="token string">" ORDER BY mark DESC;EOF`"</span>echo <span class="token string">"$result"</span>echodone</code></pre><p>运行查询脚本</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203193512.png"></p><p>进入数据库验证一下</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203194302.png"></p><h2 id="Dx-参考"><a href="#Dx-参考" class="headerlink" title="Dx 参考"></a>Dx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-            <tag> shell </tag>
-            
-            <tag> mysql </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Linux-系统信息收集</title>
       <link href="posts/f7f.html"/>
       <url>posts/f7f.html</url>
@@ -1554,6 +1525,35 @@
             <tag> shell </tag>
             
             <tag> 系统信息 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux-shell编写mysql脚本</title>
+      <link href="posts/a9c6.html"/>
+      <url>posts/a9c6.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Linux-shell编写mysql脚本"><a href="#Linux-shell编写mysql脚本" class="headerlink" title="Linux-shell编写mysql脚本"></a><a href="">Linux-shell编写mysql脚本</a></h1><blockquote><p>声明：以下代码中 &lt;&lt;表示 &lt;&lt; 因为会导致乱码 ，这漏洞真实多。。</p></blockquote><h2 id="Ax-编写脚本创建数据库、表"><a href="#Ax-编写脚本创建数据库、表" class="headerlink" title="Ax 编写脚本创建数据库、表"></a>Ax 编写脚本创建数据库、表</h2><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">#!/bin/bash</span><span class="token comment" spellcheck="true"># 创建数据库表</span><span class="token keyword">USER</span><span class="token operator">=</span><span class="token string">"root"</span>PASS<span class="token operator">=</span><span class="token string">"xxx"</span>mysql <span class="token operator">-</span>u $<span class="token keyword">USER</span>  <span class="token operator">-</span>p$PASS <span class="token operator">&lt;&lt;</span>EOF <span class="token number">2</span><span class="token operator">></span> <span class="token operator">/</span>dev<span class="token operator">/</span><span class="token boolean">null</span><span class="token keyword">create</span> <span class="token keyword">database</span> students<span class="token punctuation">;</span>EOF<span class="token punctuation">[</span> $? <span class="token operator">-</span>eq <span class="token number">0</span> <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> echo Created DB <span class="token operator">||</span> echo DB already existmysql <span class="token operator">-</span>u $<span class="token keyword">USER</span> <span class="token operator">-</span>p$PASS students <span class="token operator">&lt;&lt;</span>EOF <span class="token number">2</span><span class="token operator">></span> <span class="token operator">/</span>dev<span class="token operator">/</span><span class="token boolean">null</span><span class="token keyword">create</span> <span class="token keyword">table</span> students<span class="token punctuation">(</span>id <span class="token keyword">int</span><span class="token punctuation">,</span>name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">,</span>mark <span class="token keyword">int</span><span class="token punctuation">,</span>dept <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>EOF<span class="token punctuation">[</span> $? <span class="token operator">-</span>eq <span class="token number">0</span> <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> echo Created <span class="token keyword">table</span> students <span class="token operator">||</span> echo <span class="token keyword">Table</span> stduents already existmysql <span class="token operator">-</span>u $<span class="token keyword">USER</span> <span class="token operator">-</span>p$PASS students <span class="token operator">&lt;</span>\<span class="token operator">&lt;</span>EOF<span class="token keyword">delete</span> <span class="token keyword">from</span> students<span class="token punctuation">;</span>EOF</code></pre><p>运行脚本</p><p><code>bash create_db.sh</code></p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203180544.png"></p><p>创建数据库表成功</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203180636.png"></p><h2 id="Bx-编写脚本插入数据"><a href="#Bx-编写脚本插入数据" class="headerlink" title="Bx 编写脚本插入数据"></a>Bx 编写脚本插入数据</h2><p>作为csv文件的数据，创建一个csv文件添加数据。</p><pre class=" language-csv"><code class="language-csv">1,Navin M,98,CS2,kavya M,70,CS3,Nawaz O,80,CS4,Hari S,80,EC5,Alex M,50,EC6,Neenu J,70,EC7,Bob A,30,EC8,Anu M,90,AE9,Sruthi,89,AE10,Andrew,89,AE</code></pre><p>编写第二个脚本，插入数据</p><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">#!/bin/bash</span><span class="token comment" spellcheck="true"># 插入数据</span><span class="token keyword">USER</span><span class="token operator">=</span><span class="token string">"root"</span>PASS<span class="token operator">=</span><span class="token string">"xxx"</span><span class="token keyword">if</span> <span class="token punctuation">[</span> $<span class="token comment" spellcheck="true"># -ne 1 ];</span><span class="token keyword">then</span>       echo $<span class="token number">0</span> DATAFILE       echo       <span class="token keyword">exit</span> <span class="token number">2</span>fi<span class="token keyword">data</span><span class="token operator">=</span>$<span class="token number">1</span><span class="token keyword">while</span> <span class="token keyword">read</span> line<span class="token punctuation">;</span><span class="token keyword">do</span>          oldIFS<span class="token operator">=</span>$IFS          IFS<span class="token operator">=</span><span class="token punctuation">,</span>          <span class="token keyword">values</span><span class="token operator">=</span><span class="token punctuation">(</span>$line<span class="token punctuation">)</span>          <span class="token keyword">values</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"\"</span><span class="token punctuation">`</span>echo ${<span class="token keyword">values</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>} <span class="token operator">|</span> tr <span class="token string">' '</span> '<span class="token comment" spellcheck="true">#'`\""</span>          <span class="token keyword">values</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"\"`echo ${values[3]}`\""</span>                      query<span class="token operator">=</span><span class="token punctuation">`</span>echo ${<span class="token keyword">values</span><span class="token punctuation">[</span>@<span class="token punctuation">]</span>} <span class="token operator">|</span> tr ' <span class="token comment" spellcheck="true">#' ', ' `</span>          IFS<span class="token operator">=</span>$oldIFS          mysql <span class="token operator">-</span>u $<span class="token keyword">USER</span> <span class="token operator">-</span>p$PASS students <span class="token operator">&lt;</span>\<span class="token operator">&lt;</span>EOF<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> students <span class="token keyword">VALUES</span><span class="token punctuation">(</span>$query<span class="token punctuation">)</span><span class="token punctuation">;</span>EOFdone<span class="token operator">&lt;</span> $<span class="token keyword">data</span>echo Wrote <span class="token keyword">data</span> <span class="token keyword">into</span> DB</code></pre><p>运行第二个脚本</p><pre class=" language-shell"><code class="language-shell">$ chmod +x write_to_db.sh$ ./write_to_db.sh data.csv</code></pre><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203191859.png"></p><h2 id="Cx-编写脚本查询数据"><a href="#Cx-编写脚本查询数据" class="headerlink" title="Cx 编写脚本查询数据"></a>Cx 编写脚本查询数据</h2><p>编写查询脚本</p><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">#! /bin/bash</span><span class="token comment" spellcheck="true"># 查询</span><span class="token keyword">USER</span><span class="token operator">=</span><span class="token string">"root"</span>PASS<span class="token operator">=</span><span class="token string">"xxx"</span>depts<span class="token operator">=</span><span class="token punctuation">`</span>mysql <span class="token operator">-</span>u $<span class="token keyword">USER</span> <span class="token operator">-</span>p$PASS students <span class="token operator">&lt;</span>\<span class="token operator">&lt;</span>EOF <span class="token operator">|</span> tail <span class="token operator">-</span>n  <span class="token operator">+</span><span class="token number">2</span><span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> dept <span class="token keyword">FROM</span> students<span class="token punctuation">;</span>EOF<span class="token punctuation">`</span><span class="token keyword">for</span> <span class="token number">d</span> <span class="token operator">in</span> $depts<span class="token punctuation">;</span><span class="token keyword">do</span>echo Department : $<span class="token number">d</span>result<span class="token operator">=</span><span class="token string">"`mysql -u $USER -p$PASS students &lt;&lt;EOFSET @i:=0;SELECT @i:=@i+1 as rank,name,mark FROM students WHERE dept="</span>$<span class="token number">d</span><span class="token string">" ORDER BY mark DESC;EOF`"</span>echo <span class="token string">"$result"</span>echodone</code></pre><p>运行查询脚本</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203193512.png"></p><p>进入数据库验证一下</p><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210203194302.png"></p><h2 id="Dx-参考"><a href="#Dx-参考" class="headerlink" title="Dx 参考"></a>Dx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> shell </tag>
+            
+            <tag> mysql </tag>
             
         </tags>
       
