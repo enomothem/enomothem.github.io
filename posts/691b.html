@@ -642,14 +642,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-04
+                    2021-09-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    20.7k
+                    20.8k
                 </div>
                 
 
@@ -959,6 +959,12 @@
 <h4 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h4><p>RST：TCP重新连接的标志</p>
 <p>利用TCP协议的Dos攻击可以分为两类：一类是利用TCP协议本身的缺陷实施的攻击，包括SYN-Flood和ACK-Flood攻击；另一类是利用TCP全连接发起的攻击</p>
 <h4 id="IPSec"><a href="#IPSec" class="headerlink" title="IPSec"></a>IPSec</h4><p>ESP协议为基于IPSec的数据通信提供了安全加密、身份认证和数据完整性鉴别这三种安全保护机制</p>
+<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210910095307778.png"></p>
+<p><strong>IPSec 对 网络 层封装</strong><br><strong>SSL 对 应用 层封装</strong></p>
+<p>图1：ESP协议 传输模式</p>
+<p>图2：ESP协议 隧道模式</p>
+<p>图3：AH协议 传输模式</p>
+<p>图4：AH协议 隧道模式</p>
 <h4 id="AAA"><a href="#AAA" class="headerlink" title="AAA"></a>AAA</h4><p>集中式的AAA管理协议包括拨号用户远程认证服务RADIUS、终端访问控制器访问控制系统TACACS、Diameter等。</p>
 <h4 id="IPSec-1"><a href="#IPSec-1" class="headerlink" title="IPSec"></a>IPSec</h4><p>IPSec协议是一组开放协议的总称，包括ESP协议、AH协议和密钥协商协议，ESP协议为基于IPSec的数据通信提供了安全加密、身份认证和数据完整性鉴别这三种安全保护机制，采用的主要加密标准是DES和3DES。</p>
 <p>ps：由于ESP对数据进行加密，因此它比AH需要跟多的处理时间，从而导致<font color="red">性能下降</font>。</p>
@@ -1022,6 +1028,12 @@
 <h3 id="3-密钥的"><a href="#3-密钥的" class="headerlink" title="3 密钥的"></a>3 密钥的</h3><p>根据下述描述，完成填空。（每空1分，共10分）<br>（1）公共密钥基础设施（英文缩写<font color="red">PKI</font>）是一个用<font color="red">公钥</font>密码学技术来实施和提供安全服务的安全基础设施，它是创建、管理、存储、分布和作废<font color="red">数字证书</font>的一系列软件、硬件、人员、策略、和过程的集合。<br>（2）<font color="red">证书签发机构</font>是公共密钥基础设施的核心机构，提供数字证书生成、证书发放、证书的管理等服务。<font color="red">证书注册机构</font>是接受客户证书申请并进行审核注册的机构。<br>（3）数字证书的存储格式标准有多种，<font color="red">X.509</font>是最基本的证书存储格式。采用此格式的证书结构如下所示。<br>证书的版本号<br>证书序列号<br>签名算法<br>证书签发机构名<br>证书有效期<br>证书持有者用户名<br>证书用户<font color="red">公钥</font>信息<br>签发者唯一标识符<br>证书持有者唯一标识符<br>签名值<br>其中，签名值是<font color="red">证书签发机构</font>对证书上述内容的数字签名值。<br>（4）数字证书在使用过程中，为了验证此数字证书的真实性，其他用户、应用程序或实体需下载安装CA根证书，使用此证书中的<font color="red">公钥</font>对证书中的数字签名进行验证。</p>
 <p>答疑：解析：</p>
 <p>（1）公共密钥基础设施（Public Key Infrastructure，PKI）是一个用公钥密码学技术来实施和提供安全服务的安全基础设施，它是创建、管理、存储、分布和作废数字证书的一系列软件、硬件、人员、策略和过程的集合。<br>（2）证书认证机构（Certificate Authority，CA）是公共密钥基础设施的核心机构，提供数字证书生成、证书发放、证书的管理等服务。证书注册机构（Registration Authority，RA）是接受客户证书申请并进行审核注册的机构。<br>（3）数字证书的存储格式标准有多种，X.509是最基本的证书存储标注格式。它包含的内容有：证书的版本号；证书序列号；签名算法；证书签发机构名；证书有效期；证书持有者用户名；证书用户公钥信息；签发者唯一标识符；证书持有者唯一标识符；签名值；其中签名值是证书颁发机构对证书上述内容的数字签名值。<br>（4）在证书使用过程中，其他用户、应用程序或实体需下载安装证书认证机构根证书，使用证书认证机构根证书中的证书认证机构公钥，对证书认证机构给用户颁发证书中的数字签名进行验证。</p>
+<h3 id="4-密钥的"><a href="#4-密钥的" class="headerlink" title="4.密钥的"></a>4.密钥的</h3><p>MD5、SHA1、AES、RSA、ECC算法</p>
+<p>1.用于高效加密算法是 - &gt; AES</p>
+<p>2.校验数据完整性消息摘要 -&gt; SHA1</p>
+<p>3.对别人的公钥加密，用自己的私钥解密</p>
+<p>4.MD5明文 -&gt; 128位消息摘要</p>
+<p>5.RSA模至少-&gt;1024位</p>
 <h2 id="法律"><a href="#法律" class="headerlink" title="法律"></a>法律</h2><h4 id="刑法"><a href="#刑法" class="headerlink" title="刑法"></a>刑法</h4><p>第二百八十五条，违反国家规定，侵入国家事务、国防建设、尖端科学技术领域的计算机信息系统的，处3年以下有期徒刑或者拘役。</p>
 <p>第二百八十六条，违反国家规定，对计算机信息系统功能进行删除、修改、增加、干扰，造成计算机信息系统不能正常运行，后果严重的，处5年以下有期徒刑或者拘役</p>
 <h4 id="电子签名法"><a href="#电子签名法" class="headerlink" title="电子签名法"></a>电子签名法</h4><p>电子认证服务提供者签发的电子签名认证证书应当准确无误，并应当载明下列内容：<br>（一）电子认证服务提供者名称；<br>（二）证书持有人名称；<br>（三）证书序列号；<br>（四）证书有效期；<br>（五）证书持有人的电子签名验证数据；<br>（六）电子认证服务提供者的电子签名；<br>（七）国务院信息产业主管部门规定的其他内容；</p>
@@ -1305,13 +1317,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/851f.html">
+                <a href="/posts/8eb2.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/5.jpg" class="responsive-img" alt="Javascript学习笔记">
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/22.jpg" class="responsive-img" alt="HTML学习笔记-网页基础框架">
                         
-                        <span class="card-title">Javascript学习笔记</span>
+                        <span class="card-title">HTML学习笔记-网页基础框架</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1328,8 +1340,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Javascript/" class="post-category">
-                                    Javascript
+                            <a href="/categories/Html/" class="post-category">
+                                    Html
                                 </a>
                             
                             
@@ -1339,8 +1351,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/date/">
-                        <span class="chip bg-color">date</span>
+                    <a href="/tags/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/">
+                        <span class="chip bg-color">网页设计</span>
                     </a>
                     
                 </div>
@@ -1673,7 +1685,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">218.1k</span>&nbsp;字
+                class="white-color">218.2k</span>&nbsp;字
             
             
             
