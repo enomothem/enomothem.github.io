@@ -473,10 +473,11 @@
                         <ul style="height: 46px;">
                             <li class="this_s">百   度</li>
                             <li class="bing_s">必   应</li>
-                            <li class="google_s">谷   歌</li>
+                            <li class="google_s">✈谷   歌</li>
                             <li class="baidu_s">百   度</li>
                             <li class="yandex_s">Yandex</li>
-                            <li class="duck_s">Duck</li>
+                            <li class="duck_s">✈Duck</li>
+                            <li class="magi_s">Magi</li>
                         </ul>
                     </div> <input name="wd" id="kw-2" maxlength="100" autocomplete="off" type="text" >
                 </div>
@@ -596,7 +597,9 @@
    if (_tihs == 'yandex_s')
    { _tihs = 'https://www.yandex.com/search'; _name = 'q'; }
    if (_tihs == 'duck_s')
-   { _tihs = 'https://www.duckduckgo.com/'; _name = 'q'; }  
+   { _tihs = 'https://www.duckduckgo.com/'; _name = 'q'; } 
+   if (_tihs == 'magi_s'){ _tihs = 'https://www.magi.com/search'; _name = 'q'; } 
+
    $('.baidu form').attr('action', _tihs);
    $('.this_s').html(_html); $('#kw').attr('name', _name); 
    $('.Select-box ul').css('height', '40px') }); 
@@ -631,8 +634,7 @@
   //元素失去焦点时 btn_obj.onblur = function () { clearInterval(times); } } </script>
 -->
 
-        <script> /*选择搜索引擎*/ $('.Select-box ul').hover(function () { $(this).css('height', 'auto') }, function () { $(this).css('height', '40px') }); $('.Select-box-2 ul').hover(function () { $(this).css('height', 'auto') }, function () { $(this).css('height', '46px') }); $('.Select-box li').click(function () { var _tihs = $(this).attr('class'); var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } if (_tihs == 'google_s') { _tihs = 'https://www.google.com/search'; _name = 'q'; } if (_tihs == 'bing_s') { _tihs = 'https://www.bing.com/search'; _name = 'q'; } if (_tihs == 'yandex_s'){ _tihs = 'https://www.yandex.com/search'; _name = 'text'; }    if (_tihs == 'duck_s') { _tihs = 'https://www.duckduckgo.com/'; _name = 'q'; }  $('.baidu form').attr('action', _tihs); $('.this_s').html(_html); $('#kw').attr('name', _name); $('.Select-box ul').css('height', '40px') }); $('.Select-box-2 li').click(function () { var _tihs = $(this).attr('class'); var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } if (_tihs == 'google_s') { _tihs = 'https://www.google.com/search'; _name = 'q'; } if (_tihs == 'bing_s') { _tihs = 'https://www.bing.com/search'; _name = 'q'; } if (_tihs == 'yandex_s') { _tihs = 'https://www.yandex.com/search'; _name = 'text'; } if (_tihs == 'duck_s') 
-        { _tihs = 'https://www.duckduckgo.com/'; _name = 'q'; } $('.baidu form').attr('action', _tihs); $('.this_s').html(_html); $('#kw-2').attr('name', _name); $('.Select-box-2 ul').css('height', '48px') }); //清空输入框内容 $('.qingkong').click(function () { cls(); $(this).css('display', 'none') }); function cls() { var sum = 0; var t = document.getElementsByTagName("INPUT"); for (var i = 0; i < t.length; i++) { if (t[i].type == 'text') { ++sum; t[i].value = "";//清空 } } } //清空输入框按钮的显示和隐藏 function if_btn() { var btn_obj = document.getElementById("kw") || document.getElementById("kw-2"); var cls_btn = document.getElementById("qingkong"); var btn_obj_val; var times; //当元素获得焦点时 if (btn_obj == '' || btn_obj == null) { return false; //如果没有找到这个元素，则将函数返回，不继续执行 } btn_obj.onfocus = function () { times = setInterval(function () { btn_obj_val = btn_obj.value; if (btn_obj_val != 0) { cls_btn.style.display = "block"; } else { cls_btn.style.display = "none"; } }, 200); } //元素失去焦点时 btn_obj.onblur = function () { clearInterval(times); } } </script>
+        <script> /*选择搜索引擎*/ $('.Select-box ul').hover(function () { $(this).css('height', 'auto') }, function () { $(this).css('height', '40px') }); $('.Select-box-2 ul').hover(function () { $(this).css('height', 'auto') }, function () { $(this).css('height', '46px') }); $('.Select-box li').click(function () { var _tihs = $(this).attr('class'); var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } if (_tihs == 'google_s') { _tihs = 'https://www.google.com/search'; _name = 'q'; } if (_tihs == 'bing_s') { _tihs = 'https://www.bing.com/search'; _name = 'q'; } if (_tihs == 'yandex_s'){ _tihs = 'https://www.yandex.com/search'; _name = 'text'; }    if (_tihs == 'duck_s') { _tihs = 'https://www.duckduckgo.com/'; _name = 'q'; }    if (_tihs == 'magi_s'){ _tihs = 'https://magi.com/search'; _name = 'q'; }  $('.baidu form').attr('action', _tihs); $('.this_s').html(_html); $('#kw').attr('name', _name); $('.Select-box ul').css('height', '40px') }); $('.Select-box-2 li').click(function () { var _tihs = $(this).attr('class'); var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } if (_tihs == 'google_s') { _tihs = 'https://www.google.com/search'; _name = 'q'; } if (_tihs == 'bing_s') { _tihs = 'https://www.bing.com/search'; _name = 'q'; } if (_tihs == 'yandex_s') { _tihs = 'https://www.yandex.com/search'; _name = 'text'; } if (_tihs == 'duck_s') { _tihs = 'https://www.duckduckgo.com/'; _name = 'q'; } if (_tihs == 'magi_s'){ _tihs = 'https://magi.com/search'; _name = 'q'; }  $('.baidu form').attr('action', _tihs); $('.this_s').html(_html); $('#kw-2').attr('name', _name); $('.Select-box-2 ul').css('height', '48px') }); //清空输入框内容 $('.qingkong').click(function () { cls(); $(this).css('display', 'none') }); function cls() { var sum = 0; var t = document.getElementsByTagName("INPUT"); for (var i = 0; i < t.length; i++) { if (t[i].type == 'text') { ++sum; t[i].value = "";//清空 } } } //清空输入框按钮的显示和隐藏 function if_btn() { var btn_obj = document.getElementById("kw") || document.getElementById("kw-2"); var cls_btn = document.getElementById("qingkong"); var btn_obj_val; var times; //当元素获得焦点时 if (btn_obj == '' || btn_obj == null) { return false; //如果没有找到这个元素，则将函数返回，不继续执行 } btn_obj.onfocus = function () { times = setInterval(function () { btn_obj_val = btn_obj.value; if (btn_obj_val != 0) { cls_btn.style.display = "block"; } else { cls_btn.style.display = "none"; } }, 200); } //元素失去焦点时 btn_obj.onblur = function () { clearInterval(times); } } </script>
 
 
     </div>
