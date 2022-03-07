@@ -641,21 +641,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-12
+                    2022-03-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    39.7k
+                    40k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    144 分
+                    145 分
                 </div>
                 
 
@@ -685,6 +685,7 @@
 <p>​        <span class="github-emoji"><span>➕</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2795.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Fastjson漏洞集 2021.3.8 Enomothem</p>
 <p>​        <span class="github-emoji"><span>➕</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2795.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Tomcat漏洞集 2021.3.8 Enomothem</p>
 <p>​        <span class="github-emoji"><span>➕</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2795.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>IIS\Apache\Nginx\Jboss漏洞集 2021.3.8 Enomothem</p>
+<p>​        <span class="github-emoji"><span>➕</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2795.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Shiro漏洞集 2022.3.7 Enomothem</p>
 <p><span class="github-emoji"><span>☑</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2611.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>应急响应            ————————————————————————————— 2021.3.7</p>
 <p><span class="github-emoji"><span>☑</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2611.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>流量分析            ————————————————————————————— 2021.3.7</p>
 <p><span class="github-emoji"><span>☑</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2611.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>面试整合            ————————————————————————————— 2021.3.7</p>
@@ -697,8 +698,9 @@
 <p><span class="github-emoji"><span>☑</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2611.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>附4：学习平台 ————————————————————————————— 2021.3.7</p>
 <p>​    <span class="github-emoji"><span>➕</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2795.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>安全产品 2021.3.7 Enomothem</p>
 <p>​    <span class="github-emoji"><span>➕</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2795.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>SRC平台 2021.3.7 Enomothem</p>
-<h3 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h3><p><code>InformationSecurity Guide v1.1 2021.3.7</code></p>
+<h3 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h3><p><code>InformationSecurity Guide v1.2 2022.3.7</code></p>
 <p>【+】2021.3.7 优化目录树，便于快速定位。</p>
+<p>【+】2022.3.7 优化问答格式，便于阅读。</p>
 <h2 id="Ax-Web漏洞-Web-Vulnerability"><a href="#Ax-Web漏洞-Web-Vulnerability" class="headerlink" title="Ax Web漏洞 Web Vulnerability"></a>Ax Web漏洞 <em>Web Vulnerability</em></h2><h3 id="1-OWASP-TOP10"><a href="#1-OWASP-TOP10" class="headerlink" title="1. OWASP TOP10"></a>1. OWASP TOP10</h3><h4 id="1注入-Injection"><a href="#1注入-Injection" class="headerlink" title="1注入 Injection"></a>1注入 Injection</h4><p>　　<strong>漏洞描述</strong></p>
 <p>　　Web程序中对于用户提交的参数未做过滤直接拼接到SQL语句中执行，导致参数中的特殊字符破坏了SQL语句原有逻辑，攻击者可以利用该漏洞执行任意SQL语句，如查询数据、下载数据、写入webshell、执行系统命令以及绕过登录限制等。</p>
 <p>注入漏洞，包括 SQL，NoSQL，OS，LDAP 注入等，这些攻击发生在当不可信的数据作为命令或查询语句的一部分，被发送给解释器的时候。攻击者发送的恶意数据可以欺骗解释器，以执行计划外的命令或未被恰当授权时访问数据。</p>
@@ -720,15 +722,16 @@
 <p>　　由于Web 应用程序没有对用户发送的数据进行适当过滤和检查，攻击者可修改LDAP 语句的结构，并且以数据库服务器、Web 服务器等的权限执行任意命令，许可权可能会允许查询、修改或除去 LDAP 树状构造内任何数据。</p>
 <p>　　<strong>修复建议</strong></p>
 <p>　　对用户的输入内容进行严格的过滤。</p>
-<h4 id="2-破坏身份认证-Broken-Authentication"><a href="#2-破坏身份认证-Broken-Authentication" class="headerlink" title="2 破坏身份认证 Broken Authentication"></a>2 破坏身份认证 Broken Authentication</h4><p>与认证和会话管理相关的应用函数经常被错误地应用，这就允许攻击者窃取密码、密钥、会话 token，或者利用其他的应用错误来暂时或者永久地获取用户身份信息。</p>
-<h4 id="3-敏感数据泄露-Sensitive-Data-Exposure"><a href="#3-敏感数据泄露-Sensitive-Data-Exposure" class="headerlink" title="3 敏感数据泄露 Sensitive Data Exposure"></a>3 敏感数据泄露 Sensitive Data Exposure</h4><p>许多 web 应用和 API 不能合理的保护敏感数据，比如金融、医疗数据和 PII。攻击者可能窃取或篡改这些弱保护的数据进行信用卡诈骗、身份窃取或者其他犯罪。敏感数据需要额外的保护，比如在存放和传输过程中的加密，在与浏览器进行交换时也需要特殊的预防措施。</p>
-<h4 id="4-外部处理器漏洞-XML-External-Entities-XXE-XML"><a href="#4-外部处理器漏洞-XML-External-Entities-XXE-XML" class="headerlink" title="4 外部处理器漏洞 XML External Entities ( XXE ) XML"></a>4 外部处理器漏洞 XML External Entities ( XXE ) XML</h4><p>许多过时的或者配置不当的 XML 处理器在 XML 文档内进行外部实体引用。外部实体可以被用来泄露内部文件，比如使用文件 URI handler，内部文件共享，内部端口扫描，远程代码执行和拒绝服务攻击。</p>
+<h4 id="2-破坏身份认证"><a href="#2-破坏身份认证" class="headerlink" title="2 破坏身份认证"></a>2 破坏身份认证</h4><p>Broken Authentication，与认证和会话管理相关的应用函数经常被错误地应用，这就允许攻击者窃取密码、密钥、会话 token，或者利用其他的应用错误来暂时或者永久地获取用户身份信息。</p>
+<h4 id="3-敏感数据泄露"><a href="#3-敏感数据泄露" class="headerlink" title="3 敏感数据泄露"></a>3 敏感数据泄露</h4><p>Sensitive Data Exposure ，许多 web 应用和 API 不能合理的保护敏感数据，比如金融、医疗数据和 PII。攻击者可能窃取或篡改这些弱保护的数据进行信用卡诈骗、身份窃取或者其他犯罪。敏感数据需要额外的保护，比如在存放和传输过程中的加密，在与浏览器进行交换时也需要特殊的预防措施。</p>
+<h4 id="4-外部处理器漏洞-XXE"><a href="#4-外部处理器漏洞-XXE" class="headerlink" title="4 外部处理器漏洞 XXE"></a>4 外部处理器漏洞 XXE</h4><p>许多过时的或者配置不当的 XML 处理器在 XML 文档内进行外部实体引用。外部实体可以被用来泄露内部文件，比如使用文件 URI handler，内部文件共享，内部端口扫描，远程代码执行和拒绝服务攻击。</p>
 <p>当XML允许引用外部实体，关键字“SYSTEM”会令XML解析器从URI中读取内容，并允许它在XML文档中被替换。因此，攻击者可以通过实体将他自定义的值发送给应用程序，然后让应用程序去呈现。</p>
 <p>简单来说，攻击者强制XML解析器去访问攻击者指定的资源内容(可能是系统上本地文件亦或是远程系统上的文件)。而不同的XML解析器，对外部实体有不同的处理规则。</p>
 <p>在PHP中默认处理的函数为xml_parse和simplexml_load，xml_parse的实现方式为expat库，默认情况不会解析外部实体,而simplexml_load默认情况下会解析外部实体，造成安全威胁。除PHP外，在Java、Python等处理XML的组件及函数中，都可能存在此问题。</p>
 <p>如何判断是否存在XML外部实体攻击?那就是寻找那些接受XML作为输入内容的端点，而有些端点可能并不是那么明显，比如一些仅使用JSON去访问服务的客户端，可以通过修改HTTP的请求或修改Content-Type头部字段等方法，然后看应用程序的响应，看程序是否解析了发送的内容，如果解析了，那么就可能存在XXE攻击漏洞。</p>
 <p><strong>危害</strong>：借助XXE，攻击者可以实现任意文件读取，DDOS拒绝服务攻击以及代理扫描内网等。</p>
-<h5 id="Payload："><a href="#Payload：" class="headerlink" title="Payload："></a>Payload：</h5><pre class=" language-xml"><code class="language-xml">当有回显时，直接利用payload：
+<p><strong>Payload：</strong></p>
+<pre class=" language-xml"><code class="language-xml">当有回显时，直接利用payload：
 
 <span class="token prolog">&lt;?xml version="1.0" encoding="utf-8"?></span>
 
@@ -744,10 +747,11 @@
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>root</span><span class="token punctuation">></span></span>
 </code></pre>
-<h5 id="防御"><a href="#防御" class="headerlink" title="防御"></a>防御</h5><p>防御XXE攻击主要有三方面：一是检查所使用的底层XML解析库，默认禁止外部实体的解析；二是若使用第三方应用代码需要及时升级补丁；三是对用户提交的XML数据进行过滤，如关键词：&lt;!DOCTYPE和&lt;!ENTITY或者SYSTEM和PUBLIC等。</p>
-<h4 id="5-失效的访问控制-Broken-Access-Control"><a href="#5-失效的访问控制-Broken-Access-Control" class="headerlink" title="5 失效的访问控制 Broken Access Control"></a>5 失效的访问控制 Broken Access Control</h4><p>仅允许认证的用户的限制没有得到适当的强制执行。攻击者可以利用这些权限来访问未经授权的功能和数据，例如访问其他用户的账户，查看敏感文件，修改其他用户的数据，更改访问权限等。</p>
-<h4 id="6-安全配置错误-Security-Misconfiguration"><a href="#6-安全配置错误-Security-Misconfiguration" class="headerlink" title="6 安全配置错误 Security Misconfiguration"></a>6 安全配置错误 Security Misconfiguration</h4><p>安全配置错误是常见的问题，这是不安全的默认配置、不完整或者 ad hoc 网络配置、开放云存储、错误配置的 HTTP 头、含有敏感信息的冗长错误信息造成的。除了要安全设定所有的操作系统、框架、库、应用外，还要及时进行系统更新和升级。</p>
-<h4 id="7-跨站脚本攻击-Cross-Site-Scripting-XSS"><a href="#7-跨站脚本攻击-Cross-Site-Scripting-XSS" class="headerlink" title="7 跨站脚本攻击 Cross-Site Scripting ( XSS )"></a>7 跨站脚本攻击 Cross-Site Scripting ( XSS )</h4><p>当应用程序在新网页中包含不受信任的数据而无需正确的验证或转义时，或使用可以创建 HTML 或者 JavaScript 的浏览器 API 并使用用户提供的数据更新现有网页就会发生 XSS 缺陷。XSS 允许攻击者在受害者的浏览器上执行脚本，从而劫持用户会话、危害网站、或者将用户转向恶意网站。</p>
+<p><strong>防御</strong></p>
+<p>防御XXE攻击主要有三方面：一是检查所使用的底层XML解析库，默认禁止外部实体的解析；二是若使用第三方应用代码需要及时升级补丁；三是对用户提交的XML数据进行过滤，如关键词：&lt;!DOCTYPE和&lt;!ENTITY或者SYSTEM和PUBLIC等。</p>
+<h4 id="5-失效的访问控制"><a href="#5-失效的访问控制" class="headerlink" title="5 失效的访问控制"></a>5 失效的访问控制</h4><p>Broken Access Control ，仅允许认证的用户的限制没有得到适当的强制执行。攻击者可以利用这些权限来访问未经授权的功能和数据，例如访问其他用户的账户，查看敏感文件，修改其他用户的数据，更改访问权限等。</p>
+<h4 id="6-安全配置错误"><a href="#6-安全配置错误" class="headerlink" title="6 安全配置错误"></a>6 安全配置错误</h4><p>Security Misconfiguration，安全配置错误是常见的问题，这是不安全的默认配置、不完整或者 ad hoc 网络配置、开放云存储、错误配置的 HTTP 头、含有敏感信息的冗长错误信息造成的。除了要安全设定所有的操作系统、框架、库、应用外，还要及时进行系统更新和升级。</p>
+<h4 id="7-跨站脚本攻击-XSS"><a href="#7-跨站脚本攻击-XSS" class="headerlink" title="7 跨站脚本攻击 XSS"></a>7 跨站脚本攻击 XSS</h4><p>当应用程序在新网页中包含不受信任的数据而无需正确的验证或转义时，或使用可以创建 HTML 或者 JavaScript 的浏览器 API 并使用用户提供的数据更新现有网页就会发生 XSS 缺陷。XSS 允许攻击者在受害者的浏览器上执行脚本，从而劫持用户会话、危害网站、或者将用户转向恶意网站。</p>
 <p>　　<strong>漏洞描述</strong></p>
 <p>　　1、Web程序代码中对用户提交的参数未做过滤或过滤不严，导致参数中的特殊字符破坏了HTML页面的原有逻辑，攻击者可以利用该漏洞执行恶意HTML/JS代码、构造蠕虫、篡改页面实施钓鱼攻击、以及诱导用户再次登录，然后获取其登录凭证等。</p>
 <p>　　2、XSS攻击对Web服务器本身虽无直接危害，但是它借助网站进行传播，对网站用户进行攻击，窃取网站用户账号身份信息等，从而也会对网站产生较严重的威胁。</p>
@@ -765,9 +769,9 @@
 <p>　　（2）不仅验证数据的类型，还要验证其格式、长度、范围和内容。</p>
 <p>　　（3）不仅在客户端做数据的验证与过滤，关键的过滤步骤在服务端进行。</p>
 <p>　　（4）对输出到页面的数据进行相应的编码转换，如HTML实体编码、JS编码等。对输出的数据也要检查，数据库里的值有可能会在一个大网站的多处都有输出，即使在输入做了编码等操作，在各处的输出点时也要进行检查。</p>
-<h4 id="8-不安全的反序列化-Insecure-Deserialization"><a href="#8-不安全的反序列化-Insecure-Deserialization" class="headerlink" title="8 不安全的反序列化 Insecure Deserialization"></a>8 不安全的反序列化 Insecure Deserialization</h4><p>不安全的反序列化漏洞经常导致远程代码执行。即使反序列化错误不导致远程代码执行，也可以被用于发起攻击，例如重放攻击、注入攻击和权限提升攻击等。</p>
-<h4 id="9-使用含有已知漏洞的组件-Using-Components-with-Known-Vulnerabilities"><a href="#9-使用含有已知漏洞的组件-Using-Components-with-Known-Vulnerabilities" class="headerlink" title="9 使用含有已知漏洞的组件 Using Components with Known Vulnerabilities"></a>9 使用含有已知漏洞的组件 Using Components with Known Vulnerabilities</h4><p>组件，比如库、框架和其他软件模块，是与应用相同权限运行的。如果一个有漏洞的组件被利用，这种攻击可以造成更为严重的数据丢失或服务器接管。使用已知漏洞组件的应用和 API 可能会破坏应用程序的防御系统，并使一系列可能的攻击和影响成为可能。</p>
-<h4 id="10-记录和监控不足风险-Insufficient-Logging-amp-Monitoring"><a href="#10-记录和监控不足风险-Insufficient-Logging-amp-Monitoring" class="headerlink" title="10 记录和监控不足风险 Insufficient Logging &amp; Monitoring"></a>10 记录和监控不足风险 Insufficient Logging &amp; Monitoring</h4><p>记录和监控不足，加上没有与应急响应有效的结合，让攻击者可以进一步攻击系统、篡改、提取或者销毁数据。大多数的数据泄露研究显示，通常要经过 200 天以上，使用者才能察觉到数据泄露事件的发生，而且往往是外部机构而不是内部的监控系统发现数据泄露的事实。</p>
+<h4 id="8-不安全的反序列化"><a href="#8-不安全的反序列化" class="headerlink" title="8 不安全的反序列化"></a>8 不安全的反序列化</h4><p>Insecure Deserialization，不安全的反序列化漏洞经常导致远程代码执行。即使反序列化错误不导致远程代码执行，也可以被用于发起攻击，例如重放攻击、注入攻击和权限提升攻击等。</p>
+<h4 id="9-使用含有已知漏洞的组件"><a href="#9-使用含有已知漏洞的组件" class="headerlink" title="9 使用含有已知漏洞的组件"></a>9 使用含有已知漏洞的组件</h4><p>Using Components with Known Vulnerabilities，组件，比如库、框架和其他软件模块，是与应用相同权限运行的。如果一个有漏洞的组件被利用，这种攻击可以造成更为严重的数据丢失或服务器接管。使用已知漏洞组件的应用和 API 可能会破坏应用程序的防御系统，并使一系列可能的攻击和影响成为可能。</p>
+<h4 id="10-记录和监控不足风险"><a href="#10-记录和监控不足风险" class="headerlink" title="10 记录和监控不足风险"></a>10 记录和监控不足风险</h4><p> Insufficient Logging &amp; Monitoring，记录和监控不足，加上没有与应急响应有效的结合，让攻击者可以进一步攻击系统、篡改、提取或者销毁数据。大多数的数据泄露研究显示，通常要经过 200 天以上，使用者才能察觉到数据泄露事件的发生，而且往往是外部机构而不是内部的监控系统发现数据泄露的事实。</p>
 <h3 id="2-CSRF和SSRF"><a href="#2-CSRF和SSRF" class="headerlink" title="2.CSRF和SSRF"></a>2.CSRF和SSRF</h3><h4 id="1-CSRF"><a href="#1-CSRF" class="headerlink" title="1.CSRF"></a>1.CSRF</h4><p>　　<strong>漏洞描述</strong></p>
 <p>　　CSRF是跨站请求伪造，不攻击网站服务器，而是冒充用户在站内的正常操作。通常由于服务端没有对请求头做严格过滤引起的。CSRF会造成密码重置，用户伪造等问题，可能引发严重后果。绝大多数网站是通过 cookie 等方式辨识用户身份，再予以授权的。所以要伪造用户的正常操作，最好的方法是通过 XSS 或链接欺骗等途径，让用户在本机（即拥有身份 cookie 的浏览器端）发起用户所不知道的请求。CSRF攻击会令用户在不知情的情况下攻击自己已经登录的系统。</p>
 <p>　　<strong>修复建议</strong></p>
@@ -788,7 +792,7 @@
 <p>　　5、禁止跳转</p>
 <p>　　6、限制请求的端口为http常用的端口，比如 80、443、8080、8000等</p>
 <p>　　7、统一错误信息，避免用户可以根据错误信息来判断远端服务器的端口状态。</p>
-<h3 id="3-其它漏洞（一）"><a href="#3-其它漏洞（一）" class="headerlink" title="3.其它漏洞（一）"></a>3.其它漏洞（一）</h3><h4 id="1-任意命令-代码执行"><a href="#1-任意命令-代码执行" class="headerlink" title="1.任意命令/代码执行"></a>1.任意命令/代码执行</h4><p>　　<strong>漏洞描述</strong></p>
+<h3 id="3-常见漏洞（一）"><a href="#3-常见漏洞（一）" class="headerlink" title="3.常见漏洞（一）"></a>3.常见漏洞（一）</h3><h4 id="1-任意命令-代码执行"><a href="#1-任意命令-代码执行" class="headerlink" title="1.任意命令/代码执行"></a>1.任意命令/代码执行</h4><p>　　<strong>漏洞描述</strong></p>
 <p>　　命令或代码执行漏洞是指代码未对用户可控参数做过滤，导致直接带入执行命令和代码，通过漏洞执行恶意构造的语句，执行任意命令或代码。攻击者可在服务器上执行任意命令，读写文件操作等，危害巨大。</p>
 <p>　　<strong>修复建议</strong></p>
 <p>　　1、严格过滤用户输入的数据，禁止执行非预期系统命令。</p>
@@ -851,7 +855,7 @@
 <p>　　<strong>修复建议</strong></p>
 <p>　　1、对传入的对象进行严格的过滤检查</p>
 <p>　　2、在反序列化过程执行的文件读写、命令或代码执行函数中是否有用户可控的参数。</p>
-<h3 id="4-其它漏洞（二）"><a href="#4-其它漏洞（二）" class="headerlink" title="4.其它漏洞（二）"></a>4.其它漏洞（二）</h3><h4 id="11-http-slow拒绝服务攻击"><a href="#11-http-slow拒绝服务攻击" class="headerlink" title="11.http slow拒绝服务攻击"></a>11.http slow拒绝服务攻击</h4><p>　　<strong>漏洞描述</strong></p>
+<h3 id="4-常见漏洞（二）"><a href="#4-常见漏洞（二）" class="headerlink" title="4.常见漏洞（二）"></a>4.常见漏洞（二）</h3><h4 id="11-http-slow拒绝服务攻击"><a href="#11-http-slow拒绝服务攻击" class="headerlink" title="11.http slow拒绝服务攻击"></a>11.http slow拒绝服务攻击</h4><p>　　<strong>漏洞描述</strong></p>
 <p>　　按照设计，HTTP协议要求服务器在处理之前完全接收请求。 如果HTTP请求没有完成，或者传输速率非常低，服务器会保持其资源忙于等待其余数据。如果服务器保持太多的资源请求和处理，这将造成一个拒绝服务。严重者一台主机即可让web运行缓慢甚至是崩溃。</p>
 <p>　　<strong>修复建议</strong></p>
 <p>　　对于 Apache 可以做以下优化（其他服务器原理相同）：</p>
@@ -941,7 +945,7 @@
 <p>　　<strong>修复建议</strong></p>
 <p>　　1、若不影响业务则可删除uddiexplorer文件夹</p>
 <p>　　2、限制uddiexplorer应用只能内网访问</p>
-<h3 id="2-Apache-Struts2-系列漏洞-持续更新"><a href="#2-Apache-Struts2-系列漏洞-持续更新" class="headerlink" title="2.Apache Struts2 系列漏洞(持续更新)"></a>2.Apache Struts2 系列漏洞(持续更新)</h3><blockquote>
+<h3 id="2-Apache-Struts2-系列漏洞"><a href="#2-Apache-Struts2-系列漏洞" class="headerlink" title="2.Apache Struts2 系列漏洞"></a>2.Apache Struts2 系列漏洞</h3><blockquote>
 <p>如何判断：Struts2漏洞检测脚本       手工：看url里面的连接，如果是XXX.action结尾或直接XXX？参数1=XXX，应该就是stuts2。当然后缀是可以自定义的，但是几乎没有人无聊的改后缀吧。</p>
 </blockquote>
 <h4 id="Struts2漏洞目录"><a href="#Struts2漏洞目录" class="headerlink" title="Struts2漏洞目录"></a>Struts2漏洞目录</h4><ul>
@@ -1131,19 +1135,25 @@
 <li>禁用AJP，如果用不上这个，可以改为监听本地。</li>
 <li>添加凭证：如若需要使用AJP协议，可根据当前版本配置协议属性设置认证凭证，主要使用配置AJP配置中的secretRequired跟secret属性来限制认证</li>
 </ol>
-<h3 id="6-IIS"><a href="#6-IIS" class="headerlink" title="6.IIS"></a>6.IIS</h3><p>1、PUT漏洞</p>
+<h3 id="6-Apache-Shiro-系列漏洞"><a href="#6-Apache-Shiro-系列漏洞" class="headerlink" title="6.Apache Shiro 系列漏洞"></a>6.Apache Shiro 系列漏洞</h3><blockquote>
+<p>Apache Shiro是一个强大易用的Java安全框架，提供了认证、授权、加密和会话管理等功能。Shiro框架直观、易用，同时也能提供健壮的安全性。</p>
+</blockquote>
+<h4 id="1、Shiro-rememberMe反序列化漏洞（Shiro-550）"><a href="#1、Shiro-rememberMe反序列化漏洞（Shiro-550）" class="headerlink" title="1、Shiro rememberMe反序列化漏洞（Shiro-550）"></a>1、Shiro rememberMe反序列化漏洞（Shiro-550）</h4><p><strong>原理</strong>：Apache Shiro框架提供了记住密码的功能（RememberMe），用户登录成功后会生成经过加密并编码的cookie。在服务端对rememberMe的cookie值，先base64解码然后AES解密再反序列化，就导致了反序列化RCE漏洞。</p>
+<p><strong>特征判断</strong>：返回包中包含rememberMe=deleteMe字段。</p>
+<h4 id="2、Shiro-Padding-Oracle-Attack（Shiro-721）"><a href="#2、Shiro-Padding-Oracle-Attack（Shiro-721）" class="headerlink" title="2、Shiro Padding Oracle Attack（Shiro-721）"></a>2、Shiro Padding Oracle Attack（Shiro-721）</h4><p><strong>原理</strong>：由于Apache Shiro cookie中通过 AES-128-CBC 模式加密的rememberMe字段存在问题，用户可通过Padding Oracle 加密生成的攻击代码来构造恶意的rememberMe字段，并重新请求网站，进行反序列化攻击，最终导致任意代码执行。</p>
+<h3 id="7-Microsoft-IIS"><a href="#7-Microsoft-IIS" class="headerlink" title="7.Microsoft IIS"></a>7.Microsoft IIS</h3><p>1、PUT漏洞</p>
 <p>2、短文件名猜解</p>
 <p>3、远程代码执行</p>
 <p>4、解析漏洞</p>
-<h3 id="7-Apache"><a href="#7-Apache" class="headerlink" title="7.Apache"></a>7.Apache</h3><p>1、解析漏洞</p>
+<h3 id="8-Apache"><a href="#8-Apache" class="headerlink" title="8.Apache"></a>8.Apache</h3><p>1、解析漏洞</p>
 <p>2、目录遍历</p>
-<h3 id="8-Nginx"><a href="#8-Nginx" class="headerlink" title="8.Nginx"></a>8.Nginx</h3><p>1、文件解析</p>
+<h3 id="9-Nginx"><a href="#9-Nginx" class="headerlink" title="9.Nginx"></a>9.Nginx</h3><p>1、文件解析</p>
 <p>2、目录遍历</p>
 <p>3、CRLF注入</p>
 <p>4、目录穿越</p>
-<h3 id="9-Jboss"><a href="#9-Jboss" class="headerlink" title="9.Jboss"></a>9.Jboss</h3><p>1、反序列化漏洞</p>
+<h3 id="10-Jboss"><a href="#10-Jboss" class="headerlink" title="10.Jboss"></a>10.Jboss</h3><p>1、反序列化漏洞</p>
 <p>2、war后门文件部署</p>
-<h3 id="10-其它中间件"><a href="#10-其它中间件" class="headerlink" title="10.其它中间件"></a>10.其它中间件</h3><p>1、FastCGI未授权访问、任意命令执行</p>
+<h3 id="11-其它中间件"><a href="#11-其它中间件" class="headerlink" title="11.其它中间件"></a>11.其它中间件</h3><p>1、FastCGI未授权访问、任意命令执行</p>
 <p>2、PHPCGI远程代码执行</p>
 <h2 id="Cx-应急响应-Security-Response-Center"><a href="#Cx-应急响应-Security-Response-Center" class="headerlink" title="Cx 应急响应 Security Response Center"></a>Cx 应急响应 <em>Security Response Center</em></h2><p>1.进程 netstat -an </p>
 <p>2.端口 ps</p>
@@ -1162,69 +1172,95 @@
 <p>3.使用ARP防火墙</p>
 <h3 id="Wireshark使用"><a href="#Wireshark使用" class="headerlink" title="Wireshark使用"></a>Wireshark使用</h3><h2 id="Ex-面试整合-The-interview-summary"><a href="#Ex-面试整合-The-interview-summary" class="headerlink" title="Ex 面试整合 The interview summary"></a>Ex 面试整合 <em>The interview summary</em></h2><p>知道创宇研发技能表 <a target="_blank" rel="noopener" href="http://blog.knownsec.com/Knownsec_RD_Checklist/">http://blog.knownsec.com/Knownsec_RD_Checklist/</a>  </p>
 <p>hvv行动的，分为初、中、高级，蓝队和红队</p>
-<h3 id="蓝-初级面"><a href="#蓝-初级面" class="headerlink" title="蓝-初级面"></a>蓝-初级面</h3><hr>
-<p>SSRF 和 CSRF</p>
-<p>SSRF 攻击者利用服务器伪造URL请求发送给用户 。指的是由攻击者构造的攻击链接传给服务端执行造成的漏洞，一般用来在外网探测或攻击内网服务<br>CSRF 攻击者利用客户端的Cookie伪造用户请求服务器<br>防范：服务器端对用户的URL和身份进行检查</p>
-<p>XSS </p>
-<p>原理：用户的输入被浏览器解析成了网页代码                防范： 转义关键字，过滤特殊字符<br>类型 反射、存储、DOM</p>
-<p>SQL</p>
-<p>原理：用户的输入被数据库解析器当作了sql语句并执行  防范：转义关键字，过滤特殊字符<br>类型 Boolean、Time、报错[floor()]<br>绕过[bypass] 大小写、双写、内联注释、空格 ++  思路：对一些特殊字符识别一下，看一下哪些字符没有被截断，然后用工具fuzz一下，跑出库名来</p>
-<p>常见的中间件漏洞</p>
-<p>Struts2远程代码执行<br>Jboss反序列化漏洞<br>Weblogic 反序列化漏洞 利用T3协议<br>Monodb 未授权访问</p>
-<p>常见的网站服务器容器</p>
-<p>IIS、Apache、nginx、Lighttpd、Tomcat</p>
-<p>拿到一个待检测的站，你觉得应该先做什么？</p>
-<p>信息收集<br>a、获取域名的whois信息,获取注册者邮箱姓名电话等，丢社工库里看看有没有泄露密码，然后尝试用泄露的密码进行登录后台。用邮箱做关键词进行丢进搜索引擎。利用搜索到的关联信息找出其他邮箱进而得到常用社交账号。社工找出社交账号，里面或许会找出管理员设置密码的习惯 。利用已有信息生成专用字典。</p>
-<p>b、查询服务器旁站以及子域名站点，因为主站一般比较难，所以先看看旁站有没有通用性的cms或者其他漏洞。</p>
-<p>c、查看服务器操作系统版本，web中间件，看看是否存在已知的漏洞，比如IIS，APACHE,NGINX的解析漏洞</p>
-<p>d、查看IP，进行IP地址端口扫描，对响应的端口进行漏洞探测，比如 rsync,心脏出血，mysql,ftp,ssh弱口令等。</p>
-<p>e、扫描网站目录结构，看看是否可以遍历目录，或者敏感文件泄漏，比如php探针<br>f、google hack 进一步探测网站的信息，后台，敏感文件</p>
-<p>漏洞扫描<br>开始检测漏洞，如XSS,XSRF,sql注入，代码执行，命令执行，越权访问，目录读取，任意文件读取，下载，文件包含，远程命令执行，弱口令，上传，编辑器漏洞，暴力破解等</p>
-<p>漏洞利用<br>利用以上的方式拿到webshell，或者其他权限</p>
-<p>权限提升<br>提权服务器，比如windows下mysql的udf提权，serv-u提权，windows低版本的漏洞，如iis6,pr,巴西烤肉，linux脏牛漏洞，linux内核版本漏洞提权，linux下的mysql system提权以及oracle低权限提权</p>
-<p>日志清理</p>
+<h3 id="蓝队-Blue-Team"><a href="#蓝队-Blue-Team" class="headerlink" title="蓝队 | Blue Team"></a>蓝队 | Blue Team</h3><hr>
 <blockquote>
-<p>如果收到一个钓鱼、含木马的邮件，怎么办？</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>SSRF 和 CSRF</p>
+</blockquote>
+<p>SSRF 攻击者利用服务器伪造URL请求发送给用户 。指的是由攻击者构造的攻击链接传给服务端执行造成的漏洞，一般用来在外网探测或攻击内网服务<br>CSRF 攻击者利用客户端的Cookie伪造用户请求服务器<br>防范：服务器端对用户的URL和身份进行检查</p>
+<blockquote>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>XSS </p>
+</blockquote>
+<p>原理：用户的输入被浏览器解析成了网页代码                防范： 转义关键字，过滤特殊字符<br>类型 反射、存储、DOM</p>
+<blockquote>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>SQLi</p>
+</blockquote>
+<p>原理：用户的输入被数据库解析器当作了sql语句并执行  防范：转义关键字，过滤特殊字符<br>类型 Boolean、Time、报错[floor()]<br>绕过[bypass] 大小写、双写、内联注释、空格 ++  思路：对一些特殊字符识别一下，看一下哪些字符没有被截断，然后用工具fuzz一下，跑出库名来</p>
+<blockquote>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>常见的中间件漏洞</p>
+</blockquote>
+<p>Struts2远程代码执行<br>Jboss反序列化漏洞<br>Weblogic 反序列化漏洞 利用T3协议<br>Monodb 未授权访问</p>
+<blockquote>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>常见的网站服务器容器中间件及漏洞</p>
+</blockquote>
+<p>IIS<br>PUT漏洞、短文件名猜解、远程代码执行、解析漏洞<br>Apache<br>解析漏洞、目录遍历<br>Nginx<br>文件解析、目录遍历、CRLF注入、目录穿越<br>Tomcat<br>远程代码执行、war后门文件部署<br>JBoss<br>反序列化漏洞、war后门文件部署<br>WebLogic<br>反序列化漏洞<br>SSRF任意文件上传<br>war后门文件部署<br>Apache Shiro反序列化漏洞<br>Shiro rememberMe（Shiro-550）<br> Shiro Padding Oracle Attack(Shiro-721)</p>
+<blockquote>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>拿到一个待检测的站，你觉得应该先做什么？</p>
+</blockquote>
+<p><strong>信息收集</strong><br>a、获取域名的whois信息,获取注册者邮箱姓名电话等，丢社工库里看看有没有泄露密码，然后尝试用泄露的密码进行登录后台。用邮箱做关键词进行丢进搜索引擎。利用搜索到的关联信息找出其他邮箱进而得到常用社交账号。社工找出社交账号，里面或许会找出管理员设置密码的习惯 。利用已有信息生成专用字典。<br>b、查询服务器旁站以及子域名站点，因为主站一般比较难，所以先看看旁站有没有通用性的cms或者其他漏洞。<br>c、查看服务器操作系统版本，web中间件，看看是否存在已知的漏洞，比如IIS，APACHE,NGINX的解析漏洞<br>d、查看IP，进行IP地址端口扫描，对响应的端口进行漏洞探测，比如 rsync,心脏出血，mysql,ftp,ssh弱口令等。<br>e、扫描网站目录结构，看看是否可以遍历目录，或者敏感文件泄漏，比如php探针<br>f、google hack 进一步探测网站的信息，后台，敏感文件</p>
+<p><strong>漏洞扫描</strong><br>开始检测漏洞，如XSS,XSRF,sql注入，代码执行，命令执行，越权访问，目录读取，任意文件读取，下载，文件包含，远程命令执行，弱口令，上传，编辑器漏洞，暴力破解等</p>
+<p><strong>漏洞利用</strong><br>利用以上的方式拿到webshell，或者其他权限</p>
+<p><strong>权限提升</strong><br>提权服务器，比如windows下mysql的udf提权，serv-u提权，windows低版本的漏洞，如iis6,pr,巴西烤肉，linux脏牛漏洞，linux内核版本漏洞提权，linux下的mysql system提权以及oracle低权限提权</p>
+<p><strong>日志清理</strong><br>history -c</p>
+<blockquote>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>如果收到一个钓鱼、含木马的邮件，怎么办？</p>
 </blockquote>
 <p>抑制：把邮件的附件下载到虚拟机，然后丢到沙箱里分析。<br>溯源：使用SenderPolicy Framework去查看发件人的IP地址，他其实就是一个DNS的TXT记录。<br>    Linux：dig -t txt email<br>    Windows：nslookup -type=txt email<br>    查看SPF记录，然后使用邮件发邮件，如果发件人的源IP不在IP列表，那么说明这是一封伪造邮件。<br>          使用DKIM，这是一个数字签名技术，可以通过DNS查询得到公开密钥进行验证，验证不通过，可以判断为垃圾邮件。</p>
 <blockquote>
-<p>SQLmap如何跑POST类型？</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>SQLmap如何跑POST类型？</p>
 </blockquote>
 <p>首先，手工判断一下，查出数据库，然后用Burpsuite抓包，获取到id=1</p>
 <p>然后，右键，copy to file 保存为txt文件</p>
 <p>再使用sqlmap -r txt文件</p>
 <p>爬出来就可以用payload获取到数据库 –dbs 表 –tables 列 –columns 内容 –dump</p>
-<p>探雾hw面试题</p>
+<p><strong><span class="github-emoji"><span>♨</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2668.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>探雾hw面试题</strong></p>
+<p>[</p>
 <blockquote>
-<p>xss原理？存储型xss如何利用？</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>xss原理？存储型xss如何利用？</p>
 </blockquote>
 <p>XSS 类型<br>Dom（Self-XSS） 存储型 反射型</p>
 <blockquote>
-<p>存储型XSS怎么利用？</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>存储型XSS怎么利用？</p>
 </blockquote>
 <p>XSS攻击的原理是通过修改或者添加页面上的JavaScript恶意脚本，在浏览器渲染页面的时候执行该脚本，从而实现窃取COOKIE或者调用Ajax实现其他类型的CSRF攻击</p>
 <blockquote>
-<p>CORS（浏览器同源策略）</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>CORS（浏览器同源策略）</p>
 </blockquote>
 <p>js =&gt;ajax 去请求其他网站的东西</p>
 <p>test.com 根据浏览器的CORS策略 他只能在test.com里面请求东西 </p>
 <p>test.com 调用ajax 去访问 xxxx.com  assdasd.test.com   如果目标的CORS头 默认不放行test.com 这样 test.com 的ajax请求就不会访问其他网站 </p>
 <blockquote>
-<p>存储xss如何利用</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>存储xss如何利用</p>
 </blockquote>
 <p>利用的方式比较多  因为存储xss  可以控制页面js的渲染 我们用js可以实现很多东西</p>
 <p>可以让手机振动</p>
 <p>返回劫持 </p>
 <p>拍照 截屏 </p>
 <blockquote>
-<p>渗透测试流程</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>渗透测试流程</p>
 </blockquote>
-<p>1.信息搜集<br>2.分析信息<br>3.绘制思维导图 分析资产<br>4. 对业务的逻辑点进行逻辑漏洞测试<br>5. 对其身份验证功能的Token session进行测试<br>6. 对其数据操作点进行注入测试<br>7. 对其页面可控点进行xss测试<br>8. 对其远程访问点进行SSRF测试<br>9. 对其接口进行FUZZ 模糊测试<br>10. 对其登录点进行弱口令测试<br>11. 识别框架 弱框架有反序列化漏洞利用链 可寻找反序列化的点<br>12. 对其文件上传功能进行任意文件上传测试<br>13. 对其边界资产 例如gitlab jenkins 进行弱口令测试<br>14. 对其现有CMS 查找相关漏洞利用工具 （exploit-db）等<br>15. 对其端口进行扫描 查找其他相关服务测试<br>16. .git .svn 源代码泄露 可以下载其源码文件 并且可以通过git 查看commit切换分支等等</p>
+<ol>
+<li>信息搜集 </li>
+<li>分析信息</li>
+<li>绘制思维导图 分析资产</li>
+<li>对业务的逻辑点进行逻辑漏洞测试</li>
+<li>对其身份验证功能的Token session进行测试</li>
+<li>对其数据操作点进行注入测试</li>
+<li>对其页面可控点进行xss测试</li>
+<li>对其远程访问点进行SSRF测试</li>
+<li>对其接口进行FUZZ 模糊测试</li>
+<li>对其登录点进行弱口令测试</li>
+<li>识别框架 弱框架有反序列化漏洞利用链 可寻找反序列化的点</li>
+<li>对其文件上传功能进行任意文件上传测试</li>
+<li>对其边界资产 例如gitlab jenkins 进行弱口令测试</li>
+<li>对其现有CMS 查找相关漏洞利用工具 （exploit-db）等</li>
+<li>对其端口进行扫描 查找其他相关服务测试</li>
+<li>.git .svn 源代码泄露 可以下载其源码文件 并且可以通过git 查看commit切换分支等等</li>
+</ol>
 <blockquote>
-<p>入侵排查思路</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>入侵排查思路</p>
 </blockquote>
 <p>明确一件事情：已经被入侵，还是正在被入侵。</p>
-<p>已经被入侵</p>
+<p><strong>已经被入侵</strong></p>
 <p>一、目的已经达成，木马，后门均已销毁</p>
 <ol>
 <li>既然知道被入侵，定位被入侵的时间点。</li>
@@ -1234,36 +1270,44 @@
 <li>如果日志被删除，因为机器快照已经建立。使用Winhex 对硬盘数据进行恢复。</li>
 </ol>
 <p>二、目的没有达成，数据正在回传。木马，后门均在服务器上运行。</p>
-<p>1.Volatility 内存取证 建立快照 提取内存 定位到shellcode 找到他的IP<br>2. 如果他们使用常见的C2的工具，我们可以根据流量分析出入侵者的意图。<br>3. 关闭服务器，或者在防火墙上 禁掉他们的IP。登录服务器，对shellcode进行移除。<br>4. 重启以后进入安全模式，排查注册表  计划任务 服务 放大镜后门 shift后门。</p>
-<p>正在被入侵</p>
-<p>可能入侵者在尝试进行攻击的时候。<br>弱口令爆破。<br>1.弱口令爆破会产生日志，日志一定要采用远程日志系统，例如Linux的rsyslog。开启远程日志系统的好处：不怕日志被攻击者删除。</p>
-<ol start="2">
-<li>一定要找到入侵者的源IP，在防火墙下发阻断策略。。</li>
+<ol>
+<li>Volatility 内存取证 建立快照 提取内存 定位到shellcode 找到他的IP</li>
+<li>如果他们使用常见的C2的工具，我们可以根据流量分析出入侵者的意图。</li>
+<li>关闭服务器，或者在防火墙上 禁掉他们的IP。登录服务器，对shellcode进行移除。</li>
+<li>重启以后进入安全模式，排查注册表  计划任务 服务 放大镜后门 shift后门。</li>
+</ol>
+<p><strong>正在被入侵</strong></p>
+<p>可能入侵者在尝试进行攻击的时候。<br>弱口令爆破。</p>
+<ol>
+<li><p>弱口令爆破会产生日志，日志一定要采用远程日志系统，例如Linux的rsyslog。开启远程日志系统的好处：不怕日志被攻击者删除。</p>
+</li>
+<li><p>一定要找到入侵者的源IP，在防火墙下发阻断策略。。</p>
+</li>
 </ol>
 <blockquote>
-<p>weblogic redis未授权利用的是哪个端口</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>weblogic redis未授权利用的是哪个端口</p>
 </blockquote>
 <p>Weblogic 7001<br>redis 6379</p>
 <blockquote>
-<p>常见的端口漏洞</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>常见的端口漏洞</p>
 </blockquote>
 <p>21 ftp FTP服务端有很多  anonymous 匿名未授权访问 爆破<br>22 ssh root密码爆破  后门用户 可以google查一些关于ssh后门的文章 里面的默认密码 可能会登入进去<br>23 telnet  一般会发生在 路由器 或者交换机 嵌入式设备 管理端口 攻击方法 弱口令<br>25 smtp   默认用户 默认密码 邮件账号爆破<br>80 http   web  常见的Owasp top 10 中间件反序列化 中间件溢出  fastcgi配置不当 造成fastcgi端口泄露<br>110 pop3  默认用户 默认密码 邮件账号爆破<br>443 https  openssl 心脏滴血（影响范围较小） SSL/TLS低版本存在的漏洞<br>135 139 445 netbios smb   MS17010<br>3389 RDP  CVE-2019-0708</p>
 <blockquote>
-<p>信息收集都是收集什么</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>信息收集都是收集什么</p>
 </blockquote>
 <p>资产</p>
 <p>服务器资产<br>IP资产<br>域名资产</p>
 <blockquote>
-<p>常见漏洞以及自己的见解，防护手段等</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>常见漏洞以及自己的见解，防护手段等</p>
 </blockquote>
 <p>sql注入<br>PHP PDo Thinkphp DB class 操作类 来预处理sql语句 这样可以避免sql注入攻击<br>使用类型判断函数 判断输入的类型是否为需要的类型</p>
 <blockquote>
-<p>发现客户被传了webshell如何处置</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>发现客户被传了webshell如何处置</p>
 </blockquote>
 <p>1.如何发现的？<br>特征PHP:PHP的危险函数，exec eval assert([左尖括号]php7.4) create_function call_user_func system exec shell_exec<br>冰蝎的 openssl_decrypt<br>PHP木马关键的函数<br>2. webshell都干了些什么 该查些什么日志<br>adminer.php 在/tmp、目录下有adminer的临时文件。(PHP单文件Mysql 管理工具 )<br>nginx 日志 中间件日志 根据木马的名字查 继续再往上 找木马上传点<br>PHP-fpm的日志  绕过disable_function 进行提权 使用GC bypass等 PHPFPM日志会有痕迹的<br>mysql的 二进制日志  确定攻击者在攻击服务器的时候执行过什么语句。</p>
 <p>ps:如果中了一个免杀的webshell，日志被删除，所有的工具都查杀不出来，该怎么办<br>使用Winhex 恢复</p>
 <blockquote>
-<p>获得了攻击者的ip如何进行溯源，获取攻击者的个人信息</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>获得了攻击者的ip如何进行溯源，获取攻击者的个人信息</p>
 </blockquote>
 <p>攻击者的IP是什么，IP的信息<br><a target="_blank" rel="noopener" href="http://www.ipip.net/">www.ipip.net</a><br>根据IP地址 判断地址范围<br>直接进行扫描 先常规渗透手段。我们可以联系机房 对机房进行社工。可能会得到一些有用的信息</p>
 <p>常规的渗透手段 ，可能入侵比较菜。</p>
@@ -1271,13 +1315,13 @@
 <p>可能被蓝队反打</p>
 <p>红队利用自己博客等服务器  进行攻击。这样ip反查域名 能得到攻击人员的花名（ID） 靠自己关系 找到他是谁</p>
 <blockquote>
-<p>有无其他安全产品的使用经验</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>有无其他安全产品的使用经验</p>
 </blockquote>
 <p>有</p>
 <p>EVE-NG  自己百度下载 配置 安装  网络拓扑模拟器 可以模拟很多安全设备  例如F5 山石防火墙 华为的防火墙</p>
 <p>ensp 华为模拟器  只能windows上使用</p>
 <blockquote>
-<p>如果爆发了0day改如何处理</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>如果爆发了0day改如何处理</p>
 </blockquote>
 <p>爆发0day 0day已经爆出来了 exp poc 很成熟了</p>
 <ol>
@@ -1285,20 +1329,28 @@
 <li>避免0day打到自己 ，如果有安全设备，自己写规则用于识别0day并且阻断</li>
 </ol>
 <blockquote>
-<p>Linux下权限维持方法</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Linux下权限维持方法</p>
 </blockquote>
-<p>1.Crontab 定时任务 使用corntab 定时触发恶意脚本<br>2. ssh 后门  进程注入 hook密码校验函数 得到管理员密码<br>3. 修改管理员二进制 文件 创建软连接 使管理员在输入 ls 或者cd这种命令的时候执行我们的恶意脚本<br>4. 环境变量劫持<br>5. 内核后门(难度较高，需要重新编译内核并重启。优点，隐蔽性极强)<br>6. pam后门<br>7. /init.d/ 系统启动时默认运行的脚本</p>
+<ol>
+<li>Crontab 定时任务 使用corntab 定时触发恶意脚本</li>
+<li>ssh 后门  进程注入 hook密码校验函数 得到管理员密码</li>
+<li>修改管理员二进制 文件 创建软连接 使管理员在输入 ls 或者cd这种命令的时候执行我们的恶意脚本</li>
+<li>环境变量劫持</li>
+<li>内核后门(难度较高，需要重新编译内核并重启。优点，隐蔽性极强)</li>
+<li>pam后门</li>
+<li>/init.d/ 系统启动时默认运行的脚本</li>
+</ol>
 <blockquote>
-<p>内网代理正向与反向</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>内网代理正向与反向</p>
 </blockquote>
 <p>正向代理：直接可以从本机访问到对端的代理叫正向代理，通常用于目标主机前面没有防火墙，或者没有进行NAT地址转换的情况下使用</p>
 <p>反向代理：需要一台服务器  目标主机主动向服务器进行代理连接 ，我们本机再向服务器请求与目标主机的代理连接。同城用于目标主机前有防火墙，或者有端口限制。</p>
 <blockquote>
-<p>SQL注入JSON接口与白名单</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>SQL注入JSON接口与白名单</p>
 </blockquote>
-<p>json 传参<br>{[“0”:”'11222233333”]}<br>"</p>
+<p>json 传参 {[“0”:”'11222233333”]}"</p>
 <blockquote>
-<p>redis未授权与权限获取</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>redis未授权与权限获取</p>
 </blockquote>
 <p>redis 未授权访问<br>6379  user_pass<br>可以向系统内写文件 构成一些安全威胁  </p>
 <ol>
@@ -1308,7 +1360,7 @@
 <li>redis  docker 启动的 可以写dockerfile</li>
 </ol>
 <blockquote>
-<p>如何反查真实ip</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>如何反查真实ip</p>
 </blockquote>
 <p>fofa 互联网搜索引擎 </p>
 <ol>
@@ -1324,15 +1376,18 @@
 <li>如果网站有邮件功能，有可能邮件发送的地址为网站真实IP地址<br>11 子域名绑定 测试子域可能回源</li>
 </ol>
 <blockquote>
-<p>寻找webshell</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>寻找webshell</p>
 </blockquote>
-<p>1.自动化查找  D盾 河马  fotify<br>2. 手动查找  windows  sublime  全文件夹查找 IDE PHPSTORM 全局查找<br>    Linux  命令查找  grep -rn “eval(“ *<br>    webshell特征 PHP的危险函数<br>    还有phar [左尖括号]?php XXXXX</p>
-<blockquote>
-<p>sql注入特征</p>
+<ol>
+<li>自动化查找  D盾 河马  fotify </li>
+<li>手动查找  windows  sublime  全文件夹查找 IDE PHPSTORM 全局查找<br> Linux  命令查找  grep -rn “eval(“ *<br> webshell特征 PHP的危险函数<br> 还有phar [左尖括号]?php XXXXX<blockquote>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>sql注入特征</p>
 </blockquote>
+</li>
+</ol>
 <p>1 请求里面可能会包含sql函数<br>2 请求里面可能带/**<br>3 sql占用系统资源情况要比往常多<br>4 sql 二进制日志里面可能会有极其异常访问information_schema表名的情况</p>
 <blockquote>
-<p>sql注入利用</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>sql注入利用</p>
 </blockquote>
 <p>sqlmap 查询数据</p>
 <p>–os-pwn 联动msf getshell</p>
@@ -1342,7 +1397,7 @@
 <p>Linux so提权 Windows UDF提权</p>
 <p>sqlserver xp_cmd 执行命令 sqlmap –os-shell</p>
 <blockquote>
-<p>SQL二级注入。</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>SQL二级注入。</p>
 </blockquote>
 <p>二阶注入就是无法直接注入，它时指已存储（数据库、文件）的用户输入被读取后再次进入到 SQL 查询语句中导致的注入。</p>
 <p>一阶SQL注入：</p>
@@ -1357,7 +1412,7 @@
 <p>　　　　　　4；为处理第二次http请求，程序在检索存储在数据库中的恶意输入，构造SQL语句；</p>
 <p>　　　　　　5；如果攻击成功，在第二次请求响应中返回结果</p>
 <blockquote>
-<p>日志中看到的行为分析。</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>日志中看到的行为分析。</p>
 </blockquote>
 <p>分析方法：<br>蚁剑 菜刀  </p>
 <p>post一个PHP的函数  这些函数可以对文件进行操作  可以对数据库进行操作<br>如果特征编码 例如base64 rot13 通过该种编码的解码来实现流量的解密</p>
@@ -1365,40 +1420,43 @@
 <p>aes-128加密<br>在开始连接进行密钥协商的时候 抓取冰蝎流量密钥值</p>
 <p>通过冰蝎密钥 对加密的流量进行解密在进行行为分析</p>
 <blockquote>
-<p>linux下的敏感文件？</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>linux下的敏感文件？</p>
 </blockquote>
 <p>/etc/redhat-release  Centos 版本号<br>/proc/cpuinfo   CPU型号信息<br>/var/log/message  内核日志<br>/var/log/last   登录日志<br>/etc/sysconfig/selinux selinux状态<br>/etc/passwd  用户账户信息<br>/etc/shadow 用户密码</p>
 <blockquote>
-<p>你会流量分析吗？</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>你会流量分析吗？</p>
 </blockquote>
 <p>我会用wireshark过滤协议。</p>
 <p>如何分析进程，有一个木马？</p>
-<h3 id="经典问题"><a href="#经典问题" class="headerlink" title="经典问题"></a>经典问题</h3><blockquote>
-<p>Linux被入侵，如何检测木马？</p>
+<blockquote>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Linux被入侵，如何检测木马？</p>
 </blockquote>
 <p>账号：排查账号 /etc/paswwd /etc/shadow<br>系统：进程、端口、服务、远程登入、计划任务、日志文件、历史命令、系统状态<br>    进程 lsof -u root 查看用户进程 、、 fgrep ls 查看命令的进程 、、 ps -ef 查看进程 、、netstat -anp 列出所有进程<br>    端口 netstat -a<br>    服务 ps -aux 、 service –status-all 、 文件目录 /etc/init.d<br>    用户登入 last、lastb、lastlog 最后一次、失败、成功的用户 工具：whoamifuck2 githuub开源shell脚本，用户入侵检测排查工具<br>    计划任务 crontab -l<br>    日志分析 /var/log<br>    历史命令 /home/.bash_history      清除 -c<br>    系统状态 top stat glances<br>    木马查杀 chkrootkit</p>
 <blockquote>
-<p>Windows中免杀马，放入到正常目录下，改了名字，修改时间，然后删除了日志，D盾也查不到，怎么办？</p>
+<p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Windows中免杀马，放入到正常目录下，改了名字，修改时间，然后删除了日志，D盾也查不到，怎么办？</p>
 </blockquote>
 <p>思路一：和备份的文件做对比，查看那些不同的文件。<br>思路二：用其它的工具，比如webshell在线查杀灭绝师太版本、Cloudwalker[牧云]<br>思路三：使用Winhex 恢复</p>
+<p>]</p>
+<h3 id="红队-Red-Team"><a href="#红队-Red-Team" class="headerlink" title="红队 | Red Team"></a>红队 | Red Team</h3><p>暂时未收录，欢迎提供！</p>
+<h3 id="内网-Intranet"><a href="#内网-Intranet" class="headerlink" title="内网 | Intranet"></a>内网 | Intranet</h3><p>暂时未收录，欢迎提供！</p>
 <h3 id="渗透测试工程师面试"><a href="#渗透测试工程师面试" class="headerlink" title="渗透测试工程师面试"></a>渗透测试工程师面试</h3><h4 id="滴滴-DiDi"><a href="#滴滴-DiDi" class="headerlink" title="滴滴 DiDi"></a>滴滴 DiDi</h4><p>一面：<br>可能我简历写的比较少，面试官似乎有些不知道问什么，尴尬了一会儿，开头自我介绍，先问了个简单的n!，然后说如果输入的n是负数呢？<br>之后是一道数组最大连续子数组和。<br>python基础类库，requests,re，爬虫的基本流程<br>一些基本的sql语句</p>
 <p>二面：<br>xss与sql注入的基本原理与分类<br>xss如何防御？（分前端与后端，后端需要在入口和出口都过滤）<br>app客户端与服务器通信可能出现哪些漏洞问题<br>如何防御中间人攻击？<br>https的建立过程<br>TCP三次握手的过程以及对应的状态转换<br>app客户端破解的大致流程，app解包后文件夹的基本结构<br>对称加密与非对称加密的不同，分别用在哪些方面<br>DDOS的攻击，说道syn洪流的原理<br>ddos的防御<br>滴滴客户端可能存在哪些逻辑漏洞</p>
 <p>三面：<br>三面面试官感觉比较和蔼，上来先问平时干什么，我说玩游戏，然后说到lol，问我啥段位，我说白银。然后问我为什么段位低，我说一般打得少，基本都是开黑打匹配。<br>然后问了一些其他的生活问题。<br>后来看我简历上写了关于操作系统的，于是问我操作系统各个设备模块间的关系。当时有点蒙，就和他说了下操作系统启动的大致流程，从保护模式开启开始讲，因为实模式阶段记得不是很清楚。因为没想到三面会问我技术，后来想了想，问的意思可能是说设备栈之间数据流从上到下一层层处理的过程。</p>
 <h4 id="阿里-Alibaba"><a href="#阿里-Alibaba" class="headerlink" title="阿里 Alibaba"></a>阿里 Alibaba</h4><h5 id="1-FAQ"><a href="#1-FAQ" class="headerlink" title="1.FAQ"></a>1.FAQ</h5><ol>
-<li><p>在阿里巴巴春招(实习生)中, 我会被面试几轮? 面试轮数越多越好吗?</p>
+<li>在阿里巴巴春招(实习生)中, 我会被面试几轮? 面试轮数越多越好吗?</li>
+</ol>
 <blockquote>
 <p>技术岗面试流程一般是 技术面+HR面<br>偶尔在HR面后还会有技术面</p>
 </blockquote>
 <blockquote>
 <p>先看一个图, 是2017年(18届)阿里非官方Offer群里的一个投票.<br>可以发现面试轮数呈正态分布.<br>请注意! 这里统计的都是 <strong>拿到阿里offer的同学</strong> 不包括没有拿到阿里offer的.<br>按照ap自己不靠谱的小样本, 不转岗走到4面或者更多的基本是稳的.</p>
 </blockquote>
-</li>
-</ol>
 <blockquote>
 <p>一般来说, 评级高的人面试轮数也多. 面试轮数多的评级高的可能性也大。<br>这也是很好理解的，因为你厉害，所以公司在你身上消耗了更多的面试资源。<br>一句话, 按经验来说:  面得越多, 你越吊。</p>
 </blockquote>
 <ol start="2">
-<li><p>什么是阿里的交叉面? 哪些人有交叉面?</p>
+<li>什么是阿里的交叉面? 哪些人有交叉面?</li>
+</ol>
 <blockquote>
 <p>交叉面就是跨BU面.  (ps: BU指阿里的事业群, 具体看这里 <a target="_blank" rel="noopener" href="https://campus.alibaba.com/trems.htm">https://campus.alibaba.com/trems.htm</a>)<br>就比如说你投的是淘宝, 然后天猫的人来面试你, 就是交叉面<br>一般来说, 厉害的同学才有交叉面；具体来说, 是评级在A及以上的同学<br>(据说是)为了避免部门内部恶意操纵评级。<br>&lt;此句非常主观&gt; 根据我的观察，交叉面刷人比较少，能走到交叉面，一般都能过。</p>
 </blockquote>
@@ -1408,8 +1466,9 @@
 <blockquote>
 <p>一般是本部门的面试结束后进行一轮交叉面， 交叉面也是技术面，一般在HR面之前。</p>
 </blockquote>
-</li>
-<li><p>技术面过程中状态变成”已回绝”，但马上又出现另一个面试状态条， 为什么?</p>
+<ol start="3">
+<li>技术面过程中状态变成”已回绝”，但马上又出现另一个面试状态条， 为什么?</li>
+</ol>
 <blockquote>
 <p>有几种可能性:</p>
 <ol>
@@ -1418,13 +1477,12 @@
 <li>如果有的话欢迎补充</li>
 </ol>
 </blockquote>
-</li>
-<li><p>为什么”更换职位”或者”更换城市”按钮变灰? 发生了什么?</p>
+<ol start="4">
+<li>为什么”更换职位”或者”更换城市”按钮变灰? 发生了什么?</li>
+</ol>
 <blockquote>
 <p>首先恭喜, 这是好事<br>说明你的简历(或者面试)不错，已经被部门锁定，通过概率plus<br>如果你是定向内推的，那么”更换职位”按钮可能一开始就是灰的</p>
 </blockquote>
-</li>
-</ol>
 <h5 id="2-春招内推电话1面"><a href="#2-春招内推电话1面" class="headerlink" title="2 春招内推电话1面"></a>2 春招内推电话1面</h5><ul>
 <li>对web安全的理解</li>
 <li>熟悉的漏洞+防范</li>
@@ -3254,7 +3312,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">220.5k</span>&nbsp;字
+                class="white-color">220.9k</span>&nbsp;字
             
             
             
