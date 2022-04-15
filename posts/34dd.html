@@ -637,7 +637,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-16
+                    2022-04-16
                 </div>
                 
 
@@ -690,11 +690,11 @@
 <h2 id="Ax-CDN"><a href="#Ax-CDN" class="headerlink" title="Ax CDN"></a>Ax CDN</h2><blockquote>
 <p>Jsdelivr + Github 加速博客访问速度。</p>
 </blockquote>
-<h3 id="a-新建一个github库"><a href="#a-新建一个github库" class="headerlink" title="a 新建一个github库"></a>a 新建一个github库</h3><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201213204239553.png"></p>
+<h3 id="a-新建一个github库"><a href="#a-新建一个github库" class="headerlink" title="a 新建一个github库"></a>a 新建一个github库</h3><p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201213204239553.png"></p>
 <h3 id="b-本地新建文件夹"><a href="#b-本地新建文件夹" class="headerlink" title="b 本地新建文件夹"></a>b 本地新建文件夹</h3><blockquote>
 <p>建议：在<code>博客文件夹</code>中新建CND文件夹</p>
 </blockquote>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201213204911021.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201213204911021.png"></p>
 <p>在文件夹中运行git bash</p>
 <pre><code>git init
 git remote add origin 你新建仓库的HTTP或者SSH地址链接
@@ -706,7 +706,7 @@ git commit -m '添加文件内容描述'
 git push origin master   #将本地仓库文件推送到GitHub新建的仓库
 </code></pre>
 <p>新建一个Releases</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201213210210589.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201213210210589.png"></p>
 <p><strong>注意：</strong>版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> pull origin master  *<span class="token comment" spellcheck="true">#拉取远程仓库到本地* </span>
 <span class="token function">git</span> add <span class="token keyword">.</span> 
@@ -720,11 +720,11 @@ git push origin master   #将本地仓库文件推送到GitHub新建的仓库
 <h3 id="d-应用到博客"><a href="#d-应用到博客" class="headerlink" title="d 应用到博客"></a>d 应用到博客</h3><p>把本地地址都换上我们的CDN地址。🆗</p>
 <p>这个需要慢慢来，急不得。</p>
 <p>我们先把主题文件夹下的_config.yml的基本CSS和JS，还有一些图片全部上CDN。这已经完成大部分了。</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201213224040140.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201213224040140.png"></p>
 <p>当然，还有遗漏的，那就是banner，这个图一打开要许久才能显示，所以我们也给配上CDN吧。</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201213233641679.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201213233641679.png"></p>
 <p>分析代码</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201213233720588.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201213233720588.png"></p>
 <p>如果不使用每天切换的轮播图，否则（else）固定<code>/medias/banner/0.jpg</code>，那么我们直接改成CDN地址</p>
 <p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/banner/0.jpg">https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/banner/0.jpg</a></p>
 <p>替换之后就可以访问CDN的地址了。超级快啊。</p>
@@ -736,7 +736,7 @@ $ hexo d
 </code></pre>
 <p>访问博客,感受一下速度，然后可以联系外国的，外省的亲戚，朋友啊访问一下，看看有多快。</p>
 <h3 id="f-测试速度"><a href="#f-测试速度" class="headerlink" title="f 测试速度"></a>f 测试速度</h3><p>全国访问测试。不错不错。</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201214011956376.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201214011956376.png"></p>
 <hr>
 <h2 id="Bx-美化"><a href="#Bx-美化" class="headerlink" title="Bx 美化"></a>Bx 美化</h2><ol>
 <li>修改滚动条</li>
@@ -767,7 +767,7 @@ $ hexo d
 <p>这次使得蓝色深一点，然后蓝色在左边，因为蓝色是安静，绿色是柔和。先静下来，后柔和</p>
 <p>但是也不太好看，改来改去，直接搞成绿色吧。安静就好了。</p>
 <p>最终就是这样的了。</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20201214012640112.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201214012640112.png"></p>
 <h2 id="Cx-SEO"><a href="#Cx-SEO" class="headerlink" title="Cx SEO"></a>Cx SEO</h2><blockquote>
 <p>我们会发现博客的url路径有时间有博客标题一大串，不太好看，也不利于SEO。我们优化一下。</p>
 </blockquote>
@@ -1416,7 +1416,7 @@ permalink: :id.html <span class="token comment" spellcheck="true"># 尽量短，
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">220.9k</span>&nbsp;字
+                class="white-color">221k</span>&nbsp;字
             
             
             

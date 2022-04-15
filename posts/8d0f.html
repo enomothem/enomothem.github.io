@@ -480,7 +480,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210321155515270.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321155515270.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -637,7 +637,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-22
+                    2022-04-16
                 </div>
                 
 
@@ -672,12 +672,12 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Ensp的Cloud怎么连接Internet"><a href="#Ensp的Cloud怎么连接Internet" class="headerlink" title="Ensp的Cloud怎么连接Internet"></a>Ensp的Cloud怎么连接Internet</h1><h2 id="一-使用无线测试"><a href="#一-使用无线测试" class="headerlink" title="一.使用无线测试"></a>一.使用无线测试</h2><p>拓扑图如下：</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210321155515270.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321155515270.png"></p>
 <p>1.Cloud创建两个端口，一个WLAN，一个UDP（用于连接AR1）</p>
 <p>2.AR1的G0/0/0接口配置192.168.0.200/24 ，再配置一条通往internet的缺省路由。</p>
 <p>3.测试如下图</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210321155750144.png"></p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210321155758517.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321155750144.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321155758517.png"></p>
 <p>4.结果 直连IP是可以直接ping通的，而网关和internet是不通的</p>
 <p><font color="red">5.<strong>排错结果：因为无线传输是点到点，所以在无线热点侧只能识别一个mac地址，也就是你的无线网卡的mac，而你的模拟器里路由器的接口MAC没办法和热点通信</strong></font></p>
 <p>6.解决方法</p>
@@ -686,22 +686,22 @@
 <p><font color="red"><strong>电脑安装回环接口，ensp云不显示（卸载winpacp，安装最新或版本较高的winpacp可解决）</strong></font></p>
 <p><font color="red"><strong>WLAN共享回环接口步骤如下</strong></font></p>
 <p>6.1无线网卡右击属性点击共享，勾选允许，选择回环网卡</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210321160418620.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321160418620.png"></p>
 <p>设置之后，回环地址默认变成192.168.137.1</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210321160454472.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321160454472.png"></p>
 <p>7.第二次修改数据：</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210321161012976.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321161012976.png"></p>
 <p>添加回环地址 192.168.137.1，AR1的G0/0/0接口配置同一网段地址，在配置一条缺省路由。下一跳指向192.168.137.1</p>
 <p>8.第二次测试</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210321161218058.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321161218058.png"></p>
 <p>9.第二次结果  success</p>
 <p>PS：如果不行，记得把云删除一下，毕竟是模拟器，不会立即更新你的配置，毕竟是模拟器。</p>
 <h2 id="二-使用有线测试"><a href="#二-使用有线测试" class="headerlink" title="二.使用有线测试"></a>二.使用有线测试</h2><p>有线因为路由器就是网关，所以可以直接连接PC。</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210321210107714.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321210107714.png"></p>
 <p>拓扑图如下</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210321162328333.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321162328333.png"></p>
 <p>测试</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/image-20210321162428349.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321162428349.png"></p>
 <p>successfully</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
                 
@@ -949,7 +949,7 @@
                 <a href="/posts/2e0.html">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210327103941.png" class="responsive-img" alt="Immunity Canvas 7.26">
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210327103941.png" class="responsive-img" alt="Immunity Canvas 7.26">
                         
                         <span class="card-title">Immunity Canvas 7.26</span>
                     </div>
@@ -1318,7 +1318,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">220.9k</span>&nbsp;字
+                class="white-color">221k</span>&nbsp;字
             
             
             

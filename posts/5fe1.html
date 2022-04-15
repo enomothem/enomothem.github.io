@@ -641,7 +641,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-08
+                    2022-04-16
                 </div>
                 
 
@@ -675,33 +675,33 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Linux用户活动"><a href="#Linux用户活动" class="headerlink" title="Linux用户活动"></a><a href="">Linux用户活动</a></h1><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210207222021.png"></p>
+                <h1 id="Linux用户活动"><a href="#Linux用户活动" class="headerlink" title="Linux用户活动"></a><a href="">Linux用户活动</a></h1><p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210207222021.png"></p>
 <h2 id="Ax-登录用户活动信息"><a href="#Ax-登录用户活动信息" class="headerlink" title="Ax 登录用户活动信息"></a>Ax 登录用户活动信息</h2><h4 id="a-我是谁"><a href="#a-我是谁" class="headerlink" title="a 我是谁"></a>a 我是谁</h4><p>获取当前终端用户</p>
 <p><code>whoami</code> 相当于 <code>id -un</code></p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210207141933.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210207141933.png"></p>
 <h4 id="b-还有谁"><a href="#b-还有谁" class="headerlink" title="b 还有谁"></a>b 还有谁</h4><p>除了本终端，所有登入该Linux的终端用户</p>
 <p><code>who、w、users</code></p>
 <p>啊！不是吧，有一个hacker登入，完了完了，我被黑了<span class="github-emoji"><span>😭</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
 <p>哈哈，<span class="github-emoji"><span>🐶</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f436.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>其实是我自己创建的用户</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210207141945.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210207141945.png"></p>
 <p>出现了重复的，可以用sort和uniq过滤</p>
 <p><code>users | tr ' ' '\n' | sort | uniq</code></p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210207141951.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210207141951.png"></p>
 <h4 id="c-系统运行时间"><a href="#c-系统运行时间" class="headerlink" title="c 系统运行时间"></a>c 系统运行时间</h4><p><code>uptime</code></p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210207141957.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210207141957.png"></p>
 <p>我们用正则表达式提取运行时间，这个命令利用了perl和grep风格的正则来提取冒号分隔的3组两位数字。</p>
 <p><code>uptime | grep -Po '\d{2}\:\d{2}:\d{2}'</code></p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210207142003.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210207142003.png"></p>
 <h4 id="d-用户登入历史"><a href="#d-用户登入历史" class="headerlink" title="d 用户登入历史"></a>d 用户登入历史</h4><p><code>last</code></p>
-<p>获取单个用户的<img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210207142007.png">指定一个用户就可以了</p>
+<p>获取单个用户的<img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210207142007.png">指定一个用户就可以了</p>
 <p><code>last USER</code></p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210208225040.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210208225040.png"></p>
 <p>获取重启会话信息</p>
 <p><code>last reboot</code></p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210207142014.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210207142014.png"></p>
 <h4 id="e-获取失败的登入信息"><a href="#e-获取失败的登入信息" class="headerlink" title="e 获取失败的登入信息"></a>e 获取失败的登入信息</h4><p><code>lastb</code> ：<font color="red">是谁！在那乱搞</font></p>
 <p>比如，我们使用一个没有的用户进行登入尝试。</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210207142022.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210207142022.png"></p>
 <h2 id="Bx-通过监视用户找出入侵者"><a href="#Bx-通过监视用户找出入侵者" class="headerlink" title="Bx 通过监视用户找出入侵者"></a>Bx 通过监视用户找出入侵者</h2><p>使用一个脚本实现一个入侵检测系统，哇！<span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>我现在做的好像我小时候搞一些小发明的那种感觉，虽然在电脑上，但也感觉像是发明一些东西去解决一些问题，代替人工。我可喜欢看我爱发明了，以前我还说长大了当一个发明家呢，不过我想，现在正在做的，正是这个事情，以后如果有能力了，写编程控制机器，比以前用电路控制高级多了，哈哈。</p>
 <p>加油吧。</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token shebang important">#! /bin/bash</span>
@@ -758,10 +758,10 @@ ip_list<span class="token operator">=</span><span class="token string">"$(egrep 
 <span class="token function">rm</span> /tmp/valid.$$.log/tmp/$$.log $$.time/tmp/temp.$$.log 2<span class="token operator">></span>/dev/null
 </code></pre>
 <p>执行结果</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210208174404.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210208174404.png"></p>
 <p>默认执行/var/log/auth.log下的文件信息，当然也可以加一个文件作为参数。</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210208174522.png"></p>
-<h4 id="入侵检测工具汉化版"><a href="#入侵检测工具汉化版" class="headerlink" title="入侵检测工具汉化版"></a>入侵检测工具汉化版</h4><p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210208184426.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210208174522.png"></p>
+<h4 id="入侵检测工具汉化版"><a href="#入侵检测工具汉化版" class="headerlink" title="入侵检测工具汉化版"></a>入侵检测工具汉化版</h4><p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210208184426.png"></p>
 <p>该工具已经开源，可以在GitHub上查看哦。传送门：<a target="_blank" rel="noopener" href="https://github.com/enomothem/Whoamifuck2">Whoamifuck2</a></p>
 <h2 id="Cx-找出系统中用户的活跃时段"><a href="#Cx-找出系统中用户的活跃时段" class="headerlink" title="Cx 找出系统中用户的活跃时段"></a>Cx 找出系统中用户的活跃时段</h2><p>编写脚本</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># !/bin/bash</span>
@@ -803,7 +803,7 @@ done<span class="token operator">&lt;</span> /tmp/users.$$
 <span class="token function">rm</span> /tmp/users.$$ /tmp/user.$$ /tmp/ulog.$$
 </code></pre>
 <p>运行结果</p>
-<p><img src="https://gitee.com/enomothem/myblogphoto/raw/master/img/20210208213638.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210208213638.png"></p>
 <h2 id="Dx-参考"><a href="#Dx-参考" class="headerlink" title="Dx 参考"></a>Dx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
                 
@@ -1441,7 +1441,7 @@ done<span class="token operator">&lt;</span> /tmp/users.$$
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">220.9k</span>&nbsp;字
+                class="white-color">221k</span>&nbsp;字
             
             
             
