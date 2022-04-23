@@ -676,14 +676,14 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="Ax-HTTP"><a href="#Ax-HTTP" class="headerlink" title="Ax HTTP"></a>Ax HTTP</h2><blockquote>
-<p>HTTP协议，请问你了解过吗？</p>
+<p>HTTP协议，作为我们日常上网必不可少的一部分，有必要系统性学习。</p>
 </blockquote>
 <p><strong>超文本传输协议</strong>（<strong>H</strong>yper<strong>t</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol，<strong>HTTP</strong>）是应用程序级的用于分布式、协作、超媒体信息的协议系统。  </p>
 <p><strong>版本</strong>：目前的规范定义称为“HTTP/1.1”的协议，该协议包含了比HTTP/1.0更严格的要求，更加可靠。  </p>
 <p><strong>特点</strong>：支持C/S模式、简单快速、灵活、无连接（1.1之后支持可持续连接）、无状态。</p>
 <p>阅读文献：<a target="_blank" rel="noopener" href="https://www.rfc-editor.org/rfc/rfc2616.txt">RFC2616</a></p>
 <h2 id="Bx-HTTP-URL"><a href="#Bx-HTTP-URL" class="headerlink" title="Bx HTTP URL"></a>Bx HTTP URL</h2><blockquote>
-<p>URL，你上过网吗，对对对，就是那个，输入地址栏里的长长的一串东西。</p>
+<p>URL我们都很熟悉了，就是浏览器输入在地址栏的内容。</p>
 </blockquote>
 <p>URI（统一资源标识符）由URL（统一资源定位符）和URN（统一资源名）两个子集构成。</p>
 <h4 id="Format"><a href="#Format" class="headerlink" title="Format"></a>Format</h4><p>URL的语法描述</p>
@@ -710,7 +710,7 @@
 <p>我们来看一下报文，报文由三个部分组成，起始行、首部、主体。</p>
 </blockquote>
 <h4 id="Message-Types"><a href="#Message-Types" class="headerlink" title="Message Types"></a>Message Types</h4><p>HTTP消息由客户机到服务器的<strong>请求（Request）</strong>和服务器到客户机的<strong>响应（Respond）</strong>组成  </p>
-<h4 id="Message-Header"><a href="#Message-Header" class="headerlink" title="Message Header"></a>Message Header</h4><p>HTTP报头字段包括**通用报头(general-header)<strong>，</strong>请求头(request-header)<strong>，</strong>响应头(response-header)<strong>，以及</strong>实体头(entity-header)**字段，遵循相同的通用格式。</p>
+<h4 id="Message-Header"><a href="#Message-Header" class="headerlink" title="Message Header"></a>Message Header</h4><p>HTTP报头字段包括**通用报头(general-header)，请求头(request-header)，响应头(response-header），以及实体头(entity-header)**字段，遵循相同的通用格式。</p>
 <h4 id="Message-Body"><a href="#Message-Body" class="headerlink" title="Message Body"></a>Message Body</h4><p>HTTP消息的消息体(如果有)用于携带与请求或响应相关联的实体体。 只有当应用了传输编码时，消息体才不同于实体体，如Transfer-Encoding报头字段所示。</p>
 <pre class=" language-http"><code class="language-http">message-body = entity-body
              | &lt;entity-body encoded as per Transfer-Encoding>
@@ -1320,9 +1320,67 @@ PUT/DELETE/GET/PATCH /resource/{id}
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/4cc.html">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220422230432549.png" class="responsive-img" alt="协议之HTTP">
+                        
+                        <span class="card-title">协议之HTTP</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    网络技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/TCP-IP/">
+                        <span class="chip bg-color">TCP/IP</span>
+                    </a>
+                    
+                    <a href="/tags/OSI/">
+                        <span class="chip bg-color">OSI</span>
+                    </a>
+                    
+                    <a href="/tags/HTTP/">
+                        <span class="chip bg-color">HTTP</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/posts/4f1d.html">
                     <div class="card-image">
@@ -1339,9 +1397,9 @@ PUT/DELETE/GET/PATCH /resource/{id}
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1359,62 +1417,6 @@ PUT/DELETE/GET/PATCH /resource/{id}
                     
                     <a href="/tags/Pentesting/">
                         <span class="chip bg-color">Pentesting</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/a68a.html">
-                    <div class="card-image">
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20211210131306125.png" class="responsive-img" alt="0day问世：Apache Log4j Remote Code Execution">
-                        
-                        <span class="card-title">0day问世：Apache Log4j Remote Code Execution</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-10
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/IS/" class="post-category">
-                                    IS
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Apache/">
-                        <span class="chip bg-color">Apache</span>
-                    </a>
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/CNVD-2021-95914/">
-                        <span class="chip bg-color">CNVD-2021-95914</span>
                     </a>
                     
                 </div>
@@ -1699,7 +1701,7 @@ PUT/DELETE/GET/PATCH /resource/{id}
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">234.7k</span>&nbsp;字
+                class="white-color">234.8k</span>&nbsp;字
             
             
             
