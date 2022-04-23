@@ -1,0 +1,1944 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="协议之HTTP, web安全,web攻防,blog,shell,linux,windows,Linux,Windows,物理,物理学,宇宙,反物质,字星河,博客,星河,Enomothem,enomothem,eonthem">
+    <meta name="description" content="真正的改变只能发生在原则层面">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=E3kdz0owTVy1iw7363-rng"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'E3kdz0owTVy1iw7363-rng');
+</script>
+
+
+    <title>协议之HTTP | 字星河</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.2/sources/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/css/my.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+
+    
+
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">字星河</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Home</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Root</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>System</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Time</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/navigate" class="waves-effect waves-light">
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>Getshellmap</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Fingerheart</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/html" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>Testing</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://hs.enomothem.cn">
+          
+          <i class="fas fa-location-arrow" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>华圣影视</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://intra.enomothem.cn">
+          
+          <i class="fas fa-location-arrow" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>华圣人事</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://hs.enomothem.cn:8091">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>永恒知识库</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/js">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Development</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/happy">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Celebrate</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/kt">
+          
+          <span>空调房</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-heart" style="zoom: 0.6;"></i>
+      
+      <span>Enomothem</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">字星河</div>
+        <div class="logo-desc">
+            
+            真正的改变只能发生在原则层面
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Home
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Root
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			System
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Time
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/navigate" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-location-arrow"></i>
+			
+			Getshellmap
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Fingerheart
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-location-arrow"></i>
+			
+			Testing
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://hs.enomothem.cn " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-location-arrow" style="position: absolute;left:50px" ></i>
+			      
+		          <span>华圣影视</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://intra.enomothem.cn " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-location-arrow" style="position: absolute;left:50px" ></i>
+			      
+		          <span>华圣人事</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://hs.enomothem.cn:8091 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>永恒知识库</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/js " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Development</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/happy " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Celebrate</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/kt " style="margin-left:75px">
+				  
+		          <span>空调房</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-heart"></i>
+			
+			Enomothem
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/enomothem" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/enomothem" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('口令！Sent to:enomothem@outlook.com')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220422230432549.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">协议之HTTP</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/TCP-IP/">
+                                <span class="chip bg-color">TCP/IP</span>
+                            </a>
+                        
+                            <a href="/tags/OSI/">
+                                <span class="chip bg-color">OSI</span>
+                            </a>
+                        
+                            <a href="/tags/HTTP/">
+                                <span class="chip bg-color">HTTP</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" class="post-category">
+                                网络技术
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-04-22
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-04-23
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    8.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    32 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="Ax-HTTP"><a href="#Ax-HTTP" class="headerlink" title="Ax HTTP"></a>Ax HTTP</h2><blockquote>
+<p>HTTP协议，请问你了解过吗？</p>
+</blockquote>
+<p><strong>超文本传输协议</strong>（<strong>H</strong>yper<strong>t</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol，<strong>HTTP</strong>）是应用程序级的用于分布式、协作、超媒体信息的协议系统。  </p>
+<p><strong>版本</strong>：目前的规范定义称为“HTTP/1.1”的协议，该协议包含了比HTTP/1.0更严格的要求，更加可靠。  </p>
+<p><strong>特点</strong>：支持C/S模式、简单快速、灵活、无连接（1.1之后支持可持续连接）、无状态。</p>
+<p>阅读文献：<a target="_blank" rel="noopener" href="https://www.rfc-editor.org/rfc/rfc2616.txt">RFC2616</a></p>
+<h2 id="Bx-HTTP-URL"><a href="#Bx-HTTP-URL" class="headerlink" title="Bx HTTP URL"></a>Bx HTTP URL</h2><blockquote>
+<p>URL，你上过网吗，对对对，就是那个，输入地址栏里的长长的一串东西。</p>
+</blockquote>
+<p>URI（统一资源标识符）由URL（统一资源定位符）和URN（统一资源名）两个子集构成。</p>
+<h4 id="Format"><a href="#Format" class="headerlink" title="Format"></a>Format</h4><p>URL的语法描述</p>
+<pre class=" language-http"><code class="language-http">&lt;scheme>://&lt;user>:&lt;password>@&lt;host>:&lt;port>/&lt;path>;&lt;params>?&lt;query>#&lt;frag>
+
+<span class="token header-name keyword">scheme:</span>方法描述了请求资源时用了什么协议，用“:”与url其它部分隔开；
+<span class="token header-name keyword">user:</span>用户名描述了访问是带的用户名；
+<span class="token header-name keyword">password:</span>密码描述了用户名后面可能跟的密码，用“:”跟用户名隔开；
+<span class="token header-name keyword">host:</span>主机描述了网站主机名或ip地址，如果前面有用户名和密码，用@分开；
+<span class="token header-name keyword">post:</span>服务器当前正在监听的端口，http默认为80，https默认为443;
+<span class="token header-name keyword">path:</span>路劲描述了资源在服务器上的位置，用‘/’跟前面部分隔开；
+<span class="token header-name keyword">params:</span>参数描述了请求需要附加的参数，用“;”与其他部分隔开；
+<span class="token header-name keyword">query:</span>查询是用来激活服务器程序去执行某些操作，比如查询数据库等，用“?”与其余部分隔开；
+<span class="token header-name keyword">frag:</span>片段只在客户端使用，不发送到服务器端；
+</code></pre>
+<h4 id="URL-Coding"><a href="#URL-Coding" class="headerlink" title="URL Coding"></a>URL Coding</h4><p>URL编码：保证URL的一致性、安全性和完整性</p>
+<pre class=" language-http"><code class="language-http"><span class="token header-name keyword">https:</span>//enomothem.com/categories/操作系统/
+<span class="token header-name keyword">https:</span>//enomothem.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/  # 编码后
+</code></pre>
+<p>关于URL的编码，最早由US-ASCII码编码，但是因为只能编译127个字符，后使用<strong>utf-8编码</strong>。查询字符串的编码，用的是<strong>操作系统的默认编码</strong>。</p>
+<p>编码机制：<code>%两个表示字符的ASCII码的十六进制数</code></p>
+<p>所以在URL中不赞成使用%这样的保留字符。</p>
+<h2 id="Cx-HTTP-Message"><a href="#Cx-HTTP-Message" class="headerlink" title="Cx HTTP Message"></a>Cx HTTP Message</h2><blockquote>
+<p>我们来看一下报文，报文由三个部分组成，起始行、首部、主体。</p>
+</blockquote>
+<h4 id="Message-Types"><a href="#Message-Types" class="headerlink" title="Message Types"></a>Message Types</h4><p>HTTP消息由客户机到服务器的<strong>请求（Request）</strong>和服务器到客户机的<strong>响应（Respond）</strong>组成  </p>
+<h4 id="Message-Header"><a href="#Message-Header" class="headerlink" title="Message Header"></a>Message Header</h4><p>HTTP报头字段包括**通用报头(general-header)<strong>，</strong>请求头(request-header)<strong>，</strong>响应头(response-header)<strong>，以及</strong>实体头(entity-header)**字段，遵循相同的通用格式。</p>
+<h4 id="Message-Body"><a href="#Message-Body" class="headerlink" title="Message Body"></a>Message Body</h4><p>HTTP消息的消息体(如果有)用于携带与请求或响应相关联的实体体。 只有当应用了传输编码时，消息体才不同于实体体，如Transfer-Encoding报头字段所示。</p>
+<pre class=" language-http"><code class="language-http">message-body = entity-body
+             | &lt;entity-body encoded as per Transfer-Encoding>
+</code></pre>
+<h4 id="Message-Length"><a href="#Message-Length" class="headerlink" title="Message Length"></a>Message Length</h4><p>消息的传输长度是<strong>message-body</strong>在消息中出现时的长度; 也就是说，在应用了任何传输编码之后。 当消息体包含在消息中时，该<strong>message-body</strong>的传输长度由下列之一确定(按照优先级的顺序):  </p>
+<pre class=" language-http"><code class="language-http">
+1.   任何“绝对不能”包含消息体的响应消息(例如1xx、204和304响应以及对HEAD请求的任何响应)总是由报头字段后的第一个空行终止，而不管消息中存在实体报头字段。
+
+2.   如果存在一个Transfer-Encoding报头字段(章节14.41)，并且有除“identity”以外的任何值，那么传输长度由“chunked”传输编码(章节3.6)定义，除非消息通过关闭连接而被终止。
+
+3.   如果Content-Length报头字段(章节14.13)存在，它的OCTETs十进制值代表实体长度和传输长度。Content-Length报头字段不能被发送，如果这两个长度不同(例如，如果存在Transfer-Encoding报头字段)。如果接收到的消息同时带有Transfer-Encoding报头字段和Content-Length报头字段，则必须忽略后者。
+
+4. 如果消息使用媒体类型“multipart/byteranges”，并且传输长度没有指定，那么这个自限制媒体类型定义了传输长度。除非发送方知道接收方可以使用这种媒体类型，否则不要使用;1.1客户端在请求中出现带有多个字节范围说明符的Range报头，意味着客户端可以解析多部分/字节范围响应。
+
+   range报头可能由不理解multipart/byterange的1.0代理转发;在这种情况下，服务器必须使用本节第1、3或5项中定义的方法来划分消息。
+
+5.   服务器关闭连接。(关闭连接不能用来指示请求主体的结束，因为这将使服务器不可能发回响应。)为了兼容HTTP/1.0应用程序，包含消息体的HTTP/1.1请求必须包含有效的Content-Length报头字段，除非服务器是HTTP/1.1兼容的。如果一个请求包含一个消息体，并且没有给出Content-Length，如果服务器不能确定消息的长度，则应该以400(错误的请求)响应，如果它希望坚持接收有效的Content-Length，则应该以411(所需的长度)响应。
+
+所有接收实体的HTTP/1.1应用程序必须接受“分块”传输编码(章节3.6)，从而允许在消息长度无法确定的情况下使用该机制
+提前。
+
+消息绝对不能同时包含Content-Length报头字段和非标识传输编码。如果消息确实包含非标识传输编码，则必须忽略Content-Length。
+
+当在允许消息体的消息中给出Content-Length时，其字段值必须与消息体中字节数完全匹配。HTTP/1.1用户代理必须在接收到和检测到无效长度时通知用户。
+</code></pre>
+<h4 id="General-Header-Fields"><a href="#General-Header-Fields" class="headerlink" title="General Header Fields"></a>General Header Fields</h4><p>有一些报头字段对请求和响应消息具有普遍适用性，但不适用于正在传输的实体。 这些报头字段仅适用于正在传输的消息。  </p>
+<pre class=" language-http"><code class="language-http">       general-header = Cache-Control            ; 用于随报文传送缓存指示
+                      | Connection               ; 允许客户端和服务器指定与请求/响应连接有关的选项
+                      | Date                     ; 提供了日期的时间标志，说明报文是什么时间创建的
+                      | Pragma                   ; 另一种随报文传送指示的方式，但并不专用缓存
+                      | Trailer                  ; 如果报文采用了分块传输编码方式，就可以用这个首部列出位于报文拖挂部分的首部集合
+                      | Transfer-Encoding        ; 告知接收端为了保证报文的可靠传输，对报文采用了什么编码方式
+                      | Upgrade                  ; 给出了发送端可能想要“升级”使用的新版本或协议
+                      | Via                      ; 显示了报文经过的中间节点（代理、网关）
+                      | Warning                  ; 警告报文
+</code></pre>
+<h4 id="Request"><a href="#Request" class="headerlink" title="Request"></a>Request</h4><p><strong>Request-Line</strong>以一个方法令牌开始，接着是Request-URI和协议版本，以CRLF结束。 元素之间用SP字符分隔。 不允许CR或LF，除非在最后的CRLF序列中。  </p>
+<pre class=" language-http"><code class="language-http">Request-Line   = Method SP Request-URI SP HTTP-Version CRLF
+</code></pre>
+<p><strong>Request Header Fields</strong></p>
+<pre class=" language-http"><code class="language-http">    // 请求的信息性首部
+
+    首部                                描述
+
+    Client-IP               提供了运行客户端的机器的IP地址
+    From                    提供了客户端用户的E-mail地址
+    Host                    给出了接收请求的服务器的主机名和端口号
+    Referer                 提供了包含当前请求URL的文档的URL
+    UA-Color                提供了与客户端显示器的显示颜色有关的信息
+    UA-CPU                  给出了客户端CPU的类型或制造商
+    UA-Disp                 提供了与客户端显示器（屏幕）能力有关的信息
+    UA-OS                   给出了运行在客户端机器上的操作系统名称及版本
+    UA-Pixels               提供了客户端显示器的像素信息
+    User-Agent              将发起请求的应用程序名称告知服务器
+
+    // Accept首部
+
+    首部                                  描述
+
+    Accept                  告诉服务器能够发送那些媒体类型
+    Accept-Charset          告诉服务器能够给发送那些字符集
+    Accept-Encoding         告诉服务器能够发送那些编码方式
+    Accept-Language         告诉服务器能够发送那些语言
+    TE                      告诉服务器可以使用那些扩展传输编码
+
+
+    // 条件请求首部
+
+    首部                                描述
+
+    Expect                  允许客户端列出某请求所要求的服务器行为
+    If-Match                如果实体标记与文档当前的实体标记相匹配，就获取这份文档
+    If-Modified-Since       除非在某个指定的日期之后资源被修改过，否则就限制这个请求
+    If-None-Match           如果提供的实体标记与当前文档的标记不相符，就获取文档
+    If-Range                允许对文档的某个范围进行条件请求
+    If-Unmodified-Since     除非在某个指定日期之后资源没有被修改过，否则就限制这个请求
+    Range                   如果服务器支持范围请求，就请求资源的指定范围
+
+    // 安全请求首部
+
+    首部                                  描述
+
+    Authorization           包含了客户端提供给服务器，以便对其自身进行认证的数据
+    Cookie                  客户端用它向服务器传送一个令牌————它并不是真正的安全首部，但确实隐含了安全功能
+    Cookie2                 用来说明请求端支持的cookie版本
+
+    // 代理请求首部
+
+    首部                                  描述
+
+    Max-Forward             在通往源端服务器的路径上，将请求转发给其他代理或网关的最大次数————与TRACE方法一同使用
+    Proxy-Authorization     与Authorization首部相同，但这个首部是在与代理进行认证时使用的
+    Proxy-Connection        与Connection首部相同，但这个首部是在与代理建立连接时使用的
+</code></pre>
+<p><strong>Request Method</strong></p>
+<p>能在服务器端有操作的就是非安全方法，比如delete、put、post,不在服务器端有操作的就是安全方法，比如get、head，当然了安全方法并非不能在服务器端有操作，这是开发者可以控制的！</p>
+<pre class=" language-http"><code class="language-http">       Method         = "OPTIONS"                ; HTTP1.1增加：请求服务器告知其支持什么功能
+                      | "GET"                    ; 用于请求服务器端发送某个资源。
+                      | "HEAD"                   ; 跟GET方法类似，区别就是不返回主体
+                      | "POST"                   ; 用于向服务器端发送数据，传输实体主体。
+                      | "PUT"                    ; HTTP1.1增加：用于向服务器端修改、插入数据
+                      | "DELETE"                 ; HTTP1.1增加：向服务器删除某个指定的资源
+                      | "TRACE"                  ; HTTP1.1增加：用于向服务器端请求报文在发送的过程中经过了什么修改，主要用于测试
+                      | "CONNECT"                ; HTTP1.1增加：将服务器作为代理，让服务器代替用户去访问其他网页，之后将数据返回给用户。
+                      | "LINK"                   ; HTTP1.1移除：建立和资源之间的联系。
+                      | "UNLINK"                 ; HTTP1.1移除：断开连接关系。
+                      | extension-method
+       extension-method = token
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220423192048025.png"></p>
+<p>Idempotent: 幂等性请求，无论执行多少次，结果都是一样的。多次提交不会导致重复的记录。例如<strong>setTrue()函数</strong>就是幂等函数。<br><strong>幂等性分析</strong></p>
+<blockquote>
+<p>做笔记：幂等性在面试常考到的。</p>
+</blockquote>
+<p>GET肯定是幂等的，这是一个只读的请求，所以不会对计算机的资源改变。<br>POST不是幂等的，POST往往是新创建一个资源，例如新注册一个用户，新发一个帖子，发两遍就可能就是两个帖子。<br>PUT是幂等的，它是全部更新。而PATCH是部分更新。</p>
+<p><strong>PUT vs POST</strong></p>
+<p>主要区别在于<strong>幂等性</strong>，POST是新建一个资源，PUT则是替代现有的资源。<br>通常我们会首先使用POST新建一个资源，然后用PUT去修改或PATCH去部分修改，然后DELETE删除或GET去获取它。</p>
+<pre class=" language-http"><code class="language-http">POST /resource
+PUT/DELETE/GET/PATCH /resource/{id}
+</code></pre>
+<blockquote>
+<p>实际场景中，PUT也可用于创建，如不存在则创建，存在则更新。</p>
+</blockquote>
+<p><strong>GET vs POST</strong></p>
+<blockquote>
+<p>POST 和GET本质都是一样的。区别在于可见性、可收藏性 、可存储性、安全性、编码性、长度限制、是否可后退按钮/刷新。</p>
+</blockquote>
+<p>一、功能不同</p>
+<p>1、get是从服务器上获取数据。后退或刷新对页面无害。</p>
+<p>2、post是向服务器传送数据。后退或刷新会询问用户是否提交数据。</p>
+<p>二、过程不同</p>
+<p>1、get是把参数数据队列加到提交表单的ACTION属性所指的URL中，值和表单内各个字段一一对应，在URL中可以看到。所以可以被加入书签。GET 会将数据存在浏览器的历史中。</p>
+<p>2、post是通过HTTP post机制，将表单内各个字段与其内容放置在HTML HEADER内一起传送到ACTION属性所指的URL地址。用户看不到这个过程。不能被加入书签。POST不记录在浏览器中。</p>
+<p>三、获取值不同</p>
+<p>1、对于get方式，服务器端用Request.QueryString获取变量的值。</p>
+<p>2、对于post方式，服务器端用Request.Form获取提交的数据。</p>
+<p>四、传送数据量不同</p>
+<p>1、get传送的数据量较小，不能大于2KB。</p>
+<p>2、post传送的数据量较大，一般被默认为不受限制。但理论上，IIS4中最大量为80KB，IIS5中为100KB。</p>
+<p>五、安全性不同</p>
+<p>1、get安全性非常低。</p>
+<p>2、post安全性较高。</p>
+<p>六、编码不同</p>
+<p>1、GET 编码格式只能用ASCII码</p>
+<p>2、OST没有限制</p>
+<p><strong>HEAD</strong></p>
+<p>HEAD的响应头与GET相同，在下载一个大文件时，我们需要知道这个文件有多大，首先我们可以下载一个它的头部信息，然后决定是否下载，可以节约资源。如果使用GET则会直接下载该资源。</p>
+<p><strong>OPTIONS</strong></p>
+<p>在渗透测试中常用于查询支持哪些方法，用于文件上传的利用。可以使用<strong>Burp Suite</strong>或者<code>Curl</code>命令。在开发中，通常用于CORS中做一个先行探测。</p>
+<pre class=" language-shell"><code class="language-shell">curl -X OPTIONS https://enomothem.com -i
+</code></pre>
+<p><strong>TRACE</strong></p>
+<p>实现了通向目标资源的路径的一个消息回环（Look back）测试，提供DEBUG机制。在渗透测试中可以利用此方法获取信息，不使用的情况下建议关闭。</p>
+<p><strong>Request-URI</strong></p>
+<p>Request-URI是一个统一资源标识符，标识要应用请求的资源。</p>
+<pre class=" language-HTTP"><code class="language-HTTP">       Request-URI    = "*" | absoluteURI | abs_path | authority
+</code></pre>
+<p>Request-URI的四个选项取决于请求的性质。 星号“*”表示请求不应用于特定的资源，而是应用于服务器本身，并且仅当所使用的方法不一定应用于资源时才允许。</p>
+<p><strong>The absoluteURI</strong></p>
+<pre class=" language-http"><code class="language-http">       GET http://www.w3.org/pub/WWW/TheProject.html HTTP/1.1
+</code></pre>
+<p>在HTTP版本中，所有HTTP/1.1服务器必须接受绝对uri </p>
+<p>Request-URI最常见的形式是用来标识一个源服务器或网关上的资源。</p>
+<pre class=" language-http"><code class="language-http">       GET /pub/WWW/TheProject.html HTTP/1.1
+       Host: www.w3.org
+</code></pre>
+<p>然后是请求的其余部分。 注意绝对路径不能是空的; 如果没有在原始URI中出现，则必须是给定为“/”(服务器根)。  </p>
+<h4 id="Respond"><a href="#Respond" class="headerlink" title="Respond"></a>Respond</h4><p>在接收并解释请求消息后，服务器会作出响应，使用HTTP响应消息。  </p>
+<pre class=" language-http"><code class="language-http">       Response      = Status-Line               ; 状态行
+                       *(( general-header        ; 
+                        | response-header        ; 
+                        | entity-header ) CRLF)  ; 
+                       CRLF
+                       [ message-body ]          ; 消息体
+</code></pre>
+<p><strong>Status-Line</strong></p>
+<pre class=" language-http"><code class="language-http">Status-Line = HTTP-Version SP Status-Code SP Reason-Phrase CRLF
+</code></pre>
+<p><strong>Status Code and Reason Phrase</strong></p>
+<blockquote>
+<p>状态码和原因短语，状态码以数字形式表示当前事务处于什么状态，原因短句就是解释原因，方便阅读</p>
+</blockquote>
+<pre class=" language-http"><code class="language-http">      - 1xx: Informational - Request received, continuing process
+                            \ 请求收到，继续处理
+      - 2xx: Success - The action was successfully received, understood, and accepted
+                      \ 成功地接收、解析和接受了该操作  
+      - 3xx: Redirection - Further action must be taken in order to complete the request
+                          \ 为了完成请求，必须采取进一步的行动  
+      - 4xx: Client Error - The request contains bad syntax or cannot be fulfilled
+                           \ 请求包含错误的语法或无法实现  
+      - 5xx: Server Error - The server failed to fulfill an apparently valid request
+                           \ 服务器未能完成一个明显有效的请求  
+</code></pre>
+<p>Status-Code：</p>
+<pre class=" language-http"><code class="language-http">      Status-Code    =
+            "100"  : Continue                               # 继续。客户端应继续其请求
+          | "101"  : Switching Protocols                    # 切换协议。
+          | "200"  : OK                                        # 请求成功。一般用于Get和Post请求
+          | "201"  : Created                                # 已创建。成功请求并创建了新的资源
+          | "202"  : Accepted                                # 已接受。已经接受请求，但未处理完成
+          | "203"  : Non-Authoritative Information          # 非授权信息。请求成功。但返回的meta信息不在原始的服务器，而是一个副本
+          | "204"  : No Content                                # 无内容。服务器成功处理，但未返回内容。
+          | "205"  : Reset Content                            # 重置内容。服务器处理成功，用户终端（例如：浏览器）应重置文档视图
+          | "206"  : Partial Content                        # 部分内容。服务器成功处理了部分GET请求
+          | "300"  : Multiple Choices                        # 多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表
+          | "301"  : Moved Permanently                        # 永久移动。请求的资源已被永久的移动到新URI
+          | "302"  : Found                                    # 临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI
+          | "303"  : See Other                                # 查看其它地址。与301类似。使用GET和POST请求查看
+          | "304"  : Not Modified                            # 未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源
+          | "305"  : Use Proxy                                # 使用代理。所请求的资源必须通过代理访问
+          | "307"  : Temporary Redirect                     # 临时重定向。与302类似。使用GET请求重定向
+          | "400"  : Bad Request                            # 客户端请求的语法错误，服务器无法理解
+          | "401"  : Unauthorized                            # 请求要求用户的身份认证
+          | "402"  : Payment Required                        # 保留，将来使用
+          | "403"  : Forbidden                                # 服务器理解请求客户端的请求，但是拒绝执行此请求
+          | "404"  : Not Found                                # 服务器无法根据客户端的请求找到资源（网页）。开发者可以个性化该页面
+          | "405"  : Method Not Allowed                        # 客户端请求中的方法被禁止
+          | "406"  : Not Acceptable                         # 服务器无法根据客户端请求的内容特性完成请求
+          | "407"  : Proxy Authentication Required            # 请求要求代理的身份认证，与401类似，但请求者应当使用代理进行授权
+          | "408"  : Request Time-out                        # 服务器等待客户端发送的请求时间过长，超时
+          | "409"  : Conflict                                # 服务器完成客户端的PUT请求是可能返回此代码，服务器处理请求时发生了冲突
+          | "410"  : Gone                                    # 客户端请求的资源已经不存在。而且没有任何已知的转发地址
+          | "411"  : Length Required                        # 服务器无法处理客户端发送的不带Content-Length的请求信息
+          | "412"  : Precondition Failed                     # 客户端请求信息的先决条件错误
+          | "413"  : Request Entity Too Large                # 由于请求的实体过大，服务器无法处理，因此拒绝请求。
+          | "414"  : Request-URI Too Large                    # 请求的URI过长（URI通常为网址），服务器无法处理
+          | "415"  : Unsupported Media Type                    # 服务器无法处理请求附带的媒体格式
+          | "416"  : Requested range not satisfiable         # 客户端请求的范围无效
+          | "417"  : Expectation Failed                        # 服务器无法满足Expect的请求头信息
+          | "500"  : Internal Server Error                    # 服务器内部错误，无法完成请求
+          | "501"  : Not Implemented                        # 服务器不支持请求的功能，无法完成请求
+          | "502"  : Bad Gateway                            # 充当网关或代理的服务器，从远端服务器接收到了一个无效的请求
+          | "503"  : Service Unavailable                    # 由于超载或系统维护，服务器暂时的无法处理客户端的请求。
+          | "504"  : Gateway Time-out                        # 充当网关或代理的服务器，未及时从远端服务器获取请求
+          | "505"  : HTTP Version not supported                # 服务器不支持请求的HTTP协议的版本，无法完成处理
+          | extension-code
+
+      extension-code = 3DIGIT
+      Reason-Phrase  = *&lt;TEXT, excluding CR, LF>
+</code></pre>
+<h2 id="Dx-Entity"><a href="#Dx-Entity" class="headerlink" title="Dx Entity"></a>Dx Entity</h2><blockquote>
+<p>如果不受请求方法或响应状态码的限制，请求和响应消息可以传输实体。 实体由实体头字段和实体主体组成，尽管有些响应只包含实体头。  </p>
+</blockquote>
+<h4 id="Entity-Header-Fields"><a href="#Entity-Header-Fields" class="headerlink" title="Entity Header Fields"></a>Entity Header Fields</h4><pre class=" language-http"><code class="language-http">       entity-header  = Allow                    ; 列出了可以对此实体执行的请求方法
+                      | Content-Encoding         ; 对主体执行的任意编码方式
+                      | Content-Language         ; 理解主体时最适宜使用的自然语言
+                      | Content-Length           ; 主体的长度或者尺寸
+                      | Content-Location         ; 资源实际所处的位置
+                      | Content-MD5              ; 主体的MD5校验和
+                      | Content-Range            ; 在整个资源中此实体表示的字节范围
+                      | Content-Type             ; 这个主体的对象类型
+                      | Expires                  ; 实体不再有效，要从原始的源端再次获取此实体的日期和时间
+                      | Last-Modified            ; 这个实体最后一次被修改的日期和时间
+                      | extension-header
+
+       extension-header = message-header
+</code></pre>
+<h4 id="Entity-Body"><a href="#Entity-Body" class="headerlink" title="Entity Body"></a>Entity Body</h4><blockquote>
+<p>与HTTP请求或响应一起发送的实体主体(如果有的话)采用实体头字段定义的格式和编码。  </p>
+</blockquote>
+<pre class=" language-http"><code class="language-http">entity-body    = *OCTET
+</code></pre>
+<p>通过编码，确保信息的安全正确传递。</p>
+<p>Type：当一个实体体包含在消息中时，该实体体的数据类型 body是通过头字段Content- type和Content-Encoding确定的。 这些定义了一个两层的有序编码模型:  </p>
+<pre class=" language-http"><code class="language-http">  entity-body := Content-Encoding( Content-Type( data ) )
+</code></pre>
+<p> Entity Length：消息的实体长度是在应用任何传输编码之前消息体的长度。</p>
+<h2 id="Ex-Connections"><a href="#Ex-Connections" class="headerlink" title="Ex Connections"></a>Ex Connections</h2><blockquote>
+<p>tcp/ip建立连接需要做的事情，tcp/ip所带来的时延，以及从http的角度出发，提升网络性能的一些方法，涉及到串行连接、并行连接、持久连接、管道连接等概念</p>
+</blockquote>
+<h4 id="TCP流程"><a href="#TCP流程" class="headerlink" title="TCP流程"></a>TCP流程</h4><blockquote>
+<p>让我们来复习一下TCP连接。和三次握手四次挥手。</p>
+</blockquote>
+<p>我们以访问<a target="_blank" rel="noopener" href="https://www.enomothem.com:80/path/index.html%E4%B8%BA%E4%BE%8B%E8%AF%B4%E6%98%8E%EF%BC%9A">https://www.enomothem.com:80/path/index.html为例说明：</a></p>
+<ol>
+<li>浏览器从地址栏中解析处域名（主机名），也就是拿到<a target="_blank" rel="noopener" href="http://www.enomothem.com/">www.enomothem.com</a></li>
+<li>浏览器根据得到的主机名查询出ip地址，比如算出ip为185.199.110.153，（中间可能经过查找host文件或去查询dns服务器）</li>
+<li>浏览器解析出端口（http默认为80，https默认为443）</li>
+<li>浏览器发起一条到185.199.110.153端口为443的链接，（重建需要经过几次确定相关参数的来回“握手”）</li>
+<li>浏览器发起请求报文</li>
+<li>服务器返回响应报文</li>
+<li>浏览器关闭连接（其实浏览器和服务器都可以在不通知对方的情况关闭连接）</li>
+</ol>
+<blockquote>
+<p>TCP流是分段的，由IP分组传输，也就是说最终http报文是以ip分组的形式在网络之间传输。一个ip分组包含的数据信息如下：</p>
+</blockquote>
+<pre class=" language-http"><code class="language-http">    1. ip分组首部（通常为20字节）
+    2. tcp段首部 （通常为20字节）
+    3. tcp数据块 （0个或多个字节，实际http报文数据就在这里） 
+</code></pre>
+<blockquote>
+<p>三次握手</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220423213532387.png"></p>
+<blockquote>
+<p>四次挥手</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220423213601481.png"></p>
+<h4 id="TCP确定一个连接"><a href="#TCP确定一个连接" class="headerlink" title="TCP确定一个连接"></a>TCP确定一个连接</h4><p>TCP用四个信息来唯一确定一条连接：源ip地址、源端口号、目的ip地址、目的端口号。只要其中有一个不同，那么就不是同一条连接。在任意时刻计算机都可以有几条tcp连接在打开状态。</p>
+<h4 id="对TCP性能的考虑"><a href="#对TCP性能的考虑" class="headerlink" title="对TCP性能的考虑"></a>对TCP性能的考虑</h4><blockquote>
+<p>首先相对建立tcp连接、发送http请求报文以及响应报文相比，http事务处理的时间相对短很多很多，此时延可不用讨论，除非你的服务器超负载了或正在处理复杂的运算。因此，http事务的时延往往由以下原因组成</p>
+</blockquote>
+<ol>
+<li>首先客户端解析ip地址或者端口号需要时间，如果当前没有访问过相关资源，那么解析还需要查询dns服务器，此操作，造成的时延较多，可能花费数十秒。</li>
+<li>建立tcp链接会有建立时延，通常2s左右，如果当前的http事务较多，那么会很快叠加上去。</li>
+<li>传输、处理请求报文需要时间</li>
+<li>回传响应报文需要时间</li>
+<li>当然还有其他因素，比如硬件、网络负载，以及报文尺寸等！</li>
+</ol>
+<ul>
+<li><strong>性能聚焦区域</strong></li>
+</ul>
+<p>这里简要说明一下，建立tcp链接这个过程可能存在的时延分析，包括：经典三次“握手”、tcp慢启动拥塞控制机制等！</p>
+<ul>
+<li>经典三次“握手”说的就是http事务在建立tcp连接是需要做的相关参数确认过程，大概如下：</li>
+</ul>
+<ol>
+<li>客户端发送携带“SYN”标记的TCP段说明发起连接请求</li>
+<li>服务端返回“SYN”和“ACK”的TCP段说明已接受</li>
+<li>最后客户端发送确认信息以确认连接</li>
+</ol>
+<ul>
+<li>tcp慢启动说明了，tcp连接会随着时间的增加进行自我调谐。这个主要目的防止突然的tcp连接增多导致网络瘫痪，所以它会慢慢的调整传输速度，这个机制就叫做TCP慢启动。</li>
+</ul>
+<h4 id="HTTP连接的处理"><a href="#HTTP连接的处理" class="headerlink" title="HTTP连接的处理"></a>HTTP连接的处理</h4><p>connection能承载三种字段值:</p>
+<pre class=" language-http"><code class="language-http">    HTTP首部字段名，列出了只与此有关的首部；
+
+    任意标签值，用于描述此链接的非标准选项；
+
+    值close，说明操作完成之后需关闭这条持久连接。
+</code></pre>
+<p>接收端在收到请求报文之后，对报文进行解析，并查看connection首部中列出的首部列表，并在转发出去之前，删除相关首部，这一行为称为：“对首部的保护”。</p>
+<h4 id="优化的方法"><a href="#优化的方法" class="headerlink" title="优化的方法"></a>优化的方法</h4><blockquote>
+<p>此种机制描述了http事务一个一个接着发起，不能同时下载更多的资源，使得界面上用户看不到东西，体验不够好。串行连接没有很好的利用tcp/ip连接的慢启动机制！</p>
+</blockquote>
+<p><strong>并行连接</strong></p>
+<p>通过多条TCP连接发起并发的HTTP连接</p>
+<p><strong>持久连接</strong></p>
+<p>重用TCP连接，以消除连接及关闭时延</p>
+<p><strong>管道化连接</strong></p>
+<p>通过共享的TCP连接发起并发的HTTP请求</p>
+<h4 id="并行连接"><a href="#并行连接" class="headerlink" title="并行连接"></a>并行连接</h4><p>浏览同时发起过个http事务，因为是并行的，所以时延也并行的，这样总时延较小，页面呈现更快，体验较好。但也不是总是这样，因为如果在网络速度很慢的时候，多个连接会去竞争本来不多的带宽，那么就谈不上加快速度了。还有就是并行连接也是需要付出代价的，比如增加系统内训消耗、服务器负载，比如有一个100客户端同时对服务发起100tcp并行连接的话，那么服务器就得负责10000个处理请求，很快的你的服务器就会爆掉。当然了，并行连接确实能带来视觉上的速度提升，因为相比于串行连接慢慢地显示数据而并行一下子能全部显示完信息，视觉上并行连接会给人速度更快的感觉！</p>
+<h4 id="Persistent-Connections"><a href="#Persistent-Connections" class="headerlink" title="Persistent Connections"></a>Persistent Connections</h4><p>在持久连接之前，需要建立一个单独的TCP连接来获取每个URL，这增加了HTTP服务器的负载，并导致Internet上的拥塞。使用内联图像和其他相关数据通常要求客户机在很短的时间内对同一服务器发出多个请求。这些性能问题的分析和结果来自一个原型实现。人们也探索了替代方案，例如T/TCP。</p>
+<blockquote>
+<p>如果对同ip、同端口的发起多个http事务连接，那么可以在前一个事务处理完成之后不要关闭tcp连接，以此来减小建立tcp、tcp慢启动所带来的时延。相关概念阅读RFC文档。</p>
+</blockquote>
+<p><strong>Pipelining</strong><br>一个支持持久连接的客户端可以“流水线”它的请求(即，发送多个请求而不等待每个响应)。 服务器必须按照接收请求的顺序向这些请求发送响应。  </p>
+<p>在连接建立后立即假定存在持久连接和管道的客户端应该准备在第一次管道尝试失败时重试它们的连接。 如果一个客户端进行了这样的重试，在它知道连接是持久的之前，它绝对不能管道。 如果服务器在发送所有相应的响应之前关闭了连接，客户端也必须准备好重新发送请求。  客户端不应该使用非幂等方法或非幂等方法序列对请求进行管道传输。 否则，过早终止传输连接可能导致不确定的结果。 一个客户想要发送一个非幂等函数，request应该等待发送该请求，直到收到前一个请求的响应状态。  </p>
+<h2 id="Fx-HTTP-Version-Differences"><a href="#Fx-HTTP-Version-Differences" class="headerlink" title="Fx HTTP Version Differences"></a>Fx HTTP Version Differences</h2><h4 id="1、http-0-9："><a href="#1、http-0-9：" class="headerlink" title="1、http/0.9："></a>1、http/0.9：</h4><p>1991，原型版本，功能简陋，只有一个命令GET。GET /index.html，服务器只能回应HTML格式字符串，不能回应别的格式</p>
+<h4 id="2、http-1-0："><a href="#2、http-1-0：" class="headerlink" title="2、http/1.0："></a>2、http/1.0：</h4><p>1996年5月，支持cache，MIME，method<br>每个TCP连接只能发送一个请求，发送数据完毕，连接就关闭，如果还要请求其他资源，就必须再新建一个连接，引入了POST命令和HEAD命令头信息是 ASCII 码，后面数据可为任何格式。服务器回应时会告诉客户端，数据是什么格式，即Content-Type字段的作用。这些数据类型总称为MIME 多用途互联网邮件扩展，每个值包括一级类型和二级类型，预定义的类型，也可自定义类型, 常见Content-Type值：text/xml image/jpeg audio/mp3</p>
+<h4 id="3、http-1-1："><a href="#3、http-1-1：" class="headerlink" title="3、http/1.1："></a>3、http/1.1：</h4><p>1997年1月，引入了持久连接（persistent connection），即TCP连接默认不关闭，可以被多个请求复用，不用声明Connection: keep-alive。对于同一个域名，大多数浏览器允许同时建立6个持久连接，引入了管道机制，即在同一个TCP连接里，客户端可以同时发送多个请求，进一步改进了HTTP协议的效率</p>
+<p>新增方法：PUT、PATCH、OPTIONS、DELETE</p>
+<p><strong>HTTP/1.0和HTTP/1.1的区别：</strong></p>
+<p>（1）缓存处理：在HTTP1.0中主要使用header里的If-Modified-Since，Expires来做为缓存判断的标准，HTTP1.1则引入了更多的缓存控制策略，例如Entity tag，If-Unmodified-Since，If-Match，If-None-Match等更多可供选择的缓存头来控制缓存策略<br>（2）带宽优化及网络连接的使用：HTTP1.0中，存在一些浪费带宽的现象，例如：客户端只是需要某个对象的一部分，而服务器却将整个对象送过来了，并且不支持断点续传功能，HTTP1.1则在请求头引入了range头域，它允许只请求资源的某个部分，即返回码是206（Partial Content），方便了开发者自由的选择以便于充分利用带宽和连接<br>（3）错误通知的管理：在HTTP1.1中新增24个状态响应码，如409（Conflict）表示请求的资源与资源当前状态冲突；410（Gone）表示服务器上的某个资源被永久性的删除<br>（4）Host 头处理：在HTTP1.0中认为每台服务器都绑定一个唯一的IP地址，因此，请求消息中的URL并没有传递主机名（hostname）。但随着虚拟主机技术的发展，在一台物理服务器上可以存在多个虚拟主机（Multi-homed Web Servers），并且它们共享一个IP地址。HTTP1.1的请求消息和响应消息都应支持Host头域，且请求消息中如果没有Host头域会报告一个错误（400 Bad Request）<br>（5）长连接：HTTP 1.1支持持久连接（PersistentConnection）和请求的流水线（Pipelining）处理，在一个TCP连接上可以传送多个HTTP请求和响应，减少了建立和关闭连接的消耗和延迟，在HTTP1.1中默认开启Connection： keep-alive，弥补了HTTP1.0每次请求都要创建连接的缺点</p>
+<h4 id="4、SPDY协议："><a href="#4、SPDY协议：" class="headerlink" title="4、SPDY协议："></a>4、SPDY协议：</h4><p>SPDY：2009年谷歌研发，综合HTTPS和HTTP两者优点于一体的传输协议，主要特点：<br>（1）降低延迟。针对HTTP高延迟的问题，SPDY优雅的采取了多路复用（multiplexing）。多路复用通过多个请求stream共享一个tcp连接的方式，解决了HOL blocking的问题，降低了延迟同时提高了带宽的利用率<br>（2）请求优先级（request prioritization）。多路复用带来一个新的问题是，在连接共享的基础之上有可能会导致关键请求被阻塞。SPDY允许给每个request设置优先级，重要的请求就会优先得到响应。比如浏览器加载首页，首页的html内容应该优先展示，之后才是各种静态资源文件，脚本文件等加载，可以保证用户能第一时间看到网页内容<br>（3）header压缩。HTTP1.x的header很多时候都是重复多余的。选择合适的压缩算法可以减小包的大小和数量<br>（4）基于HTTPS的加密协议传输。大大提高了传输数据的可靠性<br>（5）服务端推送（server push）。采用了SPDY的网页，例如网页有一个sytle.css的请求，在客户端收到sytle.css数据的同时，服务端会将sytle.js的文件推送给客户端，当客户端再次尝试获取sytle.js时就可以直接从缓存中获取到，不用再发请求了</p>
+<h4 id="5、HTTP-2协议："><a href="#5、HTTP-2协议：" class="headerlink" title="5、HTTP/2协议："></a>5、HTTP/2协议：</h4><p>http/2.0：2015年，HTTP2.0是SPDY的升级版<br>（1）头信息和数据体都是二进制，称为头信息帧和数据帧<br>（2）复用TCP连接，在一个连接里，客户端和浏览器都可以同时发送多个请求或回应，且不用按顺序一一对应，避免了”队头堵塞”，此双向的实时通信称为多工（Multiplexing）<br>（3）引入头信息压缩机制（header compression），头信息使用gzip或compress压缩后再发送；客户端和服务器同时维护一张头信息表，所有字段都会存入这个表，生成一个索引号，不发送同样字段，只发送索引号，提高速度<br>（4）HTTP/2 允许服务器未经请求，主动向客户端发送资源，即服务器推送（server push）</p>
+<p><strong>HTTP2.0和SPDY区别：</strong></p>
+<p>（1）HTTP2.0 支持明文 HTTP 传输，而 SPDY 强制使用 HTTPS<br>（2）HTTP2.0 消息头的压缩算法采用 HPACK，而非 SPDY 采用的 DEFLATE</p>
+<h2 id="Gx-References"><a href="#Gx-References" class="headerlink" title="Gx References"></a>Gx References</h2><p>[1] <a target="_blank" rel="noopener" href="https://www.rfc-editor.org/rfc/rfc2616.txt">https://www.rfc-editor.org/rfc/rfc2616.txt</a></p>
+<p>[2] <a target="_blank" rel="noopener" href="https://github.com/woai30231/http">https://github.com/woai30231/http</a></p>
+<p>[3] <a target="_blank" rel="noopener" href="https://www.cnblogs.com/augustone/articles/5170761.html">https://www.cnblogs.com/augustone/articles/5170761.html</a></p>
+<p>[4] <a target="_blank" rel="noopener" href="https://blog.csdn.net/u013783095/article/details/80360149">https://blog.csdn.net/u013783095/article/details/80360149</a></p>
+<p>[5] <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1644y1k7Sg?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV1644y1k7Sg?spm_id_from=333.337.search-card.all.click</a></p>
+<p>[6] <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_51867896/article/details/122932514">https://blog.csdn.net/weixin_51867896/article/details/122932514</a></p>
+<p>[7] <a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1618114723935605183&amp;wfr=spider&amp;for=pc">https://baijiahao.baidu.com/s?id=1618114723935605183&amp;wfr=spider&amp;for=pc</a></p>
+<p>[8] <a target="_blank" rel="noopener" href="https://www.runoob.com/tags/html-httpmethods.html">https://www.runoob.com/tags/html-httpmethods.html</a></p>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Enomothem</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://enomothem.com/posts/4cc.html">http://enomothem.com/posts/4cc.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Enomothem</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/TCP-IP/">
+                                    <span class="chip bg-color">TCP/IP</span>
+                                </a>
+                            
+                                <a href="/tags/OSI/">
+                                    <span class="chip bg-color">OSI</span>
+                                </a>
+                            
+                                <a href="/tags/HTTP/">
+                                    <span class="chip bg-color">HTTP</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/4f1d.html">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220416160703010.png" class="responsive-img" alt="信息安全学习技能时间轴">
+                        
+                        <span class="card-title">信息安全学习技能时间轴</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-26
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" class="post-category">
+                                    渗透测试
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Pentesting/">
+                        <span class="chip bg-color">Pentesting</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/a68a.html">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20211210131306125.png" class="responsive-img" alt="0day问世：Apache Log4j Remote Code Execution">
+                        
+                        <span class="card-title">0day问世：Apache Log4j Remote Code Execution</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/IS/" class="post-category">
+                                    IS
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Apache/">
+                        <span class="chip bg-color">Apache</span>
+                    </a>
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/CNVD-2021-95914/">
+                        <span class="chip bg-color">CNVD-2021-95914</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('100')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround. 将 === PRE 改为CODE即可复制，解决换行问题
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 字星河<br />'
+            + '文章作者: Enomothem<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+			
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2018";
+                    var startMonth = "6";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "站龄 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "站龄 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+			
+			<br>
+			
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2018-2022</span>
+            
+            <a href="/about" target="_blank">by&nbsp;Enomothem</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">234.7k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                <i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+			
+            <br>
+
+            
+			
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="https://beian.miit.gov.cn/" target="_blank">赣ICP备2021004825号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/enomothem" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:enomothem@outlook.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://public.zsxq.com/groups/51288182112544.html" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://public.zsxq.com/groups/51288182112544.html" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=251051821" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 251051821" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/js/matery.js"></script>
+    <!--动态线条背景-->
+    <script type="text/javascript" color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4c973a61bf86a8fd9f616477668e8c47";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/instantpage/instantpage.js" type="module"></script>
+    
+<!-- 雪花snow 樱花sakura -->
+ <!--   <script src="/js/sakura.js"></script>  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+
+</html>
+
