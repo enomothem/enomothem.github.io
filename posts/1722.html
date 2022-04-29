@@ -633,14 +633,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-16
+                    2022-04-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    314
+                    418
                 </div>
                 
 
@@ -685,6 +685,7 @@
 </blockquote>
 <p>这种搭配就是把自己博客的代码放到Github代码仓库里面，然后买个域名，建议买三年的，便宜一点。</p>
 <p>因为github提供的域名实在是太长了，用自己的域名香一点。</p>
+<p>2022年4月29日又填了一个npm报错的坑。</p>
 <h2 id="Bx-准备"><a href="#Bx-准备" class="headerlink" title="Bx 准备"></a>Bx 准备</h2><p>搭建需要的环境：</p>
 <ul>
 <li>npm（node.js） // 这个提供安装hexo的环境</li>
@@ -705,12 +706,26 @@
 <pre class=" language-bash"><code class="language-bash">$ <span class="token function">npm</span> i -g hexo
 </code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201209171458474.png"></p>
+<blockquote>
+<p>报错：若出现如下报错。</p>
+</blockquote>
+<pre class=" language-shell"><code class="language-shell">internal/modules/cjs/loader.js:638
+throw err;
+^
+
+Error: Cannot find module
+</code></pre>
+<p>解决方案</p>
+<pre class=" language-txt"><code class="language-txt">This problem is cuz u have the projct file in a driver where node is not installed. 
+I moved my project to from D driver to C and it works without any problem.
+</code></pre>
+<p>意思是换一个盘，或直接默认安装。</p>
 <h2 id="Cx-验证"><a href="#Cx-验证" class="headerlink" title="Cx 验证"></a>Cx 验证</h2><h4 id="a-hexo"><a href="#a-hexo" class="headerlink" title="a hexo"></a>a hexo</h4><p><code>hexo version</code></p>
 <h4 id="b-npm"><a href="#b-npm" class="headerlink" title="b npm"></a>b npm</h4><p><code>npm -v</code></p>
 <h4 id="c-git"><a href="#c-git" class="headerlink" title="c git"></a>c git</h4><p><code>git -version</code></p>
 <h4 id="d-node"><a href="#d-node" class="headerlink" title="d node"></a>d node</h4><p><code> node -v</code></p>
 <p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201209171207903.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/QQ%E5%9B%BE%E7%89%8720201209161300.jpg"></p>
+<p>ok，一切顺利，环境准备就绪，开始下一步，<a href="https://enomothem.com/posts/204c.html">Hexo部署</a>。</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
                 
             </div>
@@ -1323,7 +1338,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">236.1k</span>&nbsp;字
+                class="white-color">238.1k</span>&nbsp;字
             
             
             
