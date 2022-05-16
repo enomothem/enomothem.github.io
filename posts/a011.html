@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Ensp cloud connect Internet, web安全,web攻防,blog,shell,linux,windows,Linux,Windows,物理,物理学,宇宙,反物质,字星河,博客,星河,Enomothem,enomothem,eonthem">
+    <meta name="keywords" content="Miscellaneous2, web安全,web攻防,blog,shell,linux,windows,Linux,Windows,物理,物理学,宇宙,反物质,字星河,博客,星河,Enomothem,enomothem,eonthem">
     <meta name="description" content="真正的改变只能发生在原则层面">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>Ensp cloud connect Internet | 字星河</title>
+    <title>Miscellaneous2 | 字星河</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/awesome/css/all.css">
@@ -480,12 +480,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321155515270.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516143830756.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Ensp cloud connect Internet</h1>
+                    <h1 class="description center-align post-title">Miscellaneous2</h1>
                 </div>
             </div>
         </div>
@@ -601,12 +601,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Ensp/">
-                                <span class="chip bg-color">Ensp</span>
+                            <a href="/tags/MISC/">
+                                <span class="chip bg-color">MISC</span>
                             </a>
                         
-                            <a href="/tags/Cloud/">
-                                <span class="chip bg-color">Cloud</span>
+                            <a href="/tags/flag/">
+                                <span class="chip bg-color">flag</span>
                             </a>
                         
                     </div>
@@ -617,8 +617,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" class="post-category">
-                                网络技术
+                            <a href="/categories/CTF/" class="post-category">
+                                CTF
                             </a>
                         
                     </div>
@@ -630,28 +630,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-21
+                    2022-05-16
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-16
+                    2022-05-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    410
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -671,38 +671,146 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Ensp的Cloud怎么连接Internet"><a href="#Ensp的Cloud怎么连接Internet" class="headerlink" title="Ensp的Cloud怎么连接Internet"></a>Ensp的Cloud怎么连接Internet</h1><h2 id="一-使用无线测试"><a href="#一-使用无线测试" class="headerlink" title="一.使用无线测试"></a>一.使用无线测试</h2><p>拓扑图如下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321155515270.png"></p>
-<p>1.Cloud创建两个端口，一个WLAN，一个UDP（用于连接AR1）</p>
-<p>2.AR1的G0/0/0接口配置192.168.0.200/24 ，再配置一条通往internet的缺省路由。</p>
-<p>3.测试如下图</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321155750144.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321155758517.png"></p>
-<p>4.结果 直连IP是可以直接ping通的，而网关和internet是不通的</p>
-<p><font color="red">5.<strong>排错结果：因为无线传输是点到点，所以在无线热点侧只能识别一个mac地址，也就是你的无线网卡的mac，而你的模拟器里路由器的接口MAC没办法和热点通信</strong></font></p>
-<p>6.解决方法</p>
-<p>电脑安装一个回环接口，wlan共享回环接口</p>
-<p>电脑安装回环接口链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/annita2019/article/details/109504791">https://blog.csdn.net/annita2019/article/details/109504791</a></p>
-<p><font color="red"><strong>电脑安装回环接口，ensp云不显示（卸载winpacp，安装最新或版本较高的winpacp可解决）</strong></font></p>
-<p><font color="red"><strong>WLAN共享回环接口步骤如下</strong></font></p>
-<p>6.1无线网卡右击属性点击共享，勾选允许，选择回环网卡</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321160418620.png"></p>
-<p>设置之后，回环地址默认变成192.168.137.1</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321160454472.png"></p>
-<p>7.第二次修改数据：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321161012976.png"></p>
-<p>添加回环地址 192.168.137.1，AR1的G0/0/0接口配置同一网段地址，在配置一条缺省路由。下一跳指向192.168.137.1</p>
-<p>8.第二次测试</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321161218058.png"></p>
-<p>9.第二次结果  success</p>
-<p>PS：如果不行，记得把云删除一下，毕竟是模拟器，不会立即更新你的配置，毕竟是模拟器。</p>
-<h2 id="二-使用有线测试"><a href="#二-使用有线测试" class="headerlink" title="二.使用有线测试"></a>二.使用有线测试</h2><p>有线因为路由器就是网关，所以可以直接连接PC。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321210107714.png"></p>
-<p>拓扑图如下</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321162328333.png"></p>
-<p>测试</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210321162428349.png"></p>
-<p>successfully</p>
+                <h1 id="Capture-The-Flag-Miscellaneous-2"><a href="#Capture-The-Flag-Miscellaneous-2" class="headerlink" title="Capture The Flag Miscellaneous 2"></a>Capture The Flag Miscellaneous 2</h1><p>Miscellaneous 【3】</p>
+<p>Miscellaneous 【★】</p>
+<p>Miscellaneous 【<a href="https://enomothem.com/posts/2242.html">1</a>】</p>
+<h2 id="Ax-Introduction"><a href="#Ax-Introduction" class="headerlink" title="Ax Introduction"></a>Ax Introduction</h2><p>什么是CTF，什么是MISC。</p>
+<p>CTF定义：网络安全技术人员之间进行技术竞技的一种比赛形式。CTF起源于1996年DEFCON全球黑客大会，以代替之前黑客们模拟攻击的比赛。</p>
+<ul>
+<li>类型：解题模式、攻防模式、混合模式</li>
+<li>赛事：DEFCONCTF、XCTF、Real World CTF等</li>
+<li>题目：PPC、MISC、PWN、WEB、REVERSE、CRYPTO、STEGA</li>
+</ul>
+<p>MISC定义：Miscellaneous，安全杂项，流量分析、电子签证、人肉搜索、数据分析等等等等等，就是除了最初的几个大类之外的题目。</p>
+<p>别看杂项杂，每一项都是很专业的东西，所以要学的东西很多很多。还能遇到有些有趣的东西呢。</p>
+<h2 id="Bx-Flag-keyisflag"><a href="#Bx-Flag-keyisflag" class="headerlink" title="Bx Flag{keyisflag}"></a>Bx Flag{keyisflag}</h2><blockquote>
+<p>只有不断的做题，才能学习到更多的东西，包括出题的套路，you know，but 作者的想法你是永远猜不到的，也许就在你意想不到的地方。</p>
+</blockquote>
+<p>我会去做各大在线网站的题目，然后记录于此便于我回顾。</p>
+<h3 id="Bugku"><a href="#Bugku" class="headerlink" title="Bugku"></a>Bugku</h3><h4 id="BugKu-Ping"><a href="#BugKu-Ping" class="headerlink" title="BugKu_Ping"></a>BugKu_Ping</h4><p>得到一个文件<code>ping.pcap</code>，又是抓包文件，这次学聪明一点，改成txt直接搜索flag。没有发现flag，看来不是那么的简单。</p>
+<p>打开wireshark看看这是什么鬼东西，ICMP的数据包，逐个看看，在看的过程中，发现flag以每个字符的形式放在每个数据片段的固定位置。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516084715359.png"></p>
+<p>但。。有好多个包，一个一个看似乎有点慢，想个法子</p>
+<p>然后我发现每个字符前面都有一个i，这个i可以作为我们正则的判断点。</p>
+<pre class=" language-shell"><code class="language-shell">grep  -o   "i.{1,3}"   --text ping.pcap
+# -o是只显示匹配的，--text是因为它是二进制文件，所以要转为文本 -P 是使用Perl语言的正则语法，使我们简单的匹配到想要的东西。
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516133202091.png"></p>
+<p>拿到Excel简单处理一下，把i和空格替换掉，然后复制粘贴成行，就可以啦</p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516134504781.png"></p>
+<table>
+<thead>
+<tr>
+<th>f</th>
+<th>l</th>
+<th>a</th>
+<th>g</th>
+<th>{</th>
+<th>d</th>
+<th>c</th>
+<th>7</th>
+<th>6</th>
+<th>a</th>
+<th>1</th>
+<th>e</th>
+<th>e</th>
+<th>e</th>
+<th>6</th>
+<th>e</th>
+<th>3</th>
+<th>8</th>
+<th>2</th>
+<th>2</th>
+<th>8</th>
+<th>7</th>
+<th>7</th>
+<th>e</th>
+<th>d</th>
+<th>6</th>
+<th>2</th>
+<th>7</th>
+<th>e</th>
+<th>0</th>
+<th>a</th>
+<th>0</th>
+<th>4</th>
+<th>a</th>
+<th>b</th>
+<th>4</th>
+<th>a</th>
+<th>}</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>f</strong></td>
+<td><strong>l</strong></td>
+<td><strong>a</strong></td>
+<td><strong>g</strong></td>
+<td><strong>{</strong></td>
+<td><strong>d</strong></td>
+<td><strong>c</strong></td>
+<td><strong>7</strong></td>
+<td><strong>6</strong></td>
+<td><strong>a</strong></td>
+<td><strong>1</strong></td>
+<td><strong>e</strong></td>
+<td><strong>e</strong></td>
+<td><strong>e</strong></td>
+<td><strong>6</strong></td>
+<td><strong>e</strong></td>
+<td><strong>3</strong></td>
+<td><strong>8</strong></td>
+<td><strong>2</strong></td>
+<td><strong>2</strong></td>
+<td><strong>8</strong></td>
+<td><strong>7</strong></td>
+<td><strong>7</strong></td>
+<td><strong>e</strong></td>
+<td><strong>d</strong></td>
+<td><strong>6</strong></td>
+<td><strong>2</strong></td>
+<td><strong>7</strong></td>
+<td><strong>e</strong></td>
+<td><strong>0</strong></td>
+<td><strong>a</strong></td>
+<td><strong>0</strong></td>
+<td><strong>4</strong></td>
+<td><strong>a</strong></td>
+<td><strong>b</strong></td>
+<td><strong>4</strong></td>
+<td><strong>a</strong></td>
+<td><strong>}</strong></td>
+</tr>
+</tbody></table>
+<p><code>flag{dc76a1eee6e3822877ed627e0a04ab4a}</code></p>
+<p>当然，我们用Linux也是未尝不可的一个好方法，能一条命令解决的问题，我们为什么要弄那么复杂。</p>
+<pre class=" language-shell"><code class="language-shell"># 导出
+grep  -o  "i.{1,3}"  --text ping.pcap  > 1.txt
+# 去杂
+sed -i "s/i  //g" 1.txt
+# 转置
+awk '{ORS = ""}{print $0} END {printf("\n")}' 1.txt
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516140131525.png"></p>
+<p>提交，所以说linux学好是非常重要的。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516142103964.png"></p>
+<h4 id="Bugku-赛博朋克"><a href="#Bugku-赛博朋克" class="headerlink" title="Bugku_赛博朋克"></a>Bugku_赛博朋克</h4><p>给了一个压缩包，需要密码。丢Winhex审阅。<br>伪加密。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516202636389.png"></p>
+<p><strong>无加密</strong></p>
+<p>压缩源文件数据区的全局加密应当为<code>00 00</code> （504B0304两个bytes之后）<br>且压缩源文件目录区的全局方式位标记应当为<code>00 00</code>（504B0304四个bytes之后）</p>
+<p><strong>假加密</strong></p>
+<p>压缩源文件数据区的全局加密应当为<code>00 00</code><br>且压缩源文件目录区的全局方式位标记应当为<code>09 00</code></p>
+<p><strong>真加密</strong></p>
+<p>压缩源文件数据区的全局加密应当为<code>09 00</code><br>且压缩源文件目录区的全局方式位标记应当为<code>09 00</code> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517000525263.png" alt="image-20220517000525263"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517000525263.png"></p>
+<p>将09改为00，无密码解压得到cyberpunk.txt，显然我们需要先丢Winhex里看是什么文件，别问为什么，因为我打开就卡住了doge，PNG文件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517001302797.png" alt="image-20220517001302797"></p>
+<p>LSB隐写找到答案，图片就不看了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517002906699.png" alt="image-20220517002906699"></p>
+<p><code>flag{Hel1o_Wor1e}</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517003358656.png"></p>
+<h2 id="Cx-Additions"><a href="#Cx-Additions" class="headerlink" title="Cx Additions"></a>Cx Additions</h2><h3 id="常见的文件头"><a href="#常见的文件头" class="headerlink" title="常见的文件头"></a>常见的文件头</h3><p>常用文件的文件头如下(16进制)：<br>JPEG (jpg)，文件头：FFD8FFE1<br>PNG (png)，文件头：89504E47<br>GIF (gif)，文件头：47494638<br>TIFF (tif)，文件头：49492A00<br>Windows Bitmap (bmp)，文件头：424DC001<br>CAD (dwg)，文件头：41433130<br>Adobe Photoshop (psd)，文件头：38425053<br>Rich Text Format (rtf)，文件头：7B5C727466<br>XML (xml)，文件头：3C3F786D6C<br>HTML (html)，文件头：68746D6C3E<br>Email [thorough only] (eml)，文件头：44656C69766572792D646174653A<br>Outlook Express (dbx)，文件头：CFAD12FEC5FD746F<br>Outlook (pst)，文件头：2142444E<br>MS Word/Excel (xls.or.doc)，文件头：D0CF11E0<br>MS Access (mdb)，文件头：5374616E64617264204A<br>WordPerfect (wpd)，文件头：FF575043<br>Adobe Acrobat (pdf)，文件头：255044462D312E<br>Quicken (qdf)，文件头：AC9EBD8F<br>Windows Password (pwl)，文件头：E3828596<br>ZIP Archive (zip)，文件头：504B0304<br>RAR Archive (rar)，文件头：52617221<br>Wave (wav)，文件头：57415645<br>AVI (avi)，文件头：41564920<br>Real Audio (ram)，文件头：2E7261FD<br>Real Media (rm)，文件头：2E524D46<br>MPEG (mpg)，文件头：000001BA<br>MPEG (mpg)，文件头：000001B3<br>Quicktime (mov)，文件头：6D6F6F76<br>Windows Media (asf)，文件头：3026B2758E66CF11<br>MIDI (mid)，文件头：4D546864</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
                 
             </div>
@@ -719,7 +827,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">It-tangsan</a>
+                    <a href="/about" rel="external nofollow noreferrer">Enomothem</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -729,7 +837,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://enomothem.com/posts/8d0f.html">http://enomothem.com/posts/8d0f.html</a>
+                    <a href="http://enomothem.com/posts/a011.html">http://enomothem.com/posts/a011.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -742,7 +850,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">It-tangsan</a>
+                    <a href="/about" target="_blank">Enomothem</a>
                     !
                 </span>
             </div>
@@ -767,12 +875,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Ensp/">
-                                    <span class="chip bg-color">Ensp</span>
+                                <a href="/tags/MISC/">
+                                    <span class="chip bg-color">MISC</span>
                                 </a>
                             
-                                <a href="/tags/Cloud/">
-                                    <span class="chip bg-color">Cloud</span>
+                                <a href="/tags/flag/">
+                                    <span class="chip bg-color">flag</span>
                                 </a>
                             
                         </div>
@@ -942,16 +1050,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/2e0.html">
+                <a href="/posts/a011.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210327103941.png" class="responsive-img" alt="Immunity Canvas 7.26">
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516143830756.png" class="responsive-img" alt="Miscellaneous2">
                         
-                        <span class="card-title">Immunity Canvas 7.26</span>
+                        <span class="card-title">Miscellaneous2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -961,26 +1070,31 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SecTools/" class="post-category">
-                                    SecTools
+                            <a href="/categories/CTF/" class="post-category">
+                                    CTF
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/canvas/">
-                        <span class="chip bg-color">canvas</span>
+                    <a href="/tags/MISC/">
+                        <span class="chip bg-color">MISC</span>
+                    </a>
+                    
+                    <a href="/tags/flag/">
+                        <span class="chip bg-color">flag</span>
                     </a>
                     
                 </div>
@@ -994,13 +1108,12 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/6e32.html">
+                <a href="/posts/2242.html">
                     <div class="card-image">
                         
+                        <img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516143830756.png" class="responsive-img" alt="Miscellaneous1">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/4.jpg" class="responsive-img" alt="Reproduction CVE-2020-0796:永恒之黑">
-                        
-                        <span class="card-title">Reproduction CVE-2020-0796:永恒之黑</span>
+                        <span class="card-title">Miscellaneous1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1011,14 +1124,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" class="post-category">
-                                    渗透测试
+                            <a href="/categories/CTF/" class="post-category">
+                                    CTF
                                 </a>
                             
                             
@@ -1028,12 +1141,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Pentesting/">
-                        <span class="chip bg-color">Pentesting</span>
+                    <a href="/tags/MISC/">
+                        <span class="chip bg-color">MISC</span>
                     </a>
                     
-                    <a href="/tags/CVE-2020-0796/">
-                        <span class="chip bg-color">CVE-2020-0796</span>
+                    <a href="/tags/flag/">
+                        <span class="chip bg-color">flag</span>
                     </a>
                     
                 </div>
