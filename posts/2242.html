@@ -637,7 +637,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-17
+                    2022-05-18
                 </div>
                 
 
@@ -671,9 +671,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Capture-The-Flag-Miscellaneous-2"><a href="#Capture-The-Flag-Miscellaneous-2" class="headerlink" title="Capture The Flag Miscellaneous 2"></a>Capture The Flag Miscellaneous 2</h1><p>Miscellaneous 【3】</p>
-<p>Miscellaneous 【2】</p>
-<p>Miscellaneous 【★】</p>
+                <h1 id="Capture-The-Flag-Miscellaneous-1"><a href="#Capture-The-Flag-Miscellaneous-1" class="headerlink" title="Capture The Flag Miscellaneous 1"></a>Capture The Flag Miscellaneous 1</h1><p>Miscellaneous 【3】</p>
+<p>Miscellaneous 【<a href="https://enomothem.com/posts/a011.html">2</a>】</p>
+<p>Miscellaneous 【1】  – flag{misc}</p>
 <h2 id="Ax-Introduction"><a href="#Ax-Introduction" class="headerlink" title="Ax Introduction"></a>Ax Introduction</h2><p>什么是CTF，什么是MISC。</p>
 <p>CTF定义：网络安全技术人员之间进行技术竞技的一种比赛形式。CTF起源于1996年DEFCON全球黑客大会，以代替之前黑客们模拟攻击的比赛。</p>
 <ul>
@@ -687,7 +687,8 @@
 <p>只有不断的做题，才能学习到更多的东西，包括出题的套路，you know，but 作者的想法你是永远猜不到的，也许就在你意想不到的地方。</p>
 </blockquote>
 <p>我会去做各大在线网站的题目，然后记录于此便于我回顾。</p>
-<h3 id="BugKu"><a href="#BugKu" class="headerlink" title="BugKu"></a>BugKu</h3><h4 id="Bugku-简单取证1"><a href="#Bugku-简单取证1" class="headerlink" title="Bugku_简单取证1"></a>Bugku_简单取证1</h4><p>给了一个压缩包<code>config.7z</code>，题目叫取证，想想。一般取证这种东西，我们都要把它丢虚拟机里，这是好习惯，关在笼子里慢慢研究，对吧。</p>
+<h3 id="BugKu-MISC"><a href="#BugKu-MISC" class="headerlink" title="BugKu_MISC"></a>BugKu_MISC</h3><h4 id="Bugku-简单取证1"><a href="#Bugku-简单取证1" class="headerlink" title="Bugku_简单取证1"></a>Bugku_简单取证1</h4><p>★☆☆☆☆☆</p>
+<p>给了一个压缩包<code>config.7z</code>，题目叫取证，想想。一般取证这种东西，我们都要把它丢虚拟机里，这是好习惯，关在笼子里慢慢研究，对吧。</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220514172803104.png"></p>
 <p>我们再看看提示，flag格式为flag{用户名_对应的密码} 例如flag{administrator_bugku}。那么这取证的肯定是一个账号和密码，想到什么了吗。</p>
 <p>没错，我们用mimikatz工具，首先进入到该文件目录。用管理员哦</p>
@@ -698,7 +699,8 @@
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220514175845789.png"></p>
 <p>显然我们已经解出来了，<code>flag{administrator-QQAAzz_forensics}</code></p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220514180143518.png"></p>
-<h4 id="Bugku-这是一张单纯的图片"><a href="#Bugku-这是一张单纯的图片" class="headerlink" title="Bugku_这是一张单纯的图片"></a>Bugku_这是一张单纯的图片</h4><p>给了一张如图所示：</p>
+<h4 id="Bugku-这是一张单纯的图片"><a href="#Bugku-这是一张单纯的图片" class="headerlink" title="Bugku_这是一张单纯的图片"></a>Bugku_这是一张单纯的图片</h4><p>★★☆☆☆☆</p>
+<p>给了一张如图所示：</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220515183757835.png"></p>
 <p>管他三七二十一，WinHex一丢，看看有没有什么发现。</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220515183838692.png"></p>
@@ -730,7 +732,8 @@
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220515190851639.png"></p>
 <p>BUGKU{a1e5aSA}</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220515190941238.png"></p>
-<h4 id="Bugku-Telnet"><a href="#Bugku-Telnet" class="headerlink" title="Bugku_Telnet"></a>Bugku_Telnet</h4><p>给了一个文件，是pcap文件，用wireshark打开，一个一个的看，找到flag</p>
+<h4 id="Bugku-Telnet"><a href="#Bugku-Telnet" class="headerlink" title="Bugku_Telnet"></a>Bugku_Telnet</h4><p>★★★★☆☆</p>
+<p>给了一个文件，是pcap文件，用wireshark打开，一个一个的看，找到flag</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220515202815396.png"></p>
 <p>或者右键追踪TCP流，直接找到。</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220515202923952.png"></p>
@@ -742,7 +745,8 @@
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220515203412834.png"></p>
 <p><code>flag{d316759c281bf925d600be698a4973d5}</code></p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220515203551526.png"></p>
-<h4 id="Bugku-眼见非实"><a href="#Bugku-眼见非实" class="headerlink" title="Bugku_眼见非实"></a>Bugku_眼见非实</h4><p>得到一个<code>眼见非实.docx</code>，打开后报错，这并非是docx文件，丢Winhex检查检查文件头</p>
+<h4 id="Bugku-眼见非实"><a href="#Bugku-眼见非实" class="headerlink" title="Bugku_眼见非实"></a>Bugku_眼见非实</h4><p>★★★★★☆</p>
+<p>得到一个<code>眼见非实.docx</code>，打开后报错，这并非是docx文件，丢Winhex检查检查文件头</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220515205341321.png"></p>
 <p>这是ZIP Archive (zip)文件头：504B0304，把后缀改成zip，然后看看有啥东西。</p>
 <p>文件太多，直接用压缩工具查找关键字flag</p>
@@ -753,7 +757,8 @@
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220515215310150.png"></p>
 <p><code>flag{F1@g}</code></p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220515215400084.png"></p>
-<h4 id="Bugku-啊哒"><a href="#Bugku-啊哒" class="headerlink" title="Bugku_啊哒"></a>Bugku_啊哒</h4><p>是一个图片，常规思路，丢Winhex审阅。</p>
+<h4 id="Bugku-啊哒"><a href="#Bugku-啊哒" class="headerlink" title="Bugku_啊哒"></a>Bugku_啊哒</h4><p>★★★★★★</p>
+<p>是一个图片，常规思路，丢Winhex审阅。</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220515220527804.png"></p>
 <p>看文件头确实是jpg的，搜索一下flag，有一个flag.txt，难道隐藏了什么，我们用binwalk工具看看，分析分析。</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220515233109730.png"></p>
@@ -1386,7 +1391,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">247.2k</span>&nbsp;字
+                class="white-color">249.5k</span>&nbsp;字
             
             
             

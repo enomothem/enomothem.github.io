@@ -637,21 +637,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-17
+                    2022-05-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    7 分
                 </div>
                 
 
@@ -671,8 +671,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Capture-The-Flag-Miscellaneous-2"><a href="#Capture-The-Flag-Miscellaneous-2" class="headerlink" title="Capture The Flag Miscellaneous 2"></a>Capture The Flag Miscellaneous 2</h1><p>Miscellaneous 【3】</p>
-<p>Miscellaneous 【★】</p>
+                <h1 id="Capture-The-Flag-Miscellaneous-2"><a href="#Capture-The-Flag-Miscellaneous-2" class="headerlink" title="Capture The Flag Miscellaneous 2"></a>Capture The Flag Miscellaneous 2</h1><p>Miscellaneous 【3】 </p>
+<p>Miscellaneous 【2】  – flag{misc}</p>
 <p>Miscellaneous 【<a href="https://enomothem.com/posts/2242.html">1</a>】</p>
 <h2 id="Ax-Introduction"><a href="#Ax-Introduction" class="headerlink" title="Ax Introduction"></a>Ax Introduction</h2><p>什么是CTF，什么是MISC。</p>
 <p>CTF定义：网络安全技术人员之间进行技术竞技的一种比赛形式。CTF起源于1996年DEFCON全球黑客大会，以代替之前黑客们模拟攻击的比赛。</p>
@@ -683,11 +683,45 @@
 </ul>
 <p>MISC定义：Miscellaneous，安全杂项，流量分析、电子签证、人肉搜索、数据分析等等等等等，就是除了最初的几个大类之外的题目。</p>
 <p>别看杂项杂，每一项都是很专业的东西，所以要学的东西很多很多。还能遇到有些有趣的东西呢。</p>
+<h4 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h4><p><strong>WinHex yyds</strong><br><strong>kali linux</strong></p>
+<ul>
+<li><p>binwalk 查看文件中是否隐藏信息</p>
+</li>
+<li><p>formost 通过分析文件头和内部数据结构和尾，还原文件，使文件分离出来。</p>
+</li>
+<li><p>zip2john 破解压缩包密码，再用<code>john</code>看破解的密码文件</p>
+<pre class=" language-shell"><code class="language-shell">zip2john flag.zip password.txt
+john password.txt
+</code></pre>
+</li>
+<li><p>tshark Linux版本的wireshark工具。</p>
+</li>
+</ul>
+<p><strong>Wireshark</strong> 有时候会有分析数据包的取证题目需要用到。<br><strong>隐写工具</strong></p>
+<ul>
+<li> Jphs05  图片信息隐藏</li>
+<li> Stegsolve 分析图片隐写工具</li>
+</ul>
+<p><strong>加密算法在线网站</strong></p>
+<ul>
+<li>MD5<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cmd5.com/">https://www.cmd5.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.somd5.com/">https://www.somd5.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://md5.cc/">https://md5.cc/</a></li>
+</ul>
+</li>
+<li>各种加密<ul>
+<li><a target="_blank" rel="noopener" href="http://www.hiencode.com/">http://www.hiencode.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.ctftools.com/down/">http://www.ctftools.com/down/</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="Bx-Flag-keyisflag"><a href="#Bx-Flag-keyisflag" class="headerlink" title="Bx Flag{keyisflag}"></a>Bx Flag{keyisflag}</h2><blockquote>
 <p>只有不断的做题，才能学习到更多的东西，包括出题的套路，you know，but 作者的想法你是永远猜不到的，也许就在你意想不到的地方。</p>
 </blockquote>
 <p>我会去做各大在线网站的题目，然后记录于此便于我回顾。</p>
-<h3 id="Bugku"><a href="#Bugku" class="headerlink" title="Bugku"></a>Bugku</h3><h4 id="BugKu-Ping"><a href="#BugKu-Ping" class="headerlink" title="BugKu_Ping"></a>BugKu_Ping</h4><p>得到一个文件<code>ping.pcap</code>，又是抓包文件，这次学聪明一点，改成txt直接搜索flag。没有发现flag，看来不是那么的简单。</p>
+<h3 id="Bugku"><a href="#Bugku" class="headerlink" title="Bugku"></a>Bugku</h3><h4 id="BugKu-Ping"><a href="#BugKu-Ping" class="headerlink" title="BugKu_Ping"></a>BugKu_Ping</h4><p>★☆☆☆☆☆</p>
+<p>得到一个文件<code>ping.pcap</code>，又是抓包文件，这次学聪明一点，改成txt直接搜索flag。没有发现flag，看来不是那么的简单。</p>
 <p>打开wireshark看看这是什么鬼东西，ICMP的数据包，逐个看看，在看的过程中，发现flag以每个字符的形式放在每个数据片段的固定位置。</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516084715359.png"></p>
 <p>但。。有好多个包，一个一个看似乎有点慢，想个法子</p>
@@ -794,7 +828,8 @@ awk '{ORS = ""}{print $0} END {printf("\n")}' 1.txt
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516140131525.png"></p>
 <p>提交，所以说linux学好是非常重要的。</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516142103964.png"></p>
-<h4 id="Bugku-赛博朋克"><a href="#Bugku-赛博朋克" class="headerlink" title="Bugku_赛博朋克"></a>Bugku_赛博朋克</h4><p>给了一个压缩包，需要密码。丢Winhex审阅。<br>伪加密。</p>
+<h4 id="Bugku-赛博朋克"><a href="#Bugku-赛博朋克" class="headerlink" title="Bugku_赛博朋克"></a>Bugku_赛博朋克</h4><p>★★☆☆☆☆</p>
+<p>给了一个压缩包，需要密码。丢Winhex审阅。<br>伪加密。</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516202636389.png"></p>
 <p><strong>无加密</strong></p>
 <p>压缩源文件数据区的全局加密应当为<code>00 00</code> （504B0304两个bytes之后）<br>且压缩源文件目录区的全局方式位标记应当为<code>00 00</code>（504B0304四个bytes之后）</p>
@@ -806,11 +841,130 @@ awk '{ORS = ""}{print $0} END {printf("\n")}' 1.txt
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517000525263.png"></p>
 <p>将09改为00，无密码解压得到cyberpunk.txt，显然我们需要先丢Winhex里看是什么文件，别问为什么，因为我打开就卡住了doge，PNG文件</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517001302797.png"></p>
-<p>LSB隐写找到答案，图片就不看了。</p>
+<p>这是图片</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517161705841.png"></p>
+<p>LSB隐写找到答案，注意这个l不是l，这个l是1，是1不是l。</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517002906699.png"></p>
 <p><code>flag{Hel1o_Wor1e}</code></p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517003358656.png"></p>
-<h2 id="Cx-Additions"><a href="#Cx-Additions" class="headerlink" title="Cx Additions"></a>Cx Additions</h2><h3 id="常见的文件头"><a href="#常见的文件头" class="headerlink" title="常见的文件头"></a>常见的文件头</h3><p>常用文件的文件头如下(16进制)：<br>JPEG (jpg)，文件头：FFD8FFE1<br>PNG (png)，文件头：89504E47<br>GIF (gif)，文件头：47494638<br>TIFF (tif)，文件头：49492A00<br>Windows Bitmap (bmp)，文件头：424DC001<br>CAD (dwg)，文件头：41433130<br>Adobe Photoshop (psd)，文件头：38425053<br>Rich Text Format (rtf)，文件头：7B5C727466<br>XML (xml)，文件头：3C3F786D6C<br>HTML (html)，文件头：68746D6C3E<br>Email [thorough only] (eml)，文件头：44656C69766572792D646174653A<br>Outlook Express (dbx)，文件头：CFAD12FEC5FD746F<br>Outlook (pst)，文件头：2142444E<br>MS Word/Excel (xls.or.doc)，文件头：D0CF11E0<br>MS Access (mdb)，文件头：5374616E64617264204A<br>WordPerfect (wpd)，文件头：FF575043<br>Adobe Acrobat (pdf)，文件头：255044462D312E<br>Quicken (qdf)，文件头：AC9EBD8F<br>Windows Password (pwl)，文件头：E3828596<br>ZIP Archive (zip)，文件头：504B0304<br>RAR Archive (rar)，文件头：52617221<br>Wave (wav)，文件头：57415645<br>AVI (avi)，文件头：41564920<br>Real Audio (ram)，文件头：2E7261FD<br>Real Media (rm)，文件头：2E524D46<br>MPEG (mpg)，文件头：000001BA<br>MPEG (mpg)，文件头：000001B3<br>Quicktime (mov)，文件头：6D6F6F76<br>Windows Media (asf)，文件头：3026B2758E66CF11<br>MIDI (mid)，文件头：4D546864</p>
+<h4 id="Bugku-贝斯手"><a href="#Bugku-贝斯手" class="headerlink" title="Bugku_贝斯手"></a>Bugku_贝斯手</h4><p>★★★☆☆☆</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517185019894.png"></p>
+<p>虽然我看过这部电影，但是我又花了一个多小时看了一遍，哈哈</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517214018127.png"></p>
+<p>这个txt，不仔细看还以为只有一行字，往下翻一翻，发现了提示，百度古力娜扎的出生，打开flag压缩包</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517214926052.png"></p>
+<p>提示</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517214708500.png"></p>
+<p>这是什么鬼东西，</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517215127060.png"></p>
+<p>5+58==<br>327a6c4304ad5938eaf0efb6cc3e53dc</p>
+<p>CFmZknmK3SDEcMEue1wrsJdqqkt7dXLuS</p>
+<p>似乎这是两组密码，第一串好像是md5，解一下试试</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517222722289.png"></p>
+<p>另外一串是什么呢，看到前面5+58，是在暗示什么，5难道是MD5，那58对应的是？</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517222923564.png"></p>
+<p>出现了答案，原来5+58这个意思啊</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517224101568.png"></p>
+<p><code>flag{this_is_md5_and_base58}</code></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517224245210.png"></p>
+<h4 id="Bugku-blind-injection"><a href="#Bugku-blind-injection" class="headerlink" title="Bugku_blind_injection"></a>Bugku_blind_injection</h4><p>★★★★☆☆</p>
+<p>盲注，给了一个数据包，打开导出http，按大到小排序，将字符提取出来，拼接一下，效率太低了这样，转战Linux。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518115052931.png"></p>
+<p>tshark是linux版本的wireshark，再配合正则匹配出字符，得到flag</p>
+<p><code>tshark -r cap.pcap -T fields -e http.request.full_uri | grep -oP '(?&lt;=database\(\)\),)[^%]*' | awk -F[,\'] '{a[$1]=$3}END{for(i in a)printf "%1s",a[i]}'</code></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518114906028.png"></p>
+<p>还以为是加密的，直接提交成功。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518115516267.png"></p>
+<h4 id="Bugku-可爱的故事"><a href="#Bugku-可爱的故事" class="headerlink" title="Bugku_可爱的故事"></a>Bugku_可爱的故事</h4><p>★★★★★☆</p>
+<p>……………..</p>
+<p>……………..</p>
+<p>emmmm</p>
+<p>这。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518121600281.png"></p>
+<p>SD007大佬说将字母旋转一百八十度，原来如此</p>
+<p>然后看翻译出来，就得到了正常的字母，找到flag。</p>
+<p><code>bugku{iamlearningteyvatinbugku}</code></p>
+<p>这是原神游戏里的提瓦特文字。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518121831536.png"></p>
+<h4 id="Bugku-FileStoragedat"><a href="#Bugku-FileStoragedat" class="headerlink" title="Bugku_FileStoragedat"></a>Bugku_FileStoragedat</h4><p>★★★★★★</p>
+<p>解压之后得到一个<code>keli.dat</code>，描述”标题有用 格式bugku{}”，搜索标题得知是微信的文件夹，dat是一种存储加密后的文件格式，很多软件都会使用这种后缀，使用异或运算对文件头进行加密。</p>
+<p>对DAT文件的解读可以参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/4thrun/p/15148485.html">https://www.cnblogs.com/4thrun/p/15148485.html</a></p>
+<p>使用微信PC版DAT文件解密工具：<a target="_blank" rel="noopener" href="https://lindi.cc/archives/301">https://lindi.cc/archives/301</a></p>
+<p>工具2：<a target="_blank" rel="noopener" href="https://github.com/PiaoZhenJia/WeChatDatFileDecoder">https://github.com/PiaoZhenJia/WeChatDatFileDecoder</a></p>
+<p>脚本：</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># -*- coding: utf-8 -*-</span>
+<span class="token comment" spellcheck="true"># @Time    : 3/27/2019 21:54</span>
+<span class="token comment" spellcheck="true"># @Author  : MARX·CBR</span>
+<span class="token comment" spellcheck="true"># @File    : 微信Dat文件转图片.py</span>
+ 
+<span class="token keyword">import</span> os
+ 
+<span class="token keyword">def</span> <span class="token function">imageDecode</span><span class="token punctuation">(</span>f<span class="token punctuation">,</span>fn<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    dat_read <span class="token operator">=</span> open<span class="token punctuation">(</span>f<span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span>
+    out<span class="token operator">=</span><span class="token string">'P:\\'</span><span class="token operator">+</span>fn<span class="token operator">+</span><span class="token string">".png"</span>
+    png_write <span class="token operator">=</span> open<span class="token punctuation">(</span>out<span class="token punctuation">,</span> <span class="token string">"wb"</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> now <span class="token keyword">in</span> dat_read<span class="token punctuation">:</span>
+        <span class="token keyword">for</span> nowByte <span class="token keyword">in</span> now<span class="token punctuation">:</span>
+            newByte <span class="token operator">=</span> nowByte <span class="token operator">^</span> <span class="token number">0x36</span>
+            png_write<span class="token punctuation">.</span>write<span class="token punctuation">(</span>bytes<span class="token punctuation">(</span><span class="token punctuation">[</span>newByte<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        dat_read<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        png_write<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ 
+<span class="token keyword">def</span> <span class="token function">findFile</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    fsinfo <span class="token operator">=</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> fn <span class="token keyword">in</span> fsinfo<span class="token punctuation">:</span>
+        temp_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>f<span class="token punctuation">,</span> fn<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token operator">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isdir<span class="token punctuation">(</span>temp_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'文件路径: {}'</span> <span class="token punctuation">.</span>format<span class="token punctuation">(</span>temp_path<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>fn<span class="token punctuation">)</span>
+            imageDecode<span class="token punctuation">(</span>temp_path<span class="token punctuation">,</span>fn<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+ 
+path <span class="token operator">=</span> r<span class="token string">'C:\Users\输入自己微信存储路径\Data'</span>
+findFile<span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+</code></pre>
+<p>得到图片</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518134857469.png"></p>
+<p><code>bugku{WeChatwithSteg0}</code>,提交</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518135049944.png"></p>
+<h2 id="Cx-Additions"><a href="#Cx-Additions" class="headerlink" title="Cx Additions"></a>Cx Additions</h2><h3 id="常见的文件头"><a href="#常见的文件头" class="headerlink" title="常见的文件头"></a>常见的文件头</h3><table>
+<thead>
+<tr>
+<th align="center">格式</th>
+<th align="center">头部</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">.jpg</td>
+<td align="center"><code>FF D8 FF</code></td>
+</tr>
+<tr>
+<td align="center">.png</td>
+<td align="center"><code>89 50 4E 47</code></td>
+</tr>
+<tr>
+<td align="center">.bmp</td>
+<td align="center"><code>42 4D</code></td>
+</tr>
+<tr>
+<td align="center">.gif</td>
+<td align="center"><code>47 49 46 38</code></td>
+</tr>
+<tr>
+<td align="center">.zip</td>
+<td align="center"><code>50 4B 03 04</code></td>
+</tr>
+<tr>
+<td align="center">.rar</td>
+<td align="center"><code>52 61 72 21</code></td>
+</tr>
+<tr>
+<td align="center">.avi</td>
+<td align="center"><code>41 56 49 20</code></td>
+</tr>
+</tbody></table>
+<p>常用文件的文件头如下(16进制)：<br>JPEG (jpg)，文件头：FFD8FFE1<br>PNG (png)，文件头：89504E47<br>GIF (gif)，文件头：47494638<br>TIFF (tif)，文件头：49492A00<br>Windows Bitmap (bmp)，文件头：424DC001<br>CAD (dwg)，文件头：41433130<br>Adobe Photoshop (psd)，文件头：38425053<br>Rich Text Format (rtf)，文件头：7B5C727466<br>XML (xml)，文件头：3C3F786D6C<br>HTML (html)，文件头：68746D6C3E<br>Email [thorough only] (eml)，文件头：44656C69766572792D646174653A<br>Outlook Express (dbx)，文件头：CFAD12FEC5FD746F<br>Outlook (pst)，文件头：2142444E<br>MS Word/Excel (xls.or.doc)，文件头：D0CF11E0<br>MS Access (mdb)，文件头：5374616E64617264204A<br>WordPerfect (wpd)，文件头：FF575043<br>Adobe Acrobat (pdf)，文件头：255044462D312E<br>Quicken (qdf)，文件头：AC9EBD8F<br>Windows Password (pwl)，文件头：E3828596<br>ZIP Archive (zip)，文件头：504B0304<br>RAR Archive (rar)，文件头：52617221<br>Wave (wav)，文件头：57415645<br>AVI (avi)，文件头：41564920<br>Real Audio (ram)，文件头：2E7261FD<br>Real Media (rm)，文件头：2E524D46<br>MPEG (mpg)，文件头：000001BA<br>MPEG (mpg)，文件头：000001B3<br>Quicktime (mov)，文件头：6D6F6F76<br>Windows Media (asf)，文件头：3026B2758E66CF11<br>MIDI (mid)，文件头：4D546864</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
                 
             </div>
@@ -1050,17 +1204,16 @@ awk '{ORS = ""}{print $0} END {printf("\n")}' 1.txt
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/a011.html">
+                <a href="/posts/60d0.html">
                     <div class="card-image">
                         
-                        <img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516143830756.png" class="responsive-img" alt="Miscellaneous2">
+                        <img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516143830756.png" class="responsive-img" alt="Miscellaneous3">
                         
-                        <span class="card-title">Miscellaneous2</span>
+                        <span class="card-title">Miscellaneous3</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1070,9 +1223,9 @@ awk '{ORS = ""}{print $0} END {printf("\n")}' 1.txt
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-16
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-18
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1085,7 +1238,6 @@ awk '{ORS = ""}{print $0} END {printf("\n")}' 1.txt
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1431,7 +1583,7 @@ awk '{ORS = ""}{print $0} END {printf("\n")}' 1.txt
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">247.2k</span>&nbsp;字
+                class="white-color">249.5k</span>&nbsp;字
             
             
             
