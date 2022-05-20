@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Mysql数据库之基本操作, web安全,web攻防,blog,shell,linux,windows,Linux,Windows,物理,物理学,宇宙,反物质,字星河,博客,星河,Enomothem,enomothem,eonthem">
+    <meta name="keywords" content="Miscellaneous4, web安全,web攻防,blog,shell,linux,windows,Linux,Windows,物理,物理学,宇宙,反物质,字星河,博客,星河,Enomothem,enomothem,eonthem">
     <meta name="description" content="真正的改变只能发生在原则层面">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>Mysql数据库之基本操作 | 字星河</title>
+    <title>Miscellaneous4 | 字星河</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://fastly.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/awesome/css/all.css">
@@ -480,12 +480,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://fastly.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516143830756.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Mysql数据库之基本操作</h1>
+                    <h1 class="description center-align post-title">Miscellaneous4</h1>
                 </div>
             </div>
         </div>
@@ -601,12 +601,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Mysql/">
-                                <span class="chip bg-color">Mysql</span>
+                            <a href="/tags/MISC/">
+                                <span class="chip bg-color">MISC</span>
                             </a>
                         
-                            <a href="/tags/Mysql%E8%AF%AD%E5%8F%A5/">
-                                <span class="chip bg-color">Mysql语句</span>
+                            <a href="/tags/flag/">
+                                <span class="chip bg-color">flag</span>
                             </a>
                         
                     </div>
@@ -617,8 +617,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Mysql/" class="post-category">
-                                Mysql
+                            <a href="/categories/CTF/" class="post-category">
+                                CTF
                             </a>
                         
                     </div>
@@ -630,28 +630,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-24
+                    2022-05-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-16
+                    2022-05-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    849
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    7 分
                 </div>
                 
 
@@ -671,142 +671,260 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Mysql数据库之基本操作"><a href="#Mysql数据库之基本操作" class="headerlink" title="Mysql数据库之基本操作"></a><a target="_blank" rel="noopener" href="https://enomothem.cn/posts/2af3.html">Mysql数据库之基本操作</a><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20201224135007.jpg"></h1><blockquote>
-<p>如果人们既没有思想，又没有信仰，还罔顾事实，那出现什么灾难都不奇怪。</p>
+                <h1 id="Capture-The-Flag-Miscellaneous-4"><a href="#Capture-The-Flag-Miscellaneous-4" class="headerlink" title="Capture The Flag Miscellaneous 4"></a>Capture The Flag Miscellaneous 4</h1><p>Miscellaneous 【4】  – flag{misc}</p>
+<hr>
+<p>Miscellaneous 【3】 </p>
+<p>Miscellaneous 【<a href="https://enomothem.com/posts/a011.html">2</a>】</p>
+<p>Miscellaneous 【<a href="https://enomothem.com/posts/2242.html">1</a>】</p>
+<h2 id="Ax-Introduction"><a href="#Ax-Introduction" class="headerlink" title="Ax Introduction"></a>Ax Introduction</h2><p>什么是CTF，什么是MISC。</p>
+<p>CTF定义：网络安全技术人员之间进行技术竞技的一种比赛形式。CTF起源于1996年DEFCON全球黑客大会，以代替之前黑客们模拟攻击的比赛。</p>
+<ul>
+<li>类型：解题模式、攻防模式、混合模式</li>
+<li>赛事：DEFCONCTF、XCTF、Real World CTF等</li>
+<li>题目：PPC、MISC、PWN、WEB、REVERSE、CRYPTO、STEGA</li>
+</ul>
+<p>MISC定义：Miscellaneous，安全杂项，流量分析、电子签证、人肉搜索、数据分析等等等等等，就是除了最初的几个大类之外的题目。</p>
+<p>别看杂项杂，每一项都是很专业的东西，所以要学的东西很多很多。还能遇到有些有趣的东西呢。</p>
+<h4 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h4><p><strong>WinHex yyds</strong></p>
+<p><strong>010editor</strong></p>
+<p><strong>kali linux</strong></p>
+<ul>
+<li><p>binwalk 查看文件中是否隐藏信息</p>
+</li>
+<li><p>formost 通过分析文件头和内部数据结构和尾，还原文件，使文件分离出来。</p>
+</li>
+<li><p>zip2john 破解压缩包密码，再用<code>john</code>看破解的密码文件</p>
+<pre class=" language-shell"><code class="language-shell">zip2john flag.zip password.txt
+john password.txt
+</code></pre>
+</li>
+<li><p>fcrackzip zip压缩包破解工具</p>
+<pre class=" language-shell"><code class="language-shell">fcrackzip -b -c 'aA1!' -l 1-10 -u crack_this.zip 
+# 选择大小写且数字!-b代表brute-force；-l限制密码长度；-c指定使用的字符集：-u是解压
+fcrackzip -b -c '1' -l 1-10 -u crack_this.zip
+# 如果知道是数字，直接使用数字
+gzip -d /usr/share/wordlists/rockyou.txt.gz
+# 解压kali自带的字典
+fcrackzip -D -p /usr/share/wordlists/rockyou.txt -u crack_this.zip
+# 使用字典爆破
+</code></pre>
+</li>
+<li><p>tshark Linux版本的wireshark工具。</p>
+</li>
+<li><p>strings、egrep、awk  找东西滴</p>
+</li>
+</ul>
+<p><strong>Wireshark</strong> 有时候会有分析数据包的取证题目需要用到。<br><strong>隐写工具</strong></p>
+<ul>
+<li> Jphs05  图片信息隐藏</li>
+<li> Stegsolve 分析图片隐写工具</li>
+</ul>
+<p><strong>RouterPassview</strong> 路由器配置文件查看器</p>
+<p><strong>好玩的工具</strong></p>
+<pre><code>- http://www.atoolbox.net/ 好好玩
+- https://www.pdfpai.com/downgif2png 
+- https://www.11zon.com/zh-cn/
+</code></pre>
+<p><strong>加密算法在线网站</strong></p>
+<ul>
+<li>MD5<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cmd5.com/">https://www.cmd5.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.somd5.com/">https://www.somd5.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://md5.cc/">https://md5.cc/</a></li>
+</ul>
+</li>
+<li>各种加密<ul>
+<li><a target="_blank" rel="noopener" href="http://www.hiencode.com/">http://www.hiencode.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.ctftools.com/down/">http://www.ctftools.com/down/</a></li>
+<li><a target="_blank" rel="noopener" href="http://hi.pcmoe.net/index.html">http://hi.pcmoe.net/index.html</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Bx-Flag-keyisflag"><a href="#Bx-Flag-keyisflag" class="headerlink" title="Bx Flag{keyisflag}"></a>Bx Flag{keyisflag}</h2><blockquote>
+<p>只有不断的做题，才能学习到更多的东西，包括出题的套路，you know，but 作者的想法你是永远猜不到的，也许就在你意想不到的地方。</p>
 </blockquote>
-<blockquote>
-<p>数据库的基本操作包括增删改查，对数据库，数据表，表里的字段、记录进行操作。</p>
-<p>这对SQL注入有很大的帮助，一定要学好。</p>
-</blockquote>
-<h2 id="Ax-数据库"><a href="#Ax-数据库" class="headerlink" title="Ax 数据库"></a>Ax 数据库</h2><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">/** Information
-*     Author: Enomothem
-*   Date:   2020-12-17 11:34
-*   Update: 2021-01-03 24:00
-**/</span>
-
-<span class="token comment" spellcheck="true">-- 注释方式1</span>
-<span class="token comment" spellcheck="true">#  注释方式2</span>
-<span class="token comment" spellcheck="true">/*
-   注释方式3
-*/</span>
-<span class="token comment" spellcheck="true"># 使用数据库</span>
-<span class="token keyword">use</span> galaxy<span class="token punctuation">;</span>   
-<span class="token comment" spellcheck="true"># =================</span>
-    <span class="token comment" spellcheck="true">-- 数据库 --</span>
-<span class="token comment" spellcheck="true"># =================</span>
-
-<span class="token comment" spellcheck="true">-- 增 --</span>
-<span class="token keyword">create</span> <span class="token keyword">database</span> galaxy<span class="token punctuation">;</span>                       <span class="token comment" spellcheck="true"># 新建数据库</span>
-<span class="token keyword">create</span> <span class="token keyword">database</span> <span class="token keyword">if</span> <span class="token operator">not</span> <span class="token keyword">exists</span> galaxy<span class="token punctuation">;</span>         <span class="token comment" spellcheck="true"># 不存在创建</span>
-<span class="token comment" spellcheck="true">-- 删 --</span>
-<span class="token keyword">drop</span> <span class="token keyword">database</span> galaxy<span class="token punctuation">;</span>                         <span class="token comment" spellcheck="true"># 删除数据库</span>
-<span class="token comment" spellcheck="true">-- 改 --</span>
-<span class="token keyword">rename</span> <span class="token keyword">database</span> olddbname <span class="token keyword">to</span> newdbname<span class="token punctuation">;</span>        <span class="token comment" spellcheck="true"># 官方不推荐</span>
-<span class="token comment" spellcheck="true">-- 查 --</span>
-<span class="token keyword">show</span> <span class="token keyword">databases</span><span class="token punctuation">;</span>                           <span class="token comment" spellcheck="true"># 查看所有数据库</span>
-<span class="token keyword">show</span> <span class="token keyword">create</span> <span class="token keyword">database</span> galaxy<span class="token punctuation">;</span>              <span class="token comment" spellcheck="true"># 查看创建数据库信息</span>
+<p>我会去做各大在线网站的题目，然后记录于此便于我回顾。</p>
+<h3 id="Bugku"><a href="#Bugku" class="headerlink" title="Bugku"></a>Bugku</h3><h4 id="Bugku-多种方法解决"><a href="#Bugku-多种方法解决" class="headerlink" title="Bugku_多种方法解决"></a>Bugku_多种方法解决</h4><p>得到一个exe文件，用winhex打开，是图片的base64编码</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520100148528.png" alt="image-20220520100148528"></p>
+<p>1）用命令解决</p>
+<pre class=" language-shell"><code class="language-shell">base64 -d "解密的内容">>flag.png
 </code></pre>
-<h2 id="Bx-数据表"><a href="#Bx-数据表" class="headerlink" title="Bx 数据表"></a>Bx 数据表</h2><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true"># =================</span>
-    <span class="token comment" spellcheck="true">-- 数据表 --</span>
-<span class="token comment" spellcheck="true"># =================</span>
-
-<span class="token comment" spellcheck="true">-- 增 --</span>
-<span class="token keyword">create</span> <span class="token keyword">table</span> square<span class="token punctuation">(</span>id <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>              <span class="token comment" spellcheck="true"># 创建表,多个表使用，分隔</span>
-<span class="token keyword">alter</span> <span class="token keyword">table</span> square <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8<span class="token punctuation">;</span>          <span class="token comment" spellcheck="true"># 设置字符集</span>
-<span class="token comment" spellcheck="true">-- 删 --</span>
-<span class="token keyword">drop</span> <span class="token keyword">table</span> time<span class="token punctuation">;</span>                          <span class="token comment" spellcheck="true"># 删除表</span>
-<span class="token comment" spellcheck="true">-- 改 --</span>
-<span class="token keyword">alter</span> <span class="token keyword">table</span> square <span class="token keyword">rename</span> square_rename<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true"># 改名</span>
-<span class="token keyword">rename</span> <span class="token keyword">table</span> square_rename <span class="token keyword">to</span> squared<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true"># 改名</span>
-<span class="token comment" spellcheck="true">-- 查 --</span>
-<span class="token keyword">show</span> <span class="token keyword">tables</span><span class="token punctuation">;</span>                              <span class="token comment" spellcheck="true"># 查看数据库所有表</span>
-<span class="token keyword">desc</span> squared<span class="token punctuation">;</span>                              <span class="token comment" spellcheck="true"># 展示表 </span>
-<span class="token keyword">show</span> <span class="token keyword">tables</span> <span class="token operator">like</span> <span class="token string">'tim%'</span><span class="token punctuation">;</span>                  <span class="token comment" spellcheck="true"># 模糊查询：% 通配  _ 只能代表一个字符</span>
-<span class="token keyword">show</span> <span class="token keyword">table</span> <span class="token keyword">status</span><span class="token punctuation">;</span>                        <span class="token comment" spellcheck="true"># 查看数据表属性 </span>
-<span class="token keyword">show</span> <span class="token keyword">create</span> <span class="token keyword">table</span> squared<span class="token punctuation">;</span>                <span class="token comment" spellcheck="true"># 查看创建的表</span>
-
+<p>2）用在线网站</p>
+<p><a target="_blank" rel="noopener" href="http://www.jsons.cn/img2base64/">http://www.jsons.cn/img2base64/</a></p>
+<p>3）用浏览器地址栏</p>
+<p>随便用什么方法将里面的内容复制到浏览器地址栏，出现图片</p>
+<p>4）用HTML代码</p>
+<p>大佬思路：”右键评论区一个人的头像 审查元素 把src替换成base64代码 完成) 懒得去开工具了“</p>
+<p>写代码：</p>
+<pre class=" language-html"><code class="language-html">Base64 在CSS中的使用
+.demoImg{ background-image: url("data:image/jpg;base64,/9j/4QMZRXhpZgAASUkqAAgAAAAL...."); }
+Base64 在HTML中的使用
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>40<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>30<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>data:image/jpg;base64,/9j/4QMZRXhpZgAASUkqAAgAAAAL....<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
 </code></pre>
-<h2 id="Cx-字段"><a href="#Cx-字段" class="headerlink" title="Cx 字段"></a>Cx 字段</h2><pre class=" language-sql"><code class="language-sql">
-<span class="token comment" spellcheck="true"># =================</span>
-    <span class="token comment" spellcheck="true">-- 数据段 --</span>
-<span class="token comment" spellcheck="true"># =================</span>
+<p>5）用工具解决</p>
+<p>可以自己用代码写，也可以下载，不过我感觉没有必要。</p>
+<p>6）用扫描二维码的网站</p>
+<p><a target="_blank" rel="noopener" href="https://jiema.wwei.cn/">https://jiema.wwei.cn/</a></p>
+<p>得出<code>KEY{dca57f966e4e4e31fd5b15417da63269}</code></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520101812088.png"></p>
+<h4 id="Bugku-闪的好快"><a href="#Bugku-闪的好快" class="headerlink" title="Bugku_闪的好快"></a>Bugku_闪的好快</h4><p>一个动态二维码，每个二维码都有一个字符，方法就是找合适的工具。</p>
+<p>各种方法</p>
+<p>1）在线网站</p>
+<p><a target="_blank" rel="noopener" href="https://tu.sioe.cn/gj/fenjie">https://tu.sioe.cn/gj/fenjie</a></p>
+<p>2）convert命令</p>
+<p>3）stegsolve工具 -&gt; Frame Browser</p>
+<p>使用脚本</p>
+<p>第一步，批量生成</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+<span class="token keyword">import</span> os
 
-<span class="token comment" spellcheck="true">-- 增 --</span>
-<span class="token keyword">alter</span> <span class="token keyword">table</span> squared <span class="token keyword">add</span> <span class="token keyword">type</span> <span class="token keyword">int</span><span class="token punctuation">;</span>                     <span class="token comment" spellcheck="true"># 添加字段，多个字段用，分隔开。</span>
-<span class="token comment" spellcheck="true">-- 删 --</span>
-<span class="token keyword">alter</span> <span class="token keyword">table</span> squared <span class="token keyword">drop</span> <span class="token keyword">type</span><span class="token punctuation">;</span>                       <span class="token comment" spellcheck="true"># 删除字段</span>
-<span class="token comment" spellcheck="true">-- 改 --</span>
-<span class="token keyword">alter</span> <span class="token keyword">table</span> squared change test name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true"># 修改字段</span>
-<span class="token keyword">alter</span> <span class="token keyword">table</span> squared <span class="token keyword">modify</span> name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment" spellcheck="true"># 修改类型、名不变</span>
-<span class="token keyword">alter</span> <span class="token keyword">table</span> squared <span class="token keyword">modify</span> id <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span> <span class="token keyword">first</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true"># 置顶</span>
-<span class="token keyword">alter</span> <span class="token keyword">table</span> squared <span class="token keyword">add</span> <span class="token keyword">type</span> <span class="token keyword">int</span> <span class="token keyword">after</span> name<span class="token punctuation">;</span>         <span class="token comment" spellcheck="true"># 在id后面新建一个type字段</span>
-<span class="token keyword">alter</span> <span class="token keyword">table</span> squared <span class="token keyword">modify</span> name <span class="token keyword">smallint</span> <span class="token keyword">after</span> id<span class="token punctuation">;</span>   <span class="token comment" spellcheck="true"># 修改位置</span>
-<span class="token comment" spellcheck="true">-- 查 --</span>
-<span class="token keyword">show</span> <span class="token keyword">full</span> <span class="token keyword">columns</span> <span class="token keyword">from</span> squared<span class="token punctuation">;</span>                      <span class="token comment" spellcheck="true"># 查看数据表结构</span>
+gifFileName <span class="token operator">=</span> <span class="token string">'masterGO.gif'</span>
+<span class="token comment" spellcheck="true">#使用Image模块的open()方法打开gif动态图像时，默认是第一帧</span>
+im <span class="token operator">=</span> Image<span class="token punctuation">.</span>open<span class="token punctuation">(</span>gifFileName<span class="token punctuation">)</span>
+pngDir <span class="token operator">=</span> gifFileName<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">]</span>
+
+<span class="token comment" spellcheck="true">#创建存放每帧图片的文件夹</span>
+os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span>pngDir<span class="token punctuation">)</span>
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        <span class="token comment" spellcheck="true">#保存当前帧图片</span>
+        current <span class="token operator">=</span> im<span class="token punctuation">.</span>tell<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        im<span class="token punctuation">.</span>save<span class="token punctuation">(</span>pngDir<span class="token operator">+</span><span class="token string">'\\'</span><span class="token operator">+</span>str<span class="token punctuation">(</span>current<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">'.png'</span><span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">#获取下一帧图片</span>
+        im<span class="token punctuation">.</span>seek<span class="token punctuation">(</span>current<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> EOFError<span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
 </code></pre>
-<h2 id="Dx-数据"><a href="#Dx-数据" class="headerlink" title="Dx 数据"></a>Dx 数据</h2><pre class=" language-sql"><code class="language-sql">
-<span class="token comment" spellcheck="true"># =================</span>
-    <span class="token comment" spellcheck="true">-- 数据 --</span>
-<span class="token comment" spellcheck="true"># =================</span>
+<p>生成图片</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520124112520.png"></p>
+<p>第二步，批量扫码</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+<span class="token keyword">import</span> pyzbar<span class="token punctuation">.</span>pyzbar <span class="token keyword">as</span> pyzbar
+<span class="token keyword">import</span> os
 
-<span class="token comment" spellcheck="true">-- 增 --</span>
-<span class="token keyword">insert</span> squared <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'关羽'</span><span class="token punctuation">,</span> <span class="token string">'6666'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                <span class="token comment" spellcheck="true"># 给所有字段添加记录</span>
-<span class="token keyword">insert</span> squared <span class="token punctuation">(</span>name<span class="token punctuation">,</span>id<span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">'百里守约'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment" spellcheck="true"># 给部分字段添加记录，因为存在允许NULL字段</span>
-<span class="token keyword">insert</span> squared <span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token keyword">value</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                           <span class="token comment" spellcheck="true"># 只添加一个字段</span>
-<span class="token keyword">insert</span> squared <span class="token punctuation">(</span><span class="token keyword">type</span><span class="token punctuation">,</span>id<span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">66</span><span class="token punctuation">,</span><span class="token number">32768</span><span class="token punctuation">)</span><span class="token punctuation">;</span>               <span class="token comment" spellcheck="true"># 整形可以填写32768大小的数据</span>
-<span class="token keyword">insert</span> squared <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token string">'曹操'</span><span class="token punctuation">,</span> <span class="token number">888</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token string">'小乔'</span>，<span class="token number">888</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token string">'大乔'</span><span class="token punctuation">,</span> <span class="token number">1888</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true"># 给所有字段插入多行数据</span>
-<span class="token keyword">insert</span> squared <span class="token punctuation">(</span>id<span class="token punctuation">,</span>name<span class="token punctuation">,</span><span class="token keyword">type</span><span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">,</span><span class="token string">'安琪拉'</span><span class="token punctuation">,</span><span class="token number">5888</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span><span class="token string">'雅典娜'</span><span class="token punctuation">,</span><span class="token number">18888</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true"># 给部分字段插入多行数据</span>
-<span class="token comment" spellcheck="true">-- 删 --</span>
-<span class="token keyword">delete</span> <span class="token keyword">from</span> time<span class="token punctuation">;</span>                                             <span class="token comment" spellcheck="true"># 删除表数据</span>
-<span class="token keyword">delete</span> <span class="token keyword">from</span> squared <span class="token keyword">where</span> id <span class="token operator">=</span> <span class="token string">'3'</span><span class="token punctuation">;</span>                             <span class="token comment" spellcheck="true"># 删除记录</span>
-<span class="token keyword">delete</span> <span class="token keyword">from</span> squared <span class="token keyword">where</span> <span class="token keyword">type</span> <span class="token operator">is</span> <span class="token boolean">null</span><span class="token punctuation">;</span>                        <span class="token comment" spellcheck="true"># 删除字段值为null的记录</span>
-<span class="token comment" spellcheck="true">-- 改 --</span>
-<span class="token keyword">update</span> squared <span class="token keyword">set</span> id <span class="token operator">=</span> <span class="token string">'22'</span> <span class="token keyword">where</span> id <span class="token operator">=</span> <span class="token string">'11'</span><span class="token punctuation">;</span>                  <span class="token comment" spellcheck="true"># 修改记录中某些字段值</span>
-<span class="token keyword">update</span> squared <span class="token keyword">set</span> id <span class="token operator">=</span> <span class="token string">'30'</span><span class="token punctuation">,</span> name <span class="token operator">=</span> <span class="token string">'关羽'</span> <span class="token keyword">where</span> id <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>       <span class="token comment" spellcheck="true"># 修改记录中多个字段值</span>
-<span class="token keyword">update</span> squared <span class="token keyword">set</span> id <span class="token operator">=</span> <span class="token string">'30'</span><span class="token punctuation">,</span> name <span class="token operator">=</span> <span class="token string">'关羽'</span> <span class="token keyword">where</span> id <span class="token operator">></span> <span class="token number">3</span> <span class="token operator">&amp;&amp;</span> id <span class="token operator">&lt;</span> <span class="token number">8</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true"># 修改记录中多个字段值  条件判断</span>
-<span class="token comment" spellcheck="true">-- 查 --</span>
-<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> squared<span class="token punctuation">;</span>                                <span class="token comment" spellcheck="true"># 查询表中所有字段记录</span>
-<span class="token keyword">select</span> id<span class="token punctuation">,</span>name <span class="token keyword">from</span> squared<span class="token punctuation">;</span>                            <span class="token comment" spellcheck="true"># 查询表中部分字段所有记录</span>
-<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> squared <span class="token keyword">where</span> id <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
-<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> squared <span class="token keyword">where</span> id <span class="token operator">></span> <span class="token number">3</span><span class="token punctuation">;</span>
-<span class="token keyword">select</span> id<span class="token punctuation">,</span>name <span class="token keyword">from</span> squared <span class="token keyword">where</span> id <span class="token operator">></span> <span class="token number">3</span><span class="token punctuation">;</span>
-<span class="token keyword">select</span> id<span class="token punctuation">,</span>name <span class="token keyword">from</span> squared <span class="token keyword">where</span> id <span class="token operator">></span> <span class="token number">3</span> <span class="token operator">||</span> id <span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
-<span class="token keyword">select</span> id<span class="token punctuation">,</span>name <span class="token keyword">from</span> squared <span class="token keyword">where</span> name <span class="token operator">=</span> <span class="token string">'关羽'</span><span class="token punctuation">;</span>
-<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> squared <span class="token keyword">where</span> name <span class="token operator">like</span> <span class="token string">'%拉%'</span><span class="token punctuation">;</span>                       <span class="token comment" spellcheck="true"># 关键字 在中间</span>
+<span class="token keyword">def</span> <span class="token function">qrcode_parse_content</span><span class="token punctuation">(</span>img_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">'''
+    单张图片的二维码解析
+    '''</span>
+    img <span class="token operator">=</span> Image<span class="token punctuation">.</span>open<span class="token punctuation">(</span>img_path<span class="token punctuation">)</span>
 
-<span class="token keyword">insert</span> squared <span class="token punctuation">(</span><span class="token keyword">type</span><span class="token punctuation">,</span>id<span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">32768</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment" spellcheck="true"># 越界测试：不能通过，因为32768越界</span>
-<span class="token comment" spellcheck="true"># 使用语句处</span>
-<span class="token keyword">update</span> squared <span class="token keyword">set</span> name <span class="token operator">=</span> <span class="token string">'武圣'</span><span class="token punctuation">,</span>id <span class="token operator">=</span> <span class="token number">6</span> <span class="token keyword">where</span> id <span class="token operator">=</span> <span class="token number">22</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">#使用pyzbar解析二维码图片内容</span>
+    barcodes <span class="token operator">=</span> pyzbar<span class="token punctuation">.</span>decode<span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true">#打印解析结果，从结果上可以看出，data是识别到的二维码内容，rect是二维码所在的位置</span>
+    <span class="token comment" spellcheck="true"># print(barcodes)</span>
+    <span class="token comment" spellcheck="true"># [Decoded(data=b'http://www.h3blog.com', type='QRCODE', rect=Rect(left=7, top=7, width=244, height=244), polygon=[Point(x=7, y=7), Point(x=7, y=251), Point(x=251, y=251), Point(x=251, y=7)])]</span>
+
+    result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> barcode <span class="token keyword">in</span> barcodes<span class="token punctuation">:</span>
+        barcode_content <span class="token operator">=</span> barcode<span class="token punctuation">.</span>data<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+        result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>barcode_content<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> result
+
+<span class="token keyword">def</span> <span class="token function">load_imgs</span><span class="token punctuation">(</span>folder<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">'''
+    加载文件夹下的图片
+    '''</span>
+    imgs <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> img_path <span class="token keyword">in</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>folder<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ext <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>img_path<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> len<span class="token punctuation">(</span>ext<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">1</span> <span class="token operator">and</span> is_img<span class="token punctuation">(</span>ext<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            imgs<span class="token punctuation">.</span>append<span class="token punctuation">(</span>img_path<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> imgs
+
+<span class="token keyword">def</span> <span class="token function">is_img</span><span class="token punctuation">(</span>ext<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">'''
+    判断文件后缀是否是图片
+    '''</span>
+    ext <span class="token operator">=</span> ext<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> ext <span class="token operator">==</span> <span class="token string">'.jpg'</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">elif</span> ext <span class="token operator">==</span> <span class="token string">'.png'</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">elif</span> ext <span class="token operator">==</span> <span class="token string">'.jpeg'</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">elif</span> ext <span class="token operator">==</span> <span class="token string">'.bmp'</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+
+    imgs <span class="token operator">=</span> load_imgs<span class="token punctuation">(</span><span class="token string">'./'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 打开图片文件夹，我这里是当前程序运行目录</span>
+    contents <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> img <span class="token keyword">in</span> imgs<span class="token punctuation">:</span>
+        contents<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>qrcode_parse_content<span class="token punctuation">(</span>img<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    file <span class="token operator">=</span> <span class="token string">'./result.txt'</span> <span class="token comment" spellcheck="true"># 写入文件路径，我这里程序当前运行目录下的result.txt</span>
+    <span class="token keyword">with</span> open<span class="token punctuation">(</span>file<span class="token punctuation">,</span><span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        <span class="token keyword">for</span> c <span class="token keyword">in</span> contents<span class="token punctuation">:</span>
+            f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>c <span class="token operator">+</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
 </code></pre>
-<h2 id="Ex-联合查询"><a href="#Ex-联合查询" class="headerlink" title="Ex 联合查询"></a>Ex 联合查询</h2><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true"># =================</span>
-    <span class="token comment" spellcheck="true">-- 联合查询 --</span>
-<span class="token comment" spellcheck="true"># =================</span>
-
-
-
-<span class="token comment" spellcheck="true">-- 子查询 --</span>
-
-<span class="token keyword">select</span> csubject<span class="token punctuation">,</span>cscore <span class="token keyword">from</span> cource
-<span class="token keyword">where</span>  cnumber <span class="token operator">=</span> <span class="token punctuation">(</span>
-<span class="token keyword">select</span> snumber <span class="token keyword">from</span> student <span class="token keyword">where</span> sname <span class="token operator">=</span> <span class="token string">"李军"</span>
-<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-
-
-<span class="token comment" spellcheck="true">-- 子查询 --</span>
-
-
-<span class="token keyword">select</span> csubject<span class="token punctuation">,</span>cscore <span class="token keyword">from</span> cource
-<span class="token keyword">where</span> cnumber <span class="token operator">in</span> <span class="token punctuation">(</span>
-<span class="token keyword">select</span> snumber <span class="token keyword">from</span> student <span class="token keyword">where</span> ssex <span class="token operator">=</span> <span class="token string">"男"</span>
-<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-
-<span class="token comment" spellcheck="true">-- 内连接 --</span>
-
-<span class="token keyword">select</span> s<span class="token punctuation">.</span>snumber<span class="token punctuation">,</span>s<span class="token punctuation">.</span>sname<span class="token punctuation">,</span>s<span class="token punctuation">.</span>sclass<span class="token punctuation">,</span><span class="token number">c</span><span class="token punctuation">.</span>csubject<span class="token punctuation">,</span><span class="token number">c</span><span class="token punctuation">.</span>cscore <span class="token keyword">from</span> student s
-<span class="token keyword">inner</span> <span class="token keyword">join</span> cource <span class="token number">c</span> <span class="token keyword">on</span> s<span class="token punctuation">.</span>snumber <span class="token operator">=</span> <span class="token number">c</span><span class="token punctuation">.</span>cnumber<span class="token punctuation">;</span>
-</code></pre>
+<p>但脚本出现了问题，就是顺序是乱的，这和文件名有关，怎么搞啊这。</p>
+<p>查阅资料，发现它之所以会出现“乱序”是因为<strong>使用默认ASCII的字符串排序方式</strong>，要改进代码就必须将排序改为按数字的方法排序，这个问题就先留着，以后来解决吧。乱的也不多，复制10-17到最后就可以了。</p>
+<p><code>SYC{F1aSh_so_f4sT}</code></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520133213467.png"></p>
+<p>当然也有工具啦，比如Excel的批量识别工具（搜索方方格子）</p>
+<p>工具网址：<a target="_blank" rel="noopener" href="https://pc.wwei.cn/">https://pc.wwei.cn/</a></p>
+<h4 id="Bugku-come-game"><a href="#Bugku-come-game" class="headerlink" title="Bugku_come_game"></a>Bugku_come_game</h4><p>给了一个游戏，但一直过不去。。，游戏会生成一个save文件，打开后发现关数，改成别的关数再按R重新开始，就可以跳关，第五关发现flag</p>
+<p><code>6E23F259D98DF153</code></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520173734452.png"></p>
+<h4 id="Bugku-白哥的鸽子"><a href="#Bugku-白哥的鸽子" class="headerlink" title="Bugku_白哥的鸽子"></a>Bugku_白哥的鸽子</h4><p>得到一个鸽子的图片，直接拿到winhex分析，得到乱序的flag，但是这不会是凯撒，以为存在flag{}的符号，应该是栅栏。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520214005812.png"></p>
+<p>直接走一波栅栏密码</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520221114951.png"></p>
+<p>3栏得到<code>flag{w22_is_v3ry_cool}</code></p>
+<h4 id="Bugku-linux"><a href="#Bugku-linux" class="headerlink" title="Bugku_linux"></a>Bugku_linux</h4><p>得到一个tar.gz的压缩包</p>
+<p>解压tar -zxvf 压缩包得到flag文件夹，是二进制文件，直接搜索flag或key关键字。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520224052928.png"></p>
+<h4 id="Bugku-简单套娃"><a href="#Bugku-简单套娃" class="headerlink" title="Bugku_简单套娃"></a>Bugku_简单套娃</h4><p>得到一张图片， 看看有没有隐藏什么</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220521005001546.png"></p>
+<p>隐藏了一张图片，但是我用foremost爆不出来，用010editor判断</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220521004842889.png"></p>
+<p>看到第二个文件头<code>FF D8 FF E0</code>，以下的都复制，然后新建一个HEX（十六进制）文件，粘贴进去，保存为jpg文件。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220521010506268.png"></p>
+<p><code>flag{Mumuzi_the_God_of_Matryoshka}</code> 不知道是不是我看清楚了，用stegsolve将两张图片合成一下</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220521011057482.png" alt="image-20220521011057482"></p>
+<p>提交成功。</p>
+<h2 id="Cx-Additions"><a href="#Cx-Additions" class="headerlink" title="Cx Additions"></a>Cx Additions</h2><h3 id="常见的文件头"><a href="#常见的文件头" class="headerlink" title="常见的文件头"></a>常见的文件头</h3><table>
+<thead>
+<tr>
+<th align="center">格式</th>
+<th align="center">头部</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">.jpg</td>
+<td align="center"><code>FF D8 FF</code></td>
+</tr>
+<tr>
+<td align="center">.png</td>
+<td align="center"><code>89 50 4E 47</code></td>
+</tr>
+<tr>
+<td align="center">.bmp</td>
+<td align="center"><code>42 4D</code></td>
+</tr>
+<tr>
+<td align="center">.gif</td>
+<td align="center"><code>47 49 46 38</code></td>
+</tr>
+<tr>
+<td align="center">.zip</td>
+<td align="center"><code>50 4B 03 04</code></td>
+</tr>
+<tr>
+<td align="center">.rar</td>
+<td align="center"><code>52 61 72 21</code></td>
+</tr>
+<tr>
+<td align="center">.avi</td>
+<td align="center"><code>41 56 49 20</code></td>
+</tr>
+</tbody></table>
+<p>常用文件的文件头如下(16进制)：<br>JPEG (jpg)，文件头：FFD8FFE1<br>PNG (png)，文件头：89504E47<br>GIF (gif)，文件头：47494638<br>TIFF (tif)，文件头：49492A00<br>Windows Bitmap (bmp)，文件头：424DC001<br>CAD (dwg)，文件头：41433130<br>Adobe Photoshop (psd)，文件头：38425053<br>Rich Text Format (rtf)，文件头：7B5C727466<br>XML (xml)，文件头：3C3F786D6C<br>HTML (html)，文件头：68746D6C3E<br>Email [thorough only] (eml)，文件头：44656C69766572792D646174653A<br>Outlook Express (dbx)，文件头：CFAD12FEC5FD746F<br>Outlook (pst)，文件头：2142444E<br>MS Word/Excel (xls.or.doc)，文件头：D0CF11E0<br>MS Access (mdb)，文件头：5374616E64617264204A<br>WordPerfect (wpd)，文件头：FF575043<br>Adobe Acrobat (pdf)，文件头：255044462D312E<br>Quicken (qdf)，文件头：AC9EBD8F<br>Windows Password (pwl)，文件头：E3828596<br>ZIP Archive (zip)，文件头：504B0304<br>RAR Archive (rar)，文件头：52617221<br>Wave (wav)，文件头：57415645<br>AVI (avi)，文件头：41564920<br>Real Audio (ram)，文件头：2E7261FD<br>Real Media (rm)，文件头：2E524D46<br>MPEG (mpg)，文件头：000001BA<br>MPEG (mpg)，文件头：000001B3<br>Quicktime (mov)，文件头：6D6F6F76<br>Windows Media (asf)，文件头：3026B2758E66CF11<br>MIDI (mid)，文件头：4D546864</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
                 
             </div>
@@ -833,7 +951,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://enomothem.com/posts/2af3.html">http://enomothem.com/posts/2af3.html</a>
+                    <a href="http://enomothem.com/posts/a291.html">http://enomothem.com/posts/a291.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -871,12 +989,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Mysql/">
-                                    <span class="chip bg-color">Mysql</span>
+                                <a href="/tags/MISC/">
+                                    <span class="chip bg-color">MISC</span>
                                 </a>
                             
-                                <a href="/tags/Mysql%E8%AF%AD%E5%8F%A5/">
-                                    <span class="chip bg-color">Mysql语句</span>
+                                <a href="/tags/flag/">
+                                    <span class="chip bg-color">flag</span>
                                 </a>
                             
                         </div>
@@ -1046,17 +1164,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/d6f0.html">
+                <a href="/posts/a291.html">
                     <div class="card-image">
                         
+                        <img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516143830756.png" class="responsive-img" alt="Miscellaneous4">
                         
-                        <img src="https://fastly.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/23.jpg" class="responsive-img" alt="SecTools-Nmap">
-                        
-                        <span class="card-title">SecTools-Nmap</span>
+                        <span class="card-title">Miscellaneous4</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1066,30 +1184,31 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SecTools/" class="post-category">
-                                    SecTools
+                            <a href="/categories/CTF/" class="post-category">
+                                    CTF
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/nmap/">
-                        <span class="chip bg-color">nmap</span>
+                    <a href="/tags/MISC/">
+                        <span class="chip bg-color">MISC</span>
                     </a>
                     
-                    <a href="/tags/portscan/">
-                        <span class="chip bg-color">portscan</span>
+                    <a href="/tags/flag/">
+                        <span class="chip bg-color">flag</span>
                     </a>
                     
                 </div>
@@ -1103,13 +1222,12 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/1444.html">
+                <a href="/posts/60d0.html">
                     <div class="card-image">
                         
+                        <img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516143830756.png" class="responsive-img" alt="Miscellaneous3">
                         
-                        <img src="https://fastly.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/19.jpg" class="responsive-img" alt="Linux-ls命令高级用法">
-                        
-                        <span class="card-title">Linux-ls命令高级用法</span>
+                        <span class="card-title">Miscellaneous3</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1120,14 +1238,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/categories/CTF/" class="post-category">
+                                    CTF
                                 </a>
                             
                             
@@ -1137,12 +1255,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/MISC/">
+                        <span class="chip bg-color">MISC</span>
                     </a>
                     
-                    <a href="/tags/ls/">
-                        <span class="chip bg-color">ls</span>
+                    <a href="/tags/flag/">
+                        <span class="chip bg-color">flag</span>
                     </a>
                     
                 </div>
