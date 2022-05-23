@@ -41,8 +41,8 @@
     <script src="https://fastly.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -633,14 +633,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-17
+                    2022-05-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    573
+                    683
                 </div>
                 
 
@@ -667,7 +667,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre class=" language-txt"><code class="language-txt">
+                <h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><pre><code>site:"edu.cn"
+</code></pre>
+<h4 id="查找后台"><a href="#查找后台" class="headerlink" title="查找后台"></a>查找后台</h4><pre><code>inurl:login|admin|manage|member|admin_login|login_admin|system|login|user|main|cms
+intext:管理|后台|登录|用户名|密码|验证码|系统|帐号|admin|login|sys|managetem|password|username
+</code></pre>
+<h4 id="查找注入点"><a href="#查找注入点" class="headerlink" title="查找注入点"></a>查找注入点</h4><pre><code>inurl:aspx|jsp|php|asp
+</code></pre>
+<h4 id="查找上传漏洞"><a href="#查找上传漏洞" class="headerlink" title="查找上传漏洞"></a>查找上传漏洞</h4><pre><code>inurl:file|load|editor|Files
+</code></pre>
+<h4 id="找eweb编辑器"><a href="#找eweb编辑器" class="headerlink" title="找eweb编辑器"></a>找eweb编辑器</h4><pre><code>inurl:ewebeditor|editor|uploadfile|eweb|edit
+</code></pre>
+<h4 id="查找存在数据库"><a href="#查找存在数据库" class="headerlink" title="查找存在数据库"></a>查找存在数据库</h4><pre><code>filetype:mdb|asp|#
+</code></pre>
+<h4 id="查看脚本类型"><a href="#查看脚本类型" class="headerlink" title="查看脚本类型"></a>查看脚本类型</h4><pre><code>filetype:asp/aspx/php/jsp
+</code></pre>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><pre class=" language-txt"><code class="language-txt">
 “Login: ” “password =” filetype: xls ( 搜索存储在excel文件中含有password的数据)。
 allinurl: auth_user_file.txt (搜索包含在服务器上的 auth_user_file.txt 的文件）。
 filetype: xls inurl: “password.xls” (查找 用户名和密码以excel格式）这个命令可以变为“admin.xls”.
@@ -698,6 +713,7 @@ inurl:**admin** inurl:**backup** intitle:index.of (查找关键词包含**admin*
 ext:pwd inurl:(service|**authors**|administrators|**users**) “*# -FrontPage-”*
 filetype: **sql** ( “passwd **values** *” |” **password** **values** *” | “pass **values** **“) 查找存储在数据库中的**sql**代码和密码。 )
 </code></pre>
+<h2 id="Refer"><a href="#Refer" class="headerlink" title="Refer"></a>Refer</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/fallingskies/p/14723617.html">https://www.cnblogs.com/fallingskies/p/14723617.html</a></p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
                 
             </div>
@@ -1310,7 +1326,7 @@ filetype: **sql** ( “passwd **values** *” |” **password** **values** *” 
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">251.4k</span>&nbsp;字
+                class="white-color">263.5k</span>&nbsp;字
             
             
             

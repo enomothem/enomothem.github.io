@@ -41,8 +41,8 @@
     <script src="https://fastly.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -630,28 +630,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-18
+                    2022-05-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-21
+                    2022-05-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    24 分
                 </div>
                 
 
@@ -671,7 +671,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Capture-The-Flag-Miscellaneous-4"><a href="#Capture-The-Flag-Miscellaneous-4" class="headerlink" title="Capture The Flag Miscellaneous 4"></a>Capture The Flag Miscellaneous 4</h1><p>Miscellaneous 【4】  – flag{misc}</p>
+                <h1 id="Capture-The-Flag-Miscellaneous-4"><a href="#Capture-The-Flag-Miscellaneous-4" class="headerlink" title="Capture The Flag Miscellaneous 4"></a>Capture The Flag Miscellaneous 4</h1><p>Miscellaneous 【6】</p>
+<p>Miscellaneous 【5】</p>
+<p>Miscellaneous 【4】  – flag{misc}</p>
 <hr>
 <p>Miscellaneous 【3】 </p>
 <p>Miscellaneous 【<a href="https://enomothem.com/posts/a011.html">2</a>】</p>
@@ -718,6 +720,7 @@ fcrackzip -D -p /usr/share/wordlists/rockyou.txt -u crack_this.zip
 <ul>
 <li> Jphs05  图片信息隐藏</li>
 <li> Stegsolve 分析图片隐写工具</li>
+<li> zsteg 隐写工具LSB</li>
 </ul>
 <p><strong>RouterPassview</strong> 路由器配置文件查看器</p>
 <p><strong>好玩的工具</strong></p>
@@ -745,7 +748,7 @@ fcrackzip -D -p /usr/share/wordlists/rockyou.txt -u crack_this.zip
 </blockquote>
 <p>我会去做各大在线网站的题目，然后记录于此便于我回顾。</p>
 <h3 id="Bugku"><a href="#Bugku" class="headerlink" title="Bugku"></a>Bugku</h3><h4 id="Bugku-多种方法解决"><a href="#Bugku-多种方法解决" class="headerlink" title="Bugku_多种方法解决"></a>Bugku_多种方法解决</h4><p>得到一个exe文件，用winhex打开，是图片的base64编码</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520100148528.png" alt="image-20220520100148528"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520100148528.png"></p>
 <p>1）用命令解决</p>
 <pre class=" language-shell"><code class="language-shell">base64 -d "解密的内容">>flag.png
 </code></pre>
@@ -886,9 +889,128 @@ os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(
 <p>看到第二个文件头<code>FF D8 FF E0</code>，以下的都复制，然后新建一个HEX（十六进制）文件，粘贴进去，保存为jpg文件。</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220521010506268.png"></p>
 <p><code>flag{Mumuzi_the_God_of_Matryoshka}</code> 不知道是不是我看清楚了，用stegsolve将两张图片合成一下</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220521011057482.png" alt="image-20220521011057482"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220521011057482.png"></p>
 <p>提交成功。</p>
-<h2 id="Cx-Additions"><a href="#Cx-Additions" class="headerlink" title="Cx Additions"></a>Cx Additions</h2><h3 id="常见的文件头"><a href="#常见的文件头" class="headerlink" title="常见的文件头"></a>常见的文件头</h3><table>
+<h4 id="Bugku-split-all"><a href="#Bugku-split-all" class="headerlink" title="Bugku_split_all"></a>Bugku_split_all</h4><p>得到一张PNG的图，打开010editor，查看发现有一个PNG标识和一部分GIF的头。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522082958529.png" alt="image-20220522082958529"></p>
+<p>把全面的删掉，补全GIF<code>47 49 46 38</code>。然后改为gif，就变成了一个比签还细的图片。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522083252034.png"></p>
+<p>这肯定是分离出gif，然后拼接起来才能看见完整的图。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522083531652.png"></p>
+<p>没想到这个gif网址直接满足了我的需求，太强了。</p>
+<p>再借助大佬的python脚本试试</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+
+im <span class="token operator">=</span> Image<span class="token punctuation">.</span>open<span class="token punctuation">(</span><span class="token string">'file.gif'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 分离</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">770</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true"># 在给定的文件序列中查找指定的帧。如果查找超越了序列的末尾，则产生一个EOFError异常。</span>
+    <span class="token comment" spellcheck="true"># 当文件序列被打开时，PIL库自动指定到第0帧上。</span>
+    im<span class="token punctuation">.</span>seek<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+    im<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'123/'</span><span class="token operator">+</span>str<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">'.png'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 保存在123的目录中</span>
+
+new_one <span class="token operator">=</span> Image<span class="token punctuation">.</span>new<span class="token punctuation">(</span><span class="token string">'RGB'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">770</span><span class="token punctuation">,</span> <span class="token number">432</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 拼接</span>
+<span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">770</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ima <span class="token operator">=</span> Image<span class="token punctuation">.</span>open<span class="token punctuation">(</span><span class="token string">'123/'</span><span class="token operator">+</span>str<span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">'.png'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 打开123目录</span>
+    <span class="token comment" spellcheck="true"># 将一张图粘贴到另一张图像上。变量box或者是一个给定左上角的2元组，或者是定义了左，上，右和下像素坐标的4元组，或者为空（与（0，0）一样）。</span>
+    <span class="token comment" spellcheck="true"># 如果给定4元组，被粘贴的图像的尺寸必须与区域尺寸一样。如果模式不匹配，被粘贴的图像将被转换为当前图像的模式。</span>
+    new_one<span class="token punctuation">.</span>paste<span class="token punctuation">(</span>ima<span class="token punctuation">,</span> <span class="token punctuation">(</span>j<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">432</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 保存</span>
+new_one<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">"flag.png"</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522084126982.png"></p>
+<p>非常滴nice，<code>flag{9f019c27eca746beb9c297cd70bf93ca}</code></p>
+<h4 id="Bugku-look"><a href="#Bugku-look" class="headerlink" title="Bugku_look"></a>Bugku_look</h4><p>得到一张bmp的文件，但是打不开图片，文件头看一下</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522091744717.png"></p>
+<p>是压缩包，改为zip，然后解压，得到图片</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522091931682.png"></p>
+<p>安装zsteg</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522090730418.png"></p>
+<p>使用zsteg -a 得到flag</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522092206285.png"></p>
+<p><code>flag{3c15d07e-5d9a-4ccb-b67c-d2369eb2c1b9}</code></p>
+<h4 id="Bugku-放松一下吧"><a href="#Bugku-放松一下吧" class="headerlink" title="Bugku_放松一下吧"></a>Bugku_放松一下吧</h4><p>得到几个压缩包，第一个压缩包需要你玩游戏得到另一个的password，这应该是老套路</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522094950015.png"></p>
+<p>修改关卡。然后R刷新</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522094936644.png"></p>
+<p>得到了password</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522105521682.png"></p>
+<p>用密码解压另一个文件得到一个提示和一个图片。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522132530546.png"></p>
+<p>Passsword是base加密，但不知道是多少，于是又临时学习了以下编码知识</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522133727773.png"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522133528353.png"></p>
+<p>早期F5算法总插入 “<strong>JPEG Encoder Copyright 1998,James R.Weeks and BioElectroMech</strong>”, 而普通图像编辑器几乎不会插入这条信息。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522132845817.png"></p>
+<p>原来刷新的意思是F5，下载工具：<a target="_blank" rel="noopener" href="https://github.com/matthewgao/F5-steganography.git">https://github.com/matthewgao/F5-steganography.git</a></p>
+<p>执行命令</p>
+<pre class=" language-shell"><code class="language-shell">java Extract 你需要刷新.jpg -p 66666666
+</code></pre>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522145841083.png"></p>
+<p>得到：<code>bugku{F5_and_i_wanna_is_so_cool}</code></p>
+<h4 id="Bugku-cisco"><a href="#Bugku-cisco" class="headerlink" title="Bugku_cisco"></a>Bugku_cisco</h4><p>下载解压出来是两个文本文件<code>1.txt</code>和<code>2.txt</code>，然后第二个文本是一个什么加密，有点像base65。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522151012738.png"></p>
+<p>是AES加密，cisco的模拟文件是pkt，把1.txt改成这个后缀。</p>
+<p>还得下载思科模拟器，唉，这不折磨人吗，给个下载链接咯：<a target="_blank" rel="noopener" href="http://www.downza.cn/soft/30116.html">http://www.downza.cn/soft/30116.html</a></p>
+<p>用这个软件还需要去注册一个账号，之后登入提示需要到邮件更改密码。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522154337799.png"></p>
+<p><a target="_blank" rel="noopener" href="https://www.netacad.com/courses/iot/introduction-iot#anchor">https://www.netacad.com/courses/iot/introduction-iot#anchor</a> 点sign up today</p>
+<p>搞了半天还是不行，这时突然来了封邮件，再试试。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522161850679.png"></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45798690/article/details/123589033">https://blog.csdn.net/weixin_45798690/article/details/123589033</a> 注册指南</p>
+<p>在思科学院做了点题，那边就登入成功了。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522174446739.png"></p>
+<p>阿这，版本又出现了问题。只能换一个了。</p>
+<p>最后，换成了7.3版本，</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522175301789.png"></p>
+<p>题目的描述提示密码是flag，点击交换机，切换到命令模式</p>
+<pre class=" language-shell"><code class="language-shell">Switch>ena
+Switch>enable 
+Password: 
+Switch#show running-config | include flag
+enable password flag
+banner motd ^Cflag^C
+ password flag{wenzi_houzhui_sike}
+Switch#
+</code></pre>
+<p><code>flag{wenzi_houzhui_sike}</code></p>
+<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220522180036435.png"></p>
+<h4 id="Bugku-被勒索了"><a href="#Bugku-被勒索了" class="headerlink" title="Bugku_被勒索了"></a>Bugku_被勒索了</h4><p>描　　述: 题主遇到真实事件改编 全盘所有文件都被加密了，检查文件的时候发现了火绒的数据目录没有被加密，不知道能不能发现什么线索</p>
+<p>下载一个火绒，首先将Huorong文件解压为到Huorong中，然后把找个文件放到<code>C:\ProgramData</code>下，再安装火绒，点击隔离区恢复这个文件。</p>
+<blockquote>
+<p>目前5.0版本会在安装时删除数据文件，所以要使用低版本的火绒，我用的是sysdiag-full-3.0.0.24.exe</p>
+</blockquote>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522190158472.png"></p>
+<p>得到<code>flag{Virus_traceability}</code></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522190335704.png"></p>
+<h4 id="Bugku-disordered-zip"><a href="#Bugku-disordered-zip" class="headerlink" title="Bugku_disordered_zip"></a>Bugku_disordered_zip</h4><p>给了一个压缩包，打不开。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522191632687.png"></p>
+<p>放010里看发现是0304开头，修改为<code>50 4B 03 04</code>。按insert键边插入模式就不会覆盖。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522192413091.png"></p>
+<p>解压需要密码，放Linux中查找隐藏信息。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522192704072.png"></p>
+<p>发现一张PNG，分离出来。是一张二维码，但是缺了两个角，是两个定位的，修补以下。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522192829464.png"></p>
+<p>就用画图补一下</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522193228971.png"></p>
+<p>识别得到<code>psw:yeQFPDS6uTaRasdvwLKoEZq0OiUk</code></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522193349968.png"></p>
+<p>经过尝试，在栅栏中解出</p>
+<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220522194020728.png" alt="image-20220522194020728"></p>
+<p>得到一个flag文件，分析文件头，<code>25 50 44 46</code>是PDF文件</p>
+<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220522194346788.png" alt="image-20220522194346788"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522194643853.png"></p>
+<p>改文件后缀为pdf打开，搜索flag发现隐藏的flag，直接复制白色文字，粘贴。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522194914430.png"></p>
+<p><code>flag is not her</code>但这不是flag。</p>
+<p>用webstego解密</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522200212551.png"></p>
+<p><code>flag{ZnSRBg8vNJV5bXfUaxryetQjO4l}</code></p>
+<h2 id="Cx-Additions"><a href="#Cx-Additions" class="headerlink" title="Cx Additions"></a>Cx Additions</h2><h3 id="File-Format"><a href="#File-Format" class="headerlink" title="File Format"></a>File Format</h3><table>
 <thead>
 <tr>
 <th align="center">格式</th>
@@ -923,8 +1045,120 @@ os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(
 <td align="center">.avi</td>
 <td align="center"><code>41 56 49 20</code></td>
 </tr>
+<tr>
+<td align="center">.pdf</td>
+<td align="center"><code>25 50 44 46</code></td>
+</tr>
 </tbody></table>
 <p>常用文件的文件头如下(16进制)：<br>JPEG (jpg)，文件头：FFD8FFE1<br>PNG (png)，文件头：89504E47<br>GIF (gif)，文件头：47494638<br>TIFF (tif)，文件头：49492A00<br>Windows Bitmap (bmp)，文件头：424DC001<br>CAD (dwg)，文件头：41433130<br>Adobe Photoshop (psd)，文件头：38425053<br>Rich Text Format (rtf)，文件头：7B5C727466<br>XML (xml)，文件头：3C3F786D6C<br>HTML (html)，文件头：68746D6C3E<br>Email [thorough only] (eml)，文件头：44656C69766572792D646174653A<br>Outlook Express (dbx)，文件头：CFAD12FEC5FD746F<br>Outlook (pst)，文件头：2142444E<br>MS Word/Excel (xls.or.doc)，文件头：D0CF11E0<br>MS Access (mdb)，文件头：5374616E64617264204A<br>WordPerfect (wpd)，文件头：FF575043<br>Adobe Acrobat (pdf)，文件头：255044462D312E<br>Quicken (qdf)，文件头：AC9EBD8F<br>Windows Password (pwl)，文件头：E3828596<br>ZIP Archive (zip)，文件头：504B0304<br>RAR Archive (rar)，文件头：52617221<br>Wave (wav)，文件头：57415645<br>AVI (avi)，文件头：41564920<br>Real Audio (ram)，文件头：2E7261FD<br>Real Media (rm)，文件头：2E524D46<br>MPEG (mpg)，文件头：000001BA<br>MPEG (mpg)，文件头：000001B3<br>Quicktime (mov)，文件头：6D6F6F76<br>Windows Media (asf)，文件头：3026B2758E66CF11<br>MIDI (mid)，文件头：4D546864</p>
+<h3 id="Cypher-Method"><a href="#Cypher-Method" class="headerlink" title="Cypher Method"></a>Cypher Method</h3><p>参考：<a target="_blank" rel="noopener" href="http://news.sohu.com/a/516614081_120818776">L</a></p>
+<h4 id="Web类编码"><a href="#Web类编码" class="headerlink" title="Web类编码"></a>Web类编码</h4><pre class=" language-xml"><code class="language-xml"># HTML源码
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>javascript:alert(1)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+# JS编码：
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>javascript:\u0061\u006c\u0065\u0072\u0074(1)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+# URL编码：
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>javascript:%5c%75%30%30%36%31%5c%75%30%30%36%63%5c%75%30%30%36%35%5c%75%30%30%37%32%5c%75%30%30%37%34(1)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+# HTML编码：
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&amp;#106;&amp;#97;&amp;#118;&amp;#97;&amp;#115;&amp;#99;&amp;#114;&amp;#105;&amp;#112;&amp;#116;&amp;#58;&amp;#37;&amp;#53;&amp;#99;&amp;#37;&amp;#55;&amp;#53;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#54;&amp;#37;&amp;#51;&amp;#49;&amp;#37;&amp;#53;&amp;#99;&amp;#37;&amp;#55;&amp;#53;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#54;&amp;#37;&amp;#54;&amp;#51;&amp;#37;&amp;#53;&amp;#99;&amp;#37;&amp;#55;&amp;#53;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#54;&amp;#37;&amp;#51;&amp;#53;&amp;#37;&amp;#53;&amp;#99;&amp;#37;&amp;#55;&amp;#53;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#55;&amp;#37;&amp;#51;&amp;#50;&amp;#37;&amp;#53;&amp;#99;&amp;#37;&amp;#55;&amp;#53;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#55;&amp;#37;&amp;#51;&amp;#52;&amp;#40;&amp;#49;&amp;#41;<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+</code></pre>
+<p><strong>URL编码</strong></p>
+<p>一般来说，URL只能使用英文字母、阿拉伯数字和某些标点符号，不能使用其他文字和符号。这意味着，如果URL中有汉字和其他符号，就必须编码后使用。我们在进行 URL 请求时，浏览器会自动帮我们把部分符号转换成 <code>%</code> + <code>十六进制数字</code> 的形式<br> <code>http://127.0.0.1/flag.php?x=1{)wo我</code><br> 转化为<br> <code>http://127.0.0.1/flag.php?x=1{)wo%E6%88%91</code></p>
+<p><strong>HTML实体编码</strong></p>
+<p>因为HTML对符号很敏感，比如空格，“&lt;”,“&gt;”等，于是这些符号需要用一些编码代替，这些编码就是HTML实体编码。</p>
+<p><strong>JavaScript编码</strong></p>
+<p>JavaScript编码主要是为了解决URL编码留下的坑进行的</p>
+<p>escape()函数编码：形式为<code>%uXXXX</code>、<code>%XX</code>，字符范围<code>0-F</code>，本身就是URL编码的一种实现方式</p>
+<p>Unicode 编码：<code>'\u' + '四位十六进制数字'</code>不够四位前面补0</p>
+<p>JSFuck： 一种基于JavaScript原子部分的晦涩的编程风格，它只有6种字符：<code>[</code> <code>]</code> <code>(</code> <code>)</code> <code>!</code> <code>+</code> ，也可以来编写程序并执行，可以做到所有JavaScript能做的事情</p>
+<h4 id="MD5"><a href="#MD5" class="headerlink" title="MD5"></a>MD5</h4><p>MD5以512位分组来处理输入文本，每一分组又划分为16个32位子分组。算法的输出由四个32位分组组成，将它们级联形成一个128位散列值。是不可逆的加密。</p>
+<h4 id="AES加密"><a href="#AES加密" class="headerlink" title="AES加密"></a>AES加密</h4><p>特征：AES加密最重要的特征还是它的S-box,反汇编代码中很明显，而且容易定位</p>
+<p>又称Rijndael加密法，是美国联邦政府采用的一种区块加密标准。</p>
+<p>明文分组的长度为128位即16字节，密钥长度可以为16，24或者32字节(128，192，256位)。根据密钥的长度，算法被称为AES-128，AES-192或者AE-256。</p>
+<p>从安全性来看，AES-256安全性最高 从性能来看，AES-128性能最高</p>
+<h4 id="sha1"><a href="#sha1" class="headerlink" title="sha1"></a>sha1</h4><p>对于长度小于2^64位的消息，SHA1会产生一个160位的消息摘要。</p>
+<h4 id="CRS32"><a href="#CRS32" class="headerlink" title="CRS32"></a>CRS32</h4><p>在诸多检错手段中，CRC是最著名的一种。CRC的全称是循环冗余校验。</p>
+<p>特征：CRC32的计算结果只有8位</p>
+<p>Cyclic Redundancy Check循环冗余检验，是基于数据计算一组效验码，用于核对数据传输过程中是否被更改或传输错误。 算法原理 假 设数据传输过程中需要发送15位的二进制信息g=101001110100001，这串二进制码可表示为代数多项式g(x) = x^14 + x^12 + x^9 + x^8 + x^7 + x^5 + 1，其中g中第k位的值，对应g(x)中x^k的系数。将g(x)乘以x^m，既将g后加m个0，然后除以m阶多项式h(x)，得到的(m-1)阶余项 r(x)对应的二进制码r就是CRC编码。<br>h(x)可以自由选择或者使用国际通行标准，一般按照h(x)的阶数m，将CRC算法称为CRC-m，比如CRC-32、CRC-64等。国际通行标准可以<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Cyclic_redundancy_check">look</a><br>g(x)和h(x)的除运算，可以通过g和h做xor（异或）运算。比如将11001与10101做xor运算： </p>
+<p>这里把计算过程的要点记录一下：</p>
+<ol>
+<li><p>CRC32是CRC算法一种，先参考Wiki上CRC算法的原理和实例搞明白基本的计算方法。</p>
+</li>
+<li><p>最常见的CRC32算法就是IEEE 802.3里生成FCS字段用的那个：</p>
+</li>
+</ol>
+<p>a) CRC32使用的Polynomial是，是什么，你知道码</p>
+<p>b) IEEE 802.3在传送数据时使用的是最低有效位优先 (least significant bit first)，所以要根据你机器的架构转换成有效的比特流输入。同理，输出流也一样。</p>
+<p>c) 为了有效识别输入流开头和结尾的零，开头的32位要按位取反(complement)，最后计算出的余数也要按位取反。</p>
+<p>按照上述方法计算能得到想要的CRC32值了。</p>
+<h4 id="Base-系列编码"><a href="#Base-系列编码" class="headerlink" title="Base 系列编码"></a>Base 系列编码</h4><p>是我们最常见的编码，除此之外，其实还有 Base16、Base32、Base58、Base85、Base100 等，他们之间最明显的区别就是使用了不同数量的可打印字符对任意字节数据进行编码，比如 使用了 64 个可打印字符（A-Z、a-z、0-9、+、/），Base16 使用了 16 个可打印字符（A-F、0-9），这里主要讲怎么快速识别，其具体原理可自行百度，Base 系列主要特征如下：</p>
+<ul>
+<li><strong>Base16</strong>：结尾没有等号，数字要多于字母；</li>
+<li><strong>Base32</strong>：字母要多于数字，明文数量超过 10 个，结尾可能会有很多等号；</li>
+<li><strong>Base58</strong>：结尾没有等号，字母要多于数字；</li>
+<li>：一般情况下结尾都会有 1 个或者 2 个等号，明文很少的时候可能没有；</li>
+<li><strong>Base85</strong>：等号一般出现在字符串中间，含有一些奇怪的字符；</li>
+<li><strong>Base100</strong>：密文由 Emoji 表情组成。</li>
+</ul>
+<h4 id="莫斯码"><a href="#莫斯码" class="headerlink" title="莫斯码"></a>莫斯码</h4><p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134036989.png" alt="字母"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134101319.png" alt="数字"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134114478.png" alt="标点"></p>
+<h4 id="栅栏密码"><a href="#栅栏密码" class="headerlink" title="栅栏密码"></a>栅栏密码</h4><p>特征：字母不会太多</p>
+<p>①把将要传递的信息中的字母交替排成上下两行。<br>②再将下面一行字母排在上面一行的后边，从而形成一段密码。</p>
+<p>明文：THE LONGEST DAY MUST HAVE AN END<br>加密：<br>1、把将要传递的信息中的字母交替排成上下两行。<br>T E O G S D Y U T A E N N<br>H L N E T A M S H V A E D</p>
+<p>2、 密文：<br>将下面一行字母排在上面一行的后边。<br>TEOGSDYUTAENN HLNETAMSHVAED<br>解密：<br>先将密文分为两行<br>T E O G S D Y U T A E N N<br>H L N E T A M S H V A E D<br>再按上下上下的顺序组合成一句话<br>明文：THE LONGEST DAY MUST HAVE AN END</p>
+<h4 id="培根密码"><a href="#培根密码" class="headerlink" title="培根密码"></a>培根密码</h4><p>培根密码，又名倍康尼密码（Bacon’s cipher）是由法兰西斯·培根发明的一种隐写术，它是一种本质上用二进制数设计的，没有用通常的0和1来表示，而是采用a和b，看到一串的a和b，并且五个一组，那么就是培根加密了。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134248890.png"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134305859.png"></p>
+<h4 id="凯撒密码"><a href="#凯撒密码" class="headerlink" title="凯撒密码"></a>凯撒密码</h4><p>通过把字母移动一定的位数来实现加密和解密。明文中的所有字母都在字母表上向后（或向前）按照一个固定数目进行偏移后被替换成密文。只需简单地统计字频就可以破译</p>
+<h4 id="维吉尼亚密码"><a href="#维吉尼亚密码" class="headerlink" title="维吉尼亚密码"></a>维吉尼亚密码</h4><p>维吉尼亚密码是在凯撒密码基础上产生的一种加密方法，它将凯撒密码的全部25种位移排序为一张表，与原字母序列共同组成26行及26列的字母表。另外，维吉尼亚密码必须有一个密钥，这个密钥由字母组成，最少一个，最多可与明文字母数量相等。维吉尼亚密码表如下：</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134355061.png"></p>
+<h4 id="猪圈密码"><a href="#猪圈密码" class="headerlink" title="猪圈密码"></a>猪圈密码</h4><p>是一种以格子为基础的简单替代式密码，是共济会的暗号</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522140531088.png"></p>
+<h4 id="波利比奥斯方阵密码Polybius"><a href="#波利比奥斯方阵密码Polybius" class="headerlink" title="波利比奥斯方阵密码Polybius"></a>波利比奥斯方阵密码Polybius</h4><p>公元前2世纪,一个叫Polybius的希腊人设计了一种将字母编码成符号对的方法,他使用了一个称为Polybius的校验表,这个表中包含许多后来在加密系统中非常常见的成分。Polybius校验表由一个5行5列的网格组成,网格中包含26个英文字母,其中I和J在同一格中。相应字母用数对表示。在古代,这种棋盘密码被广泛使用。</p>
+<h4 id="rabbit加密"><a href="#rabbit加密" class="headerlink" title="rabbit加密"></a>rabbit加密</h4><p>特征：有U2Fsd开头</p>
+<h4 id="utf-7编码"><a href="#utf-7编码" class="headerlink" title="utf-7编码"></a>utf-7编码</h4><p>特征：url解码后可以看到如下，里面有“+/v++”，可以猜出这是UTF-7编码</p>
+<p>UTF-7:这是一种使用7位ASCII码]对Unicode码进行转换的编码。它的设计目标仍然是为了在只能传递7为编码的邮件网关中传递信息。UTF-7对英语字母、数字和常见符号直接显示，而对其他符号用修正的Base64编码。<strong>符号+和-号</strong>控制编码过程的<strong>开始和暂停</strong>。所以乱码中如果夹有英文单词，并且相伴有+号和-号，这就有可能是UTF-7编码。</p>
+<h4 id="Uuencode编码"><a href="#Uuencode编码" class="headerlink" title="Uuencode编码"></a>Uuencode编码</h4><p>Uuencode是二进制信息和文字信息之间的转换编码，也就是机器和人眼识读的转换。Uuencode编码方案常见于电子邮件信息的传输，目前已被多用途互联网邮件扩展（MIME）大量取代。</p>
+<p>Uuencode将输入文字以每三个字节为单位进行编码，如此重复进行。如果最后剩下的文字少于三个字节，不够的部份用零补齐。这三个字节共有24个Bit，以6-bit为单位分为4个群组，每个群组以十进制来表示所出现的数值只会落在0到63之间。将每个数加上32，所产生的结果刚好落在ASCII字符集中可打印字符（32-空白…95-底线）的范围之中。</p>
+<p>Uuencode编码每60个将输出为独立的一行（相当于45个输入字节），每行的开头会加上长度字符，除了最后一行之外，长度字符都应该是“M”这个ASCII字符（77=32+45），最后一行的长度字符为32+剩下的字节数目这个ASCII字符。</p>
+<h4 id="rot13加密算法"><a href="#rot13加密算法" class="headerlink" title="rot13加密算法"></a>rot13加密算法</h4><p>Rot13是一种非常简单的替换加密算法，只能加密26个英语字母。方法是：把每个字母用其后第13个字母代替。<br>因为有26个字母，取其一半13。</p>
+<pre class=" language-python"><code class="language-python">s <span class="token operator">=</span> <span class="token string">"xrlvf23xfqwsxsqf"</span>
+ans <span class="token operator">=</span> <span class="token string">""</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> s<span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token string">'a'</span> <span class="token operator">&lt;=</span> i <span class="token operator">&lt;=</span> <span class="token string">'z'</span><span class="token punctuation">:</span>
+        ans <span class="token operator">+=</span> chr<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">(</span>ord<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">-</span>ord<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">13</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">26</span> <span class="token operator">+</span> ord<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        ans<span class="token operator">+=</span>i
+<span class="token keyword">print</span><span class="token punctuation">(</span>ans<span class="token punctuation">)</span>
+</code></pre>
+<h4 id="当铺密码"><a href="#当铺密码" class="headerlink" title="当铺密码"></a>当铺密码</h4><p>该加密算法是根据当前汉字有多少笔画出头，对应的明文就是数字几。</p>
+<p>当前汉字有多少笔画出头，就是转化成数字几<br>例如：口 0 田 0 由 1 中 2 人 3 工 4 大 5 王 6 夫 7 井 8 羊 9</p>
+<p>解密脚本</p>
+<pre class=" language-python"><code class="language-python">dh <span class="token operator">=</span> <span class="token string">'田口由中人工大土士王夫井羊壮'</span>
+ds <span class="token operator">=</span> <span class="token string">'00123455567899'</span>
+
+cip <span class="token operator">=</span> <span class="token string">'王壮 夫工 王中 王夫 由由井 井人 夫中 夫夫 井王 土土 夫由 土夫 井中 士夫 王工 王人 土由 由口夫'</span>
+s <span class="token operator">=</span> <span class="token string">''</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> cip<span class="token punctuation">:</span>
+    <span class="token keyword">if</span> i <span class="token keyword">in</span> dh<span class="token punctuation">:</span>
+        s <span class="token operator">+=</span> ds<span class="token punctuation">[</span>dh<span class="token punctuation">.</span>index<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        s <span class="token operator">+=</span> <span class="token string">' '</span>
+<span class="token comment" spellcheck="true">#print(s)</span>
+
+ll <span class="token operator">=</span> s<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span>
+t <span class="token operator">=</span> <span class="token string">''</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>len<span class="token punctuation">(</span>ll<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    t <span class="token operator">+=</span> chr<span class="token punctuation">(</span>int<span class="token punctuation">(</span>ll<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">+</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'t='</span><span class="token punctuation">,</span> t<span class="token punctuation">,</span> <span class="token string">'\t\tt.lower()='</span><span class="token punctuation">,</span> t<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="各种奇葩加密"><a href="#各种奇葩加密" class="headerlink" title="各种奇葩加密"></a>各种奇葩加密</h4><h5 id="与佛论禅-新约佛论禅"><a href="#与佛论禅-新约佛论禅" class="headerlink" title="与佛论禅/新约佛论禅"></a>与佛论禅/新约佛论禅</h5><p>字符串转换后，是一些佛语。</p>
+<h5 id="与熊论道"><a href="#与熊论道" class="headerlink" title="与熊论道"></a>与熊论道</h5><p>字符串转换后，是一些熊语。</p>
+<h5 id="兽音译者"><a href="#兽音译者" class="headerlink" title="兽音译者"></a>兽音译者</h5><p>字符串转换后，是一些兽语。</p>
+<h5 id="社会核心价值观"><a href="#社会核心价值观" class="headerlink" title="社会核心价值观"></a>社会核心价值观</h5><p>字符串转换后，是社会核心价值观。</p>
+<h5 id="颜文字加密"><a href="#颜文字加密" class="headerlink" title="颜文字加密"></a>颜文字加密</h5><p>字符串转换后，是颜文字。</p>
+<h5 id="Ook加密"><a href="#Ook加密" class="headerlink" title="Ook加密"></a>Ook加密</h5><p><a target="_blank" rel="noopener" href="https://www.splitbrain.org/services/ook">https://www.splitbrain.org/services/ook</a></p>
+<p>OOK！只有三个不同的语法元素：<br>Ook。<br>OOK？<br>OOK！</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
                 
             </div>
@@ -1164,17 +1398,16 @@ os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/a291.html">
+                <a href="/posts/6250.html">
                     <div class="card-image">
                         
-                        <img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516143830756.png" class="responsive-img" alt="Miscellaneous4">
+                        <img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516143830756.png" class="responsive-img" alt="Miscellaneous5">
                         
-                        <span class="card-title">Miscellaneous4</span>
+                        <span class="card-title">Miscellaneous5</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1184,9 +1417,9 @@ os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-18
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-22
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1199,7 +1432,6 @@ os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1545,7 +1777,7 @@ os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">251.4k</span>&nbsp;字
+                class="white-color">263.5k</span>&nbsp;字
             
             
             
