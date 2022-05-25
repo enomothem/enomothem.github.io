@@ -467,7 +467,7 @@
 <script src="https://fastly.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '9c32429c292637fdf6cb659cd0ba247b03ac4980727fca1df0636eca84751ea2';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('口令！Sent to:enomothem@outlook.com')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -637,21 +637,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-24
+                    2022-05-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.1k
+                    8.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    28 分
+                    35 分
                 </div>
                 
 
@@ -672,7 +672,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Capture-The-Flag-Miscellaneous-5"><a href="#Capture-The-Flag-Miscellaneous-5" class="headerlink" title="Capture The Flag Miscellaneous 5"></a>Capture The Flag Miscellaneous 5</h1><p>Miscellaneous 【6】</p>
-<p>Miscellaneous 【5】  – flag{misc}</p>
+<p>Miscellaneous 【5】  –key{flag{misc}}</p>
 <p>Miscellaneous 【4】</p>
 <hr>
 <p>Miscellaneous 【3】 </p>
@@ -691,7 +691,7 @@
 <p>图片：</p>
 <ul>
 <li>jpg\png\bmp  隐写文件、LSB隐写、文件高度隐藏（图片残缺）</li>
-<li>gif 分裂拼接、分裂合成</li>
+<li>gif 分裂拼接、分裂合成 </li>
 </ul>
 <p>多个文件：注意文件大小，压缩差，字节拼接</p>
 <h4 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h4><p><strong>WinHex yyds</strong></p>
@@ -703,6 +703,8 @@
 <li><p>pngcheck、tweakpng  查看png的CRC是否正确，错误则代表被修改宽高等</p>
 </li>
 <li><p>base64 转码</p>
+</li>
+<li><p>jadx-gui java反编译</p>
 </li>
 <li><p>binwalk 查看文件中是否隐藏信息</p>
 </li>
@@ -724,6 +726,10 @@ fcrackzip -D -p /usr/share/wordlists/rockyou.txt -u crack_this.zip
 # 使用字典爆破
 </code></pre>
 </li>
+<li><p>crunch 密码字典生成</p>
+</li>
+<li><p>aircrack-ng wifi密码破解</p>
+</li>
 <li><p>tshark Linux版本的wireshark工具。</p>
 </li>
 <li><p>strings、egrep、awk  找东西滴</p>
@@ -737,10 +743,12 @@ fcrackzip -D -p /usr/share/wordlists/rockyou.txt -u crack_this.zip
 </ul>
 <p><strong>RouterPassview</strong> 路由器配置文件查看器</p>
 <p><strong>好玩的工具</strong></p>
-<pre><code>- http://www.atoolbox.net/ 好好玩
-- https://www.pdfpai.com/downgif2png 
-- https://www.11zon.com/zh-cn/
-</code></pre>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.atoolbox.net/">http://www.atoolbox.net/</a> 好好玩</li>
+<li><a target="_blank" rel="noopener" href="https://www.pdfpai.com/downgif2png">https://www.pdfpai.com/downgif2png</a> </li>
+<li> <a target="_blank" rel="noopener" href="https://www.11zon.com/zh-cn/">https://www.11zon.com/zh-cn/</a></li>
+<li> <a target="_blank" rel="noopener" href="https://the-x.cn/">https://the-x.cn/</a> 推荐</li>
+</ul>
 <p><strong>加密算法在线网站</strong></p>
 <ul>
 <li>MD5<ul>
@@ -754,6 +762,8 @@ fcrackzip -D -p /usr/share/wordlists/rockyou.txt -u crack_this.zip
 <li><a target="_blank" rel="noopener" href="http://www.ctftools.com/down/">http://www.ctftools.com/down/</a></li>
 <li><a target="_blank" rel="noopener" href="http://hi.pcmoe.net/index.html">http://hi.pcmoe.net/index.html</a></li>
 <li><a target="_blank" rel="noopener" href="http://www.ab126.com/goju/1711.html">http://www.ab126.com/goju/1711.html</a>  进制-ASCII</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Ganapati/RsaCtfTool">https://github.com/Ganapati/RsaCtfTool</a> Rsa</li>
+<li><a target="_blank" rel="noopener" href="https://crypot.51strive.com/sha256.html">https://crypot.51strive.com/sha256.html</a> sha1-sha2</li>
 </ul>
 </li>
 </ul>
@@ -763,16 +773,16 @@ fcrackzip -D -p /usr/share/wordlists/rockyou.txt -u crack_this.zip
 <p>我会去做各大在线网站的题目，然后记录于此便于我回顾。</p>
 <h3 id="Bugku"><a href="#Bugku" class="headerlink" title="Bugku"></a>Bugku</h3><h4 id="Bugku-想要种子吗"><a href="#Bugku-想要种子吗" class="headerlink" title="Bugku_想要种子吗"></a>Bugku_想要种子吗</h4><p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522204605517.png"></p>
 <p>得到一张jpg，首先随便简单看看，发现详细信息提示STEGHIDE，然后用这个工具打开，额，我没这个工具，<a target="_blank" rel="noopener" href="http://steghide.sourceforge.net/">Download</a>一下。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522202855192.png" alt="image-20220522202855192"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522202855192.png"></p>
 <p>简单滴学习了一下使用方法，得到一个文件，网盘地址？难道是，。种子？</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522204510907.png" alt="image-20220522204510907"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522204510907.png"></p>
 <p>下载下来</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522205922313.png"></p>
 <p>解压需要密码，解压出一个txt里面的six six six不是密码，实在找不到密码了，直接爆破</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522210955690.png"></p>
 <p>牛逼。</p>
 <p>还是啥都没，放binwalk看一下。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522212913947.png" alt="image-20220522212913947"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522212913947.png"></p>
 <p>得到一张PNG，010打开报错，一般宽高出问题了，用脚本跑出宽高</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> zlib
 <span class="token keyword">import</span> struct
@@ -805,7 +815,7 @@ filename <span class="token operator">=</span> <span class="token string">'flag.
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522213307282.png"></p>
 <p><code>fkyg{SfirgsXmuqRoqpemr}</code></p>
 <p>看看还有什么信息，底部得到一个网址，<a target="_blank" rel="noopener" href="https://www.guballa.de/vigenere-solver%EF%BC%8C">https://www.guballa.de/vigenere-solver，</a></p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522213347890.png" alt="image-20220522213347890"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522213347890.png"></p>
 <p>是Vigenere Solver（维吉尼亚密码）选择English，得到flag。</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522213824625.png"></p>
 <p><code>flag{ThisisYourTorrent}</code></p>
@@ -907,7 +917,7 @@ Hello, world<span class="token operator">!</span>
 <p>改进后的bash shell，仅需要再继续<code>| base64 -d</code>，即可获得base64解码后的字符串。</p>
 <pre class=" language-shell"><code class="language-shell">cat tempsz.txt | awk '{gsub(/2345678910/,"0") ; print $0 }' | awk '{ gsub(/A/,"1") ; print $0 }' | perl -lpe '$_=pack"B*",$_' | base64 -d
 </code></pre>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220523223953954.png" alt="image-20220523223953954"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220524064537.png"></p>
 <p>写到这里，我感慨到，shell真是好啊，我一定要写一个shell的笔记，因为我迫不及待的想要把shell的知识安利给你们，一起来学shell吧。</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220523232632.png"></p>
 <p>好了，回到题目中来，积累知识，沉淀知识，运用知识，分享知识，学而思，思而学。</p>
@@ -926,9 +936,189 @@ Hello, world<span class="token operator">!</span>
 <p>得到隐藏的数据</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220524004712.png"></p>
 <p>这谁看得清啊，旋转一下</p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220524013029009.png" alt="image-20220524013029009"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220524064553.png"></p>
 <p>通过识别的字样来看，可以猜到是题目名的变种flag{P0ker_F?ce}，，不对，题目提示说@和a不要弄混了，？处应该是a但是应该是@</p>
 <p>最后把0改o成功，好离谱，这明明是0。</p>
+<h4 id="Bugku-where-is-flag-4"><a href="#Bugku-where-is-flag-4" class="headerlink" title="Bugku_where is flag 4"></a>Bugku_where is flag 4</h4><p>下载得到一个文本，里面是Base64，解码发现是乱码，猜想是不是一个文件的二进制文件，转为十六进制。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220524214256.png"></p>
+<p>发现头部文件是ZIP的，但数据之间被插入无用字符，所以要提取奇数出来。</p>
+<p>用python</p>
+<pre class=" language-python"><code class="language-python">src<span class="token operator">=</span><span class="token string">'5D0346B8073D0C4A114C01050328050C0E810F0CFF0C94986E3A5E38105909B837EDD98B35880D040D090C093F89080203010607068D0C0A0E02040A6C626DCB6E116C7F25EF734E7C817F434CBEC2BF449141CAABFA0BE2C998468B8BDFCFF4C3A62FFB28DDC7A64CBAA7DC8ACCC2FE40FA8DBDC0FCC09ECAFDCEF3CEEEC9C84CBF8DFD4AF3CDBF29FC84AA2FF50D1F47ADAB51011AD051C34F68711E65CE76147EAB5A226EE466EA48554FCD62AF72945AEC602A9DDF62082D0808520549B907170E241A4709041C4D0E0D0923030E0A840606F006909E6538503E1E580CB533EBDC8A3380000D03040E0D3E80010B0301080B0B860D0223480A0C020E070000030D0C000D040B2E060D0E0D0903000E0C0405030A080A6E626EC26B16697028EC7F4E798E72480BA9090C210803080A080D020B04030A0A1E0E0F1B850F073E2B6E76BEEE1FC1AA48D700D7720C1FA71D69515A011AD9AF4CDD0CDB7E051118F6D43078D96C85AD38D809D07E071A5C0947B20252046E040E07090B000B0D07110D01031E0C0659A90A0D0C000C0D5CEC090B0404070A03030F0E'</span>
+ 
+flag<span class="token operator">=</span><span class="token string">''</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>src<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> i<span class="token operator">%</span><span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        flag<span class="token operator">+=</span>src<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+ 
+flagzip<span class="token operator">=</span>bytes<span class="token punctuation">.</span>fromhex<span class="token punctuation">(</span>flag<span class="token punctuation">)</span>
+<span class="token keyword">with</span> open<span class="token punctuation">(</span><span class="token string">'flag.zip'</span><span class="token punctuation">,</span><span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>flagzip<span class="token punctuation">)</span>
+</code></pre>
+<p>得到一个压缩包，解压就可以获得flag</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220524222404.png"></p>
+<h4 id="Bugku-清凉一夏"><a href="#Bugku-清凉一夏" class="headerlink" title="Bugku_清凉一夏"></a>Bugku_清凉一夏</h4><p>描　　述: 二维码中藏着美女，想办法见到她，她会告诉你密码</p>
+<p>得到：二维码</p>
+<p>二维码得到：happyctf</p>
+<p>显然不是扫码那么简单，将图片送检Linux。</p>
+<p>在Linux一翻操作之后得到一个压缩包</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220524231631.png"></p>
+<p>得到：二维码+压缩包+图片</p>
+<p>里面有一张gilr.jpg girl的英文都打错了。。打开需要密码，使用之前的在二维码扫描得到的key，得到图片文件，但打不开。</p>
+<p>那肯定是文件头格式有问题，用010分析一下，头部信息缺失，将jpg头部<code>FF D8 FF</code>补上</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220524230637.png"></p>
+<p>图片恢复了</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220524230706.png"></p>
+<p>查看大小怀疑高度被修改，将高度调到</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220524231025.png"></p>
+<p>把高度修改得长一些，得到flag</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220524231527.png"></p>
+<p><code>key:U2FsdGVkX1+/JVhJjnTXAwi5whdn+NuW</code></p>
+<p>这时候当然要去解密了，这是什么密码呢，查看密码特征发现是rabbit加密</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220524232016.png"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220524232816.png"></p>
+<p>得到ZmxhZw==，是base64，直接解密，得到flag。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220524232934.png"></p>
+<h4 id="Bugku-做个游戏"><a href="#Bugku-做个游戏" class="headerlink" title="Bugku_做个游戏"></a>Bugku_做个游戏</h4><p>描　　述: 坚持60秒</p>
+<p>发现坚持六十秒也是不行滴</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220525074758.png"></p>
+<p>直接使用jadx-gui反编译，搜索flag得到base64。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220525074622.png"></p>
+<p>得到flag</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220525080551.png"></p>
+<h4 id="Bugku-TLS"><a href="#Bugku-TLS" class="headerlink" title="Bugku_TLS"></a>Bugku_TLS</h4><p>给了一个pcap包和一个server.key</p>
+<p>我也没有头绪，为此专门学习了一下TLS的协商和RSA算法。</p>
+<p>server.key里面是一个rsa私钥，client包里面有TLS和TCP协商，追踪TLS流是空的。说明缺少私钥</p>
+<p>将私钥导入到wireshark，重启wireshark追踪TLS流</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220525162652.png"></p>
+<p>追踪到了流，出现一个key就是flag</p>
+<p><code>flag{39u7v25n1jxkl123}</code></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220525162822.png"></p>
+<p>这题算是对我来说很偏的题，我不了解这方面的知识，但是很简单。</p>
+<p>我找了相关的资料，有空做一个学习</p>
+<h5 id="扩展："><a href="#扩展：" class="headerlink" title="扩展："></a>扩展：</h5><p>使用 RSA 768 位和 Wireshark 解密 HTTPS SSL/TLSv1<br><a target="_blank" rel="noopener" href="https://blog.stalkr.net/2010/03/codegate-decrypting-https-ssl-rsa-768.html">https://blog.stalkr.net/2010/03/codegate-decrypting-https-ssl-rsa-768.html</a><br>bsidessf-ctf-2017 root<br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/37d7be2c0172">https://www.jianshu.com/p/37d7be2c0172</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jarvisoj.com/">https://www.jarvisoj.com/</a> ctf平台</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/Ganapati/RsaCtfTool">https://github.com/Ganapati/RsaCtfTool</a> RSA工具</p>
+<h4 id="Bugku-easy-python"><a href="#Bugku-easy-python" class="headerlink" title="Bugku_easy_python"></a>Bugku_easy_python</h4><p>这是游戏的代码</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#coding=utf-8</span>
+<span class="token keyword">import</span> socket<span class="token punctuation">,</span>threading
+<span class="token keyword">import</span> math<span class="token punctuation">,</span> base64
+
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    level<span class="token operator">=</span>open<span class="token punctuation">(</span><span class="token string">'.level'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    level<span class="token operator">=</span>int<span class="token punctuation">(</span>level<span class="token punctuation">)</span>
+<span class="token keyword">except</span><span class="token punctuation">:</span>
+    level<span class="token operator">=</span><span class="token number">1</span>
+<span class="token keyword">class</span> <span class="token class-name">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    HP<span class="token operator">=</span>int<span class="token punctuation">(</span><span class="token number">100</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token operator">*</span>level<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    Danger<span class="token operator">=</span>int<span class="token punctuation">(</span><span class="token number">10</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token operator">*</span>level<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    Defence<span class="token operator">=</span>int<span class="token punctuation">(</span><span class="token number">5</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">*</span>level<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">npc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    name<span class="token operator">=</span><span class="token string">'穿山甲'</span>
+    HP<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token operator">**</span><span class="token number">15</span><span class="token punctuation">)</span>
+    Danger<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token operator">**</span><span class="token number">10</span><span class="token punctuation">)</span>
+    Defence<span class="token operator">=</span><span class="token number">100</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'面板\t血量\t攻击力\t防御力\t\n'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'玩家 %s\t%s\t%s\t\n'</span><span class="token operator">%</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>HP<span class="token punctuation">,</span>user<span class="token punctuation">.</span>Danger<span class="token punctuation">,</span>user<span class="token punctuation">.</span>Defence<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'怪物 %s\t%s\t%s\t\n'</span><span class="token operator">%</span><span class="token punctuation">(</span>npc<span class="token punctuation">.</span>HP<span class="token punctuation">,</span>npc<span class="token punctuation">.</span>Danger<span class="token punctuation">,</span>npc<span class="token punctuation">.</span>Defence<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+user<span class="token punctuation">.</span>Danger<span class="token operator">=</span>user<span class="token punctuation">.</span>Danger<span class="token operator">-</span>npc<span class="token punctuation">.</span>Defence
+npc<span class="token punctuation">.</span>Danger<span class="token operator">=</span>npc<span class="token punctuation">.</span>Danger<span class="token operator">-</span>user<span class="token punctuation">.</span>Defence
+<span class="token keyword">if</span> user<span class="token punctuation">.</span>Danger <span class="token operator">&lt;=</span><span class="token number">0</span><span class="token punctuation">:</span>
+    user<span class="token punctuation">.</span>Danger<span class="token operator">=</span><span class="token number">1</span>
+<span class="token keyword">if</span> npc<span class="token punctuation">.</span>Danger <span class="token operator">&lt;=</span><span class="token number">0</span><span class="token punctuation">:</span>
+    npc<span class="token punctuation">.</span>Danger<span class="token operator">=</span><span class="token number">1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"开始战斗"</span><span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token number">41</span><span class="token punctuation">,</span><span class="token string">'^'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">while</span> <span class="token number">1</span><span class="token punctuation">:</span>
+    npc<span class="token punctuation">.</span>HP<span class="token operator">=</span>npc<span class="token punctuation">.</span>HP<span class="token operator">-</span>user<span class="token punctuation">.</span>Danger
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'你对%s造成了%s 怪物剩余血量 %s\t\n'</span><span class="token operator">%</span><span class="token punctuation">(</span>npc<span class="token punctuation">.</span>name<span class="token punctuation">,</span>user<span class="token punctuation">.</span>Danger<span class="token punctuation">,</span>npc<span class="token punctuation">.</span>HP<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    user<span class="token punctuation">.</span>HP<span class="token operator">=</span>user<span class="token punctuation">.</span>HP<span class="token operator">-</span>npc<span class="token punctuation">.</span>Danger
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'%s对你造成了%s 你剩余血量 %s\t\n'</span><span class="token operator">%</span><span class="token punctuation">(</span>npc<span class="token punctuation">.</span>name<span class="token punctuation">,</span>npc<span class="token punctuation">.</span>Danger<span class="token punctuation">,</span>user<span class="token punctuation">.</span>HP<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> npc<span class="token punctuation">.</span>HP<span class="token operator">&lt;=</span><span class="token number">0</span> <span class="token operator">and</span> user<span class="token punctuation">.</span>HP<span class="token operator">&lt;=</span><span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'平局!!!'</span><span class="token punctuation">)</span>
+        <span class="token keyword">break</span>
+    <span class="token keyword">if</span> npc<span class="token punctuation">.</span>HP <span class="token operator">&lt;=</span><span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'你赢了!!!,你剩余血量 %s\t\n'</span><span class="token operator">%</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>HP<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">break</span>
+    <span class="token keyword">if</span> user<span class="token punctuation">.</span>HP <span class="token operator">&lt;=</span><span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'你死了!!!%s剩余血量 %s\t\n'</span><span class="token operator">%</span><span class="token punctuation">(</span>npc<span class="token punctuation">.</span>name<span class="token punctuation">,</span>npc<span class="token punctuation">.</span>HP<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">break</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">"战斗结束 等级+1 您目前等级%s"</span><span class="token operator">%</span><span class="token punctuation">(</span>int<span class="token punctuation">(</span>level<span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token number">49</span><span class="token punctuation">,</span><span class="token string">'^'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+open<span class="token punctuation">(</span><span class="token string">'.level'</span><span class="token punctuation">,</span><span class="token string">'w'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span>str<span class="token punctuation">(</span>level<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">battle</span><span class="token punctuation">(</span>level<span class="token punctuation">)</span>
+    HP <span class="token operator">=</span> <span class="token number">4</span>  level <span class="token operator">+</span> <span class="token number">100</span>
+    ATK <span class="token operator">=</span> max<span class="token punctuation">(</span><span class="token number">3</span>  level <span class="token operator">-</span> <span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    M_ATK <span class="token operator">=</span> max<span class="token punctuation">(</span><span class="token number">3</span>  <span class="token number">10</span> <span class="token operator">-</span> level <span class="token operator">-</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token boolean">True</span> <span class="token keyword">if</span> math<span class="token punctuation">.</span>ceil<span class="token punctuation">(</span><span class="token number">3</span>  <span class="token number">15</span>  ATK<span class="token punctuation">)</span>  HP  M_ATK <span class="token keyword">else</span> <span class="token boolean">False</span>
+
+geitaoshenketou <span class="token operator">=</span> <span class="token number">3</span>  <span class="token number">100</span>  <span class="token comment" spellcheck="true"># 超大</span>
+l <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> geitaoshenketou<span class="token punctuation">]</span>
+<span class="token keyword">while</span> <span class="token boolean">True</span>
+    <span class="token keyword">if</span> l<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> l<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span>
+        res <span class="token operator">=</span> base64<span class="token punctuation">.</span>b64encode<span class="token punctuation">(</span>str<span class="token punctuation">(</span>l<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'flag{'</span> <span class="token operator">+</span> res<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'}'</span><span class="token punctuation">)</span>
+        <span class="token keyword">break</span>
+    <span class="token keyword">elif</span> battle<span class="token punctuation">(</span>sum<span class="token punctuation">(</span>l<span class="token punctuation">)</span>  <span class="token number">2</span><span class="token punctuation">)</span>
+        l <span class="token operator">=</span> <span class="token punctuation">[</span>l<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> sum<span class="token punctuation">(</span>l<span class="token punctuation">)</span>  <span class="token number">2</span><span class="token punctuation">]</span>
+    <span class="token keyword">else</span>
+        l <span class="token operator">=</span> <span class="token punctuation">[</span>sum<span class="token punctuation">(</span>l<span class="token punctuation">)</span>  <span class="token number">2</span><span class="token punctuation">,</span> l<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+</code></pre>
+<p>这题我不会做，花了点金币买了个WriteUp，更搞笑的是得到了代码还不会用，搜索报错发现就是语法错误，原来是我复制的时候有些符号缺失了，。。</p>
+<p><strong>WriteUp code</strong></p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> math<span class="token punctuation">,</span> base64
+
+<span class="token keyword">def</span> <span class="token function">battle</span><span class="token punctuation">(</span>level<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    HP <span class="token operator">=</span> <span class="token number">4</span> <span class="token operator">*</span> level <span class="token operator">+</span> <span class="token number">100</span>
+    ATK <span class="token operator">=</span> max<span class="token punctuation">(</span><span class="token number">3</span> <span class="token operator">*</span> level <span class="token operator">-</span> <span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    M_ATK <span class="token operator">=</span> max<span class="token punctuation">(</span><span class="token number">3</span> <span class="token operator">**</span> <span class="token number">10</span> <span class="token operator">-</span> level <span class="token operator">-</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token boolean">True</span> <span class="token keyword">if</span> math<span class="token punctuation">.</span>ceil<span class="token punctuation">(</span><span class="token number">3</span> <span class="token operator">**</span> <span class="token number">15</span> <span class="token operator">/</span>  ATK<span class="token punctuation">)</span> <span class="token operator">&lt;</span> HP <span class="token operator">/</span> M_ATK <span class="token keyword">else</span> <span class="token boolean">False</span>
+
+geitaoshenketou <span class="token operator">=</span> <span class="token number">3</span> <span class="token operator">**</span> <span class="token number">100</span>  <span class="token comment" spellcheck="true"># 超大</span>
+l <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> geitaoshenketou<span class="token punctuation">]</span>
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> l<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> l<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        res <span class="token operator">=</span> base64<span class="token punctuation">.</span>b64encode<span class="token punctuation">(</span>str<span class="token punctuation">(</span>l<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'flag{'</span> <span class="token operator">+</span> res<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'}'</span><span class="token punctuation">)</span>
+        <span class="token keyword">break</span>
+    <span class="token keyword">elif</span> battle<span class="token punctuation">(</span>sum<span class="token punctuation">(</span>l<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        l <span class="token operator">=</span> <span class="token punctuation">[</span>l<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> sum<span class="token punctuation">(</span>l<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">]</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        l <span class="token operator">=</span> <span class="token punctuation">[</span>sum<span class="token punctuation">(</span>l<span class="token punctuation">)</span> <span class="token operator">//</span>  <span class="token number">2</span><span class="token punctuation">,</span> l<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+</code></pre>
+<p>这题我算法不行，就不多说了。</p>
+<h4 id="Bugku-想蹭网先解开密码"><a href="#Bugku-想蹭网先解开密码" class="headerlink" title="Bugku_想蹭网先解开密码"></a>Bugku_想蹭网先解开密码</h4><p>得到一个cap包。</p>
+<p>描　　述: flag格式：flag{你破解的WiFi密码} tips：密码为手机号，为了不为难你，大佬特地让我悄悄地把前七位告诉你 1391040** Goodluck!! 作者@NewBee</p>
+<p>这个不就是生成社工字典，然后无线密码破解，直接打开工具吧，密码为手机号码，已经告诉了前七位，那么再遍历后四位</p>
+<p>密码字典生成工具：那太多了，随便用什么工具，自己写python都可以，这里就用一个crunch命令行工具。</p>
+<p>无线密码破解工具：Elcomsoft Wireless Security Auditor（GUI）、aircrack-ng（Linux）</p>
+<p><strong>生成社工字典</strong></p>
+<pre class=" language-shell"><code class="language-shell">$ crunch 11 11 -t 13891040%%%% >> phonenumber.txt  # -t 指定格式 >>也可以用-o代替
+</code></pre>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220525183145.png"></p>
+<p><strong>破解WIFI密码</strong></p>
+<pre class=" language-shell"><code class="language-shell">$ aircrack-ng -w phonenumber.txt wifi.cap  # 选3
+</code></pre>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220525183833.png"></p>
+<p>再用个图形化工具试试</p>
+<p>导入cap包，<code>Import date</code> &gt; <code>Import TCPDUMP File</code> &gt; 导入包</p>
+<p>导入字典，<code>Options</code>&gt;<code>Dictionary Attack</code>&gt;导入字典</p>
+<p>Start Attack，选择字典攻击。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220525191635.png"></p>
+<p>这个工具攻击有点慢，所以不推荐</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220525193458.png"></p>
+<h4 id="Bugku-zip-伪加密"><a href="#Bugku-zip-伪加密" class="headerlink" title="Bugku_zip_伪加密"></a>Bugku_zip_伪加密</h4><p>正如题目所提示，修改伪加密<code>00 09</code>为 <code>00 00</code>即可，解压得到flag</p>
+<p><img src="https://test1.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220525200339.png"></p>
+<h4 id="Bugku-三色绘恋"><a href="#Bugku-三色绘恋" class="headerlink" title="Bugku_三色绘恋"></a>Bugku_三色绘恋</h4><p>得到一张jpg，010看了一下发现存在不同的格式，binwalk分析，包含一个压缩包</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220525201519.png"></p>
+<p>压缩包需要密码，突然看到图片出现了一串字符，而打开却没有，直接修改高度，得到flag</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220525202954.png"></p>
+<p>打开计算器计算一下，然后搜索定位，修改高度</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220525203322.png"></p>
+<p>得到key</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220525203418.png"></p>
+<p>解压得到flag</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20220525203558.png"></p>
 <h2 id="Cx-Additions"><a href="#Cx-Additions" class="headerlink" title="Cx Additions"></a>Cx Additions</h2><h3 id="File-Format"><a href="#File-Format" class="headerlink" title="File Format"></a>File Format</h3><table>
 <thead>
 <tr>
@@ -1754,7 +1944,7 @@ t <span class="token operator">=</span> <span class="token string">''</span>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">263.5k</span>&nbsp;字
+                class="white-color">265k</span>&nbsp;字
             
             
             
