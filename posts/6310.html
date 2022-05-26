@@ -1,0 +1,2186 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="Miscellaneous6, web安全,web攻防,blog,shell,linux,windows,Linux,Windows,物理,物理学,宇宙,反物质,字星河,博客,星河,Enomothem,enomothem,eonthem">
+    <meta name="description" content="真正的改变只能发生在原则层面">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=E3kdz0owTVy1iw7363-rng"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'E3kdz0owTVy1iw7363-rng');
+</script>
+
+
+    <title>Miscellaneous6 | 字星河</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.2/sources/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/css/my.css">
+
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+
+    
+
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">字星河</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Home</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Root</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>System</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Time</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/navigate" class="waves-effect waves-light">
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>Getshellmap</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Fingerheart</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/html" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>Testing</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://hs.enomothem.cn">
+          
+          <i class="fas fa-location-arrow" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>华圣影视</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://intra.enomothem.cn">
+          
+          <i class="fas fa-location-arrow" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>华圣人事</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://hs.enomothem.cn:8091">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>永恒知识库</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/js">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Development</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/happy">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Celebrate</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/kt">
+          
+          <span>空调房</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-heart" style="zoom: 0.6;"></i>
+      
+      <span>Enomothem</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">字星河</div>
+        <div class="logo-desc">
+            
+            真正的改变只能发生在原则层面
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Home
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Root
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			System
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Time
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/navigate" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-location-arrow"></i>
+			
+			Getshellmap
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Fingerheart
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-location-arrow"></i>
+			
+			Testing
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://hs.enomothem.cn " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-location-arrow" style="position: absolute;left:50px" ></i>
+			      
+		          <span>华圣影视</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://intra.enomothem.cn " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-location-arrow" style="position: absolute;left:50px" ></i>
+			      
+		          <span>华圣人事</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://hs.enomothem.cn:8091 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>永恒知识库</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/js " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Development</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/happy " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Celebrate</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/kt " style="margin-left:75px">
+				  
+		          <span>空调房</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-heart"></i>
+			
+			Enomothem
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/enomothem" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/enomothem" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '9c32429c292637fdf6cb659cd0ba247b03ac4980727fca1df0636eca84751ea2';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('口令！Sent to:enomothem@outlook.com')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://lit.enomothem.com/zhixinghe/20220526124238.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Miscellaneous6</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/MISC/">
+                                <span class="chip bg-color">MISC</span>
+                            </a>
+                        
+                            <a href="/tags/flag/">
+                                <span class="chip bg-color">flag</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/CTF/" class="post-category">
+                                CTF
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-05-26
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-05-27
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    5 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Capture-The-Flag-Miscellaneous-6"><a href="#Capture-The-Flag-Miscellaneous-6" class="headerlink" title="Capture The Flag Miscellaneous 6"></a>Capture The Flag Miscellaneous 6</h1><p>Miscellaneous 【6】 –key{flag{misc}}</p>
+<p>Miscellaneous 【5】 </p>
+<p>Miscellaneous 【4】</p>
+<hr>
+<p>Miscellaneous 【3】 </p>
+<p>Miscellaneous 【<a href="https://enomothem.com/posts/a011.html">2</a>】</p>
+<p>Miscellaneous 【<a href="https://enomothem.com/posts/2242.html">1</a>】</p>
+<h2 id="Ax-Introduction"><a href="#Ax-Introduction" class="headerlink" title="Ax Introduction"></a>Ax Introduction</h2><p>什么是CTF，什么是MISC。</p>
+<p>CTF定义：网络安全技术人员之间进行技术竞技的一种比赛形式。CTF起源于1996年DEFCON全球黑客大会，以代替之前黑客们模拟攻击的比赛。</p>
+<ul>
+<li>类型：解题模式、攻防模式、混合模式</li>
+<li>赛事：DEFCONCTF、XCTF、Real World CTF等</li>
+<li>题目：PPC、MISC、PWN、WEB、REVERSE、CRYPTO、STEGA</li>
+</ul>
+<p>MISC定义：Miscellaneous，安全杂项，流量分析、电子签证、人肉搜索、数据分析等等等等等，就是除了最初的几个大类之外的题目。</p>
+<p>别看杂项杂，每一项都是很专业的东西，所以要学的东西很多很多。还能遇到有些有趣的东西呢。</p>
+<h4 id="常见思路"><a href="#常见思路" class="headerlink" title="常见思路"></a>常见思路</h4><p>压缩包：伪加密、爆破、找其它文件的解密密码</p>
+<p>图片：</p>
+<ul>
+<li>jpg\png\bmp  隐写文件、LSB隐写、文件高度隐藏（图片残缺）</li>
+<li>gif 分裂拼接、分裂合成 </li>
+</ul>
+<p>多个文件：注意文件大小，压缩差，字节拼接</p>
+<h4 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h4><p><strong>WinHex yyds</strong></p>
+<p><strong>010editor</strong></p>
+<p><strong>kali linux</strong></p>
+<ul>
+<li><p>hexdump 二进制分析，二进制文件转换为ASCII、八进制、十进制、十六进制</p>
+</li>
+<li><p>pngcheck、tweakpng  查看png的CRC是否正确，错误则代表被修改宽高等</p>
+</li>
+<li><p>base64 转码</p>
+</li>
+<li><p>jadx-gui java反编译</p>
+</li>
+<li><p>binwalk 查看文件中是否隐藏信息</p>
+</li>
+<li><p>formost 通过分析文件头和内部数据结构和尾，还原文件，使文件分离出来。</p>
+</li>
+<li><p>zip2john 破解压缩包密码，再用<code>john</code>看破解的密码文件</p>
+<pre class=" language-shell"><code class="language-shell">zip2john flag.zip password.txt
+john password.txt
+</code></pre>
+</li>
+<li><p>fcrackzip zip压缩包破解工具</p>
+<pre class=" language-shell"><code class="language-shell">fcrackzip -b -c 'aA1!' -l 1-10 -u crack_this.zip 
+# 选择大小写且数字!-b代表brute-force；-l限制密码长度；-c指定使用的字符集：-u是解压
+fcrackzip -b -c '1' -l 1-10 -u crack_this.zip
+# 如果知道是数字，直接使用数字
+gzip -d /usr/share/wordlists/rockyou.txt.gz
+# 解压kali自带的字典
+fcrackzip -D -p /usr/share/wordlists/rockyou.txt -u crack_this.zip
+# 使用字典爆破
+</code></pre>
+</li>
+<li><p>crunch 密码字典生成</p>
+</li>
+<li><p>aircrack-ng wifi密码破解</p>
+</li>
+<li><p>tshark Linux版本的wireshark工具。</p>
+</li>
+<li><p>strings、egrep、awk  找东西滴</p>
+</li>
+</ul>
+<p><strong>Wireshark</strong> 有时候会有分析数据包的取证题目需要用到。<br><strong>隐写工具</strong></p>
+<ul>
+<li> Jphs05  图片信息隐藏</li>
+<li> Stegsolve 分析图片隐写工具</li>
+<li> zsteg 隐写工具LSB</li>
+<li> stegpy 图片一些工具</li>
+</ul>
+<p><strong>RouterPassview</strong> 路由器配置文件查看器</p>
+<p><strong>好玩的工具</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.atoolbox.net/">http://www.atoolbox.net/</a> 好好玩</li>
+<li><a target="_blank" rel="noopener" href="https://www.pdfpai.com/downgif2png">https://www.pdfpai.com/downgif2png</a> </li>
+<li> <a target="_blank" rel="noopener" href="https://www.11zon.com/zh-cn/">https://www.11zon.com/zh-cn/</a></li>
+<li> <a target="_blank" rel="noopener" href="https://the-x.cn/">https://the-x.cn/</a> 推荐</li>
+</ul>
+<p><strong>加密算法在线网站</strong></p>
+<ul>
+<li>MD5<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cmd5.com/">https://www.cmd5.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.somd5.com/">https://www.somd5.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://md5.cc/">https://md5.cc/</a></li>
+</ul>
+</li>
+<li>各种加密<ul>
+<li><a target="_blank" rel="noopener" href="http://www.hiencode.com/">http://www.hiencode.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.ctftools.com/down/">http://www.ctftools.com/down/</a></li>
+<li><a target="_blank" rel="noopener" href="http://hi.pcmoe.net/index.html">http://hi.pcmoe.net/index.html</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.ab126.com/goju/1711.html">http://www.ab126.com/goju/1711.html</a>  进制-ASCII</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Ganapati/RsaCtfTool">https://github.com/Ganapati/RsaCtfTool</a> Rsa</li>
+<li><a target="_blank" rel="noopener" href="https://crypot.51strive.com/sha256.html">https://crypot.51strive.com/sha256.html</a> sha1-sha2</li>
+<li><a target="_blank" rel="noopener" href="https://morsecode.buyaocha.com/">https://morsecode.buyaocha.com/</a> 莫斯</li>
+<li><a target="_blank" rel="noopener" href="http://encode.chahuo.com/">http://encode.chahuo.com/</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Bx-Flag-keyisflag"><a href="#Bx-Flag-keyisflag" class="headerlink" title="Bx Flag{keyisflag}"></a>Bx Flag{keyisflag}</h2><blockquote>
+<p>只有不断的做题，才能学习到更多的东西，包括出题的套路，you know，but 作者的想法你是永远猜不到的，也许就在你意想不到的地方。</p>
+</blockquote>
+<p>我会去做各大在线网站的题目，然后记录于此便于我回顾。</p>
+<h3 id="Bugku"><a href="#Bugku" class="headerlink" title="Bugku"></a>Bugku</h3><h4 id="Bugku-只有黑棋的棋盘"><a href="#Bugku-只有黑棋的棋盘" class="headerlink" title="Bugku_只有黑棋的棋盘"></a>Bugku_只有黑棋的棋盘</h4><p>得到一张图片和一个flag压缩包（加密的）</p>
+<p>分析图片包含压缩包，无法分离考虑是否修改压缩包头格式</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526145435.png"></p>
+<p>修改后分离压缩包得到压缩包，需要密码，没有得到有密码的思路，考虑是否伪加密，修改<code>00 09</code>为 <code>00 00</code>，得到txt文本</p>
+<pre class=" language-txt"><code class="language-txt">…
+…
+CDEFGHIJKLMNOPQRSTU
+BCDEFGHIJKLMNOPQRST
+ABCDEFGHIJKLMNOPQRS
+</code></pre>
+<p>这有点像维吉尼亚密码表，把这个补全。发现突然与棋盘对应，而棋盘上的黑子就是密码。</p>
+<pre><code>JKLMNOPQRSTUVWX【Y】ZAB
+IJKLMNOPQRSTUVWXYZ【A】
+HIJK【L】MNOPQRSTUVWXYZ
+GHIJKLMNO【P】QRSTUVWXY
+FGHIJKLMN【O】PQRSTUVWX
+EF【G】HIJKLMNOPQRSTUVW
+【D】EFGHIJKLMNOPQRSTUV
+CDEFGHIJKLMN【O】PQRSTU
+BCDEFGHIJKLMN【O】PQRST
+ABCDEF【G】HIJKLMNOPQRS
+</code></pre>
+<p>YALPOGDOOG 解压flag压缩包，解不开，考虑是否倒序，因为棋盘的序号是从上下往上开始</p>
+<p>GOODGOPLAY 得到flag图片</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526151426.png"></p>
+<p>尝试修改高度，得到flag</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526153227.png"></p>
+<h4 id="Bugku-蜘蛛侠"><a href="#Bugku-蜘蛛侠" class="headerlink" title="Bugku_蜘蛛侠"></a>Bugku_蜘蛛侠</h4><p>得到一个压缩，打不开，放到010发现一串乱码，用UTF-8打开得到这种没有见过的字符，百度查一下</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526154026.png"></p>
+<p>这是苏州码子，通过对照得到数字441106998101，capital_num提示是商用数字，应该是大写</p>
+<p>可以使用微软输入法的v模式，输入：<code>v441106998101</code>可以转换成大写。</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526155534.png"></p>
+<p>注意，把壹零改为拾。肆肆壹拾陆玖玖捌拾壹，解开得到几个文件。</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526160131.png"></p>
+<p>根据hint提示，key被encode加密，通过脚本来解密，修改一下脚本内的文件名。</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> os
+data_jpg <span class="token operator">=</span> open<span class="token punctuation">(</span><span class="token string">'key.jpg'</span><span class="token punctuation">,</span><span class="token string">'wb'</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">jpg_encode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> open<span class="token punctuation">(</span><span class="token string">'file.jpg'</span><span class="token punctuation">,</span><span class="token string">'rb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> handle<span class="token punctuation">:</span>
+        size <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>getsize<span class="token punctuation">(</span><span class="token string">'file.jpg'</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>size<span class="token punctuation">)</span>
+        i <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">while</span> i<span class="token operator">&lt;</span>size<span class="token punctuation">:</span>
+            bytedata <span class="token operator">=</span> handle<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+            process_data <span class="token operator">=</span> data_encode<span class="token punctuation">(</span>bytedata<span class="token punctuation">)</span>
+            data_write<span class="token punctuation">(</span>process_data<span class="token punctuation">)</span>
+            i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span>
+
+<span class="token keyword">def</span> <span class="token function">data_encode</span><span class="token punctuation">(</span>bytedata<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    data <span class="token operator">=</span> int<span class="token punctuation">.</span>from_bytes<span class="token punctuation">(</span>bytedata<span class="token punctuation">,</span>byteorder<span class="token operator">=</span><span class="token string">'big'</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>data <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        data <span class="token operator">=</span> <span class="token punctuation">(</span>data <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">^</span> <span class="token number">128</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        data <span class="token operator">=</span> <span class="token punctuation">(</span>data <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">^</span> <span class="token number">128</span>
+    data <span class="token operator">=</span> bytes<span class="token punctuation">(</span><span class="token punctuation">[</span>data<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> data
+
+<span class="token keyword">def</span> <span class="token function">data_write</span><span class="token punctuation">(</span>process_data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    data_jpg<span class="token punctuation">.</span>write<span class="token punctuation">(</span>process_data<span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    jpg_encode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    data_jpg<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>得到一个file.jpg，用010打开，看到一串字符</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526161717.png"></p>
+<p>base92解码得到password:SilentEye</p>
+<p>然后学习了base92的知识<a target="_blank" rel="noopener" href="https://github.com/thenoviceoof/base92">https://github.com/thenoviceoof/base92</a></p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526181901.png"></p>
+<p>使用SilentEye打开图片，输入SilentEye获得flag</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526182337.png"></p>
+<h4 id="Bugku-baby-flag-txt"><a href="#Bugku-baby-flag-txt" class="headerlink" title="Bugku_baby_flag.txt"></a>Bugku_baby_flag.txt</h4><p>得到一个txt文本文件，查看文件头发现是JPG，修改后缀得到图片。</p>
+<p>根据描述还能再高一点，修改高度，得到字符串</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526183224.png"></p>
+<p>文件分析存在一个rar，修复头格式</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526184111.png"></p>
+<p>新建一个十六进制复制HEX进去，保存为rar文件。需要密码，使用0q1W2e3R4t打开</p>
+<p>得到一个文本文件</p>
+<pre class=" language-txt"><code class="language-txt">真是一种丑陋的语言呢
+oh!!!!!!!!!!!!!!ugly programming language!!!!!!!!!!!
+
+
+D'`r#?oJ[;|9Wx0/et?rqM(-9JI6(hEgeBc.x,<;)yrZvo5mrkji/Plkjib(fedFE[!Y^]\[Tx;QuU7SRKo2NGLEDh+AFEDC<;_?>~}5Y987w5.R21qp('K+$j"'~}${"y?`_{tyrwp6tmUqj0nmleMib(fe^c\"`_^@VUTxXWV8NSRKJn10LKJIHAe?'=<;:9]76Z:981w543,P*)M-,%k)"F&}${zy?>_{zyr8YXtmlk1onmlNMib(I_d]\"`BA]\Uy<;QPUTMLpJ2NMLKDhHA)E>b%$@?8\}5Y981w543,P0/o-&Jk)"!~D1
+</code></pre>
+<p>百度搜索ugly programming language，可能是某中深奥的语言，得知是Malbolge，最复杂的语言。被称之为Esoteric programming language</p>
+<p>使用工具：<a target="_blank" rel="noopener" href="https://zb3.me/malbolge-tools/">https://zb3.me/malbolge-tools/</a></p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526185103.png"></p>
+<h4 id="Bugku-善用工具"><a href="#Bugku-善用工具" class="headerlink" title="Bugku_善用工具"></a>Bugku_善用工具</h4><p>描　　述: webp</p>
+<p>得到一个hint.png，一个压缩包和一张jpg</p>
+<p>hint.png是一个文本文件，提供了以下信息</p>
+<pre class=" language-txt"><code class="language-txt">8:V5Y:7,Y,3MU=$8D:D%11&9O6BY .G,M
+</code></pre>
+<p>使用UUENCODE解码得到</p>
+<pre class=" language-txt"><code class="language-txt">keyis91;utF$jAQDfoZ.@:s-
+</code></pre>
+<p>使用base85，特征是等号一般出现在字符串中间，含有一些奇怪的字符</p>
+<pre class=" language-txt"><code class="language-txt">KEYisCamouflage
+</code></pre>
+<p>我寻思这是个钥匙，解不开压缩包，百度关键字Camouflage，我突然想了想我好像见过这个东西，看了下我的工具，原来还真有</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526191429.png"></p>
+<p>得到一个文件，写着远在天边近在眼前:</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526191648.png"></p>
+<p>看了下文档的作者：</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526191918.png"></p>
+<p>百度下看看是不是什么名人</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526192001.png"></p>
+<p>得到学号</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526192022.png"></p>
+<p>走偏了走偏了。密码近在眼前，在哪呢？</p>
+<p>丢进010做个全面检查，发现这是个压缩包，修改后缀，在document.xml中发现关键字符</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526192541.png"></p>
+<p>使用这个解密压缩包，得到csgo文件，但不知道是什么文件，放入010发现是riff，更改后缀为.riff，使用浏览器打开</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526193432.png"></p>
+<p>根据提示webp和stegpy有关，用stegpy隐写工具进行恢复</p>
+<p>下载工具：<code>pip install stegpy</code></p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526194701.png"></p>
+<h4 id="Bugku-MuMuMisc的简单题"><a href="#Bugku-MuMuMisc的简单题" class="headerlink" title="Bugku_MuMuMisc的简单题"></a>Bugku_MuMuMisc的简单题</h4><p>这题太难了，WP的脚本。</p>
+<p>得到一张红色图片，和一个私钥</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526200434.png"></p>
+<p>写脚本把左侧这块读出来，黑色对应1，白色对应0，再转成字符</p>
+<p>py</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+
+im <span class="token operator">=</span> Image<span class="token punctuation">.</span>open<span class="token punctuation">(</span><span class="token string">'mumumisc.png'</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span>w<span class="token punctuation">,</span> h<span class="token punctuation">)</span> <span class="token operator">=</span> im<span class="token punctuation">.</span>size
+
+flag <span class="token operator">=</span> <span class="token string">''</span>
+<span class="token keyword">for</span> x <span class="token keyword">in</span> range<span class="token punctuation">(</span>w<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> y <span class="token keyword">in</span> range<span class="token punctuation">(</span>h<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        p <span class="token operator">=</span> im<span class="token punctuation">.</span>getpixel<span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> p <span class="token operator">==</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            flag <span class="token operator">+=</span> <span class="token string">'1'</span>
+        <span class="token keyword">elif</span> p <span class="token operator">==</span> <span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            flag <span class="token operator">+=</span> <span class="token string">'0'</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token operator">//</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>chr<span class="token punctuation">(</span>int<span class="token punctuation">(</span>flag<span class="token punctuation">[</span>i<span class="token operator">*</span><span class="token number">8</span><span class="token punctuation">:</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>end<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">)</span>
+</code></pre>
+<p>得到字符</p>
+<pre class=" language-txt"><code class="language-txt">MTEwMDAxIDAwMDAwIDAxMCAwMTEwIDExMDAxIDEwMSAwMTExIDEwMSAwMTExIDEwMSAwMDAxIDAwMSAxMTAwMDAgMTAwIDAwMDEgMDAxIDEwMCAwMTEwIDExMTEgMTExMSAxMTAxIDEwMCAwMTAgMTExMDEgMTEwMSAxMDAgMDAwMDEgMDEwIDExMTAxIDExMDEgMDAxIDExMTEgMTAxIDExMTAwMSAxMTEwMDAJ
+</code></pre>
+<p>通过base64解码</p>
+<pre class=" language-txt"><code class="language-txt">110001 00000 010 0110 11001 101 0111 101 0111 101 0001 001 110000 100 0001 001 100 0110 1111 1111 1101 100 010 11101 1101 100 00001 010 11101 1101 001 1111 101 111001 111000
+</code></pre>
+<p>观察key文件发现是一个jpg后缀，修改后缀打开图片</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526221247.png"></p>
+<p>通过txt里提到老外霍夫曼靠在树上，推出霍夫曼树，使用的是霍夫曼编码，通过脚本解码</p>
+<pre class=" language-python"><code class="language-python">s <span class="token operator">=</span> <span class="token string">"110001 00000 010 0110 11001 101 0111 101 0111 101 0001 001 110000 100 0001 001 100 0110 1111 1111 1101 100 010 11101 1101 100 00001 010 11101 1101 001 1111 101 111001 111000"</span>
+lt <span class="token operator">=</span> s<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+tree <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'l'</span><span class="token punctuation">,</span><span class="token string">'h'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'i'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'s'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+         <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">'g'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+         <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'_'</span><span class="token punctuation">,</span><span class="token string">'m'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'f'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'{'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+         <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'}'</span><span class="token punctuation">,</span><span class="token string">'e'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'n'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'o'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> lt<span class="token punctuation">:</span>
+    t <span class="token operator">=</span> tree
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> i<span class="token punctuation">:</span>
+        t<span class="token operator">=</span>t<span class="token punctuation">[</span>int<span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span>end<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">)</span>
+</code></pre>
+<p>得到flag。</p>
+<h4 id="Bugku-群友们的唠嗑"><a href="#Bugku-群友们的唠嗑" class="headerlink" title="Bugku_群友们的唠嗑"></a>Bugku_群友们的唠嗑</h4><p>这题参考WP</p>
+<p>hint文本内容</p>
+<pre class=" language-txt"><code class="language-txt">mounting password：
+(128,128,128)(0,0,0)
+(255,255,255)(0,0,0)
+(128,128,128)(255,255,255)
+
+(128,128,128)(255,255,255)
+(0,0,0)(0,0,0)
+(128,128,128)(255,255,255)
+
+(128,128,128)(255,255,255)
+(0,0,0)(128,128,128)
+(0,0,0)(255,255,255)
+
+hint:hex @ hue
+fk hint:no hint more happiness
+</code></pre>
+<p>这是色块密码</p>
+<p>十六进制编辑器查看flag.001，可以看到ADCRYPT文件头，这是AD1加密镜像的特征。用FTK Image打开，发现需要密码。根据提示找到hexahue，将txt中的RGB颜色矩阵转为图形，再与替换表对照，可以得到密码为123。进入镜像。</p>
+<p>用<code>FTK Image</code>打开，先解密出<code>flag-decrypted.001</code></p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526234709.png"></p>
+<p>然后再添加源证据：<code>Add Evidence Item</code> &gt; <code>Contents of a Folder</code></p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526235157.png"></p>
+<p>发现回收站里有东西，导出来</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526235452.png"></p>
+<p>排除部分强行黑群友的图片不用管，整理一下镜像内的文件内容，有几个值得关注的线索。<br>1、\flag\here 目录下的加密压缩包encode.rar，内含图片encode.png。<br>2、回收站内有一张 $I3PC85G.gif 图片。注意到上方的 $I3PC85G.gif 文件中有如下字符串：G:\password\only-a-gif.gif</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220526235721.png"></p>
+<p>说明该gif图片是从 password 目录被删除的，很可能与密码有关。</p>
+<p>导出该gif图片，根据对出题人的了解，筛选目前国内公开CTF平台上misc题中与gif格式隐写有关的考点。可以找到某平台的蜘蛛侠呀一题中出现过的gif动画帧时长隐写（帧数间隔隐写）。用Image Magick提取该gif的帧时长：</p>
+<pre class=" language-shell"><code class="language-shell">identify -format "%T " $R3PC85G.gif
+</code></pre>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527000333.png"></p>
+<p>5 5 5 4 4 4 4 4 5 5 4 4 4 4 5 4 5 5 5 4 4 5 5 4 5 5 5 4 4 5 5 4 5 5 4 5 4 4 5 4<br>5 5 5 4 4 5 5 4 5 4 5 4 5 5 5 4 5 4 5 4 5 4 4 4 5 4 4 4 4 4 4 4 5 5 4 4 5 5 5 4<br>5 5 4 5 4 4 5 4 5 4 4 4 5 5 4 3 3 3 3 3</p>
+<p>排除末尾的3，前95帧出现了4和5两种时长，考虑将其转为二进制0和1，再进行下一步转码。但这里由于出题人的水平太高，草木竹石皆可为剑，出题时随便揪一个不知道哪来的在线工具就用，而且用完绝不检查。毕竟题目做不出来是做题的太菜，总不可能是出题人不会出题还瞎出吧。总之这里不知道从哪找来的神奇工具在字符串转二进制ASCII码时漏掉了开头的一位0，也就是说隐写信息实际是12位字符对应96位长度的二进制串。比较有趣的是当大家都因此卡在了这一步的时候，出题人以为大家都没见识过gif动画帧时长隐写，还在群里对大家进行了亲切的嘲讽，并给出了并没有什么用的提示。也许这就是学好算术再出题的重要性吧。</p>
+<p>总之转码脚本如下：</p>
+<pre class=" language-python"><code class="language-python">s<span class="token operator">=</span><span class="token string">"5 5 5 4 4 4 4 4 5 5 4 4 4 4 5 4 5 5 5 4 4 5 5 4 5 5 5 4 4 5 5 4 5 5 4 5 4 4 5 4 5 5 5 4 4 5 5 4 5 4 5 4 5 5 5 4 5 4 5 4 5 4 4 4 5 4 4 4 4 4 4 4 5 5 4 4 5 5 5 4 5 5 4 5 4 4 5 4 5 4 4 4 5 5 4"</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span>
+flag <span class="token operator">=</span> <span class="token string">"0"</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> s<span class="token punctuation">:</span>
+    <span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token string">"5"</span><span class="token punctuation">:</span>
+        flag <span class="token operator">+=</span> <span class="token string">"1"</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        flag <span class="token operator">+=</span> <span class="token string">"0"</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token operator">//</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>chr<span class="token punctuation">(</span>int<span class="token punctuation">(</span>flag<span class="token punctuation">[</span>i<span class="token operator">*</span><span class="token number">8</span><span class="token punctuation">:</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>end<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">)</span>
+</code></pre>
+<p>输出结果：passisWT@giF</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527000551.png"></p>
+<p>把encode.rar导出到桌面，然后使用<code>WT@giF</code>解压得到encode.png。大体能看出图像以及文字的痕迹，但严重偏斜。这是因为原图的像素被放置到了错误的宽度上导致的，图像呈右上-左下偏斜，</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527001543.png"></p>
+<p>说明正确宽度比当前宽度732要小。图像失真并没有到无法识别的程度，说明正确宽度和当前宽度之间的差距不会特别大，可以手动爆破。脚本如下：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+
+img <span class="token operator">=</span> Image<span class="token punctuation">.</span>open<span class="token punctuation">(</span><span class="token string">'encode.png'</span><span class="token punctuation">)</span>
+w<span class="token punctuation">,</span> h <span class="token operator">=</span> img<span class="token punctuation">.</span>size
+
+<span class="token keyword">def</span> <span class="token function">decodei</span><span class="token punctuation">(</span>width<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    height <span class="token operator">=</span> w <span class="token operator">*</span> h <span class="token operator">//</span> width <span class="token operator">+</span> <span class="token number">1</span>
+    new <span class="token operator">=</span> Image<span class="token punctuation">.</span>new<span class="token punctuation">(</span><span class="token string">'RGB'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>width<span class="token punctuation">,</span> height<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>w <span class="token operator">*</span> h<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        new<span class="token punctuation">.</span>putpixel<span class="token punctuation">(</span><span class="token punctuation">(</span>i <span class="token operator">%</span> width<span class="token punctuation">,</span> i <span class="token operator">//</span> width<span class="token punctuation">)</span><span class="token punctuation">,</span> img<span class="token punctuation">.</span>getpixel<span class="token punctuation">(</span><span class="token punctuation">(</span>i <span class="token operator">%</span> w<span class="token punctuation">,</span> i <span class="token operator">//</span> w<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    new<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    new<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">"flag.png"</span><span class="token punctuation">)</span>
+
+decodei<span class="token punctuation">(</span><span class="token number">720</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 变为左上-右下偏斜，说明过小了</span>
+decodei<span class="token punctuation">(</span><span class="token number">726</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 略带左上-右下偏斜，实际上已经能够识别</span>
+decodei<span class="token punctuation">(</span><span class="token number">727</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 完美</span>
+</code></pre>
+<p>输出结果里的汉字包上flag格式就是最终flag。</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527002120.png"></p>
+<h4 id="Bugku-妹子的陌陌"><a href="#Bugku-妹子的陌陌" class="headerlink" title="Bugku_妹子的陌陌"></a>Bugku_妹子的陌陌</h4><p><img src="https://lit.enomothem.com/zhixinghe/20220527003007.png"></p>
+<p>分析图片得到一个压缩包</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527003158.png"></p>
+<p>解压密码是图片上的<code>喜欢我吗.</code>，解压得到文本</p>
+<pre class=" language-txt"><code class="language-txt">嘟嘟嘟嘟
+士兵：报告首长！已截获纳粹的加密电报！
+首长：拿来看看
+
+电报内容：
+..../-/-/.--./---.../-..-./-..-././-./-.-./---/-.././.-.-.-/-.-./..../.-/..../..-/---/.-.-.-/-.-./---/--/-..-.
+
+首长：我操你在逗我吗？你确定是他们纳粹发的吗？
+士兵：难道我弄错了？哦。。。等等是这一条
+
+内容：http://c.bugku.com/U2FsdGVkX18tl8Yi7FaGiv6jK1SBxKD30eYb52onYe0=
+      AES Key：@#@#￥%……￥￥%%……&￥
+
+士兵：二维码真的扫不出来吗？？肯定可以扫出来
+</code></pre>
+<p>莫斯码解得</p>
+<pre class=" language-txt"><code class="language-txt">HTTP://ENCODE.CHAHUO.COM/
+</code></pre>
+<p>访问网址，根据提示，AES解密</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527003840.png"></p>
+<p>访问网址<code>http://c.bugku.com/momoj2j.png</code>，得到二维码</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527003949.png"></p>
+<p>扫描二维码得到<code>KEY{nitmzhen6}</code></p>
+<h2 id="Cx-Additions"><a href="#Cx-Additions" class="headerlink" title="Cx Additions"></a>Cx Additions</h2><h3 id="File-Format"><a href="#File-Format" class="headerlink" title="File Format"></a>File Format</h3><table>
+<thead>
+<tr>
+<th align="center">格式</th>
+<th align="center">头部</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">.jpg</td>
+<td align="center"><code>FF D8 FF</code></td>
+</tr>
+<tr>
+<td align="center">.png</td>
+<td align="center"><code>89 50 4E 47</code></td>
+</tr>
+<tr>
+<td align="center">.bmp</td>
+<td align="center"><code>42 4D</code></td>
+</tr>
+<tr>
+<td align="center">.gif</td>
+<td align="center"><code>47 49 46 38</code></td>
+</tr>
+<tr>
+<td align="center">.zip</td>
+<td align="center"><code>50 4B 03 04</code></td>
+</tr>
+<tr>
+<td align="center">.rar</td>
+<td align="center"><code>52 61 72 21</code></td>
+</tr>
+<tr>
+<td align="center">.avi</td>
+<td align="center"><code>41 56 49 20</code></td>
+</tr>
+<tr>
+<td align="center">.pdf</td>
+<td align="center"><code>25 50 44 46</code></td>
+</tr>
+</tbody></table>
+<h4 id="常见格式"><a href="#常见格式" class="headerlink" title="常见格式"></a>常见格式</h4><p>常用文件的文件头如下(16进制)：<br>JPEG (jpg)，文件头：FFD8FFE1<br>PNG (png)，文件头：89504E47<br>GIF (gif)，文件头：47494638<br>TIFF (tif)，文件头：49492A00<br>Windows Bitmap (bmp)，文件头：424DC001<br>CAD (dwg)，文件头：41433130<br>Adobe Photoshop (psd)，文件头：38425053<br>Rich Text Format (rtf)，文件头：7B5C727466<br>XML (xml)，文件头：3C3F786D6C<br>HTML (html)，文件头：68746D6C3E<br>Email [thorough only] (eml)，文件头：44656C69766572792D646174653A<br>Outlook Express (dbx)，文件头：CFAD12FEC5FD746F<br>Outlook (pst)，文件头：2142444E<br>MS Word/Excel (xls.or.doc)，文件头：D0CF11E0<br>MS Access (mdb)，文件头：5374616E64617264204A<br>WordPerfect (wpd)，文件头：FF575043<br>Adobe Acrobat (pdf)，文件头：255044462D312E<br>Quicken (qdf)，文件头：AC9EBD8F<br>Windows Password (pwl)，文件头：E3828596<br>ZIP Archive (zip)，文件头：504B0304<br>RAR Archive (rar)，文件头：52617221<br>Wave (wav)，文件头：57415645<br>AVI (avi)，文件头：41564920<br>Real Audio (ram)，文件头：2E7261FD<br>Real Media (rm)，文件头：2E524D46<br>MPEG (mpg)，文件头：000001BA<br>MPEG (mpg)，文件头：000001B3<br>Quicktime (mov)，文件头：6D6F6F76<br>Windows Media (asf)，文件头：3026B2758E66CF11<br>MIDI (mid)，文件头：4D546864<br>RIFF，文件头：52494646</p>
+<h4 id="图片格式"><a href="#图片格式" class="headerlink" title="图片格式"></a>图片格式</h4><h5 id="常见识别方法"><a href="#常见识别方法" class="headerlink" title="常见识别方法"></a>常见识别方法</h5><p>以下是常见的图片格式及判断方法</p>
+<table>
+<thead>
+<tr>
+<th>格式</th>
+<th>描述</th>
+<th>判断方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>jpeg</td>
+<td>用JFIF或者Exif格式保存的JPEG图片</td>
+<td>第7到第10个字节是b’JFIF’或者b’Exif’</td>
+</tr>
+<tr>
+<td>png</td>
+<td>可移植网络图形格式(Portable Network Graphic Format)</td>
+<td>以字节串b’\x89PNG\r\n\x1a\n’开头</td>
+</tr>
+<tr>
+<td>gif</td>
+<td>GIF(Graphics Interchange Format)的87版本和89版本</td>
+<td>前6个字节为b’GIF87a’或者b’GIF89a’</td>
+</tr>
+<tr>
+<td>tiff</td>
+<td>TIFF(Tag Image File Format)的两种字节顺序</td>
+<td>前两个字节为b’MM’或者b’II’</td>
+</tr>
+<tr>
+<td>rgb</td>
+<td>SGI ImgLib</td>
+<td>以字节串b’\x01\xda’开头</td>
+</tr>
+<tr>
+<td>pbm</td>
+<td>Portable Bitmap</td>
+<td>第1个字节为b’P’，第2个字节为b’1’或b’4’，第3个字节为b’\t’或b’\n’或b’\r’</td>
+</tr>
+<tr>
+<td>pgm</td>
+<td>Portable Graymap Files</td>
+<td>第1个字节为b’P’，第2个字节为b’2’或b’5’，第3个字节为b’\t’或b’\n’或b’\r’</td>
+</tr>
+<tr>
+<td>ppm</td>
+<td>Portable Pixmap Files</td>
+<td>第1个字节为b’P’，第2个字节为b’3’或b’6’，第3个字节为b’\t’或b’\n’或b’\r’</td>
+</tr>
+<tr>
+<td>rast</td>
+<td>Sun Raster</td>
+<td>以字节串b’\x59\xA6\x6A\x95’开头</td>
+</tr>
+<tr>
+<td>xbm</td>
+<td>X Bitmap Files</td>
+<td>以字节串b’#define ‘开头</td>
+</tr>
+<tr>
+<td>bmp</td>
+<td>Bitmap，Windows标准图像文件格式</td>
+<td>以字节串b’BM’开头</td>
+</tr>
+<tr>
+<td>webp</td>
+<td>谷歌的WebP格式，Python3.5加入</td>
+<td>以字节串b’RIFF’开头并且第9到第12个字节为b’WEBP’</td>
+</tr>
+<tr>
+<td>exr</td>
+<td>OpenEXR，Python3.5加入</td>
+<td>以字节串b’\x76\x2f\x31\x01’开头</td>
+</tr>
+</tbody></table>
+<h5 id="JPEG"><a href="#JPEG" class="headerlink" title="JPEG"></a>JPEG</h5><p><strong>JPEG格式说明</strong></p>
+<p>JPEG文件可以看作由多条数据段拼接成的文件，每条<strong>数据段</strong>包括两个部分：<strong>标记码</strong>和<strong>数据流</strong>。</p>
+<p><strong>标记码</strong>：由两个字节构成，其前一个字节为0xFF（通常只有一个0xFF，可以多个连续的0xFF），后一个字节则根据不同意义有不同数值。<br><strong>数据流</strong>：记录了关于JPEG文件的相应信息（有些数据段无数据流）。</p>
+<p>常用的数据段有SOI、APPx、DQT、SOF0、DHT、DRI、SOS、EOI等（<em>SOI等只是数据段名，例如SOI是标记码为0xFFD8的数据段名，DHT是标记码为0xFFC4的数据段名</em>）。</p>
+<p><strong>JPEG主要数据段说明</strong></p>
+<p><strong>SOI -&gt;Start of Image</strong></p>
+<p>含义：图像结束<br>标记码：0xFFD9 占2字节<br>数据流：无</p>
+<p><strong>APP0 -&gt;Application 0（保留标记）</strong></p>
+<p>含义：应用程序保留标记0<br>标记码：0xFFE0——占2字节<br>数据流：<br>数据段长度——占2字节<br>标识符——5字节（固定值0x4A46494600=“JFIF0”）<br>版本号——2字节<br>密度单位——1字节（0-&gt;无单位 1-&gt;点数/英寸 2-&gt;点数/厘米）<br>X方向像素密度——2字节<br>Y方向像素密度——2字节<br>缩略图水平像素数目——1字节<br>缩略图垂直像素数目——1字节<br>缩略图RGB位图——长度为是3的倍数</p>
+<p><strong>APPx -&gt; APPn-&gt;Application，x=1～15(可任选)</strong></p>
+<p>含义：应用程序保留标记x<br>标记码：0xFFE1~0xFFF——2字节（手机照片通常包含APP1，内容由地点，时间等）<br>数据流：<br>数据段长度——占2字节（不同数据段数据格式不同）</p>
+<p><strong>DQT -&gt;Define Quantization Table，定义量化表</strong></p>
+<p>含义：定义量化表<br>标记码：0xFFDB——占2字节<br>数据流：<br>数据段长度——占2字节<br>量化表长度——占2字节<br>量化表ID——占1字节<br>量化表内容——占64字节<br>（量化表可以有多个，不超过4个）</p>
+<p><strong>SOF0 -&gt;Start of Frame</strong></p>
+<p>含义：帧图像起始<br>标记码：0xFFC0——占2字节<br>数据流：<br>数据段长度——占2字节<br>精度——1字节<br>图像高度——2字节<br>图像宽度——2字节<br>颜色分量数——1字节（1-灰度图 3-YCrCb或YIQ 4-CMYK）<br>颜色分量信息——9字节</p>
+<p><strong>DHT -&gt;Difine Huffman Table</strong></p>
+<p>含义：定义哈夫曼表<br>标记码：0xFFC4——占2字节<br>数据流：<br>数据段长度——占2字节<br>霍夫曼表长度——占2字节<br>表ID和表类型——1字节<br>不同位数的码字数量——16字节<br>编码内容——占16个不同位数的码字数量之和字节</p>
+<p><strong>DRI -&gt;Define Restart Interval</strong></p>
+<p>含义：定义差分编码累计复位的间隔<br>标记码：0xFFDD——占2字节<br>数据流：<br>数据段长度——占2字节（长度固定为4）<br>MCU块的单元中的重新开始间隔——占2字节</p>
+<p><strong>SOS -&gt;Start of Scan</strong></p>
+<p>含义：定义差分编码累计复位的间隔<br>标记码：0xFFC4——占2字节<br>数据流：<br>数据段长度——占2字节<br>颜色分量数——1字节（1-灰度图是 3-YCrCb或YIQ 4-CMYK）<br>颜色分量ID——1字节<br>直流/交流系数表号——1字节<br>压缩图像数据——3字节（固定值0x003F00）</p>
+<p><strong>EOI -&gt;End of Image</strong></p>
+<p>含义：图像结束<br>标记码：0xFFD9 占2字节<br>数据流：无</p>
+<h5 id="PNG"><a href="#PNG" class="headerlink" title="PNG"></a>PNG</h5><p>PNG的文件头格式：</p>
+<p>（固定）八个字节<code>89 50 4E 47 0D 0A 1A 0A</code>为png的文件头</p>
+<p>（固定）四个字节<code>00 00 00 0D</code>（即为十进制的13）代表数据块的长度为13</p>
+<p>（固定）四个字节<code>49 48 44 52</code>（即为ASCII码的IHDR）是文件头数据块的标示（IDCH）</p>
+<p>（可变）13位数据块（IHDR)</p>
+<ol>
+<li><p>前四个字节代表该图片的宽</p>
+</li>
+<li><p>后四个字节代表该图片的高</p>
+</li>
+<li><p>后五个字节依次为：</p>
+<p>​    Bit depth、ColorType、Compression method、Filter method、Interlace method</p>
+</li>
+</ol>
+<h4 id="压缩包格式"><a href="#压缩包格式" class="headerlink" title="压缩包格式"></a>压缩包格式</h4><ul>
+<li><p>压缩源文件数据区：<br><code>50 4B 03 04</code> 是头文件的标志 （0x04034b50）</p>
+<p>00 00 全局方式标记（判断有无加密的重要标志）</p>
+</li>
+<li><p>压缩文件目录区<br><code>50 4B 01 02</code> 目录中文件头标志（0x02014b50）</p>
+<p>00 00 全局方式标记（有无加密的重要标志，更改这里就可以进行伪加密了，改为 09 00 打开就会提示有密码了。）</p>
+</li>
+<li><p>压缩源文件目录结束标志<br><code>50 4B 05 06</code> 目录结束标记</p>
+</li>
+</ul>
+<p><strong>辨别真假加密</strong>：</p>
+<p>无加密：</p>
+<p>压缩源文件数据区的<strong>全局方式位标记</strong>应当为<code>00 00</code>  （<code>50 4B 03 04 14 00</code> 后）<br>且压缩源文件目录区的<strong>全局方式位标记</strong>应当为<code>00 00</code>  （<code>50 4B 01 02 14 00</code> 后）</p>
+<p>假加密</p>
+<p>压缩源文件数据区的<strong>全局方式位标记</strong>应当为 <code>00 00</code> （<code>50 4B 03 04 14 00</code> 后）<br>且压缩源文件目录区的<strong>全局方式位标记</strong>应当为 <code>09 00</code>  （<code>50 4B 01 02 14 00</code> 后）</p>
+<p>真加密</p>
+<p>压缩源文件数据区的<strong>全局方式位标记</strong>应当为<code>09 00</code> （<code>50 4B 03 04 14 00</code> 后）<br>且压缩源文件目录区的<strong>全局方式位标记</strong>应当为<code>09 00</code> （<code>50 4B 01 02 14 00</code> 后） </p>
+<h3 id="Cypher-Method"><a href="#Cypher-Method" class="headerlink" title="Cypher Method"></a>Cypher Method</h3><p>参考：<a target="_blank" rel="noopener" href="http://news.sohu.com/a/516614081_120818776">L</a></p>
+<h4 id="Web类编码"><a href="#Web类编码" class="headerlink" title="Web类编码"></a>Web类编码</h4><pre class=" language-xml"><code class="language-xml"># HTML源码
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>javascript:alert(1)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+# JS编码：
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>javascript:\u0061\u006c\u0065\u0072\u0074(1)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+# URL编码：
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>javascript:%5c%75%30%30%36%31%5c%75%30%30%36%63%5c%75%30%30%36%35%5c%75%30%30%37%32%5c%75%30%30%37%34(1)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+# HTML编码：
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&amp;#106;&amp;#97;&amp;#118;&amp;#97;&amp;#115;&amp;#99;&amp;#114;&amp;#105;&amp;#112;&amp;#116;&amp;#58;&amp;#37;&amp;#53;&amp;#99;&amp;#37;&amp;#55;&amp;#53;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#54;&amp;#37;&amp;#51;&amp;#49;&amp;#37;&amp;#53;&amp;#99;&amp;#37;&amp;#55;&amp;#53;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#54;&amp;#37;&amp;#54;&amp;#51;&amp;#37;&amp;#53;&amp;#99;&amp;#37;&amp;#55;&amp;#53;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#54;&amp;#37;&amp;#51;&amp;#53;&amp;#37;&amp;#53;&amp;#99;&amp;#37;&amp;#55;&amp;#53;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#55;&amp;#37;&amp;#51;&amp;#50;&amp;#37;&amp;#53;&amp;#99;&amp;#37;&amp;#55;&amp;#53;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#48;&amp;#37;&amp;#51;&amp;#55;&amp;#37;&amp;#51;&amp;#52;&amp;#40;&amp;#49;&amp;#41;<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+</code></pre>
+<p><strong>URL编码</strong></p>
+<p>一般来说，URL只能使用英文字母、阿拉伯数字和某些标点符号，不能使用其他文字和符号。这意味着，如果URL中有汉字和其他符号，就必须编码后使用。我们在进行 URL 请求时，浏览器会自动帮我们把部分符号转换成 <code>%</code> + <code>十六进制数字</code> 的形式<br> <code>http://127.0.0.1/flag.php?x=1{)wo我</code><br> 转化为<br> <code>http://127.0.0.1/flag.php?x=1{)wo%E6%88%91</code></p>
+<p><strong>HTML实体编码</strong></p>
+<p>因为HTML对符号很敏感，比如空格，“&lt;”,“&gt;”等，于是这些符号需要用一些编码代替，这些编码就是HTML实体编码。</p>
+<p><strong>JavaScript编码</strong></p>
+<p>JavaScript编码主要是为了解决URL编码留下的坑进行的</p>
+<p>escape()函数编码：形式为<code>%uXXXX</code>、<code>%XX</code>，字符范围<code>0-F</code>，本身就是URL编码的一种实现方式</p>
+<p>Unicode 编码：<code>'\u' + '四位十六进制数字'</code>不够四位前面补0</p>
+<p>JSFuck： 一种基于JavaScript原子部分的晦涩的编程风格，它只有6种字符：<code>[</code> <code>]</code> <code>(</code> <code>)</code> <code>!</code> <code>+</code> ，也可以来编写程序并执行，可以做到所有JavaScript能做的事情</p>
+<h4 id="MD5"><a href="#MD5" class="headerlink" title="MD5"></a>MD5</h4><p>MD5以512位分组来处理输入文本，每一分组又划分为16个32位子分组。算法的输出由四个32位分组组成，将它们级联形成一个128位散列值。是不可逆的加密。</p>
+<h4 id="AES加密"><a href="#AES加密" class="headerlink" title="AES加密"></a>AES加密</h4><p>特征：AES加密最重要的特征还是它的S-box,反汇编代码中很明显，而且容易定位</p>
+<p>又称Rijndael加密法，是美国联邦政府采用的一种区块加密标准。</p>
+<p>明文分组的长度为128位即16字节，密钥长度可以为16，24或者32字节(128，192，256位)。根据密钥的长度，算法被称为AES-128，AES-192或者AE-256。</p>
+<p>从安全性来看，AES-256安全性最高 从性能来看，AES-128性能最高</p>
+<h4 id="sha1"><a href="#sha1" class="headerlink" title="sha1"></a>sha1</h4><p>对于长度小于2^64位的消息，SHA1会产生一个160位的消息摘要。</p>
+<h4 id="CRS32"><a href="#CRS32" class="headerlink" title="CRS32"></a>CRS32</h4><p>在诸多检错手段中，CRC是最著名的一种。CRC的全称是循环冗余校验。</p>
+<p>特征：CRC32的计算结果只有8位</p>
+<p>Cyclic Redundancy Check循环冗余检验，是基于数据计算一组效验码，用于核对数据传输过程中是否被更改或传输错误。 算法原理 假 设数据传输过程中需要发送15位的二进制信息g=101001110100001，这串二进制码可表示为代数多项式g(x) = x^14 + x^12 + x^9 + x^8 + x^7 + x^5 + 1，其中g中第k位的值，对应g(x)中x^k的系数。将g(x)乘以x^m，既将g后加m个0，然后除以m阶多项式h(x)，得到的(m-1)阶余项 r(x)对应的二进制码r就是CRC编码。<br>h(x)可以自由选择或者使用国际通行标准，一般按照h(x)的阶数m，将CRC算法称为CRC-m，比如CRC-32、CRC-64等。国际通行标准可以<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Cyclic_redundancy_check">look</a><br>g(x)和h(x)的除运算，可以通过g和h做xor（异或）运算。比如将11001与10101做xor运算： </p>
+<p>这里把计算过程的要点记录一下：</p>
+<ol>
+<li><p>CRC32是CRC算法一种，先参考Wiki上CRC算法的原理和实例搞明白基本的计算方法。</p>
+</li>
+<li><p>最常见的CRC32算法就是IEEE 802.3里生成FCS字段用的那个：</p>
+</li>
+</ol>
+<p>a) CRC32使用的Polynomial是 ，这个，图片缺失。。</p>
+<p>b) IEEE 802.3在传送数据时使用的是最低有效位优先 (least significant bit first)，所以要根据你机器的架构转换成有效的比特流输入。同理，输出流也一样。</p>
+<p>c) 为了有效识别输入流开头和结尾的零，开头的32位要按位取反(complement)，最后计算出的余数也要按位取反。</p>
+<p>按照上述方法计算能得到想要的CRC32值了。</p>
+<h4 id="Base-系列编码"><a href="#Base-系列编码" class="headerlink" title="Base 系列编码"></a>Base 系列编码</h4><p>是我们最常见的编码，除此之外，其实还有 Base16、Base32、Base58、Base85、Base100 等，他们之间最明显的区别就是使用了不同数量的可打印字符对任意字节数据进行编码，比如 使用了 64 个可打印字符（A-Z、a-z、0-9、+、/），Base16 使用了 16 个可打印字符（A-F、0-9），这里主要讲怎么快速识别，其具体原理可自行百度，Base 系列主要特征如下：</p>
+<ul>
+<li><strong>Base16</strong>：结尾没有等号，数字要多于字母；</li>
+<li><strong>Base32</strong>：字母要多于数字，明文数量超过 10 个，结尾可能会有很多等号；</li>
+<li><strong>Base58</strong>：结尾没有等号，字母要多于数字；</li>
+<li>：一般情况下结尾都会有 1 个或者 2 个等号，明文很少的时候可能没有；</li>
+<li><strong>Base85</strong>：等号一般出现在字符串中间，含有一些奇怪的字符；</li>
+<li><strong>Base100</strong>：密文由 Emoji 表情组成。</li>
+</ul>
+<h4 id="莫斯码"><a href="#莫斯码" class="headerlink" title="莫斯码"></a>莫斯码</h4><p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134036989.png" alt="字母"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134101319.png" alt="数字"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134114478.png" alt="标点"></p>
+<h4 id="栅栏密码"><a href="#栅栏密码" class="headerlink" title="栅栏密码"></a>栅栏密码</h4><p>特征：字母不会太多</p>
+<p>①把将要传递的信息中的字母交替排成上下两行。<br>②再将下面一行字母排在上面一行的后边，从而形成一段密码。</p>
+<p>明文：THE LONGEST DAY MUST HAVE AN END<br>加密：<br>1、把将要传递的信息中的字母交替排成上下两行。<br>T E O G S D Y U T A E N N<br>H L N E T A M S H V A E D</p>
+<p>2、 密文：<br>将下面一行字母排在上面一行的后边。<br>TEOGSDYUTAENN HLNETAMSHVAED<br>解密：<br>先将密文分为两行<br>T E O G S D Y U T A E N N<br>H L N E T A M S H V A E D<br>再按上下上下的顺序组合成一句话<br>明文：THE LONGEST DAY MUST HAVE AN END</p>
+<h4 id="培根密码"><a href="#培根密码" class="headerlink" title="培根密码"></a>培根密码</h4><p>培根密码，又名倍康尼密码（Bacon’s cipher）是由法兰西斯·培根发明的一种隐写术，它是一种本质上用二进制数设计的，没有用通常的0和1来表示，而是采用a和b，看到一串的a和b，并且五个一组，那么就是培根加密了。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134248890.png"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134305859.png"></p>
+<h4 id="凯撒密码"><a href="#凯撒密码" class="headerlink" title="凯撒密码"></a>凯撒密码</h4><p>通过把字母移动一定的位数来实现加密和解密。明文中的所有字母都在字母表上向后（或向前）按照一个固定数目进行偏移后被替换成密文。只需简单地统计字频就可以破译</p>
+<h4 id="维吉尼亚密码"><a href="#维吉尼亚密码" class="headerlink" title="维吉尼亚密码"></a>维吉尼亚密码</h4><p>维吉尼亚密码是在凯撒密码基础上产生的一种加密方法，它将凯撒密码的全部25种位移排序为一张表，与原字母序列共同组成26行及26列的字母表。另外，维吉尼亚密码必须有一个密钥，这个密钥由字母组成，最少一个，最多可与明文字母数量相等。维吉尼亚密码表如下：</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134355061.png"></p>
+<h4 id="猪圈密码"><a href="#猪圈密码" class="headerlink" title="猪圈密码"></a>猪圈密码</h4><p>是一种以格子为基础的简单替代式密码，是共济会的暗号</p>
+<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522140531088.png"></p>
+<h4 id="波利比奥斯方阵"><a href="#波利比奥斯方阵" class="headerlink" title="波利比奥斯方阵"></a>波利比奥斯方阵</h4><p>公元前2世纪,一个叫Polybius的希腊人设计了一种将字母编码成符号对的方法,他使用了一个称为Polybius的校验表,这个表中包含许多后来在加密系统中非常常见的成分。Polybius校验表由一个5行5列的网格组成,网格中包含26个英文字母,其中I和J在同一格中。相应字母用数对表示。在古代,这种棋盘密码被广泛使用。</p>
+<h4 id="rabbit加密"><a href="#rabbit加密" class="headerlink" title="rabbit加密"></a>rabbit加密</h4><p>特征：有U2Fsd开头</p>
+<h4 id="utf-7编码"><a href="#utf-7编码" class="headerlink" title="utf-7编码"></a>utf-7编码</h4><p>特征：url解码后可以看到如下，里面有“+/v++”，可以猜出这是UTF-7编码</p>
+<p>UTF-7:这是一种使用7位ASCII码]对Unicode码进行转换的编码。它的设计目标仍然是为了在只能传递7为编码的邮件网关中传递信息。UTF-7对英语字母、数字和常见符号直接显示，而对其他符号用修正的Base64编码。<strong>符号+和-号</strong>控制编码过程的<strong>开始和暂停</strong>。所以乱码中如果夹有英文单词，并且相伴有+号和-号，这就有可能是UTF-7编码。</p>
+<h4 id="Uuencode编码"><a href="#Uuencode编码" class="headerlink" title="Uuencode编码"></a>Uuencode编码</h4><p>Uuencode是二进制信息和文字信息之间的转换编码，也就是机器和人眼识读的转换。Uuencode编码方案常见于电子邮件信息的传输，目前已被多用途互联网邮件扩展（MIME）大量取代。</p>
+<p>Uuencode将输入文字以每三个字节为单位进行编码，如此重复进行。如果最后剩下的文字少于三个字节，不够的部份用零补齐。这三个字节共有24个Bit，以6-bit为单位分为4个群组，每个群组以十进制来表示所出现的数值只会落在0到63之间。将每个数加上32，所产生的结果刚好落在ASCII字符集中可打印字符（32-空白…95-底线）的范围之中。</p>
+<p>Uuencode编码每60个将输出为独立的一行（相当于45个输入字节），每行的开头会加上长度字符，除了最后一行之外，长度字符都应该是“M”这个ASCII字符（77=32+45），最后一行的长度字符为32+剩下的字节数目这个ASCII字符。</p>
+<h4 id="rot13加密算法"><a href="#rot13加密算法" class="headerlink" title="rot13加密算法"></a>rot13加密算法</h4><p>Rot13是一种非常简单的替换加密算法，只能加密26个英语字母。方法是：把每个字母用其后第13个字母代替。<br>因为有26个字母，取其一半13。</p>
+<pre class=" language-python"><code class="language-python">s <span class="token operator">=</span> <span class="token string">"xrlvf23xfqwsxsqf"</span>
+ans <span class="token operator">=</span> <span class="token string">""</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> s<span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token string">'a'</span> <span class="token operator">&lt;=</span> i <span class="token operator">&lt;=</span> <span class="token string">'z'</span><span class="token punctuation">:</span>
+        ans <span class="token operator">+=</span> chr<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">(</span>ord<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">-</span>ord<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">13</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">26</span> <span class="token operator">+</span> ord<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        ans<span class="token operator">+=</span>i
+<span class="token keyword">print</span><span class="token punctuation">(</span>ans<span class="token punctuation">)</span>
+</code></pre>
+<h4 id="当铺密码"><a href="#当铺密码" class="headerlink" title="当铺密码"></a>当铺密码</h4><p>该加密算法是根据当前汉字有多少笔画出头，对应的明文就是数字几。</p>
+<p>当前汉字有多少笔画出头，就是转化成数字几<br>例如：口 0 田 0 由 1 中 2 人 3 工 4 大 5 王 6 夫 7 井 8 羊 9</p>
+<p>解密脚本</p>
+<pre class=" language-python"><code class="language-python">dh <span class="token operator">=</span> <span class="token string">'田口由中人工大土士王夫井羊壮'</span>
+ds <span class="token operator">=</span> <span class="token string">'00123455567899'</span>
+
+cip <span class="token operator">=</span> <span class="token string">'王壮 夫工 王中 王夫 由由井 井人 夫中 夫夫 井王 土土 夫由 土夫 井中 士夫 王工 王人 土由 由口夫'</span>
+s <span class="token operator">=</span> <span class="token string">''</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> cip<span class="token punctuation">:</span>
+    <span class="token keyword">if</span> i <span class="token keyword">in</span> dh<span class="token punctuation">:</span>
+        s <span class="token operator">+=</span> ds<span class="token punctuation">[</span>dh<span class="token punctuation">.</span>index<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        s <span class="token operator">+=</span> <span class="token string">' '</span>
+<span class="token comment" spellcheck="true">#print(s)</span>
+
+ll <span class="token operator">=</span> s<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span>
+t <span class="token operator">=</span> <span class="token string">''</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>len<span class="token punctuation">(</span>ll<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    t <span class="token operator">+=</span> chr<span class="token punctuation">(</span>int<span class="token punctuation">(</span>ll<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">+</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'t='</span><span class="token punctuation">,</span> t<span class="token punctuation">,</span> <span class="token string">'\t\tt.lower()='</span><span class="token punctuation">,</span> t<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="苏州码子"><a href="#苏州码子" class="headerlink" title="苏州码子"></a>苏州码子</h4><p>〡〢〣〤〥〦〧〨〩是苏州码子，表示〡〢〣〤〥〦〧〨〩，就是中国民间的“商业数字”。在“字符映射表”中找得到，称为“杭州符号”，可能是一处讹误。在如今之苏州或杭州，还有没有这样的记号，得问一下当地人，甚至当地的商人才能得证。但据说在香港台湾一带的小商小贩中，仍能见这样的标价方式。既如此标价，想必当地识之者亦多。共和国建国之初，广州一带亦很常见。据说这种“商业数字”在商业上广泛应用，特别是水果摊，竖写账本的记帐。因为其形象性很强，极容易学习掌握，在当年，小贩即便是文盲，写出来也是运笔如飞的熟练，所以成为其“商业数字”。建国后随着工商业的凋蔽，大概“破四旧”时一起被破去了。</p>
+<p>看起来很神奇的符号，其实说破了不值钱。〡 〢 〣 〤 〥 〦 〧 〨 〩 十，对应我们现在汉字的一二三四五六七八九十。便于大家详细了解，照贴了网上一段介绍文字。<br>1，就写一个竖；<br>2，两个竖：〢<br>3， 三个竖：〣<br>4，是个交叉：〤<br>5，写成〥，其实只是 5 字写得草和快<br>6，写成一点加一横，其中的一点，代表了5： 〦<br>7，写成一点加两横：〧<br>8，一点加三横：〨<br>9，写成“久”的草体：〩<br>20，两个“十”字：廿</p>
+<h4 id="各种奇葩加密"><a href="#各种奇葩加密" class="headerlink" title="各种奇葩加密"></a>各种奇葩加密</h4><h5 id="与佛论禅-新约佛论禅"><a href="#与佛论禅-新约佛论禅" class="headerlink" title="与佛论禅/新约佛论禅"></a>与佛论禅/新约佛论禅</h5><p>字符串转换后，是一些佛语。</p>
+<h5 id="与熊论道"><a href="#与熊论道" class="headerlink" title="与熊论道"></a>与熊论道</h5><p>字符串转换后，是一些熊语。</p>
+<h5 id="兽音译者"><a href="#兽音译者" class="headerlink" title="兽音译者"></a>兽音译者</h5><p>字符串转换后，是一些兽语。</p>
+<h5 id="社会核心价值观"><a href="#社会核心价值观" class="headerlink" title="社会核心价值观"></a>社会核心价值观</h5><p>字符串转换后，是社会核心价值观。</p>
+<h5 id="颜文字加密"><a href="#颜文字加密" class="headerlink" title="颜文字加密"></a>颜文字加密</h5><p>字符串转换后，是颜文字。</p>
+<h5 id="Ook加密"><a href="#Ook加密" class="headerlink" title="Ook加密"></a>Ook加密</h5><p><a target="_blank" rel="noopener" href="https://www.splitbrain.org/services/ook">https://www.splitbrain.org/services/ook</a></p>
+<p>OOK！只有三个不同的语法元素：<br>Ook。<br>OOK？<br>OOK！</p>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Enomothem</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://enomothem.com/posts/6310.html">http://enomothem.com/posts/6310.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Enomothem</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/MISC/">
+                                    <span class="chip bg-color">MISC</span>
+                                </a>
+                            
+                                <a href="/tags/flag/">
+                                    <span class="chip bg-color">flag</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/6310.html">
+                    <div class="card-image">
+                        
+                        <img src="https://lit.enomothem.com/zhixinghe/20220526124238.png" class="responsive-img" alt="Miscellaneous6">
+                        
+                        <span class="card-title">Miscellaneous6</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/CTF/" class="post-category">
+                                    CTF
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MISC/">
+                        <span class="chip bg-color">MISC</span>
+                    </a>
+                    
+                    <a href="/tags/flag/">
+                        <span class="chip bg-color">flag</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/93db.html">
+                    <div class="card-image">
+                        
+                        <img src="https://lit.enomothem.com/zhixinghe/20220526124131.png" class="responsive-img" alt="Linux-二进制ASCII互转的实现">
+                        
+                        <span class="card-title">Linux-二进制ASCII互转的实现</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Linux/" class="post-category">
+                                    Linux
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/ASCII/">
+                        <span class="chip bg-color">ASCII</span>
+                    </a>
+                    
+                    <a href="/tags/Binary/">
+                        <span class="chip bg-color">Binary</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('100')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround. 将 === PRE 改为CODE即可复制，解决换行问题
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 字星河<br />'
+            + '文章作者: Enomothem<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="2457752542"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aplayer/APlayer.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+			
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2018";
+                    var startMonth = "6";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "站龄 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "站龄 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+			
+			<br>
+			
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2018-2022</span>
+            
+            <a href="/about" target="_blank">by&nbsp;Enomothem</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">266.7k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                <i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+			
+            <br>
+
+            
+			
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="https://beian.miit.gov.cn/" target="_blank">赣ICP备2021004825号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/enomothem" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:enomothem@outlook.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://public.zsxq.com/groups/51288182112544.html" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://public.zsxq.com/groups/51288182112544.html" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=251051821" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 251051821" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/materialize/materialize.min.js"></script>
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aos/aos.js"></script>
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/js/matery.js"></script>
+    <!--动态线条背景-->
+    <script type="text/javascript" color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4c973a61bf86a8fd9f616477668e8c47";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/instantpage/instantpage.js" type="module"></script>
+    
+<!-- 雪花snow 樱花sakura -->
+ <!--   <script src="/js/sakura.js"></script>  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+
+</html>
+
