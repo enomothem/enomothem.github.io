@@ -41,8 +41,8 @@
     <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -637,21 +637,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-17
+                    2022-05-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -827,8 +827,27 @@ message: 可以不填。这个就是上次的时候的一个描述
 <p>图片地址为本地，我们点击上传后，图片变成Gitee的地址即为成功。</p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201214222954884.png"></p>
 <p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201214223048684.png"></p>
-<h2 id="Ex-Reference"><a href="#Ex-Reference" class="headerlink" title="Ex Reference"></a>Ex Reference</h2><p>[1] <a target="_blank" rel="noopener" href="https://yafine-blog.cn/posts/15cb.html">https://yafine-blog.cn/posts/15cb.html</a></p>
+<h2 id="Dx-⚝-国内图床方案"><a href="#Dx-⚝-国内图床方案" class="headerlink" title="Dx ⚝ 国内图床方案"></a>Dx ⚝ 国内图床方案</h2><blockquote>
+<p>在Gitee加了防盗链以及Github的CDN加速Jsdeliver出事之后，我无路可退，只能转变思路看国内的图床了。</p>
+<p>我会思考和对比哪个图床值得一试，首先我会列出一些国内比较好的图床。</p>
+</blockquote>
+<h3 id="七牛云"><a href="#七牛云" class="headerlink" title="七牛云"></a>七牛云</h3><p>网址：<a target="_blank" rel="noopener" href="https://www.upyun.com/">https://www.upyun.com/</a></p>
+<p>PicGo是否支持：是<br>是否稳定：可靠</p>
+<h3 id="又拍云"><a href="#又拍云" class="headerlink" title="又拍云"></a>又拍云</h3><p>费用。。</p>
+<h3 id="SM-MS"><a href="#SM-MS" class="headerlink" title="SM.MS"></a>SM.MS</h3><h3 id="路过图床"><a href="#路过图床" class="headerlink" title="路过图床"></a>路过图床</h3><h3 id="圆子图床"><a href="#圆子图床" class="headerlink" title="圆子图床"></a>圆子图床</h3><h3 id="聚合图床"><a href="#聚合图床" class="headerlink" title="聚合图床"></a>聚合图床</h3><h2 id="Ex-⚝-自建图床方案"><a href="#Ex-⚝-自建图床方案" class="headerlink" title="Ex ⚝ 自建图床方案"></a>Ex ⚝ 自建图床方案</h2><blockquote>
+<p> 可以利用下面的开源代码搭建自己的图床，虽然自己的才是最稳定的，但自己的就一定稳定吗？你的图床就一定快吗？</p>
+</blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.xiebruce.top/644.html">使用nginx负载均衡+多个云的免费额度打造免费markdown图床 | | Bruce’s Blog</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/lazy-koala/imgs-upload-srv">lazy-koala/imgs-upload-srv</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.xiebruce.top/17.html%23i-20">PicUploader: 一个还不错的图床工具</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/skycity233/SMPIC">skycity233/SMPIC</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/skycity233/MDPIC">skycity233/MDPIC</a></li>
+<li>教程：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/51c2cc86bbf9">如何使用 chevereto 搭建免费图床系统</a></li>
+</ul>
+<h2 id="Fx-Reference"><a href="#Fx-Reference" class="headerlink" title="Fx Reference"></a>Fx Reference</h2><p>[1] <a target="_blank" rel="noopener" href="https://yafine-blog.cn/posts/15cb.html">https://yafine-blog.cn/posts/15cb.html</a></p>
 <p>[2] <a target="_blank" rel="noopener" href="https://www.imwzh.com/archives/73.html">https://www.imwzh.com/archives/73.html</a></p>
+<p>[3] <a target="_blank" rel="noopener" href="https://www.shejibiji.com/archives/2297">https://www.shejibiji.com/archives/2297</a></p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
                 
             </div>
@@ -1445,7 +1464,7 @@ message: 可以不填。这个就是上次的时候的一个描述
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">265k</span>&nbsp;字
+                class="white-color">265.2k</span>&nbsp;字
             
             
             
