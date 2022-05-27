@@ -644,14 +644,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    4.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    18 分
                 </div>
                 
 
@@ -671,11 +671,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Capture-The-Flag-Miscellaneous-6"><a href="#Capture-The-Flag-Miscellaneous-6" class="headerlink" title="Capture The Flag Miscellaneous 6"></a>Capture The Flag Miscellaneous 6</h1><p>Miscellaneous 【6】 –key{flag{misc}}</p>
-<p>Miscellaneous 【5】 </p>
-<p>Miscellaneous 【4】</p>
+                <h1 id="Capture-The-Flag-Miscellaneous-6"><a href="#Capture-The-Flag-Miscellaneous-6" class="headerlink" title="Capture The Flag Miscellaneous 6"></a>Capture The Flag Miscellaneous 6</h1><p>Miscellaneous 【6】 –key{flag{misc}}  - The end</p>
+<p>Miscellaneous 【<a href="https://enomothem.com/posts/6250.html">5</a>】 </p>
+<p>Miscellaneous 【<a href="https://enomothem.com/posts/a291.html">4</a>】 </p>
 <hr>
-<p>Miscellaneous 【3】 </p>
+<p>Miscellaneous 【<a href="https://enomothem.com/posts/60d0.html">3</a>】 </p>
 <p>Miscellaneous 【<a href="https://enomothem.com/posts/a011.html">2</a>】</p>
 <p>Miscellaneous 【<a href="https://enomothem.com/posts/2242.html">1</a>】</p>
 <h2 id="Ax-Introduction"><a href="#Ax-Introduction" class="headerlink" title="Ax Introduction"></a>Ax Introduction</h2><p>什么是CTF，什么是MISC。</p>
@@ -767,6 +767,7 @@ fcrackzip -D -p /usr/share/wordlists/rockyou.txt -u crack_this.zip
 <li><a target="_blank" rel="noopener" href="https://crypot.51strive.com/sha256.html">https://crypot.51strive.com/sha256.html</a> sha1-sha2</li>
 <li><a target="_blank" rel="noopener" href="https://morsecode.buyaocha.com/">https://morsecode.buyaocha.com/</a> 莫斯</li>
 <li><a target="_blank" rel="noopener" href="http://encode.chahuo.com/">http://encode.chahuo.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://the-x.cn/cryptography/Aes.aspx">https://the-x.cn/cryptography/Aes.aspx</a> AES</li>
 </ul>
 </li>
 </ul>
@@ -785,7 +786,7 @@ BCDEFGHIJKLMNOPQRST
 ABCDEFGHIJKLMNOPQRS
 </code></pre>
 <p>这有点像维吉尼亚密码表，把这个补全。发现突然与棋盘对应，而棋盘上的黑子就是密码。</p>
-<pre><code>JKLMNOPQRSTUVWX【Y】ZAB
+<pre class=" language-txt"><code class="language-txt">JKLMNOPQRSTUVWX【Y】ZAB
 IJKLMNOPQRSTUVWXYZ【A】
 HIJK【L】MNOPQRSTUVWXYZ
 GHIJKLMNO【P】QRSTUVWXY
@@ -1037,6 +1038,111 @@ decodei<span class="token punctuation">(</span><span class="token number">727</s
 <p>访问网址<code>http://c.bugku.com/momoj2j.png</code>，得到二维码</p>
 <p><img src="https://lit.enomothem.com/zhixinghe/20220527003949.png"></p>
 <p>扫描二维码得到<code>KEY{nitmzhen6}</code></p>
+<h4 id="Bugku-where-is-flag-2"><a href="#Bugku-where-is-flag-2" class="headerlink" title="Bugku_where is flag 2"></a>Bugku_where is flag 2</h4><p><img src="https://lit.enomothem.com/zhixinghe/20220527154800.png"></p>
+<p>CRC32校验字符</p>
+<pre class=" language-shell"><code class="language-shell">6275676b757b596f755f63616e27745f696d6167696e655f7468655f68617070696e6573735F6F665f686964696e675f7468655f666c61672121217d454ab976
+</code></pre>
+<p>转字符</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527155854.png"></p>
+<h4 id="Bugku-美丽的烟火"><a href="#Bugku-美丽的烟火" class="headerlink" title="Bugku_美丽的烟火"></a>Bugku_美丽的烟火</h4><p>压缩包伪加密，修改后解开得到key和压缩包</p>
+<p>Key</p>
+<pre class=" language-shell"><code class="language-shell">jnPX5p5ZtfDJumxSsEK
+</code></pre>
+<p>base64解密</p>
+<pre class=" language-shell"><code class="language-shell">am5QWDVwNVp0ZkRKdW14U3NFSw==
+</code></pre>
+<p>再base58解密</p>
+<pre class=" language-shell"><code class="language-shell">t_hp1ass_s1wsd
+</code></pre>
+<p>栅栏解密</p>
+<pre class=" language-shell"><code class="language-shell">th1s_1s_passwd
+</code></pre>
+<p>图片隐写</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527162716.png"></p>
+<p>stegppy，密码shumu</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527162811.png"></p>
+<p>AES的key是<code>th1s_1s_passwd</code></p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527163138.png"></p>
+<h4 id="Bugku-黑客的图片"><a href="#Bugku-黑客的图片" class="headerlink" title="Bugku_黑客的图片"></a>Bugku_黑客的图片</h4><p>思路图</p>
+<pre class=" language-shell"><code class="language-shell">|──hacker.png  第一个flag片段。通过zsteg得到隐写信息。通过binwalk得知隐藏文件，使用foremost分解得到压缩包
+    ├── audit.txt
+    ├── png
+    │&nbsp;&nbsp; └── 00000000.png
+    └── zip
+        ├── 00000436.zip RSA解密脚本得到438压缩包密码
+        └── 00000438.zip 得到两张图片
+            ├── flag2.jpg 第二个flag片段，通过修改高度得到
+            └── flag3.png 第三个flag片段，通过stegpy得到
+# flag{m1s3_1s_eas3_bu1_misc_d0n't_love_me}
+</code></pre>
+<p>png图片分解得到两个压缩包，其中一个压缩包得到一个文本，是rsa，解密</p>
+<pre class=" language-shell"><code class="language-shell">e = 65537
+p = 164350308907712452504716893470938822086802561377251841485619431897833167640001783092159677313093192408910634151587217774530424780799210606788423235161145718338446278412594875577030585348241677399115351594884341730030967775904826577379710370821510596437921027155767780096652437826492144775541221209701657278949
+q = 107494571486621948612091613779149137205875732174969005765729543731117585892506950289230919634697561179755186311617524660328836580868616958686987611614233013077705519528946490721065002342868403557070176752015767206263130391554820965931893485236727415230333736176351392882266005356897538286240946151616799180309
+c = 17210571768112859512606763871602432030258009922654088989566328727381190849684513475124813364778051200650944085160387368205190094114248470795550466411940889923383014246698624524757431163133844451910049804985359021655893564081185136250014784383020061202277758202995568045817822133418748737332056585115499621035958182697568687907469775302076271824469564025505064692884524991123703791933906950170434627603154363327534790335960055199999942362152676240079134224911013272873561710522794163680938311720454325197279589918653386378743004464088071552860606302378595024909242096524840681786769068680666093033640022862042786586612
+#longs_to_bytes(m) = passwd
+</code></pre>
+<p>p 和 q：两个大的质数，是另一个参数N的的两个因子。<br>N：大整数，可以称之为模数<br>e 和 d：互为无反数的两个指数<br>c 和 m：密文和明文</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> Crypto<span class="token punctuation">.</span>Util<span class="token punctuation">.</span>number <span class="token keyword">import</span> <span class="token operator">*</span>
+<span class="token keyword">import</span> gmpy2
+
+e <span class="token operator">=</span> <span class="token number">65537</span>
+p <span class="token operator">=</span> <span class="token number">164350308907712452504716893470938822086802561377251841485619431897833167640001783092159677313093192408910634151587217774530424780799210606788423235161145718338446278412594875577030585348241677399115351594884341730030967775904826577379710370821510596437921027155767780096652437826492144775541221209701657278949</span>
+q <span class="token operator">=</span> <span class="token number">107494571486621948612091613779149137205875732174969005765729543731117585892506950289230919634697561179755186311617524660328836580868616958686987611614233013077705519528946490721065002342868403557070176752015767206263130391554820965931893485236727415230333736176351392882266005356897538286240946151616799180309</span>
+c <span class="token operator">=</span> <span class="token number">17210571768112859512606763871602432030258009922654088989566328727381190849684513475124813364778051200650944085160387368205190094114248470795550466411940889923383014246698624524757431163133844451910049804985359021655893564081185136250014784383020061202277758202995568045817822133418748737332056585115499621035958182697568687907469775302076271824469564025505064692884524991123703791933906950170434627603154363327534790335960055199999942362152676240079134224911013272873561710522794163680938311720454325197279589918653386378743004464088071552860606302378595024909242096524840681786769068680666093033640022862042786586612</span>
+
+
+n <span class="token operator">=</span> p <span class="token operator">*</span> q
+phi <span class="token operator">=</span> <span class="token punctuation">(</span>p<span class="token number">-1</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>q<span class="token number">-1</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 求φ(n)，φ(n)=(p-1)(q-1)</span>
+d <span class="token operator">=</span> gmpy2<span class="token punctuation">.</span>invert<span class="token punctuation">(</span>e<span class="token punctuation">,</span> phi<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 求e对于模n的逆元，即解密指数d</span>
+m <span class="token operator">=</span> pow<span class="token punctuation">(</span>c<span class="token punctuation">,</span> d<span class="token punctuation">,</span> n<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># m=c^d mod n</span>
+passwd <span class="token operator">=</span> long_to_bytes<span class="token punctuation">(</span>m<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># m的字符串形式</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>passwd<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>得到密码</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527170232.png"></p>
+<p>用密码解压第二个压缩包，得到 flag2和flag3图片</p>
+<p>flag2通过修改高度得到flag片段</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527170708.png"></p>
+<p>flag3通过stegpy隐写得到flag片段</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527170859.png" alt="image-20220527170857921"></p>
+<p>使用zsteg查看hacker.png隐写信息</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527171027.png"></p>
+<h4 id="Bugku-Linux2"><a href="#Bugku-Linux2" class="headerlink" title="Bugku_Linux2"></a>Bugku_Linux2</h4><p>得到一个二进制文件，直接正则搜索一下关键词。</p>
+<p>获得key，把匹配范围改大一点，结束</p>
+<p><code>KEY{24f3627a86fc740a7f36ee2c7a1c124a}</code></p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527175513.png"></p>
+<h4 id="Bugku-开始也是结束"><a href="#Bugku-开始也是结束" class="headerlink" title="Bugku_开始也是结束"></a>Bugku_开始也是结束</h4><p>描述： rockyou文件</p>
+<p>得到一个图片，查看发现包含压缩包</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527181536.png"></p>
+<p>使用破解发现密码正是压缩包里面的文件名，11549.zip</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527182058.png"></p>
+<p>然后发现都是按这样的规律一直解压</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527182226.png"></p>
+<p>使用脚本</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> zipfile
+
+path <span class="token operator">=</span> r<span class="token string">'path'</span>
+zipname <span class="token operator">=</span> path <span class="token operator">+</span> <span class="token string">'11549.zip'</span>
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+    ts1 <span class="token operator">=</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span>zipname<span class="token punctuation">)</span>
+    res <span class="token operator">=</span> ts1<span class="token punctuation">.</span>namelist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+    passwd <span class="token operator">=</span> bytes<span class="token punctuation">(</span>res<span class="token punctuation">,</span> <span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+    ts1<span class="token punctuation">.</span>extractall<span class="token punctuation">(</span>path<span class="token punctuation">,</span> pwd <span class="token operator">=</span> passwd<span class="token punctuation">)</span>
+    zipname <span class="token operator">=</span> path <span class="token operator">+</span> ts1<span class="token punctuation">.</span>namelist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+</code></pre>
+<p>使用脚本解压出986个压缩包，直到最后一个压缩包bunku密码不正确，报错</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527182805.png"></p>
+<p>根据描述，使用rockyou字典爆破</p>
+<pre class=" language-shell"><code class="language-shell">$ fcrackzip -D -p /usr/share/wordlists/rockyou.txt -u bugku.zip
+</code></pre>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527183050.png"></p>
+<p>得到解压密码，打开图片用010分析，发现flag。</p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527183616.png"></p>
+<blockquote>
+<p>经过这几天的更新，MISC系列也算是完结了。</p>
+</blockquote>
 <h2 id="Cx-Additions"><a href="#Cx-Additions" class="headerlink" title="Cx Additions"></a>Cx Additions</h2><h3 id="File-Format"><a href="#File-Format" class="headerlink" title="File Format"></a>File Format</h3><table>
 <thead>
 <tr>
@@ -1941,7 +2047,7 @@ t <span class="token operator">=</span> <span class="token string">''</span>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">266.7k</span>&nbsp;字
+                class="white-color">270k</span>&nbsp;字
             
             
             
