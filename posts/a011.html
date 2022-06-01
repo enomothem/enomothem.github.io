@@ -41,8 +41,8 @@
     <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -637,7 +637,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-27
+                    2022-06-01
                 </div>
                 
 
@@ -723,15 +723,15 @@ john password.txt
 <h3 id="Bugku"><a href="#Bugku" class="headerlink" title="Bugku"></a>Bugku</h3><h4 id="BugKu-Ping"><a href="#BugKu-Ping" class="headerlink" title="BugKu_Ping"></a>BugKu_Ping</h4><p>★☆☆☆☆☆</p>
 <p>得到一个文件<code>ping.pcap</code>，又是抓包文件，这次学聪明一点，改成txt直接搜索flag。没有发现flag，看来不是那么的简单。</p>
 <p>打开wireshark看看这是什么鬼东西，ICMP的数据包，逐个看看，在看的过程中，发现flag以每个字符的形式放在每个数据片段的固定位置。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516084715359.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220516084715359.png"></p>
 <p>但。。有好多个包，一个一个看似乎有点慢，想个法子</p>
 <p>然后我发现每个字符前面都有一个i，这个i可以作为我们正则的判断点。</p>
 <pre class=" language-shell"><code class="language-shell">grep  -o  -P  "i.{1,3}"   --text ping.pcap
 # -o是只显示匹配的，--text是因为它是二进制文件，所以要转为文本 -P 是使用Perl语言的正则语法，使我们简单的匹配到想要的东西。
 </code></pre>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516133202091.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220516133202091.png"></p>
 <p>拿到Excel简单处理一下，把i和空格替换掉，然后复制粘贴成行，就可以啦</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516134504781.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220516134504781.png"></p>
 <table>
 <thead>
 <tr>
@@ -825,58 +825,58 @@ sed -i "s/i  //g" 1.txt
 # 转置
 awk '{ORS = ""}{print $0} END {printf("\n")}' 1.txt
 </code></pre>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516140131525.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220516140131525.png"></p>
 <p>提交，所以说linux学好是非常重要的。</p>
 <h4 id="Bugku-赛博朋克"><a href="#Bugku-赛博朋克" class="headerlink" title="Bugku_赛博朋克"></a>Bugku_赛博朋克</h4><p>★★☆☆☆☆</p>
 <p>给了一个压缩包，需要密码。丢Winhex审阅。<br>伪加密。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220516202636389.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220516202636389.png"></p>
 <p><strong>无加密</strong></p>
 <p>压缩源文件数据区的全局加密应当为<code>00 00</code> （504B0304两个bytes之后）<br>且压缩源文件目录区的全局方式位标记应当为<code>00 00</code>（504B0304四个bytes之后）</p>
 <p><strong>假加密</strong></p>
 <p>压缩源文件数据区的全局加密应当为<code>00 00</code><br>且压缩源文件目录区的全局方式位标记应当为<code>09 00</code></p>
 <p><strong>真加密</strong></p>
 <p>压缩源文件数据区的全局加密应当为<code>09 00</code><br>且压缩源文件目录区的全局方式位标记应当为<code>09 00</code> </p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517000525263.png"></p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517000525263.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220517000525263.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220517000525263.png"></p>
 <p>将09改为00，无密码解压得到cyberpunk.txt，显然我们需要先丢Winhex里看是什么文件，别问为什么，因为我打开就卡住了doge，PNG文件</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517001302797.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220517001302797.png"></p>
 <p>这是图片</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517161705841.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220517161705841.png"></p>
 <p>LSB隐写找到答案，注意这个l不是l，这个l是1，是1不是l。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517002906699.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220517002906699.png"></p>
 <p><code>flag{Hel1o_Wor1e}</code></p>
 <h4 id="Bugku-贝斯手"><a href="#Bugku-贝斯手" class="headerlink" title="Bugku_贝斯手"></a>Bugku_贝斯手</h4><p>★★★☆☆☆</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517185019894.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220517185019894.png"></p>
 <p>虽然我看过这部电影，但是我又花了一个多小时看了一遍，哈哈</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517214018127.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220517214018127.png"></p>
 <p>这个txt，不仔细看还以为只有一行字，往下翻一翻，发现了提示，百度古力娜扎的出生，打开flag压缩包</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517214926052.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220517214926052.png"></p>
 <p>提示</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517214708500.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220517214708500.png"></p>
 <p>这是什么鬼东西，</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517215127060.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220517215127060.png"></p>
 <p>5+58==<br>327a6c4304ad5938eaf0efb6cc3e53dc</p>
 <p>CFmZknmK3SDEcMEue1wrsJdqqkt7dXLuS</p>
 <p>似乎这是两组密码，第一串好像是md5，解一下试试</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517222722289.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220517222722289.png"></p>
 <p>另外一串是什么呢，看到前面5+58，是在暗示什么，5难道是MD5，那58对应的是？</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517222923564.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220517222923564.png"></p>
 <p>出现了答案，原来5+58这个意思啊</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220517224101568.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220517224101568.png"></p>
 <p><code>flag{this_is_md5_and_base58}</code></p>
 <h4 id="Bugku-blind-injection"><a href="#Bugku-blind-injection" class="headerlink" title="Bugku_blind_injection"></a>Bugku_blind_injection</h4><p>★★★★☆☆</p>
 <p>盲注，给了一个数据包，打开导出http，按大到小排序，将字符提取出来，拼接一下，效率太低了这样，转战Linux。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518115052931.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220518115052931.png"></p>
 <p>tshark是linux版本的wireshark，再配合正则匹配出字符，得到flag</p>
 <p><code>tshark -r cap.pcap -T fields -e http.request.full_uri | grep -oP '(?&lt;=database\(\)\),)[^%]*' | awk -F[,\'] '{a[$1]=$3}END{for(i in a)printf "%1s",a[i]}'</code></p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518114906028.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220518114906028.png"></p>
 <p>还以为是加密的，直接提交成功。</p>
 <h4 id="Bugku-可爱的故事"><a href="#Bugku-可爱的故事" class="headerlink" title="Bugku_可爱的故事"></a>Bugku_可爱的故事</h4><p>★★★★★☆</p>
 <p>……………..</p>
 <p>……………..</p>
 <p>emmmm</p>
 <p>这。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518121600281.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220518121600281.png"></p>
 <p>SD007大佬说将字母旋转一百八十度，原来如此</p>
 <p>然后看翻译出来，就得到了正常的字母，找到flag。</p>
 <p><code>bugku{iamlearningteyvatinbugku}</code></p>
@@ -920,7 +920,7 @@ path <span class="token operator">=</span> r<span class="token string">'C:\Users
 findFile<span class="token punctuation">(</span>path<span class="token punctuation">)</span>
 </code></pre>
 <p>得到图片</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518134857469.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220518134857469.png"></p>
 <p><code>bugku{WeChatwithSteg0}</code>,提交</p>
 <h2 id="Cx-Additions"><a href="#Cx-Additions" class="headerlink" title="Cx Additions"></a>Cx Additions</h2><h3 id="常见的文件头"><a href="#常见的文件头" class="headerlink" title="常见的文件头"></a>常见的文件头</h3><table>
 <thead>

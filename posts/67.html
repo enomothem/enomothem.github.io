@@ -41,8 +41,8 @@
     <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -645,7 +645,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-16
+                    2022-06-01
                 </div>
                 
 
@@ -679,7 +679,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Linux-du-amp-df查看磁盘信息"><a href="#Linux-du-amp-df查看磁盘信息" class="headerlink" title="Linux-du&amp;df查看磁盘信息"></a><a href="">Linux-du&amp;df查看磁盘信息</a></h1><p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210206214016.png"></p>
+                <h1 id="Linux-du-amp-df查看磁盘信息"><a href="#Linux-du-amp-df查看磁盘信息" class="headerlink" title="Linux-du&amp;df查看磁盘信息"></a><a href="">Linux-du&amp;df查看磁盘信息</a></h1><p><img src="https://lit.enomothem.com/brackets/20210206214016.png"></p>
 <p><span class="github-emoji"><span>💿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4bf.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
 <h2 id="Ax-统计磁盘使用情况"><a href="#Ax-统计磁盘使用情况" class="headerlink" title="Ax 统计磁盘使用情况"></a>Ax 统计磁盘使用情况</h2><h3 id="a-使用"><a href="#a-使用" class="headerlink" title="a 使用"></a>a 使用</h3><p>df是disk free缩写，du是disk usage缩写</p>
 <p>du可以查看文件或目录的使用磁盘情况，单位为字节</p>
@@ -689,9 +689,9 @@
 <p><code>-b -k -m -B</code> 单位分别为字节、KB、MB、块</p>
 <p><code>du -c</code> 总计 或 <code>-sh</code></p>
 <h3 id="b-显示磁盘可用空间"><a href="#b-显示磁盘可用空间" class="headerlink" title="b 显示磁盘可用空间"></a>b 显示磁盘可用空间</h3><p><code>df -h</code>（-h提高可读性）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210206160025.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210206160025.png"></p>
 <h3 id="c-找出指定目录最大的10个文件"><a href="#c-找出指定目录最大的10个文件" class="headerlink" title="c 找出指定目录最大的10个文件"></a>c 找出指定目录最大的10个文件</h3><p><code>du -ak filepath  | sort -nrk 1 | head</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210206160434.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210206160434.png"></p>
 <p>但是我们不需要目录，对下面的命令进行改进可以只输出文件而不是目录</p>
 <p><code>find . -type f -exec du -k {} \; | sort -nrk 1 | head</code></p>
 <h3 id="d-统计中排除部分文件"><a href="#d-统计中排除部分文件" class="headerlink" title="d 统计中排除部分文件"></a>d 统计中排除部分文件</h3><h4 id="1-使用通配符"><a href="#1-使用通配符" class="headerlink" title="1.使用通配符"></a>1.使用通配符</h4><p>排除目录下所有txt文件。</p>
@@ -700,28 +700,28 @@
 <p><code>du --exclude-from EXCLUDE.txt directory</code></p>
 <h4 id="3-目录深度"><a href="#3-目录深度" class="headerlink" title="3.目录深度"></a>3.目录深度</h4><p>不包括二级子目录</p>
 <p><code>du --max-depth 2 directory</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210206162021.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210206162021.png"></p>
 <h2 id="Bx-监视磁盘活动"><a href="#Bx-监视磁盘活动" class="headerlink" title="Bx 监视磁盘活动"></a>Bx 监视磁盘活动</h2><p><code>iotop</code>命令需要先安装。</p>
 <h3 id="a-交互式监视"><a href="#a-交互式监视" class="headerlink" title="a 交互式监视"></a>a 交互式监视</h3><p><code>iotop -o</code></p>
 <p>只显示正在活动的I/O进程</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210208220721.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210208220721.png"></p>
 <h3 id="b-用于shell脚本的非交互式用法"><a href="#b-用于shell脚本的非交互式用法" class="headerlink" title="b 用于shell脚本的非交互式用法"></a>b 用于shell脚本的非交互式用法</h3><p><code>iotop -b -n 2</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210208220830.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210208220830.png"></p>
 <h3 id="c-监视特定进程"><a href="#c-监视特定进程" class="headerlink" title="c 监视特定进程"></a>c 监视特定进程</h3><p>iotop -p PID</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210208221114.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210208221114.png"></p>
 <p>找PID麻烦？没关系，我们可以使用pidof命令，结合成</p>
 <p><code>iotop -p 'pidof cp'</code></p>
 <p>但是有时候一个进程名字有很多进程号，我们可以使用-s参数只显示一个</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210208222520.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210208222415.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210208222540.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210208222520.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210208222415.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210208222540.png"></p>
 <h2 id="Cx-检查磁盘及文件系统错误"><a href="#Cx-检查磁盘及文件系统错误" class="headerlink" title="Cx 检查磁盘及文件系统错误"></a>Cx 检查磁盘及文件系统错误</h2><h4 id="1-检查分区错误"><a href="#1-检查分区错误" class="headerlink" title="1.检查分区错误"></a>1.检查分区错误</h4><p><code>fsck /dev/sdb3</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210208222917.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210208222917.png"></p>
 <h4 id="2-检查-etc-fstab中所有配置文件系统"><a href="#2-检查-etc-fstab中所有配置文件系统" class="headerlink" title="2.检查/etc/fstab中所有配置文件系统"></a>2.检查/etc/fstab中所有配置文件系统</h4><p><code>fsck -A</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210208223008.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210208223008.png"></p>
 <h4 id="3-指定fsck自动修复错误，无需询问是否进行修复"><a href="#3-指定fsck自动修复错误，无需询问是否进行修复" class="headerlink" title="3.指定fsck自动修复错误，无需询问是否进行修复"></a>3.指定fsck自动修复错误，无需询问是否进行修复</h4><p><code>fsck -a  /dev/sda2</code></p>
 <h4 id="4-模拟fsck要执行的操作"><a href="#4-模拟fsck要执行的操作" class="headerlink" title="4.模拟fsck要执行的操作"></a>4.模拟fsck要执行的操作</h4><p>fsck -AN</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210208223219.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210208223219.png"></p>
 <h2 id="Dx-参考"><a href="#Dx-参考" class="headerlink" title="Dx 参考"></a>Dx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
                 

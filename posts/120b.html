@@ -41,8 +41,8 @@
     <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -641,7 +641,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-16
+                    2022-06-01
                 </div>
                 
 
@@ -675,7 +675,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Linux-Shell-从终端截图"><a href="#Linux-Shell-从终端截图" class="headerlink" title="Linux-Shell 从终端截图"></a><a href="">Linux-Shell 从终端截图</a></h1><p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210206214131.png"></p>
+                <h1 id="Linux-Shell-从终端截图"><a href="#Linux-Shell-从终端截图" class="headerlink" title="Linux-Shell 从终端截图"></a><a href="">Linux-Shell 从终端截图</a></h1><p><img src="https://lit.enomothem.com/brackets/20210206214131.png"></p>
 <blockquote>
 <p>为什么要截图，意义何在？</p>
 </blockquote>
@@ -683,16 +683,16 @@
 <p>linux下截屏除了<code>printscreen</code>按键外，还可以用<code>improt</code>命令。</p>
 <h2 id="Ax-安装"><a href="#Ax-安装" class="headerlink" title="Ax 安装"></a>Ax 安装</h2><p>截图工具来自ImageMagick软件包。</p>
 <p><code>apt install imagemagick-6.q16</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210202233139.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210202233139.png"></p>
 <h2 id="Bx-使用"><a href="#Bx-使用" class="headerlink" title="Bx 使用"></a>Bx 使用</h2><h4 id="a-取整个屏幕"><a href="#a-取整个屏幕" class="headerlink" title="a 取整个屏幕"></a>a 取整个屏幕</h4><p>作用相当于<code>Print Screen</code>键</p>
 <p><code>$ import  -window root screenshot.png</code></p>
 <h4 id="b-手动选择部分区域进行抓取"><a href="#b-手动选择部分区域进行抓取" class="headerlink" title="b 手动选择部分区域进行抓取"></a>b 手动选择部分区域进行抓取</h4><p><code>$ import screenshot.png</code></p>
 <h4 id="c-抓取特定窗口"><a href="#c-抓取特定窗口" class="headerlink" title="c 抓取特定窗口"></a>c 抓取特定窗口</h4><p><code>$ import -window  window_id screenshot.png</code></p>
 <p>window_id查看方法使用<code>xwininfo</code>命令，然后抓取截图的窗口得到ID号</p>
 <p>比如我使用命令后，我选中terminal窗口，获得以下信息，其中就有window id为：0x2c0000a</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210202233604.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210202233604.png"></p>
 <p>然后再将id传给import，放入指定的路径下。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210202234448.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210202234448.png"></p>
 <h4 id="d-等待5秒钟后，截取鼠标选择的范围"><a href="#d-等待5秒钟后，截取鼠标选择的范围" class="headerlink" title="d 等待5秒钟后，截取鼠标选择的范围"></a>d 等待5秒钟后，截取鼠标选择的范围</h4><p><code>sleep 5; import enomo.jpg</code></p>
 <h4 id="e-截取鼠标所点击的窗口"><a href="#e-截取鼠标所点击的窗口" class="headerlink" title="e 截取鼠标所点击的窗口"></a>e 截取鼠标所点击的窗口</h4><p><code>import -frame enomo.jpg</code></p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">

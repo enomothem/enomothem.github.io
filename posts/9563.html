@@ -41,8 +41,8 @@
     <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -641,7 +641,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-16
+                    2022-06-01
                 </div>
                 
 
@@ -677,7 +677,7 @@
             <div id="articleContent">
                 <h2 id="Ax-记录文件及目录访问"><a href="#Ax-记录文件及目录访问" class="headerlink" title="Ax 记录文件及目录访问"></a>Ax 记录文件及目录访问</h2><p>下载inotifywait命令,跟踪目录和文件的变化。</p>
 <p><code>apt install inotify-tools</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210210120214.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210210120214.png"></p>
 <p>使用方法</p>
 <p><code>inotifywait -m -r -e create,move,delete /opt -q</code></p>
 <p>-m 持续监视</p>
@@ -724,7 +724,7 @@
 <td>文件被输出</td>
 </tr>
 </tbody></table>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210210121535.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210210121535.png"></p>
 <p>命令太长了，没事，写一个脚本</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># /bin/bash</span>
 <span class="token comment" spellcheck="true"># 跟踪文件</span>
@@ -732,12 +732,12 @@ path<span class="token operator">=</span><span class="token variable">$1</span>
 inotifywait -m -r -e create,move,delete <span class="token variable">$path</span> -q
 </code></pre>
 <p>使用方法，加上路径就好了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210210122444.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210210122444.png"></p>
 <h2 id="Bx-管理日志文件"><a href="#Bx-管理日志文件" class="headerlink" title="Bx 管理日志文件"></a>Bx 管理日志文件</h2><p>使用logrotate管理日志文件，跟踪系统内服务出现的一些事件。但是时间长了，日志文件会越来越大，我们可以限定它的大小。这种方法叫轮替（rotation）也正是命令logrotate名字的由来。</p>
 <p>配置文件位于/var/logrotate下</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210210123953.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210210123953.png"></p>
 <p>例如apache2文件日志信息</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210210124608.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210210124608.png"></p>
 <h2 id="Cx-用syslog记录日志"><a href="#Cx-用syslog记录日志" class="headerlink" title="Cx 用syslog记录日志"></a>Cx 用syslog记录日志</h2><p>Linux系统，守护进程sylogd使用syslog协议负责在/var/log创建并写入日志。</p>
 <p>一些重要的日志文件</p>
 <table>
@@ -779,16 +779,16 @@ inotifywait -m -r -e create,move,delete <span class="token variable">$path</span
 <h4 id="a-向日志文件-vaar-log-message写入日志信息"><a href="#a-向日志文件-vaar-log-message写入日志信息" class="headerlink" title="a 向日志文件/vaar/log/message写入日志信息"></a>a 向日志文件/vaar/log/message写入日志信息</h4><p><code>logger This is a test log line</code></p>
 <p><code>tail -n 1 /var/log/messages</code></p>
 <p>这个日志是通用日志文件，如果使用logger命令，将记录在此文件中</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210210132931.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210210132931.png"></p>
 <p>b 记录特定的标记（tag）</p>
 <p><code>logger -t TAG this is a message</code></p>
 <p><code>tail -n 1 /var/log/messages</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210210133516.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210210133516.png"></p>
 <p>根据标记可以放入指定的日志下，在/etc/rsyslog.d目录下可以查看相关配置</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210210133411.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210210133411.png"></p>
 <p>3.要将另一个日志文件中的最后一行记录到系统日志中，可以使用：</p>
 <p><code>logger -f /var/log/source.log</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210210134324.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210210134324.png"></p>
 <h2 id="Dx-参考"><a href="#Dx-参考" class="headerlink" title="Dx 参考"></a>Dx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
                 

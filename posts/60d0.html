@@ -41,8 +41,8 @@
     <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -637,7 +637,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-27
+                    2022-06-01
                 </div>
                 
 
@@ -736,59 +736,59 @@ fcrackzip -D -p /usr/share/wordlists/rockyou.txt -u crack_this.zip
 </blockquote>
 <p>我会去做各大在线网站的题目，然后记录于此便于我回顾。</p>
 <h3 id="Bugku"><a href="#Bugku" class="headerlink" title="Bugku"></a>Bugku</h3><h4 id="Bugku-where-is-flag-番外篇"><a href="#Bugku-where-is-flag-番外篇" class="headerlink" title="Bugku_where is flag 番外篇"></a>Bugku_where is flag 番外篇</h4><p>文件结构如下，出师表需要密码，key解压出13个txt</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518141749394.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220518141749394.png"></p>
 <p>合起来看</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518142323717.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220518142323717.png"></p>
 <p>貌似也没什么规律</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518171921765.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220518171921765.png"></p>
 <p>脑洞太大了，百度了下，原来是通过压缩差来得到ASCII 码。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518173936719.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220518173936719.png"></p>
 <p>得出：353-278 284-183 315-194 238-180 331-241 351-247 316-199 247-176 246-170 283-219 283-219 123-77 125-77</p>
 <p>= 75 101 121 58 90 104 117 71 76 64 64 46 48</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518183659870.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220518183659870.png"></p>
 <p>得到密码，解开key，是ZhuGL@@.0，而不是Key:ZhuGL@@.0</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518183853895.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220518183853895.png"></p>
 <p>是一张图片，这显然不是flag，丢到Winhex里观察</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518205723137.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220518205723137.png"></p>
 <p>找到flag。<code>flag in here {LjFWBuxFNTzEWv6t2NfxjNFSH1sQEwBt5wTTLD1fJ}</code></p>
 <p>这是什么加密，像Base58，找一下<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_37268841/article/details/115396658">密码特征大全</a>，符合特征，解密</p>
 <blockquote>
 <p>​    Base58是用于Bitcoin中使用的一种独特的编码方式，主要用于产生Bitcoin的钱包地址，Base58不使用数字”0”，字母大写”O”，字母大写”I”，和字母小写”l”，以及”+”和”/”符号</p>
 </blockquote>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518223327991.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220518223327991.png"></p>
 <h4 id="Bugku-再也没有纯白的灵魂"><a href="#Bugku-再也没有纯白的灵魂" class="headerlink" title="Bugku_再也没有纯白的灵魂"></a>Bugku_再也没有纯白的灵魂</h4><p>这是啥，又是一种不知道的加密吗，算了百度吧。</p>
 <p>查到是一种兽音加密。</p>
 <p>在线网站有很多 <a target="_blank" rel="noopener" href="http://hi.pcmoe.net/roar.html">http://hi.pcmoe.net/roar.html</a> 和 <a target="_blank" rel="noopener" href="https://roar.iiilab.com/">https://roar.iiilab.com/</a></p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220518235357523.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220518235357523.png"></p>
 <p>B-嗷 U-呜 G-啊 K-~ 用word替换</p>
 <p>但还是解密不了，看评论说少了一个字母，开头应该是BBBUGB</p>
 <pre class=" language-txt"><code class="language-txt">~呜嗷嗷嗷嗷呜啊嗷啊呜呜嗷呜呜~嗷嗷~啊嗷啊呜嗷嗷~嗷~嗷~呜呜嗷呜啊嗷嗷嗷呜啊呜~啊呜嗷呜呜~嗷呜呜啊嗷啊呜嗷嗷呜嗷~嗷~呜嗷嗷~嗷嗷嗷嗷呜啊呜~呜呜嗷呜呜~嗷~~啊嗷啊呜嗷嗷嗷嗷~嗷~呜呜嗷~呜嗷嗷嗷呜呜嗷嗷嗷呜嗷呜呜~呜啊啊啊嗷啊呜嗷嗷嗷~~嗷~呜呜嗷啊嗷嗷嗷嗷呜呜嗷嗷嗷呜嗷呜呜~呜啊啊啊嗷啊呜嗷嗷嗷~~嗷~呜呜嗷~啊嗷嗷嗷呜啊呜啊嗷呜嗷呜呜啊嗷呜嗷啊嗷啊呜嗷呜~呜~嗷~呜呜嗷呜嗷嗷嗷嗷呜啊嗷嗷呜呜嗷呜呜~呜呜嗷啊
 </code></pre>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220519083805619.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220519083805619.png"></p>
 <p><code>flag{ni-zhen-shi-shou-ren}</code>，你真是兽人？？</p>
 <h4 id="Bugku-又一张图片，还单纯吗"><a href="#Bugku-又一张图片，还单纯吗" class="headerlink" title="Bugku_又一张图片，还单纯吗"></a>Bugku_又一张图片，还单纯吗</h4><p>给了张图片，binwalk分析，发现不同的信息，分离出来</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220519084835825.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220519084835825.png"></p>
 <p>用foremost分离，得到第二张jpg，找到falg，不是flag，是falg。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220519085329466.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220519085329466.png"></p>
 <p><code>falg{NSCTF_e6532a34928a3d1dadd0b049d5a3cc57}</code></p>
 <h4 id="Bugku-猜"><a href="#Bugku-猜" class="headerlink" title="Bugku_猜"></a>Bugku_猜</h4><p>binwalk没什么东西，丢Winhex看看，也没东西。突然看见题目的描述是图中人物名字的全拼，直接识图。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220519091322530.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220519091322530.png"></p>
 <p>没什么难度，看清除题目就会了</p>
 <h4 id="Bugku-宽带信息泄露"><a href="#Bugku-宽带信息泄露" class="headerlink" title="Bugku_宽带信息泄露"></a>Bugku_宽带信息泄露</h4><p>得到一个名字为conf.bin的文件，工具题目的信息所知，这是一个有关于宽带的配置文件，下载RouterPassview工具进行查看，搜索Username即可。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520002054887.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220520002054887.png"></p>
 <p>提交</p>
 <h4 id="Bugku-隐写2"><a href="#Bugku-隐写2" class="headerlink" title="Bugku_隐写2"></a>Bugku_隐写2</h4><p>得到一张图片，常规思路，binwalk和foremost分离。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520002801842.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220520002801842.png"></p>
 <p>得到压缩包，flag需要密码解开，并且给了提示</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520003145509.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220520003145509.png"></p>
 <p>查理曼是K，雅典娜Q，兰斯洛特J，13，12，11，输入进去，密码错误。不管了，直接爆破。采用数字爆破</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520005719144.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220520005719144.png"></p>
 <p>得到密码，图片是看到了，flag呢</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520005853753.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220520005853753.png"></p>
 <p>得到<code>f1@g{eTB1IEFyZSBhIGhAY2tlciE=}    </code></p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520010450976.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220520010450976.png"></p>
 <p>一看就是base64，解一下</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520010708869.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220520010708869.png"></p>
 <pre class=" language-flag"><code class="language-flag">y0u Are a h@cker!
 </code></pre>
 <h2 id="Cx-Additions"><a href="#Cx-Additions" class="headerlink" title="Cx Additions"></a>Cx Additions</h2><h3 id="常见的文件头"><a href="#常见的文件头" class="headerlink" title="常见的文件头"></a>常见的文件头</h3><table>

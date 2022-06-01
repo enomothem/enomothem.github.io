@@ -41,8 +41,8 @@
     <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -637,7 +637,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-16
+                    2022-06-01
                 </div>
                 
 
@@ -729,7 +729,7 @@
 <td>否</td>
 </tr>
 </tbody></table>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210107210224.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210107210224.png"></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 创建数据库</span>
 
 <span class="token keyword">create</span> <span class="token keyword">database</span> huasheng_zg<span class="token punctuation">;</span>
@@ -812,19 +812,19 @@ eon_class           <span class="token keyword">varchar</span><span class="token
 <span class="token punctuation">(</span><span class="token string">"109"</span><span class="token punctuation">,</span> <span class="token string">"笑笑"</span> <span class="token punctuation">,</span> <span class="token string">"女"</span>  <span class="token punctuation">,</span> <span class="token string">"2000-11-12"</span><span class="token punctuation">,</span> <span class="token string">"财务部"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token punctuation">(</span><span class="token string">"199"</span><span class="token punctuation">,</span> <span class="token string">"唐五"</span> <span class="token punctuation">,</span> <span class="token string">"女"</span>  <span class="token punctuation">,</span> <span class="token string">"2000-02-21"</span><span class="token punctuation">,</span> <span class="token string">"唐门"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210109122719.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210109122719.png"></p>
 <h3 id="b-查询"><a href="#b-查询" class="headerlink" title="b 查询"></a>b 查询</h3><p>现在，财务部门需要查看所有人的华圣ID号和名字还有所在部门</p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> eon_id<span class="token punctuation">,</span>eon_name<span class="token punctuation">,</span>eon_class <span class="token keyword">from</span> member<span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210109122804.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210109122804.png"></p>
 <h3 id="c-去重查询"><a href="#c-去重查询" class="headerlink" title="c 去重查询"></a>c 去重查询</h3><p>粗心的数据库管理员重复输入了Eon的信息，导致出现了两个Eon。</p>
 <p>现在要查看去重部门字段之后的member表的eon_class字段。</p>
 <p>最后，把重复多余的记录删除</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210109123004.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210109123004.png"></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">distinct</span> eon_class <span class="token keyword">from</span> member<span class="token punctuation">;</span>
 <span class="token keyword">delete</span> <span class="token keyword">from</span> member <span class="token keyword">where</span> eon_id <span class="token operator">=</span> <span class="token string">"105"</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210108004520.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210108004520.png"></p>
 <h3 id="d-排序查询"><a href="#d-排序查询" class="headerlink" title="d 排序查询"></a>d 排序查询</h3><p>公司想给员工按照生日的顺序提醒信息部门送去生日祝福。</p>
 <p>分别使用升序和降序对出生日期进行查看，只查看姓名、生日字段</p>
 <pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true"># 一直查不出来，原来我birthday打错了，将错就错吧。</span>
@@ -895,7 +895,7 @@ Eon_ad_office       <span class="token keyword">varchar</span><span class="token
 <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span><span class="token punctuation">(</span>Eon_id<span class="token punctuation">)</span>
 <span class="token punctuation">)</span><span class="token keyword">charset</span><span class="token operator">=</span>utf8<span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210109123658.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210109123658.png"></p>
 <h3 id="b-记录"><a href="#b-记录" class="headerlink" title="b 记录"></a>b 记录</h3><table>
 <thead>
 <tr>
@@ -945,7 +945,7 @@ Eon_ad_office       <span class="token keyword">varchar</span><span class="token
 <span class="token punctuation">(</span><span class="token string">"110"</span><span class="token punctuation">,</span><span class="token string">"4F"</span><span class="token punctuation">,</span><span class="token string">"4053"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token punctuation">(</span><span class="token string">"199"</span><span class="token punctuation">,</span><span class="token string">"1F"</span><span class="token punctuation">,</span><span class="token string">"1032"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210109124113.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210109124113.png"></p>
 <h3 id="C-子查询"><a href="#C-子查询" class="headerlink" title="C 子查询"></a>C 子查询</h3><p>有人向前台询问笑笑的办公室位置，通过数据库查询笑笑所在楼层及办公室</p>
 <pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 子查询</span>
 
@@ -954,7 +954,7 @@ Eon_ad_office       <span class="token keyword">varchar</span><span class="token
 <span class="token keyword">select</span> eon_id <span class="token keyword">from</span> member <span class="token keyword">where</span> eon_name <span class="token operator">=</span> <span class="token string">"笑笑"</span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210109130313.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210109130313.png"></p>
 <p>现在急需一批搬运工</p>
 <p>查询所有男生所在楼层和办公室位置</p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> Eon_floor<span class="token punctuation">,</span>Eon_ad_office <span class="token keyword">from</span> location
@@ -962,7 +962,7 @@ Eon_ad_office       <span class="token keyword">varchar</span><span class="token
 <span class="token keyword">select</span> eon_id <span class="token keyword">from</span> member <span class="token keyword">where</span> eon_sex <span class="token operator">=</span> <span class="token string">"男"</span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210109130811.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210109130811.png"></p>
 <p>左思右想，怎么少了一个人，原来是白给。</p>
 <h3 id="d-内连接查询"><a href="#d-内连接查询" class="headerlink" title="d 内连接查询"></a>d 内连接查询</h3><p>这样太麻烦了，为此使用语句将所有人对应的ID、姓名、部门以及楼层和办公室位置升序的方式查询出来，然后打印成一张表。</p>
 <pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 内连接</span>
@@ -992,8 +992,8 @@ mysql<span class="token operator">></span> <span class="token keyword">select</s
 
 mysql<span class="token operator">></span> <span class="token keyword">select</span> m<span class="token punctuation">.</span>eon_id<span class="token punctuation">,</span>m<span class="token punctuation">.</span>eon_name<span class="token punctuation">,</span>m<span class="token punctuation">.</span>eon_class<span class="token punctuation">,</span>l<span class="token punctuation">.</span>Eon_floor<span class="token punctuation">,</span>l<span class="token punctuation">.</span>Eon_ad_office <span class="token keyword">from</span> member m <span class="token keyword">inner</span> <span class="token keyword">join</span> location l <span class="token keyword">on</span> m<span class="token punctuation">.</span>eon_id <span class="token operator">=</span> l<span class="token punctuation">.</span>Eon_id <span class="token keyword">order</span> <span class="token keyword">by</span> Eon_ad_office <span class="token keyword">asc</span><span class="token punctuation">;</span>
 </code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210109133359.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210109135123.png" alt="排序"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210109133359.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210109135123.png" alt="排序"></p>
 <h2 id="Fx-附页：关键字和保留字"><a href="#Fx-附页：关键字和保留字" class="headerlink" title="Fx 附页：关键字和保留字"></a>Fx 附页：关键字和保留字</h2><p>A</p>
 <ul>
 <li><code>ACCESSIBLE</code> (R)</li>

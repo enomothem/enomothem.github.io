@@ -41,8 +41,8 @@
     <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -641,7 +641,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-16
+                    2022-06-01
                 </div>
                 
 
@@ -683,13 +683,13 @@
 <li><a target="_blank" rel="noopener" href="http://www.imagemagick.org/">www.imagemagick.org</a></li>
 </ul>
 <h2 id="Bx-使用"><a href="#Bx-使用" class="headerlink" title="Bx 使用"></a>Bx 使用</h2><h3 id="a-格式转换"><a href="#a-格式转换" class="headerlink" title="a 格式转换"></a>a 格式转换</h3><p><code>convert  file1 file2</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210204225400.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210204225400.png"></p>
 <h3 id="b-图片大小"><a href="#b-图片大小" class="headerlink" title="b 图片大小"></a>b 图片大小</h3><p>指定宽高</p>
 <p><code>convert file1 -resize wxh file2</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210204230010.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210204230010.png"></p>
 <p>指定缩放比</p>
 <p><code>convert file1 -resize "50%" file2</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210204230252.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210204230252.png"></p>
 <h2 id="Cx-图像管理脚本"><a href="#Cx-图像管理脚本" class="headerlink" title="Cx 图像管理脚本"></a>Cx 图像管理脚本</h2><h4 id="a-编写脚本"><a href="#a-编写脚本" class="headerlink" title="a 编写脚本"></a>a 编写脚本</h4><pre class=" language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
 
 <span class="token keyword">if</span> <span class="token punctuation">[</span> $<span class="token comment" spellcheck="true"># -ne 4 -a $# -ne 6 -a $# -ne 8 ];</span>
@@ -742,13 +742,13 @@
 <h4 id="b-使用"><a href="#b-使用" class="headerlink" title="b 使用"></a>b 使用</h4><p>怎么使用呢，下面给出几个样例</p>
 <p>将某文件夹中全部图片调整到1024像素宽度</p>
 <p><code>./imgmanager.sh -source dir -scale 1024x</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210205000753.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210205000753.png"></p>
 <p>将全部图片调整到原来的20%</p>
 <p><code>./imgmanager.sh -source dir -percent 20%</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210205000839.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210205000839.png"></p>
 <p>调整到原来的50%且转为jpg文件，并存放至名为light的文件夹中</p>
 <p><code>./imgmanager.sh -source dir -percent 50% -ext jpg -dest light</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210205001131.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210205001131.png"></p>
 <h2 id="Dx-生成网页相册脚本"><a href="#Dx-生成网页相册脚本" class="headerlink" title="Dx 生成网页相册脚本"></a>Dx 生成网页相册脚本</h2><p>先执行脚本，然后把图片放在zmyer文件夹下，再次执行</p>
 <pre class=" language-bash"><code class="language-bash">
 <span class="token comment" spellcheck="true">#!/bin/bash</span>
@@ -793,8 +793,8 @@ EOF2
 <span class="token keyword">echo</span> Album generated to index.html
 </code></pre>
 <p>执行效果</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210208152352.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210208165008.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210208152352.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210208165008.png"></p>
 <p>我们图片从哪里来呢，网上找？那太麻烦了，一个一个保存，别忘了，我们已经具备基于shell脚本提供的完整自动化体系，每分钟可以爬取互联网上近千张图片，下面就是爬取图片的脚本。</p>
 <h2 id="Ex-爬取图片脚本"><a href="#Ex-爬取图片脚本" class="headerlink" title="Ex 爬取图片脚本"></a>Ex 爬取图片脚本</h2><pre class=" language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
 
@@ -829,24 +829,24 @@ curl -s <span class="token variable">$url</span> <span class="token operator">|<
 
 </code></pre>
 <p>使用方式</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210210164910.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210210164910.png"></p>
 <p>执行效果</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210210164718.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210210164718.png"></p>
 <p>我遇到的问题</p>
 <p>mkdir: missing operand</p>
 <p>查看发现果然不是bash，而是dash</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210210145151.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210210145151.png"></p>
 <p>解决方法</p>
 <p><code>sudo dpkg-reconfigure dash</code> ，选择no</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210210145106.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210210145106.png"></p>
 <p>现在就是bash了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210210145525.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210210145525.png"></p>
 <p>如果我们有两个脚本，想对比差异的话，可以使用diff命令</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210210165120.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210210165120.png"></p>
 <p>这样就不用一个一个看了。</p>
 <p>根据这个理念，我们可以对比网页，比如网页变动，传送门：<a target="_blank" rel="noopener" href="https://enomothem.cn/posts/ac0e.html">跟踪网页变动</a></p>
 <p>再结合我们的自动化生成相册的脚本，我们就可以实现全自动了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/20210210170221.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/20210210170221.png"></p>
 <h2 id="Fx-参考"><a href="#Fx-参考" class="headerlink" title="Fx 参考"></a>Fx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p>
 <p>[2] <a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_681e31a20102wc8e.html">http://blog.sina.com.cn/s/blog_681e31a20102wc8e.html</a></p>
 <p>[3] <a target="_blank" rel="noopener" href="https://www.cnblogs.com/wf-linux/p/9488257.html">https://www.cnblogs.com/wf-linux/p/9488257.html</a></p>

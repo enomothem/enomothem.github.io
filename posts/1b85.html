@@ -41,8 +41,8 @@
     <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -480,7 +480,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210531012104973.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://lit.enomothem.com/brackets/image-20210531012104973.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -637,7 +637,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-16
+                    2022-06-01
                 </div>
                 
 
@@ -673,7 +673,7 @@
             <div id="articleContent">
                 <h2 id="Q-基于虚拟化的安全性不能关闭，导致VM虚拟机打不开"><a href="#Q-基于虚拟化的安全性不能关闭，导致VM虚拟机打不开" class="headerlink" title="Q: 基于虚拟化的安全性不能关闭，导致VM虚拟机打不开"></a>Q: 基于虚拟化的安全性不能关闭，导致VM虚拟机打不开</h2><p>前段时间，在Windows安装了Docker，然后说要开启Hyper-V，最后Docker没有用，VM虚拟机也起不来了。虽然我知道不可兼得，但我朋友Gu0st居然能一起使用，这就很神奇，他的VM版本是15的，我的是最新版16的。</p>
 <p>最后我把Docker卸载了，我直接在虚拟机里的Linux里面装不就好了，也是两全其美呀。没想到，关闭了Hyper-V服务，还是进不去了，有一个报错，由于我现在解决了，我就去网上找一个图吧</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210417202446209.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20210417202446209.png"></p>
 <p>在网上找了很多，都是解决不了，看到一个很奇特的方法，他说他通过重启Bios里的虚拟服务，就是开一下，保存，然后再开起来，然后基于虚拟化的安全性就关闭了，我试过之后，解决了。</p>
 <blockquote>
 <p>第二次出现问题，这几天windows更新，没想到直接把我的系统给更新坏了，我直接卸载了更新，因为这次更新出现了很多问题还是没有修复，比如我的notepad快捷搜索找不到了。</p>
@@ -683,14 +683,14 @@
 <h2 id="A：解决"><a href="#A：解决" class="headerlink" title="A：解决"></a>A：解决</h2><p>我需要的效果，也是达到启动VM虚拟机的前提如下</p>
 <p>在运行输入：<code>msinfo32</code>，<font color="cornflowerblue">基于虚拟化的安全性</font>为<font color="red">未启用</font>状态</p>
 <p>打开任务管理器<code>Ctrl+Shift+ESC</code>，<font color="cornflowerblue">虚拟化</font>为<font color="red">开启</font>状态</p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210417204007048.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20210417204007048.png"></p>
 <p>解决方案</p>
 <p>a 关闭 Hyper-v</p>
 <p>打开程序和功能  快捷键：<code>shell:::{67718415-c450-4f3c-bf8a-b487642dc39b}</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210417204546623.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20210417204546623.png"></p>
 <p>b 禁用 HV主机服务</p>
 <p>打开服务 快捷键：<code>services.msc</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210417204742745.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20210417204742745.png"></p>
 <p>管理员模式打开cmd</p>
 <p><code>bcdedit /set hypervisorlaunchtype off</code></p>
 <p>重启</p>
@@ -937,12 +937,12 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/8aec.html">
+                <a href="/posts/264c.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20210531012104973.png" class="responsive-img" alt="Docker-vulscan">
+                        <img src="https://lit.enomothem.com/brackets/image-20210531012104973.png" class="responsive-img" alt="Docker-container">
                         
-                        <span class="card-title">Docker-vulscan</span>
+                        <span class="card-title">Docker-container</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -974,8 +974,8 @@
                         <span class="chip bg-color">docker</span>
                     </a>
                     
-                    <a href="/tags/vulscan/">
-                        <span class="chip bg-color">vulscan</span>
+                    <a href="/tags/container/">
+                        <span class="chip bg-color">container</span>
                     </a>
                     
                 </div>
@@ -992,7 +992,7 @@
                 <a href="/posts/61a5.html">
                     <div class="card-image">
                         
-                        <img src="https://test1.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/QQ截图20210417160708.jpg" class="responsive-img" alt="0day问世：Chrome zero-day vulnerability">
+                        <img src="https://lit.enomothem.com/brackets/QQ截图20210417160708.jpg" class="responsive-img" alt="0day问世：Chrome zero-day vulnerability">
                         
                         <span class="card-title">0day问世：Chrome zero-day vulnerability</span>
                     </div>

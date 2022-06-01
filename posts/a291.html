@@ -41,8 +41,8 @@
     <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -637,7 +637,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-27
+                    2022-06-01
                 </div>
                 
 
@@ -748,7 +748,7 @@ fcrackzip -D -p /usr/share/wordlists/rockyou.txt -u crack_this.zip
 </blockquote>
 <p>我会去做各大在线网站的题目，然后记录于此便于我回顾。</p>
 <h3 id="Bugku"><a href="#Bugku" class="headerlink" title="Bugku"></a>Bugku</h3><h4 id="Bugku-多种方法解决"><a href="#Bugku-多种方法解决" class="headerlink" title="Bugku_多种方法解决"></a>Bugku_多种方法解决</h4><p>得到一个exe文件，用winhex打开，是图片的base64编码</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520100148528.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220520100148528.png"></p>
 <p>1）用命令解决</p>
 <pre class=" language-shell"><code class="language-shell">base64 -d "解密的内容">>flag.png
 </code></pre>
@@ -769,7 +769,7 @@ Base64 在HTML中的使用
 <p>6）用扫描二维码的网站</p>
 <p><a target="_blank" rel="noopener" href="https://jiema.wwei.cn/">https://jiema.wwei.cn/</a></p>
 <p>得出<code>KEY{dca57f966e4e4e31fd5b15417da63269}</code></p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520101812088.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220520101812088.png"></p>
 <h4 id="Bugku-闪的好快"><a href="#Bugku-闪的好快" class="headerlink" title="Bugku_闪的好快"></a>Bugku_闪的好快</h4><p>一个动态二维码，每个二维码都有一个字符，方法就是找合适的工具。</p>
 <p>各种方法</p>
 <p>1）在线网站</p>
@@ -799,7 +799,7 @@ os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(
     <span class="token keyword">pass</span>
 </code></pre>
 <p>生成图片</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520124112520.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220520124112520.png"></p>
 <p>第二步，批量扫码</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
 <span class="token keyword">import</span> pyzbar<span class="token punctuation">.</span>pyzbar <span class="token keyword">as</span> pyzbar
@@ -868,35 +868,35 @@ os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(
 <p>但脚本出现了问题，就是顺序是乱的，这和文件名有关，怎么搞啊这。</p>
 <p>查阅资料，发现它之所以会出现“乱序”是因为<strong>使用默认ASCII的字符串排序方式</strong>，要改进代码就必须将排序改为按数字的方法排序，这个问题就先留着，以后来解决吧。乱的也不多，复制10-17到最后就可以了。</p>
 <p><code>SYC{F1aSh_so_f4sT}</code></p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520133213467.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220520133213467.png"></p>
 <p>当然也有工具啦，比如Excel的批量识别工具（搜索方方格子）</p>
 <p>工具网址：<a target="_blank" rel="noopener" href="https://pc.wwei.cn/">https://pc.wwei.cn/</a></p>
 <h4 id="Bugku-come-game"><a href="#Bugku-come-game" class="headerlink" title="Bugku_come_game"></a>Bugku_come_game</h4><p>给了一个游戏，但一直过不去。。，游戏会生成一个save文件，打开后发现关数，改成别的关数再按R重新开始，就可以跳关，第五关发现flag</p>
 <p><code>6E23F259D98DF153</code></p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520173734452.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220520173734452.png"></p>
 <h4 id="Bugku-白哥的鸽子"><a href="#Bugku-白哥的鸽子" class="headerlink" title="Bugku_白哥的鸽子"></a>Bugku_白哥的鸽子</h4><p>得到一个鸽子的图片，直接拿到winhex分析，得到乱序的flag，但是这不会是凯撒，以为存在flag{}的符号，应该是栅栏。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520214005812.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220520214005812.png"></p>
 <p>直接走一波栅栏密码</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520221114951.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220520221114951.png"></p>
 <p>3栏得到<code>flag{w22_is_v3ry_cool}</code></p>
 <h4 id="Bugku-linux"><a href="#Bugku-linux" class="headerlink" title="Bugku_linux"></a>Bugku_linux</h4><p>得到一个tar.gz的压缩包</p>
 <p>解压tar -zxvf 压缩包得到flag文件夹，是二进制文件，直接搜索flag或key关键字。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220520224052928.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220520224052928.png"></p>
 <h4 id="Bugku-简单套娃"><a href="#Bugku-简单套娃" class="headerlink" title="Bugku_简单套娃"></a>Bugku_简单套娃</h4><p>得到一张图片， 看看有没有隐藏什么</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220521005001546.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220521005001546.png"></p>
 <p>隐藏了一张图片，但是我用foremost爆不出来，用010editor判断</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220521004842889.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220521004842889.png"></p>
 <p>看到第二个文件头<code>FF D8 FF E0</code>，以下的都复制，然后新建一个HEX（十六进制）文件，粘贴进去，保存为jpg文件。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220521010506268.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220521010506268.png"></p>
 <p><code>flag{Mumuzi_the_God_of_Matryoshka}</code> 不知道是不是我看清楚了，用stegsolve将两张图片合成一下</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220521011057482.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220521011057482.png"></p>
 <p>提交成功。</p>
 <h4 id="Bugku-split-all"><a href="#Bugku-split-all" class="headerlink" title="Bugku_split_all"></a>Bugku_split_all</h4><p>得到一张PNG的图，打开010editor，查看发现有一个PNG标识和一部分GIF的头。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522082958529.png" alt="image-20220522082958529"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522082958529.png" alt="image-20220522082958529"></p>
 <p>把全面的删掉，补全GIF<code>47 49 46 38</code>。然后改为gif，就变成了一个比签还细的图片。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522083252034.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522083252034.png"></p>
 <p>这肯定是分离出gif，然后拼接起来才能看见完整的图。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522083531652.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522083531652.png"></p>
 <p>没想到这个gif网址直接满足了我的需求，太强了。</p>
 <p>再借助大佬的python脚本试试</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
@@ -922,51 +922,51 @@ new_one <span class="token operator">=</span> Image<span class="token punctuatio
 <span class="token comment" spellcheck="true"># 保存</span>
 new_one<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">"flag.png"</span><span class="token punctuation">)</span>
 </code></pre>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522084126982.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522084126982.png"></p>
 <p>非常滴nice，<code>flag{9f019c27eca746beb9c297cd70bf93ca}</code></p>
 <h4 id="Bugku-look"><a href="#Bugku-look" class="headerlink" title="Bugku_look"></a>Bugku_look</h4><p>得到一张bmp的文件，但是打不开图片，文件头看一下</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522091744717.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522091744717.png"></p>
 <p>是压缩包，改为zip，然后解压，得到图片</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522091931682.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522091931682.png"></p>
 <p>安装zsteg</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522090730418.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522090730418.png"></p>
 <p>使用zsteg -a 得到flag</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522092206285.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522092206285.png"></p>
 <p><code>flag{3c15d07e-5d9a-4ccb-b67c-d2369eb2c1b9}</code></p>
 <h4 id="Bugku-放松一下吧"><a href="#Bugku-放松一下吧" class="headerlink" title="Bugku_放松一下吧"></a>Bugku_放松一下吧</h4><p>得到几个压缩包，第一个压缩包需要你玩游戏得到另一个的password，这应该是老套路</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522094950015.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522094950015.png"></p>
 <p>修改关卡。然后R刷新</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522094936644.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522094936644.png"></p>
 <p>得到了password</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522105521682.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522105521682.png"></p>
 <p>用密码解压另一个文件得到一个提示和一个图片。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522132530546.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522132530546.png"></p>
 <p>Passsword是base加密，但不知道是多少，于是又临时学习了以下编码知识</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522133727773.png"></p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522133528353.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522133727773.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522133528353.png"></p>
 <p>早期F5算法总插入 “<strong>JPEG Encoder Copyright 1998,James R.Weeks and BioElectroMech</strong>”, 而普通图像编辑器几乎不会插入这条信息。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522132845817.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522132845817.png"></p>
 <p>原来刷新的意思是F5，下载工具：<a target="_blank" rel="noopener" href="https://github.com/matthewgao/F5-steganography.git">https://github.com/matthewgao/F5-steganography.git</a></p>
 <p>执行命令</p>
 <pre class=" language-shell"><code class="language-shell">java Extract 你需要刷新.jpg -p 66666666
 </code></pre>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522145841083.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522145841083.png"></p>
 <p>得到：<code>bugku{F5_and_i_wanna_is_so_cool}</code></p>
 <h4 id="Bugku-cisco"><a href="#Bugku-cisco" class="headerlink" title="Bugku_cisco"></a>Bugku_cisco</h4><p>下载解压出来是两个文本文件<code>1.txt</code>和<code>2.txt</code>，然后第二个文本是一个什么加密，有点像base65。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522151012738.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522151012738.png"></p>
 <p>是AES加密，cisco的模拟文件是pkt，把1.txt改成这个后缀。</p>
 <p>还得下载思科模拟器，唉，这不折磨人吗，给个下载链接咯：<a target="_blank" rel="noopener" href="http://www.downza.cn/soft/30116.html">http://www.downza.cn/soft/30116.html</a></p>
 <p>用这个软件还需要去注册一个账号，之后登入提示需要到邮件更改密码。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522154337799.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522154337799.png"></p>
 <p><a target="_blank" rel="noopener" href="https://www.netacad.com/courses/iot/introduction-iot#anchor">https://www.netacad.com/courses/iot/introduction-iot#anchor</a> 点sign up today</p>
 <p>搞了半天还是不行，这时突然来了封邮件，再试试。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522161850679.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522161850679.png"></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45798690/article/details/123589033">https://blog.csdn.net/weixin_45798690/article/details/123589033</a> 注册指南</p>
 <p>在思科学院做了点题，那边就登入成功了。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522174446739.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522174446739.png"></p>
 <p>阿这，版本又出现了问题。只能换一个了。</p>
 <p>最后，换成了7.3版本，</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522175301789.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522175301789.png"></p>
 <p>题目的描述提示密码是flag，点击交换机，切换到命令模式</p>
 <pre class=" language-shell"><code class="language-shell">Switch>ena
 Switch>enable 
@@ -984,31 +984,31 @@ Switch#
 <blockquote>
 <p>目前5.0版本会在安装时删除数据文件，所以要使用低版本的火绒，我用的是sysdiag-full-3.0.0.24.exe</p>
 </blockquote>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522190158472.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522190158472.png"></p>
 <p>得到<code>flag{Virus_traceability}</code></p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522190335704.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522190335704.png"></p>
 <h4 id="Bugku-disordered-zip"><a href="#Bugku-disordered-zip" class="headerlink" title="Bugku_disordered_zip"></a>Bugku_disordered_zip</h4><p>给了一个压缩包，打不开。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522191632687.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522191632687.png"></p>
 <p>放010里看发现是0304开头，修改为<code>50 4B 03 04</code>。按insert键边插入模式就不会覆盖。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522192413091.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522192413091.png"></p>
 <p>解压需要密码，放Linux中查找隐藏信息。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522192704072.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522192704072.png"></p>
 <p>发现一张PNG，分离出来。是一张二维码，但是缺了两个角，是两个定位的，修补以下。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522192829464.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522192829464.png"></p>
 <p>就用画图补一下</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522193228971.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522193228971.png"></p>
 <p>识别得到<code>psw:yeQFPDS6uTaRasdvwLKoEZq0OiUk</code></p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522193349968.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522193349968.png"></p>
 <p>经过尝试，在栅栏中解出</p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220522194020728.png" alt="image-20220522194020728"></p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527201932.png"></p>
 <p>得到一个flag文件，分析文件头，<code>25 50 44 46</code>是PDF文件</p>
-<p><img src="C:\Users\Enomothem\AppData\Roaming\Typora\typora-user-images\image-20220522194346788.png" alt="image-20220522194346788"></p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522194643853.png"></p>
+<p><img src="https://lit.enomothem.com/zhixinghe/20220527201917.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522194643853.png"></p>
 <p>改文件后缀为pdf打开，搜索flag发现隐藏的flag，直接复制白色文字，粘贴。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522194914430.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522194914430.png"></p>
 <p><code>flag is not her</code>但这不是flag。</p>
 <p>用webstego解密</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522200212551.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522200212551.png"></p>
 <p><code>flag{ZnSRBg8vNJV5bXfUaxryetQjO4l}</code></p>
 <h2 id="Cx-Additions"><a href="#Cx-Additions" class="headerlink" title="Cx Additions"></a>Cx Additions</h2><h3 id="File-Format"><a href="#File-Format" class="headerlink" title="File Format"></a>File Format</h3><table>
 <thead>
@@ -1099,21 +1099,21 @@ Switch#
 <li><strong>Base85</strong>：等号一般出现在字符串中间，含有一些奇怪的字符；</li>
 <li><strong>Base100</strong>：密文由 Emoji 表情组成。</li>
 </ul>
-<h4 id="莫斯码"><a href="#莫斯码" class="headerlink" title="莫斯码"></a>莫斯码</h4><p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134036989.png" alt="字母"></p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134101319.png" alt="数字"></p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134114478.png" alt="标点"></p>
+<h4 id="莫斯码"><a href="#莫斯码" class="headerlink" title="莫斯码"></a>莫斯码</h4><p><img src="https://lit.enomothem.com/brackets/image-20220522134036989.png" alt="字母"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522134101319.png" alt="数字"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522134114478.png" alt="标点"></p>
 <h4 id="栅栏密码"><a href="#栅栏密码" class="headerlink" title="栅栏密码"></a>栅栏密码</h4><p>特征：字母不会太多</p>
 <p>①把将要传递的信息中的字母交替排成上下两行。<br>②再将下面一行字母排在上面一行的后边，从而形成一段密码。</p>
 <p>明文：THE LONGEST DAY MUST HAVE AN END<br>加密：<br>1、把将要传递的信息中的字母交替排成上下两行。<br>T E O G S D Y U T A E N N<br>H L N E T A M S H V A E D</p>
 <p>2、 密文：<br>将下面一行字母排在上面一行的后边。<br>TEOGSDYUTAENN HLNETAMSHVAED<br>解密：<br>先将密文分为两行<br>T E O G S D Y U T A E N N<br>H L N E T A M S H V A E D<br>再按上下上下的顺序组合成一句话<br>明文：THE LONGEST DAY MUST HAVE AN END</p>
 <h4 id="培根密码"><a href="#培根密码" class="headerlink" title="培根密码"></a>培根密码</h4><p>培根密码，又名倍康尼密码（Bacon’s cipher）是由法兰西斯·培根发明的一种隐写术，它是一种本质上用二进制数设计的，没有用通常的0和1来表示，而是采用a和b，看到一串的a和b，并且五个一组，那么就是培根加密了。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134248890.png"></p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134305859.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522134248890.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522134305859.png"></p>
 <h4 id="凯撒密码"><a href="#凯撒密码" class="headerlink" title="凯撒密码"></a>凯撒密码</h4><p>通过把字母移动一定的位数来实现加密和解密。明文中的所有字母都在字母表上向后（或向前）按照一个固定数目进行偏移后被替换成密文。只需简单地统计字频就可以破译</p>
 <h4 id="维吉尼亚密码"><a href="#维吉尼亚密码" class="headerlink" title="维吉尼亚密码"></a>维吉尼亚密码</h4><p>维吉尼亚密码是在凯撒密码基础上产生的一种加密方法，它将凯撒密码的全部25种位移排序为一张表，与原字母序列共同组成26行及26列的字母表。另外，维吉尼亚密码必须有一个密钥，这个密钥由字母组成，最少一个，最多可与明文字母数量相等。维吉尼亚密码表如下：</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522134355061.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522134355061.png"></p>
 <h4 id="猪圈密码"><a href="#猪圈密码" class="headerlink" title="猪圈密码"></a>猪圈密码</h4><p>是一种以格子为基础的简单替代式密码，是共济会的暗号</p>
-<p><img src="https://fastly.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220522140531088.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20220522140531088.png"></p>
 <h4 id="波利比奥斯方阵密码Polybius"><a href="#波利比奥斯方阵密码Polybius" class="headerlink" title="波利比奥斯方阵密码Polybius"></a>波利比奥斯方阵密码Polybius</h4><p>公元前2世纪,一个叫Polybius的希腊人设计了一种将字母编码成符号对的方法,他使用了一个称为Polybius的校验表,这个表中包含许多后来在加密系统中非常常见的成分。Polybius校验表由一个5行5列的网格组成,网格中包含26个英文字母,其中I和J在同一格中。相应字母用数对表示。在古代,这种棋盘密码被广泛使用。</p>
 <h4 id="rabbit加密"><a href="#rabbit加密" class="headerlink" title="rabbit加密"></a>rabbit加密</h4><p>特征：有U2Fsd开头</p>
 <h4 id="utf-7编码"><a href="#utf-7编码" class="headerlink" title="utf-7编码"></a>utf-7编码</h4><p>特征：url解码后可以看到如下，里面有“+/v++”，可以猜出这是UTF-7编码</p>

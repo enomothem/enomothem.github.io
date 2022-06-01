@@ -41,8 +41,8 @@
     <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -480,7 +480,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://test1.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20211210131306125.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://lit.enomothem.com/brackets/image-20211210131306125.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -641,7 +641,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-26
+                    2022-06-01
                 </div>
                 
 
@@ -678,7 +678,7 @@
                 <blockquote>
 <p>今年又迎来了一次波及安全圈的核弹级0day，太久没关注的我都知道了，朋友圈，公众号，知识星球。上次还是Google浏览器的事件。</p>
 </blockquote>
-<p><img src="https://test1.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20211210131306125.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20211210131306125.png"></p>
 <h2 id="Ax-Introduction"><a href="#Ax-Introduction" class="headerlink" title="Ax Introduction"></a>Ax Introduction</h2><p>It seems beyond dispute that Apache <strong>Log4j2</strong> is an excellent <strong>Java</strong> logging framework.</p>
 <h3 id="Information"><a href="#Information" class="headerlink" title="Information"></a>Information</h3><p><font color="grenn">漏洞预警</font>：Apache Log4j 远程代码执行漏洞</p>
 <p><font color="grenn">编号</font>：CNVD-2021-95914</p>
@@ -720,12 +720,12 @@
 <h3 id="Time-line"><a href="#Time-line" class="headerlink" title="Time line"></a>Time line</h3><p>2021年11月24日，阿里云安全团队向Apache官方报告了Apache Log4j2远程代码执行漏洞。<br>2021年12月7日，野外首次发现Apache log4j漏洞。<br>2021年12月8日，知道创宇404积极防御实验室通过创宇安全智脑监测到Apache Log4j2远程代码执行最新漏洞被攻击者利用，并注意到该漏洞细节已经被公开扩散。<br>2021年12月9日，国内多家机构监测到Apache Log4j存在任意代码执行漏洞，并紧急通报相关情况。流行的 Java 日志库中的 0 天漏洞与发布在github上的 <code>log4j</code>POC在推特上发布，如果<code>log4j</code>记录攻击者控制的字符串值，则会导致远程代码执行 (RCE) 。<br>2021年12月10日，2.15.0-rc1版本仍可触发漏洞，多家应急响应团队发布二次漏洞预警。Apache log4j官方发布2.15.0-rc2。<br>2021年12月10日11时，国家信息安全漏洞共享平台（CNVD）收录了Apache Log4j2远程代码执行漏洞（CNVD-2021-95914）。CNVD对该漏洞的综合评级为“高危”。</p>
 <h3 id="Insufficient-validation"><a href="#Insufficient-validation" class="headerlink" title="Insufficient validation"></a>Insufficient validation</h3><p>1、相关用户可根据Java jar解压后是否存在org/apache/logging/log4j相关路径结构，判断是否使用了存在漏洞的组件，若存在相关Java程序包，则很可能存在该漏洞。<br>2、若程序使用Maven打包，查看项目的pom.xml文件中是否存在下图所示的相关字段，若版本号为小于2.15.0，则存在该漏洞。<br>3、若程序使用gradle打包，可查看build.gradle编译配置文件，若在dependencies部分存在org.apache.logging.log4j相关字段，且版本号为小于2.15.0，则存在该漏洞。</p>
 <h2 id="Bx-Reproduction"><a href="#Bx-Reproduction" class="headerlink" title="Bx Reproduction"></a>Bx Reproduction</h2><p>安全研究人员复现</p>
-<p><img src="https://test1.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20211210131554497.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20211210131554497.png"></p>
 <p>老外直呼，还有什么比这更糟糕的，POC一下子传遍互联网。</p>
 <blockquote>
 <p>“What can be more worse than this. It just some hour past and PoC for Log4j Vulnerability released on internet.”</p>
 </blockquote>
-<p><img src="https://test1.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20211210142925548.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20211210142925548.png"></p>
 <h2 id="Cx-Patch-Vulnerabilities"><a href="#Cx-Patch-Vulnerabilities" class="headerlink" title="Cx Patch Vulnerabilities"></a>Cx Patch Vulnerabilities</h2><p>目前，Apache官方已发布新版本完成漏洞修复</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/apache/logging-log4j2/releases/tag/log4j-2.15.0-rc2">https://github.com/apache/logging-log4j2/releases/tag/log4j-2.15.0-rc2</a></p>
 <p>建议同时采用如下临时措施进行漏洞防范：</p>
@@ -733,7 +733,7 @@
 <p>建议使用如下相关应用组件构建网站的信息系统运营者进行自查，如Apache Struts2、Apache Solr、Apache Druid、Apache Flink等，发现存在漏洞后及时按照上述建议进行处置。</p>
 <h2 id="Dx-Attack-Detection"><a href="#Dx-Attack-Detection" class="headerlink" title="Dx Attack Detection"></a>Dx Attack Detection</h2><p>1、攻击者在利用前通常采用dnslog方式进行扫描、探测，常见的漏洞利用方式可通过应用系统报错日志中的”javax.naming.CommunicationException”、”javax.naming.NamingException: problem generating object using object factory”、”Error looking up JNDI resource”关键字进行排查。<br>2、攻击者发送的数据包中可能存在”${jndi:}” 字样，推荐使用全流量或WAF设备进行检索排查。</p>
 <h2 id="Ex-Addition"><a href="#Ex-Addition" class="headerlink" title="Ex Addition"></a>Ex Addition</h2><p>这个月12.4国家宪法日，借着这个log4j普及一下法律知识。</p>
-<p><img src="https://test1.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20211210142849984.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20211210142849984.png"></p>
 <h4 id="中华人民共和国宪法（2018年3月11日修正）"><a href="#中华人民共和国宪法（2018年3月11日修正）" class="headerlink" title="中华人民共和国宪法（2018年3月11日修正）"></a>中华人民共和国宪法（2018年3月11日修正）</h4><p>第五十四条 中华人民共和国公民有维护祖国的安全、荣誉和利益的义务，不得有危害祖国的安全、荣誉和利益的行为。</p>
 <h4 id="中华人民共和国刑法-285、286"><a href="#中华人民共和国刑法-285、286" class="headerlink" title="中华人民共和国刑法(285、286)"></a>中华人民共和国刑法(285、286)</h4><p>第二百八十五条违反国家规定,侵入国家事务、国防建设、尖端科学技术领域的计算机信息系统的,处三年以下有期徒刑或者拘役。</p>
 <p>第二百八十六条违反国家规定,对计算机信息系统功能进行删除、修改、增加、干扰,造成计算机信息系统不能正常运行,后果严重的,处五年以下有期徒刑或者拘役;后果特别严重的,处五年以上有期徒刑。违反国家规定,对计算机信息系统中存储、处理或者传输的数据和应用程序进行删除、修改、增加的操作,后果严重的,依照前款的规定处罚。</p>
@@ -744,15 +744,15 @@
 <h4 id="网络产品安全漏洞管理规定（2021年9月1日起施行）"><a href="#网络产品安全漏洞管理规定（2021年9月1日起施行）" class="headerlink" title="网络产品安全漏洞管理规定（2021年9月1日起施行）"></a>网络产品安全漏洞管理规定（2021年9月1日起施行）</h4><p> 第四条 任何组织或者个人不得利用网络产品安全漏洞从事危害网络安全的活动，不得非法收集、出售、发布网络产品安全漏洞信息；明知他人利用网络产品安全漏洞从事危害网络安全的活动的，不得为其提供技术支持、广告推广、支付结算等帮助。</p>
 <p>第十条 任何组织或者个人设立的网络产品安全漏洞收集平台，应当向工业和信息化部备案。工业和信息化部及时向公安部、国家互联网信息办公室通报相关漏洞收集平台，并对通过备案的漏洞收集平台予以公布。</p>
 <h4 id="关键信息基础设施安全保护条例（2021年9月1日起施行）"><a href="#关键信息基础设施安全保护条例（2021年9月1日起施行）" class="headerlink" title="关键信息基础设施安全保护条例（2021年9月1日起施行）"></a>关键信息基础设施安全保护条例（2021年9月1日起施行）</h4><p>第三十一条　未经国家网信部门、国务院公安部门批准或者保护工作部门、运营者授权，任何个人和组织不得对关键信息基础设施实施漏洞探测、渗透性测试等可能影响或者危害关键信息基础设施安全的活动。对基础电信网络实施漏洞探测、渗透性测试等活动，应当事先向国务院电信主管部门报告。</p>
-<p><img src="https://test1.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20211210143114914.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20211210143114914.png"></p>
 <h2 id="Fx-Security-community"><a href="#Fx-Security-community" class="headerlink" title="Fx Security community"></a>Fx Security community</h2><p>来看看圈子里头的段子</p>
-<p><img src="https://test1.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20211210143418326.png"></p>
-<p><img src="https://test1.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20211210144039256.png"></p>
-<p><img src="https://test1.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20211210143840665.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20211210143418326.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20211210144039256.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20211210143840665.png"></p>
 <p>一个冷知识，法拉利也基于log4j2，万物皆可</p>
-<p><img src="https://test1.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20211210145416483.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20211210145416483.png"></p>
 <p><a target="_blank" rel="noopener" href="https://s.weibo.com/weibo/%23java%E5%BC%80%E5%8F%91%23">#java开发#</a> 感觉今天全世界都在修补log4j2的漏洞</p>
-<p><img src="https://test1.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20211210143227148.png"></p>
+<p><img src="https://lit.enomothem.com/brackets/image-20211210143227148.png"></p>
 <h2 id="Gx-References"><a href="#Gx-References" class="headerlink" title="Gx References"></a>Gx References</h2><p>[0] <a target="_blank" rel="noopener" href="https://www.lunasec.io/docs/blog/log4j-zero-day/">https://www.lunasec.io/docs/blog/log4j-zero-day/</a><br>[1] <a target="_blank" rel="noopener" href="https://github.com/apache/logging-log4j2/releases/tag/log4j-2.15.0-rc2">https://github.com/apache/logging-log4j2/releases/tag/log4j-2.15.0-rc2</a><br>[2] <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/jLWUudhwI2Gor_1Lq4ppdw">https://mp.weixin.qq.com/s/jLWUudhwI2Gor_1Lq4ppdw</a><br>[3] <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/lT23zRKQVZl0MIsBSkTMfA">https://mp.weixin.qq.com/s/lT23zRKQVZl0MIsBSkTMfA</a><br>[4] <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/ybPdlNY98J2xSsep9bllUA">https://mp.weixin.qq.com/s/ybPdlNY98J2xSsep9bllUA</a><br>[5] <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/1PbEDPUFY4vRPbPa5yR8NA">https://mp.weixin.qq.com/s/1PbEDPUFY4vRPbPa5yR8NA</a></p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
                 
@@ -1004,7 +1004,7 @@
                 <a href="/posts/4f1d.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/enomothem/squarebackets/zixinghe/image-20220416160703010.png" class="responsive-img" alt="信息安全学习技能时间轴">
+                        <img src="https://lit.enomothem.com/brackets/image-20220416160703010.png" class="responsive-img" alt="信息安全学习技能时间轴">
                         
                         <span class="card-title">信息安全学习技能时间轴</span>
                     </div>
