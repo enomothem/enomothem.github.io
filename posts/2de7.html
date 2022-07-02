@@ -1,0 +1,2031 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="Python Spider 1, web安全,web攻防,blog,shell,linux,windows,Linux,Windows,物理,物理学,宇宙,反物质,字星河,博客,星河,Enomothem,enomothem,eonthem">
+    <meta name="description" content="真正的改变只能发生在原则层面">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=E3kdz0owTVy1iw7363-rng"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'E3kdz0owTVy1iw7363-rng');
+</script>
+
+
+    <title>Python Spider 1 | 字星河</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.2/sources/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/css/my.css">
+
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+
+    
+
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">字星河</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Home</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Root</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>System</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Time</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/navigate" class="waves-effect waves-light">
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>Getshellmap</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Fingerheart</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/html" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>Testing</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://hs.enomothem.cn">
+          
+          <i class="fas fa-location-arrow" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>华圣影视</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://intra.enomothem.cn">
+          
+          <i class="fas fa-location-arrow" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>华圣人事</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://hs.enomothem.cn:8091">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>永恒知识库</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/js">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Development</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/happy">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Celebrate</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/kt">
+          
+          <span>空调房</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-heart" style="zoom: 0.6;"></i>
+      
+      <span>Enomothem</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">字星河</div>
+        <div class="logo-desc">
+            
+            真正的改变只能发生在原则层面
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Home
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Root
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			System
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Time
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/navigate" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-location-arrow"></i>
+			
+			Getshellmap
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Fingerheart
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-location-arrow"></i>
+			
+			Testing
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://hs.enomothem.cn " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-location-arrow" style="position: absolute;left:50px" ></i>
+			      
+		          <span>华圣影视</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://intra.enomothem.cn " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-location-arrow" style="position: absolute;left:50px" ></i>
+			      
+		          <span>华圣人事</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://hs.enomothem.cn:8091 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>永恒知识库</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/js " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Development</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/happy " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Celebrate</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/kt " style="margin-left:75px">
+				  
+		          <span>空调房</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-heart"></i>
+			
+			Enomothem
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/enomothem" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/enomothem" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('口令！Sent to:enomothem@outlook.com')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://lit.enomothem.com/zhixinghe/20220623005101.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Python Spider 1</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/spider/">
+                                <span class="chip bg-color">spider</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Python/" class="post-category">
+                                Python
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-06-22
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-06-24
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.1k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    16 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <blockquote>
+<p>基础永远值得花费90%的精力去学习加强。认识实践的重要性。</p>
+</blockquote>
+<h2 id="Ax-Python-Spider"><a href="#Ax-Python-Spider" class="headerlink" title="Ax Python Spider"></a>Ax Python Spider</h2><p>网络爬虫又称网络蜘蛛、网络机器人，它是一种按照一定的规则自动浏览、检索网页信息的程序或者脚本。网络爬虫能够自动请求网页，并将所需要的数据抓取下来。通过对抓取的数据进行处理，从而提取出有价值的信息。</p>
+<p>搜索引擎就是大型的爬虫，比如百度、搜狗、360浏览器、谷歌搜索，所以我们才能搜索到想要的信息。</p>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><p>爬虫可分为三大类：通用网络爬虫、聚焦网络爬虫、增量式网络爬虫。</p>
+<p><strong>通用网络爬虫</strong>：是搜索引擎的重要组成部分，上面已经进行了介绍，这里就不再赘述。通用网络爬虫需要遵守 robots 协议，网站通过此协议告诉搜索引擎哪些页面可以抓取，哪些页面不允许抓取。</p>
+<blockquote>
+<p><code>robots 协议</code>：是一种“约定俗称”的协议，并不具备法律效力，它体现了互联网人的“契约精神”。行业从业者会自觉遵守该协议，因此它又被称为“君子协议”。</p>
+</blockquote>
+<p><strong>聚焦网络爬虫</strong>：是面向特定需求的一种网络爬虫程序。它与通用爬虫的区别在于，聚焦爬虫在实施网页抓取的时候会对网页内容进行筛选和处理，尽量保证只抓取与需求相关的网页信息。聚焦网络爬虫极大地节省了硬件和网络资源，由于保存的页面数量少所以更新速度很快，这也很好地满足一些特定人群对特定领域信息的需求。</p>
+<p><strong>增量式网络爬虫</strong>：是指对已下载网页采取增量式更新，它是一种只爬取新产生的或者已经发生变化网页的爬虫程序，能够在一定程度上保证所爬取的页面是最新的页面。</p>
+<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>爬虫程序与其他程序不同，它的的思维逻辑一般都是相似的， 所以无需我们在逻辑方面花费大量的时间。下面对 Python 编写爬虫程序的流程做简单地说明：</p>
+<ul>
+<li>先由 urllib 模块的 request 方法打开 URL 得到网页 HTML 对象。</li>
+<li>使用浏览器打开网页源代码分析网页结构以及元素节点。</li>
+<li>通过 Beautiful Soup 或则正则表达式提取数据。</li>
+<li>存储数据到本地磁盘或数据库。</li>
+</ul>
+<p>当然也不局限于上述一种流程。编写爬虫程序，需要您具备较好的 Python 编程功底，这样在编写的过程中您才会得心应手。爬虫程序需要尽量伪装成人访问网站的样子，而非机器访问，否则就会被网站的反爬策略限制，甚至直接封杀 IP，相关知识会在后续内容介绍</p>
+<h3 id="网页"><a href="#网页" class="headerlink" title="网页"></a>网页</h3><p>网页一般由三部分组成，分别是 HTML（超文本标记语言）、CSS（层叠样式表）和 JavaScript（简称“JS”动态脚本语言），它们三者在网页中分别承担着不同的任务。</p>
+<ul>
+<li>HTML 负责定义网页的内容</li>
+<li>CSS 负责描述网页的布局</li>
+<li>JavaScript 负责网页的行为</li>
+</ul>
+<h4 id="静态网页"><a href="#静态网页" class="headerlink" title="静态网页"></a>静态网页</h4><p>访问速度快，找到url规律就可以实现爬取。</p>
+<h4 id="动态网页"><a href="#动态网页" class="headerlink" title="动态网页"></a>动态网页</h4><p>可以实现局部的更新，但响应速度慢，爬取较为复杂。</p>
+<h2 id="Bx-Get-HTML-information"><a href="#Bx-Get-HTML-information" class="headerlink" title="Bx Get HTML information"></a>Bx Get HTML information</h2><h3 id="获取响应对象"><a href="#获取响应对象" class="headerlink" title="获取响应对象"></a>获取响应对象</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 导包,发起请求使用urllib库的request请求模块</span>
+<span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request
+<span class="token comment" spellcheck="true"># urlopen()向URL发请求,返回响应对象,注意url必须完整</span>
+response<span class="token operator">=</span>urllib<span class="token punctuation">.</span>request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span><span class="token string">'http://www.baidu.com/'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+</code></pre>
+<p>执行</p>
+<pre class=" language-python"><code class="language-python"><span class="token operator">&lt;</span>http<span class="token punctuation">.</span>client<span class="token punctuation">.</span>HTTPResponse object at <span class="token number">0x0000018688441AF0</span><span class="token operator">></span>
+</code></pre>
+<h3 id="输出HTML信息"><a href="#输出HTML信息" class="headerlink" title="输出HTML信息"></a>输出HTML信息</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 导包,发起请求使用urllib库的request请求模块</span>
+<span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request
+<span class="token comment" spellcheck="true"># urlopen()向URL发请求,返回响应对象,注意url必须完整</span>
+response<span class="token operator">=</span>urllib<span class="token punctuation">.</span>request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span><span class="token string">'http://www.baidu.com/'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># -- 输出HTML --</span>
+
+<span class="token comment" spellcheck="true">#提取响应内容</span>
+html <span class="token operator">=</span> response<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#打印响应内容</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+</code></pre>
+<p>这样就获得了网页的资源，这是最基础，最简单的程序，如何选择性的爬取其中的内容，是接下来要干的事儿。</p>
+<h3 id="用户代理"><a href="#用户代理" class="headerlink" title="用户代理"></a>用户代理</h3><p>绝大多数网站都具备一定的反爬能力，禁止网爬虫大量地访问网站，所以我们（的程序）需要伪装成人的样子去访问。</p>
+<p><code>User-Agent</code> 即用户代理，简称“UA”，它是一个特殊字符串头。网站服务器通过识别 “UA”来确定用户所使用的操作系统版本、CPU 类型、浏览器版本等信息。而网站服务器则通过判断 UA 来给客户端发送不同的页面。</p>
+<p>本机UA检测工具：<a target="_blank" rel="noopener" href="https://useragent.buyaocha.com/">https://useragent.buyaocha.com/</a></p>
+<table>
+<thead>
+<tr>
+<th>系统</th>
+<th>浏览器</th>
+<th>User-Agent字符串</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mac</td>
+<td>Chrome</td>
+<td>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36</td>
+</tr>
+<tr>
+<td>Mac</td>
+<td>Firefox</td>
+<td>Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:65.0) Gecko/20100101 Firefox/65.0</td>
+</tr>
+<tr>
+<td>Mac</td>
+<td>Safari</td>
+<td>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Edge</td>
+<td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>IE</td>
+<td>Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Chrome</td>
+<td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>Chrome</td>
+<td>Mozilla/5.0 (iPhone; CPU iPhone OS 7_0_4 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) CriOS/31.0.1650.18 Mobile/11B554a Safari/8536.25</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>Safari</td>
+<td>Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari/600.1.4</td>
+</tr>
+<tr>
+<td>Android</td>
+<td>Chrome</td>
+<td>Mozilla/5.0 (Linux; Android 4.2.1; M040 Build/JOP40D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.59 Mobile Safari/537.36</td>
+</tr>
+<tr>
+<td>Android</td>
+<td>Webkit</td>
+<td>Mozilla/5.0 (Linux; U; Android 4.4.4; zh-cn; M351 Build/KTU84P) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30</td>
+</tr>
+</tbody></table>
+<h4 id="爬虫程序UA信息"><a href="#爬虫程序UA信息" class="headerlink" title="爬虫程序UA信息"></a>爬虫程序UA信息</h4><p>下面，通过向 HTTP 测试网站（<a target="_blank" rel="noopener" href="http://httpbin.org/%EF%BC%89%E5%8F%91%E9%80%81">http://httpbin.org/）发送</a> GET 请求来查看请求头信息，从而获取爬虫程序的 UA。代码如下所示：</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#导入模块</span>
+<span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request
+<span class="token comment" spellcheck="true">#向网站发送get请求</span>
+response<span class="token operator">=</span>urllib<span class="token punctuation">.</span>request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span><span class="token string">'http://httpbin.org/get'</span><span class="token punctuation">)</span>
+html <span class="token operator">=</span> response<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+</code></pre>
+<p>执行</p>
+<pre class=" language-python"><code class="language-python"><span class="token punctuation">{</span>
+  <span class="token string">"args"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">"headers"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"Accept-Encoding"</span><span class="token punctuation">:</span> <span class="token string">"identity"</span><span class="token punctuation">,</span>
+    <span class="token string">"Host"</span><span class="token punctuation">:</span> <span class="token string">"httpbin.org"</span><span class="token punctuation">,</span>
+    <span class="token string">"User-Agent"</span><span class="token punctuation">:</span> <span class="token string">"Python-urllib/3.9"</span><span class="token punctuation">,</span>
+    <span class="token string">"X-Amzn-Trace-Id"</span><span class="token punctuation">:</span> <span class="token string">"Root=1-62b479db-091019084b3b1c3151df34af"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">"origin"</span><span class="token punctuation">:</span> <span class="token string">"120.203.237.152"</span><span class="token punctuation">,</span>
+  <span class="token string">"url"</span><span class="token punctuation">:</span> <span class="token string">"http://httpbin.org/get"</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>从输出结果可以看出，User-Agent 竟然是 Python-urllib/3.7，这显然是爬虫程序访问网站。因此就需要重构 User-Agent，将其伪装成“浏览器”访问网站。</p>
+<p>注意：<a target="_blank" rel="noopener" href="http://httpbin.org/">httpbin.org </a>这个网站能测试 HTTP 请求和响应的各种信息，比如 cookie、IP、headers 和登录验证等，且支持 GET、POST 等多种方法，对 Web 开发和测试很有帮助。</p>
+<h4 id="重构爬虫UA信息"><a href="#重构爬虫UA信息" class="headerlink" title="重构爬虫UA信息"></a>重构爬虫UA信息</h4><p>下面使用<code>urllib.request.Request()</code>方法重构 User-Agent 信息，代码如下所示：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> urllib <span class="token keyword">import</span> request
+
+<span class="token comment" spellcheck="true"># 定义变量：URL 与 headers</span>
+url <span class="token operator">=</span> <span class="token string">'http://httpbin.org/get'</span> <span class="token comment" spellcheck="true">#向测试网站发送请求</span>
+<span class="token comment" spellcheck="true"># 重构请求头，伪装成 Mac火狐浏览器访问，可以使用上表中任意浏览器的UA信息</span>
+headers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:65.0) Gecko/20100101 Firefox/65.0'</span><span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true"># 1、创建请求对象，包装ua信息</span>
+req <span class="token operator">=</span> request<span class="token punctuation">.</span>Request<span class="token punctuation">(</span>url<span class="token operator">=</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 2、发送请求，获取响应对象</span>
+res <span class="token operator">=</span> request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span>req<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 3、提取响应内容</span>
+html <span class="token operator">=</span> res<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+</code></pre>
+<p>执行</p>
+<pre class=" language-python"><code class="language-python"><span class="token punctuation">{</span>
+  <span class="token string">"args"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> 
+  <span class="token string">"headers"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"Accept-Encoding"</span><span class="token punctuation">:</span> <span class="token string">"identity"</span><span class="token punctuation">,</span> 
+    <span class="token string">"Host"</span><span class="token punctuation">:</span> <span class="token string">"httpbin.org"</span><span class="token punctuation">,</span> 
+    <span class="token string">"User-Agent"</span><span class="token punctuation">:</span> <span class="token string">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:65.0) Gecko/20100101 Firefox/65.0"</span><span class="token punctuation">,</span> 
+    <span class="token string">"X-Amzn-Trace-Id"</span><span class="token punctuation">:</span> <span class="token string">"Root=1-62b47e38-5073e563772c786c6da6b3e6"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+  <span class="token string">"origin"</span><span class="token punctuation">:</span> <span class="token string">"120.203.237.152"</span><span class="token punctuation">,</span> 
+  <span class="token string">"url"</span><span class="token punctuation">:</span> <span class="token string">"http://httpbin.org/get"</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="代理池"><a href="#代理池" class="headerlink" title="代理池"></a>代理池</h3><p>在编写爬虫程序时，一般都会构建一个 User-Agent （用户代理）池，就是把多个浏览器的 UA 信息放进列表中，然后再从中随机选择。构建用户代理池，能够避免总是使用一个 UA 来访问网站，因为短时间内总使用一个 UA 高频率访问的网站，可能会引起网站的警觉，从而封杀掉 IP。</p>
+<h4 id="自定义UA代理池"><a href="#自定义UA代理池" class="headerlink" title="自定义UA代理池"></a>自定义UA代理池</h4><p>构建代理池的方法也非常简单，在您的 Pycharm 工作目录中定义一个 ua_info.py 文件，并将以下 UA 信息以列表的形式粘贴到该文件中，如下所示：</p>
+<pre class=" language-python"><code class="language-python">ua_list <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Maxthon 2.0'</span><span class="token punctuation">,</span>
+    <span class="token string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11'</span><span class="token punctuation">,</span>
+    <span class="token string">'User-Agent:Opera/9.80 (Windows NT 6.1; U; en) Presto/2.8.131 Version/11.11'</span><span class="token punctuation">,</span>
+    <span class="token string">'Mozilla/5.0 (Windows NT 6.1; rv:2.0.1) Gecko/20100101 Firefox/4.0.1'</span><span class="token punctuation">,</span>
+    <span class="token string">'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)'</span><span class="token punctuation">,</span>
+    <span class="token string">'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50'</span><span class="token punctuation">,</span>
+    <span class="token string">'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0'</span><span class="token punctuation">,</span>
+    <span class="token string">' Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1'</span><span class="token punctuation">,</span>
+    <span class="token string">'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1'</span><span class="token punctuation">,</span>
+    <span class="token string">' Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0.1) Gecko/20100101 Firefox/4.0.1'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+<h4 id="模块随机获取UA"><a href="#模块随机获取UA" class="headerlink" title="模块随机获取UA"></a>模块随机获取UA</h4><p>您也可以使用专门第三方的模块来随机获取浏览器 UA 信息，不过该模块需要单独安装，安装方式如下：</p>
+<pre class=" language-python"><code class="language-python">pip install fake<span class="token operator">-</span>useragent
+</code></pre>
+<p>例</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> fake_useragent <span class="token keyword">import</span> UserAgent
+
+<span class="token comment" spellcheck="true"># 实例化一个对象</span>
+ua<span class="token operator">=</span>UserAgent<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 随机获取一个ie浏览器ua</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>ua<span class="token punctuation">.</span>ie<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>ua<span class="token punctuation">.</span>ie<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 随机获取一个火狐浏览器ua</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>ua<span class="token punctuation">.</span>firefox<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>ua<span class="token punctuation">.</span>firefox<span class="token punctuation">)</span>
+</code></pre>
+<p>结果</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#随机获取ie的ua信息</span>
+Mozilla<span class="token operator">/</span><span class="token number">5.0</span> <span class="token punctuation">(</span>compatible<span class="token punctuation">;</span> MSIE <span class="token number">9.0</span><span class="token punctuation">;</span> Windows NT <span class="token number">6.0</span><span class="token punctuation">;</span> Trident<span class="token operator">/</span><span class="token number">4.0</span><span class="token punctuation">;</span> GTB7<span class="token number">.4</span><span class="token punctuation">;</span> InfoPath<span class="token number">.3</span><span class="token punctuation">;</span> SV1<span class="token punctuation">;</span> <span class="token punctuation">.</span>NET CLR <span class="token number">3.1</span><span class="token punctuation">.</span><span class="token number">76908</span><span class="token punctuation">;</span> WOW64<span class="token punctuation">;</span> en<span class="token operator">-</span>US<span class="token punctuation">)</span>
+Mozilla<span class="token operator">/</span><span class="token number">5.0</span> <span class="token punctuation">(</span>compatible<span class="token punctuation">;</span> MSIE <span class="token number">9.0</span><span class="token punctuation">;</span> Windows NT <span class="token number">6.1</span><span class="token punctuation">;</span> Win64<span class="token punctuation">;</span> x64<span class="token punctuation">;</span> Trident<span class="token operator">/</span><span class="token number">5.0</span>
+    
+<span class="token comment" spellcheck="true">#随机获取火狐的ua信息</span>
+Mozilla<span class="token operator">/</span><span class="token number">5.0</span> <span class="token punctuation">(</span>Macintosh<span class="token punctuation">;</span> Intel Mac OS X <span class="token number">10.8</span><span class="token punctuation">;</span> rv<span class="token punctuation">:</span><span class="token number">21.0</span><span class="token punctuation">)</span> Gecko<span class="token operator">/</span><span class="token number">20100101</span> Firefox<span class="token operator">/</span><span class="token number">21.0</span>
+Mozilla<span class="token operator">/</span><span class="token number">5.0</span> <span class="token punctuation">(</span>Windows NT <span class="token number">5.0</span><span class="token punctuation">;</span> rv<span class="token punctuation">:</span><span class="token number">21.0</span><span class="token punctuation">)</span> Gecko<span class="token operator">/</span><span class="token number">20100101</span> Firefox<span class="token operator">/</span><span class="token number">21.0</span>
+</code></pre>
+<h3 id="URL编码-解码详解"><a href="#URL编码-解码详解" class="headerlink" title="URL编码/解码详解"></a>URL编码/解码详解</h3><p>当 URL 路径或者查询参数中，带有中文或者特殊字符的时候，就需要对 URL 进行编码（采用十六进制编码格式）。URL 编码的原则是使用安全字符去表示那些不安全的字符。</p>
+<h4 id="URL基本组成"><a href="#URL基本组成" class="headerlink" title="URL基本组成"></a>URL基本组成</h4><p>URL 是由一些简单的组件构成，比如协议、域名、端口号、路径和查询字符串等，示例如下：</p>
+<pre class=" language-python"><code class="language-python">http<span class="token punctuation">:</span><span class="token operator">//</span>www<span class="token punctuation">.</span>example<span class="token punctuation">.</span>net<span class="token operator">/</span>index?param<span class="token operator">=</span><span class="token number">10</span>
+</code></pre>
+<p>URL 中规定了一些具有特殊意义的字符，常被用来分隔两个不同的 URL 组件，这些字符被称为<strong>保留字符</strong>。例如：</p>
+<ul>
+<li>冒号：用于分隔协议和主机组件，斜杠用于分隔主机和路径</li>
+<li><code>?</code>：用于分隔路径和查询参数等。</li>
+<li><code>=</code>用于表示查询参数中的键值对。</li>
+<li><code>&amp;</code>符号用于分隔查询多个键值对。</li>
+</ul>
+<pre class=" language-txt"><code class="language-txt">其余常用的保留字符有：/ . ... # @ $ + ; %
+</code></pre>
+<h4 id="哪些字符需要编码"><a href="#哪些字符需要编码" class="headerlink" title="哪些字符需要编码"></a>哪些字符需要编码</h4><p>URL 中只允许使用 ASCII 字符集可以显示的字符，比如英文字母、数字、和<code>- _ . ~ ! *</code>这 6 个<strong>特殊字符</strong></p>
+<p>不属于 ASCII 字符集的字符时，就要使用特殊的符号对该字符进行编码。另外就是保留字符和不安全字符进行编码。不安全字符有</p>
+<pre class=" language-url"><code class="language-url">[ ] < > " "  { } | \ ^ * · ‘ ’ 等
+</code></pre>
+<p>不安全字符和保留字符的说明</p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>含义</th>
+<th>十六进制值编码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>+</td>
+<td>URL 中 + 号表示空格</td>
+<td>%2B</td>
+</tr>
+<tr>
+<td>空格</td>
+<td>URL中的空格可以编码为 + 号或者 %20</td>
+<td>%20</td>
+</tr>
+<tr>
+<td>/</td>
+<td>分隔目录和子目录</td>
+<td>%2F</td>
+</tr>
+<tr>
+<td>?</td>
+<td>分隔实际的 URL 和参数</td>
+<td>%3F</td>
+</tr>
+<tr>
+<td>%</td>
+<td>指定特殊字符</td>
+<td>%25</td>
+</tr>
+<tr>
+<td>#</td>
+<td>表示书签</td>
+<td>%23</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>URL 中指定的参数间的分隔符</td>
+<td>%26</td>
+</tr>
+<tr>
+<td>=</td>
+<td>URL 中指定参数的值</td>
+<td>%3D</td>
+</tr>
+</tbody></table>
+<p>下面简单总结一下，哪些字符需要编码，分为以下三种情况：</p>
+<ul>
+<li>ASCII 表中没有对应的可显示字符，例如，汉字。</li>
+<li>不安全字符，包括：<code># ”% &lt;&gt; [] {} | \ ^  </code>以及反引号 。</li>
+<li>部分保留字符，即 <code>&amp; / : ; = ? @</code> 。</li>
+</ul>
+<h3 id="Python实现编码与解码"><a href="#Python实现编码与解码" class="headerlink" title="Python实现编码与解码"></a>Python实现编码与解码</h3><p>Python 的标准库<code>urllib.parse</code>模块中提供了用来编码和解码的方法，分别是 urlencode() 与 unquote() 方法。</p>
+<h4 id="1-编码urlencode"><a href="#1-编码urlencode" class="headerlink" title="1) 编码urlencode()"></a>1) 编码urlencode()</h4><p>下面以百度搜索为例进行讲解。首先打开百度首页，在搜索框中输入“爬虫”，然后点击“百度一下”。当搜索结果显示后，此时地址栏的 URL 信息，如下所示：</p>
+<pre class=" language-python"><code class="language-python">https<span class="token punctuation">:</span><span class="token operator">//</span>www<span class="token punctuation">.</span>baidu<span class="token punctuation">.</span>com<span class="token operator">/</span>s?wd<span class="token operator">=</span>爬虫<span class="token operator">&amp;</span>rsv_spt<span class="token operator">=</span><span class="token number">1</span><span class="token operator">&amp;</span>rsv_iqid<span class="token operator">=</span><span class="token number">0xa3ca348c0001a2ab</span><span class="token operator">&amp;</span>issp<span class="token operator">=</span><span class="token number">1</span><span class="token operator">&amp;</span>f<span class="token operator">=</span><span class="token number">8</span><span class="token operator">&amp;</span>rsv_bp<span class="token operator">=</span><span class="token number">1</span><span class="token operator">&amp;</span>rsv_idx<span class="token operator">=</span><span class="token number">2</span><span class="token operator">&amp;</span>ie<span class="token operator">=</span>utf<span class="token number">-8</span><span class="token operator">&amp;</span>tn<span class="token operator">=</span>baiduhome_pg<span class="token operator">&amp;</span>rsv_enter<span class="token operator">=</span><span class="token number">1</span><span class="token operator">&amp;</span>rsv_dl<span class="token operator">=</span>ib<span class="token operator">&amp;</span>rsv_sug3<span class="token operator">=</span><span class="token number">8</span><span class="token operator">&amp;</span>rsv_sug1<span class="token operator">=</span><span class="token number">7</span><span class="token operator">&amp;</span>rsv_sug7<span class="token operator">=</span><span class="token number">101</span>
+</code></pre>
+<p>删除多于查询字符串，对第一个字符串进行编码</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#导入parse模块</span>
+<span class="token keyword">from</span> urllib <span class="token keyword">import</span> parse
+<span class="token comment" spellcheck="true">#构建查询字符串字典</span>
+query_string <span class="token operator">=</span> <span class="token punctuation">{</span>
+<span class="token string">'wd'</span> <span class="token punctuation">:</span> <span class="token string">'爬虫'</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">#调用parse模块的urlencode()进行编码</span>
+result <span class="token operator">=</span> parse<span class="token punctuation">.</span>urlencode<span class="token punctuation">(</span>query_string<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#使用format函数格式化字符串，拼接url地址</span>
+url <span class="token operator">=</span> <span class="token string">'http://www.baidu.com/s?{}'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+</code></pre>
+<p>也可以使用 quote(string) 方法实现编码</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> urllib <span class="token keyword">import</span> parse
+<span class="token comment" spellcheck="true">#注意url的书写格式，和 urlencode存在不同</span>
+url <span class="token operator">=</span> <span class="token string">'http://www.baidu.com/s?wd={}'</span>
+word <span class="token operator">=</span> input<span class="token punctuation">(</span><span class="token string">'请输入要搜索的内容:'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#quote()只能对字符串进行编码</span>
+query_string <span class="token operator">=</span> parse<span class="token punctuation">.</span>quote<span class="token punctuation">(</span>word<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>url<span class="token punctuation">.</span>format<span class="token punctuation">(</span>query_string<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>执行</p>
+<pre class=" language-python"><code class="language-python">输入：请输入要搜索的内容<span class="token punctuation">:</span>编程帮www<span class="token punctuation">.</span>biancheng<span class="token punctuation">.</span>net
+输出：http<span class="token punctuation">:</span><span class="token operator">//</span>www<span class="token punctuation">.</span>baidu<span class="token punctuation">.</span>com<span class="token operator">/</span>s?wd<span class="token operator">=</span><span class="token operator">%</span>E7<span class="token operator">%</span>BC<span class="token operator">%</span><span class="token number">96</span><span class="token operator">%</span>E7<span class="token operator">%</span>A8<span class="token operator">%</span><span class="token number">8B</span><span class="token operator">%</span>E5<span class="token operator">%</span>B8<span class="token operator">%</span>AEwww<span class="token punctuation">.</span>biancheng<span class="token punctuation">.</span>net
+</code></pre>
+<p>两则的差异就是一个是字典，一个是字符串的一个编码。</p>
+<h4 id="2-解码unquote-string"><a href="#2-解码unquote-string" class="headerlink" title="2) 解码unquote(string)"></a>2) 解码unquote(string)</h4><p>对url进行还原</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> urllib <span class="token keyword">import</span> parse
+string <span class="token operator">=</span> <span class="token string">'%E7%88%AC%E8%99%AB'</span>
+result <span class="token operator">=</span> parse<span class="token punctuation">.</span>unquote<span class="token punctuation">(</span>string<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+</code></pre>
+<p>执行</p>
+<pre class=" language-python"><code class="language-python">爬虫
+</code></pre>
+<h4 id="3-URL地址拼接方式"><a href="#3-URL地址拼接方式" class="headerlink" title="3) URL地址拼接方式"></a>3) URL地址拼接方式</h4><p>三种拼接 URL 地址的方法。除了使用 format() 函数外，还可以使用字符串相加，以及字符串占位符</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 1、字符串相加</span>
+  baseurl <span class="token operator">=</span> <span class="token string">'http://www.baidu.com/s?'</span>
+  params<span class="token operator">=</span><span class="token string">'wd=%E7%88%AC%E8%99%AB'</span>
+  url <span class="token operator">=</span> baseurl <span class="token operator">+</span> params
+<span class="token comment" spellcheck="true"># 2、字符串格式化（占位符）</span>
+  params<span class="token operator">=</span><span class="token string">'wd=%E7%88%AC%E8%99%AB'</span>
+  url <span class="token operator">=</span> <span class="token string">'http://www.baidu.com/s?%s'</span><span class="token operator">%</span> params
+<span class="token comment" spellcheck="true"># 3、format()方法</span>
+  url <span class="token operator">=</span> <span class="token string">'http://www.baidu.com/s?{}'</span>
+  params<span class="token operator">=</span><span class="token string">'wd=%E7%88%AC%E8%99%AB'</span>
+  url <span class="token operator">=</span> url<span class="token punctuation">.</span>format<span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="Cx-Regular-expression"><a href="#Cx-Regular-expression" class="headerlink" title="Cx Regular expression"></a>Cx Regular expression</h2><h3 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h3><table>
+<thead>
+<tr>
+<th>元字符</th>
+<th>匹配内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.</td>
+<td>匹配除换行符以外的任意字符</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>匹配所有普通字符(数字、字母或下划线)</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>匹配任意的空白符</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>匹配数字</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>匹配一个换行符</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>匹配一个制表符</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>匹配一个单词的结尾</td>
+</tr>
+<tr>
+<td>^</td>
+<td>匹配字符串的开始位置</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配字符串的结尾位置</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>匹配非字母或数字或下划线</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>匹配非数字</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>匹配非空白符</td>
+</tr>
+<tr>
+<td>a|b</td>
+<td>匹配字符 a 或字符 b</td>
+</tr>
+<tr>
+<td>()</td>
+<td>正则表达式分组所用符号，匹配括号内的表达式，表示一个组。</td>
+</tr>
+<tr>
+<td>[…]</td>
+<td>匹配字符组中的字符</td>
+</tr>
+<tr>
+<td>[^…]</td>
+<td>匹配除了字符组中字符的所有字符</td>
+</tr>
+</tbody></table>
+<h4 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h4><table>
+<thead>
+<tr>
+<th>量词</th>
+<th>用法说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*</td>
+<td>重复零次或者更多次</td>
+</tr>
+<tr>
+<td>+</td>
+<td>重复一次或者更多次</td>
+</tr>
+<tr>
+<td>？</td>
+<td>重复0次或者一次</td>
+</tr>
+<tr>
+<td>{n}</td>
+<td>重复n次</td>
+</tr>
+<tr>
+<td>{n,}</td>
+<td>重复n次或者更多次</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td>重复n到m次</td>
+</tr>
+</tbody></table>
+<h4 id="字符组"><a href="#字符组" class="headerlink" title="字符组"></a>字符组</h4><table>
+<thead>
+<tr>
+<th>正则</th>
+<th>待匹配字符</th>
+<th>匹配结果</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[0123456789]</td>
+<td>8</td>
+<td>True</td>
+<td>在一个字符组里枚举所有字符，字符组里的任意一个字符 和”待匹配字符”相同都视为可以匹配。</td>
+</tr>
+<tr>
+<td>[0123456789]</td>
+<td>a</td>
+<td>False</td>
+<td>由于字符组中没有 “a” 字符，所以不能匹配。</td>
+</tr>
+<tr>
+<td>[0-9]</td>
+<td>7</td>
+<td>True</td>
+<td>也可以用-表示范围，[0-9] 就和 [0123456789] 是一个意思。</td>
+</tr>
+<tr>
+<td>[a-z]</td>
+<td>s</td>
+<td>True</td>
+<td>同样的如果要匹配所有的小写字母，直接用 [a-z] 就可以表示。</td>
+</tr>
+<tr>
+<td>[A-Z]</td>
+<td>B</td>
+<td>True</td>
+<td>[A-Z] 就表示所有的大写字母。</td>
+</tr>
+<tr>
+<td>[0-9a-fA-F]</td>
+<td>e</td>
+<td>True</td>
+<td>可以匹配数字，大小写形式的 a～f，用来验证十六进制字符。</td>
+</tr>
+</tbody></table>
+<h3 id="贪婪模式非贪婪模式"><a href="#贪婪模式非贪婪模式" class="headerlink" title="贪婪模式非贪婪模式"></a>贪婪模式非贪婪模式</h3><p>正则表达式默认为贪婪匹配，也就是尽可能多的向后匹配字符，比如 {n,m} 表示匹配前面的内容出现 n 到 m 次（n 小于 m），在贪婪模式下，首先以匹配 m 次为目标，而在非贪婪模式是尽可能少的向后匹配内容，也就是说匹配 n 次即可。</p>
+<p>贪婪模式转换为非贪婪模式的方法很简单，在元字符后添加“?”即可实现，如下所示：</p>
+<table>
+<thead>
+<tr>
+<th>元字符(贪婪模式)</th>
+<th>非贪婪模式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*</td>
+<td>*?</td>
+</tr>
+<tr>
+<td>+</td>
+<td>+？</td>
+</tr>
+<tr>
+<td>？</td>
+<td>??</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td>{n,m}？</td>
+</tr>
+</tbody></table>
+<h3 id="正则表达式转义"><a href="#正则表达式转义" class="headerlink" title="正则表达式转义"></a>正则表达式转义</h3><p>如果使用正则表达式匹配特殊字符时，则需要在字符前加<code>\</code>表示转义。常见的特殊字符如下：</p>
+<pre><code>* + ? ^ $ [] () {} | \
+</code></pre>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Enomothem</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://enomothem.com/posts/2de7.html">http://enomothem.com/posts/2de7.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Enomothem</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/spider/">
+                                    <span class="chip bg-color">spider</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/7a52.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/medias/featureimages/22.jpg" class="responsive-img" alt="Nim socket 免杀">
+                        
+                        <span class="card-title">Nim socket 免杀</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-28
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/AntiVirus/" class="post-category">
+                                    AntiVirus
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/nim/">
+                        <span class="chip bg-color">nim</span>
+                    </a>
+                    
+                    <a href="/tags/socket/">
+                        <span class="chip bg-color">socket</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/703e.html">
+                    <div class="card-image">
+                        
+                        <img src="https://lit.enomothem.com/zhixinghe/20220623005101.jpg" class="responsive-img" alt="Python进度条">
+                        
+                        <span class="card-title">Python进度条</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%BF%9B%E5%BA%A6%E6%9D%A1/">
+                        <span class="chip bg-color">进度条</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('100')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround. 将 === PRE 改为CODE即可复制，解决换行问题
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 字星河<br />'
+            + '文章作者: Enomothem<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="2457752542"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aplayer/APlayer.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+			
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2018";
+                    var startMonth = "6";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "站龄 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "站龄 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+			
+			<br>
+			
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2018-2022</span>
+            
+            <a href="/about" target="_blank">by&nbsp;Enomothem</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">296.3k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                <i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+			
+            <br>
+
+            
+			
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="https://beian.miit.gov.cn/" target="_blank">赣ICP备2021004825号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/enomothem" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:enomothem@outlook.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://public.zsxq.com/groups/51288182112544.html" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://public.zsxq.com/groups/51288182112544.html" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=251051821" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 251051821" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/materialize/materialize.min.js"></script>
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/aos/aos.js"></script>
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/js/matery.js"></script>
+    <!--动态线条背景-->
+    <script type="text/javascript" color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4c973a61bf86a8fd9f616477668e8c47";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="https://test1.jsdelivr.net/gh/enomothem/cdn@1.5.0/sources/libs/instantpage/instantpage.js" type="module"></script>
+    
+<!-- 雪花snow 樱花sakura -->
+ <!--   <script src="/js/sakura.js"></script>  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+
+</html>
+

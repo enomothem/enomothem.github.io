@@ -819,14 +819,14 @@ fo<span class="token punctuation">.</span>close<span class="token punctuation">(
 <pre class=" language-python"><code class="language-python">fileObject<span class="token punctuation">.</span>write<span class="token punctuation">(</span>string<span class="token punctuation">)</span>
 </code></pre>
 <p>例</p>
-<pre><code>#!/usr/bin/python
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#!/usr/bin/python</span>
 
-# Open a file
-fo = open("foo.txt", "w")
-fo.write( "Python is a great language.\nYeah its great!!\n")
+<span class="token comment" spellcheck="true"># Open a file</span>
+fo <span class="token operator">=</span> open<span class="token punctuation">(</span><span class="token string">"foo.txt"</span><span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span>
+fo<span class="token punctuation">.</span>write<span class="token punctuation">(</span> <span class="token string">"Python is a great language.\nYeah its great!!\n"</span><span class="token punctuation">)</span>
 
-# Close opend file
-fo.close()
+<span class="token comment" spellcheck="true"># Close opend file</span>
+fo<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 <p>打开文件会发现一下内容</p>
 <pre><code>Python is a great language.
@@ -834,22 +834,22 @@ Yeah its great!!
 </code></pre>
 <h4 id="read"><a href="#read" class="headerlink" title="read()"></a>read()</h4><p>读取文件字符串</p>
 <p>语法</p>
-<pre><code>fileObject.read([count])
+<pre class=" language-python"><code class="language-python">fileObject<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">[</span>count<span class="token punctuation">]</span><span class="token punctuation">)</span>
 </code></pre>
 <p>count是指定读取的数量，如果无则直到文件结束。</p>
 <p>例</p>
 <p>读取写时产生的那个文件的内容</p>
-<pre><code>#!/usr/bin/python
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#!/usr/bin/python</span>
 
-# Open a file
-fo = open("foo.txt", "r+")
-str = fo.read(10);
-print "Read String is : ", str
-# Close opend file
-fo.close()
+<span class="token comment" spellcheck="true"># Open a file</span>
+fo <span class="token operator">=</span> open<span class="token punctuation">(</span><span class="token string">"foo.txt"</span><span class="token punctuation">,</span> <span class="token string">"r+"</span><span class="token punctuation">)</span>
+str <span class="token operator">=</span> fo<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">print</span> <span class="token string">"Read String is : "</span><span class="token punctuation">,</span> str
+<span class="token comment" spellcheck="true"># Close opend file</span>
+fo<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 <p>执行</p>
-<pre><code>Read String is : Python is
+<pre class=" language-python"><code class="language-python">Read String <span class="token keyword">is</span> <span class="token punctuation">:</span> Python <span class="token keyword">is</span>
 </code></pre>
 <h3 id="文件位置"><a href="#文件位置" class="headerlink" title="文件位置"></a>文件位置</h3><p><em>tell()</em>  告诉你在文件中的当前位置</p>
 <p><em>seek(offset[, from])</em> 更改文件的当前位置，offset是需要移动的字节数，from指定被移动时的位置，from为0则从开头开始，1表示当前位置，2表示结尾位置。</p>
@@ -916,11 +916,11 @@ os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(
 <pre class=" language-python"><code class="language-python">os<span class="token punctuation">.</span>chdir<span class="token punctuation">(</span><span class="token string">"newdir"</span><span class="token punctuation">)</span>
 </code></pre>
 <p>例</p>
-<pre><code>#!/usr/bin/python
-import os
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#!/usr/bin/python</span>
+<span class="token keyword">import</span> os
 
-# Changing a directory to "/home/newdir"
-os.chdir("/home/newdir")
+<span class="token comment" spellcheck="true"># Changing a directory to "/home/newdir"</span>
+os<span class="token punctuation">.</span>chdir<span class="token punctuation">(</span><span class="token string">"/home/newdir"</span><span class="token punctuation">)</span>
 </code></pre>
 <h4 id="getcwd"><a href="#getcwd" class="headerlink" title="getcwd()"></a>getcwd()</h4><p>显示当前目录</p>
 <p>语法</p>
@@ -1186,17 +1186,16 @@ os<span class="token punctuation">.</span>rmdir<span class="token punctuation">(
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/2542.html">
+                <a href="/posts/703e.html">
                     <div class="card-image">
                         
-                        <img src="https://lit.enomothem.com/zhixinghe/20220623005101.jpg" class="responsive-img" alt="Python programming 10">
+                        <img src="https://lit.enomothem.com/zhixinghe/20220623005101.jpg" class="responsive-img" alt="Python进度条">
                         
-                        <span class="card-title">Python programming 10</span>
+                        <span class="card-title">Python进度条</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1206,9 +1205,9 @@ os<span class="token punctuation">.</span>rmdir<span class="token punctuation">(
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-20
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-21
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1221,16 +1220,11 @@ os<span class="token punctuation">.</span>rmdir<span class="token punctuation">(
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/I-O/">
-                        <span class="chip bg-color">I/O</span>
-                    </a>
-                    
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/%E8%BF%9B%E5%BA%A6%E6%9D%A1/">
+                        <span class="chip bg-color">进度条</span>
                     </a>
                     
                 </div>
@@ -1567,7 +1561,7 @@ os<span class="token punctuation">.</span>rmdir<span class="token punctuation">(
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">291.2k</span>&nbsp;字
+                class="white-color">296.3k</span>&nbsp;字
             
             
             
