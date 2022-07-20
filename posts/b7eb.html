@@ -641,21 +641,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-26
+                    2022-07-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    40.1k
+                    41.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    146 分
+                    152 分
                 </div>
                 
 
@@ -1445,7 +1445,72 @@
 <p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Windows中免杀马，放入到正常目录下，改了名字，修改时间，然后删除了日志，D盾也查不到，怎么办？</p>
 </blockquote>
 <p>思路一：和备份的文件做对比，查看那些不同的文件。<br>思路二：用其它的工具，比如webshell在线查杀灭绝师太版本、Cloudwalker[牧云]<br>思路三：使用Winhex 恢复</p>
-<h3 id="红队-Red-Team"><a href="#红队-Red-Team" class="headerlink" title="红队 | Red Team"></a>红队 | Red Team</h3><p>暂时未收录，欢迎提供！</p>
+<h3 id="红队-Red-Team"><a href="#红队-Red-Team" class="headerlink" title="红队 | Red Team"></a>红队 | Red Team</h3><p>1、自我介绍</p>
+<p>2、看你项目经历上有些打过hw，简单说一说？第几名啊？</p>
+<p>3、挖过SRC吗？有cve吗？</p>
+<p>4、最近接触过哪些漏洞？</p>
+<p>5、看你写了会python和c，用他们干过什么？</p>
+<p>6、打过大型内网吗，讲讲过程？（但丁yyds，讲了一些那里面的骚思路，面试官好像很满意）</p>
+<p>7、kerberos认证过程？</p>
+<p>8、域内攻击手法讲一下，维权这些说一下</p>
+<p>9、Golden ticket和Sliver ticket有啥区别</p>
+<p>10、管理员会话劫持怎么做</p>
+<p>11、堆栈溢出具体讲一下</p>
+<p>12、接触过云waf吗，讲讲绕过思路</p>
+<p>13、宝塔文件上传能绕过吗？</p>
+<p>14、免杀这些是自己写的吗？讲讲过程，卡巴内存查杀能过吗？</p>
+<p>15、R0和R3层hook了解过吗？</p>
+<p>16、dll劫持，进程注入讲一下过程</p>
+<p>17、钓鱼了解过吗？除了exe还可以用什么？</p>
+<p>18、代码审计接触过吗？（问到这感觉寄了，毕竟不会，但是嘴硬说了年后准备学一下java，面试官后面也没说什么）</p>
+<hr>
+<ol>
+<li>任意文件上传绕过？</li>
+<li>php+mysql 有注入点，Getshell条件？</li>
+<li>redis未授权访问利用方式？</li>
+<li>ssrf+redis？</li>
+<li>xxe?</li>
+<li>psexec？</li>
+<li>如何快速定位域控？</li>
+<li>mssql不用xp_cmdshell，如何执行命令？</li>
+<li>黄金白银票据？</li>
+<li>windows2012之后，如何抓取密码？</li>
+<li>拿到webshell之后，内网中如何登录3389？</li>
+<li>windows提权？</li>
+</ol>
+<hr>
+<p>初试<br>漏洞原理<br>发现特征<br>利用方法<br>爬虫绕过封锁（绕过技术）</p>
+<p>二面<br>sqlserver命令执行   orcole执行命令的方法<br>信息收集关注的点-然后根据你说的然后继续深入<br>华哥总结的那些就足够了<br>然后利用方法<br>tp5代码执行不允许上传文件要怎么做</p>
+<p>（回答的很失败说了两个1：关掉杀软 2：是什么我忘了）<br>关注的漏洞点，如何识别，<br>漏洞原理（我说的最近的log4）<br>学习的来源，我说的各种论坛<br>一些很细枝末节的东西注入无回显（dnslog）<br>控制的机器不出网但是能ping到（不知道）<br>docker判断特征（我说的是哪个文件有没有作为判断特征）<br>注入绕过waf的方法（函数替换，诸如手法替换，延时，布尔，报错）<br>说一下项目经过哪些奇葩的洞<br>SQL注入回显一堆乱码。dnslog也是一堆乱码<br>代码审计，手机号发送验证码等待的时候才能sql注入<br>总结一下，主要包含命令执行的细枝末节和简单内网渗透操作命令的细枝末节<br>最近在学习什么（我说最近在重保，学习方面可能拉下一些，但是在学习爬虫漏洞识别这一方面）<br>后面就是问了一下公司上班，薪资还有接的项目，完了日常忘记问了<br>希望大家注意啊，骑驴找马的时候一定要下家发正式的offer了再决定动不动身</p>
+<hr>
+<p>sql注入碰到过那些数据库</p>
+<p>mysql渗透思路</p>
+<p>如果当前ip只开放mysql如何渗透</p>
+<p>mssql渗透思路</p>
+<p>xp_cmdshell没有开启怎么办</p>
+<p>sql agent提权具体细节</p>
+<p>oracle渗透思路</p>
+<p>oracle提权方法</p>
+<p>如何进行信息收集扩大攻击面</p>
+<p>如何针对同一款网站框架进行信息收集</p>
+<p>内网如何权限维持</p>
+<p>黄金票据和白银票据说一下具体利用过程，需要哪些条件，两者有什么不同</p>
+<p>免杀有了解过嘛，了解过哪些windows api</p>
+<p>钓鱼获得权限，如何横向</p>
+<p>域渗透思路</p>
+<p>了解过代码审计嘛</p>
+<p>内网如何扫描存活主机，如果部署了安全产品应该怎么办</p>
+<p>内网如何扩大攻击面</p>
+<p>如果存在任意文件读取，你怎么利用，还有一些伪协议绕过问题，采用路由的网站如何进行任意文件读取，后缀jpg如何进行任意文件读取</p>
+<p>xxe漏洞了解过嘛</p>
+<hr>
+<p>1.不出网有什么方法，正向shell方法除了reg之类的，还有什么?<br>2.域内委派<br>3.dpapi机制说下，能干嘛4.fastjson不出网<br>5.shiro漏洞类型，721原理，721利用要注意什么?<br>7.weblogic漏洞类型都有啥,原理<br>8.dll劫持，dll注入<br>9.内网优先爆破测试的端口、为什么;如果只有3389开放，爆破3389的实际影响…</p>
+<p>10.window2003 frp nps为神马用不了<br>11.钓鱼方法姿势…除了exe这种双击的，还有什么</p>
+<p>12.redis window shell方法<br>13.bypass uac技巧，方法，原理</p>
+<p>14.内存马filter shell……<br>15.PTH深度原理，利用条件<br>16.抓hash方法,有杀软抓不到尼….</p>
+<p>17.Windows defender安全机制</p>
+<p>18.有的时候抓到的hash不是明文为啥</p>
+<p>19.hvv三大洞挨个说……<br>20.cs是否有二次开发过,cna脚本有没有写过</p>
 <h3 id="内网-Intranet"><a href="#内网-Intranet" class="headerlink" title="内网 | Intranet"></a>内网 | Intranet</h3><blockquote>
 <p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>shell无法上线，如何判断机器出网？</p>
 </blockquote>
@@ -1458,7 +1523,7 @@
 <p><span class="github-emoji"><span>📌</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>怎么查看域控？</p>
 </blockquote>
 <p>net user administrator /domain</p>
-<h3 id="渗透测试工程师面试"><a href="#渗透测试工程师面试" class="headerlink" title="渗透测试工程师面试"></a>渗透测试工程师面试</h3><h4 id="滴滴-DiDi"><a href="#滴滴-DiDi" class="headerlink" title="滴滴 DiDi"></a>滴滴 DiDi</h4><p>一面：<br>可能我简历写的比较少，面试官似乎有些不知道问什么，尴尬了一会儿，开头自我介绍，先问了个简单的n!，然后说如果输入的n是负数呢？<br>之后是一道数组最大连续子数组和。<br>python基础类库，requests,re，爬虫的基本流程<br>一些基本的sql语句</p>
+<h3 id="渗透安服工程师面试"><a href="#渗透安服工程师面试" class="headerlink" title="渗透安服工程师面试"></a>渗透安服工程师面试</h3><h4 id="滴滴-DiDi"><a href="#滴滴-DiDi" class="headerlink" title="滴滴 DiDi"></a>滴滴 DiDi</h4><p>一面：<br>可能我简历写的比较少，面试官似乎有些不知道问什么，尴尬了一会儿，开头自我介绍，先问了个简单的n!，然后说如果输入的n是负数呢？<br>之后是一道数组最大连续子数组和。<br>python基础类库，requests,re，爬虫的基本流程<br>一些基本的sql语句</p>
 <p>二面：<br>xss与sql注入的基本原理与分类<br>xss如何防御？（分前端与后端，后端需要在入口和出口都过滤）<br>app客户端与服务器通信可能出现哪些漏洞问题<br>如何防御中间人攻击？<br>https的建立过程<br>TCP三次握手的过程以及对应的状态转换<br>app客户端破解的大致流程，app解包后文件夹的基本结构<br>对称加密与非对称加密的不同，分别用在哪些方面<br>DDOS的攻击，说道syn洪流的原理<br>ddos的防御<br>滴滴客户端可能存在哪些逻辑漏洞</p>
 <p>三面：<br>三面面试官感觉比较和蔼，上来先问平时干什么，我说玩游戏，然后说到lol，问我啥段位，我说白银。然后问我为什么段位低，我说一般打得少，基本都是开黑打匹配。<br>然后问了一些其他的生活问题。<br>后来看我简历上写了关于操作系统的，于是问我操作系统各个设备模块间的关系。当时有点蒙，就和他说了下操作系统启动的大致流程，从保护模式开启开始讲，因为实模式阶段记得不是很清楚。因为没想到三面会问我技术，后来想了想，问的意思可能是说设备栈之间数据流从上到下一层层处理的过程。</p>
 <h4 id="阿里-Alibaba"><a href="#阿里-Alibaba" class="headerlink" title="阿里 Alibaba"></a>阿里 Alibaba</h4><h5 id="1-FAQ"><a href="#1-FAQ" class="headerlink" title="1.FAQ"></a>1.FAQ</h5><ol>
@@ -2306,6 +2371,33 @@
 <hr>
 <p>And–蘑菇街会约面试时间，而且管是小姐姐还是小哥哥说话都很温柔 +加分</p>
 <p>—–其他的都忘了，大概半小时  And 半小时以后收到了邮件 not pass</p>
+<h4 id="安全狗"><a href="#安全狗" class="headerlink" title="安全狗"></a>安全狗</h4><p>反序列化，<br>给你一个网站如何渗透的思路，<br>sql注入，种类之类的<br>文件上传遇到WAF，<br>有没有挖过SRC，<br>挖SRC的细节<br>逻辑漏洞<br>怎么防止SQL注入<br>内网渗透，免杀的基础(看简历有没有)<br>我简历上说写过python脚本，他让我说一下细节<br>参加的CTF是校内还是校外，有什么奖项<br>有没有了解最新的漏洞，说一下原理<br>CSRF和SSRF区别<br>MSF和CS联动<br>如果有一台目标机器疑似感染病毒，如何进行应急处理<br>内网渗透怎么搞</p>
+<h4 id="安恒"><a href="#安恒" class="headerlink" title="安恒"></a>安恒</h4><p>安服</p>
+<p>一面</p>
+<p>1.sql注入说一下，联合注入流程，</p>
+<p>2.xss说一下，alert被过滤怎么办</p>
+<p>3.ssrf说一下，刚刚提到可以扫内网，具体怎么扫，ssrf用到的协议</p>
+<p>4.xxe说一下，命令执行得xxe怎么写</p>
+<p>5.struts2知道吗，有哪些漏洞</p>
+<p>6.spring框架漏洞了解吗</p>
+<p>7.redis未授权知道吗，说说他的条件和方法</p>
+<p>8.中间件都有哪些，说一说都有哪些漏洞</p>
+<p>9.sqlmap常用函数，–os-shell参数如何用，条件是什么</p>
+<p>二面</p>
+<p>1.自我介绍</p>
+<p>2.如何学习网安的</p>
+<p>3.java的三大特征</p>
+<p>4.java的重载和重写的区别</p>
+<p>5.java的反射、反序列化。</p>
+<p>6.短信轰炸的时候一分钟只能访问5次，如何来解决</p>
+<p>7.什么是数字签名</p>
+<p>8.sqlmap的命令</p>
+<p>9.nmap的扫描方式，对应的命令</p>
+<p>10.如何学习内网的（详细问题一个没问）</p>
+<p>11.如何判断spring框架、shiro框架</p>
+<p>12.csrf和ssrf的区别</p>
+<p>13.sql注入盲注时间太长如何加快速度</p>
+<p>14.挖过的漏洞，详细说明。</p>
 <h2 id="Fx-渗透测试指南-Pentesting-Guide"><a href="#Fx-渗透测试指南-Pentesting-Guide" class="headerlink" title="Fx 渗透测试指南 Pentesting Guide"></a>Fx 渗透测试指南 Pentesting Guide</h2><p><strong>1、信息收集</strong></p>
 <p>a、服务器的相关信息（真实ip，系统类型，版本，开放端口，WAF等）</p>
 <p>b、网站指纹识别（包括，cms，cdn，证书等），dns记录</p>
@@ -3331,7 +3423,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">298.5k</span>&nbsp;字
+                class="white-color">301.8k</span>&nbsp;字
             
             
             

@@ -637,21 +637,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-22
+                    2022-07-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.9k
+                    5.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    21 分
+                    23 分
                 </div>
                 
 
@@ -678,7 +678,7 @@
 <p>跑题了跑题了，回归主题</p>
 <p>！不要轻易修改注册表！ 再次强调，不要轻易修改。</p>
 </blockquote>
-<h1 id="操作系统-效率优化"><a href="#操作系统-效率优化" class="headerlink" title="操作系统-效率优化"></a>操作系统-效率优化</h1><blockquote>
+<h2 id="操作系统-效率优化"><a href="#操作系统-效率优化" class="headerlink" title="操作系统-效率优化"></a>操作系统-效率优化</h2><blockquote>
 <p>以下内容就是一些折腾电脑的记录，从工具到快捷键，从没有桌面的桌面到不用快捷键只用命令打开。<br>一定要做备份！一定要做备份！一定要做备份！</p>
 </blockquote>
 <p>效率优化，顾名思义，就是使用快捷键提升效率</p>
@@ -988,11 +988,16 @@ C:\Users\enomothem\Desktop>explorer
 <li>dxdiag</li>
 <li>msinfo32</li>
 </ul>
-<h2 id="清理C盘"><a href="#清理C盘" class="headerlink" title="清理C盘"></a>清理C盘</h2><p>这是最烦的一个问题了，明明C盘满了，又不知道该输出什么东西，所以就很烦。</p>
+<h2 id="清理C盘"><a href="#清理C盘" class="headerlink" title="清理C盘"></a>清理C盘</h2><blockquote>
+<p>C盘拯救专项</p>
+</blockquote>
+<p>这是最烦的一个问题了，明明C盘满了，又不知道该输出什么东西，所以就很烦。</p>
 <p>解决方法有很多，但最彻底的方法是备份自己的东西，然后重装系统。</p>
 <p>或者加内存，否则就只能采取各种措施缓解了，好吧，既然如此，只能怎么做了。</p>
-<h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><p>输出下面路径中的文件，有一个压缩包特别大，但是没有什么用。</p>
-<p> C:\Users\user（你的user名字）\AppDate\Local\Temp</p>
+<p>思路，我发现，C盘就算不安装软件一样会变为软件的数据存储区域，因为软件的默认存储都在C盘，而且我的微信占了20多个G，一般像QQ、微信这种社交软件，产生的聊天数据，图片，视频都会加载到默认的C盘用户下的文档中，建议修改到其它盘符，这是一个大头，去掉了就会好很多，而且是一个持续增长的，又不好删除，因为都是聊天历史，还是很重要的，删除了可能就找不到了。</p>
+<p>然后就是一些特殊的大文件，可以使用SpaceSniffer工具看，直观一点。比较大的就删掉。比如hiberfil.sys文件。</p>
+<h3 id="初步·清理缓存"><a href="#初步·清理缓存" class="headerlink" title="初步·清理缓存"></a>初步·清理缓存</h3><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><p>输出下面路径中的文件，有一个压缩包特别大，但是没有什么用。</p>
+<p> <code>C:\Users\user（你的user名字）\AppDate\Local\Temp</code></p>
 <h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>使用脚本</p>
 <p>打开一个notepad，把下面的命令丢进去，然后把后缀改为.bat就ok了</p>
 <pre class=" language-bat"><code class="language-bat">@echo off     
@@ -1119,6 +1124,17 @@ echo 干净！
 echo Finger heart ~    
 echo. & pause   
 </code></pre>
+<p>当然，你可以根据自己的需求，研究可以删除的目录，添加进去，不过不要把有用的信息删除掉哦。</p>
+<h3 id="分析·清理大头"><a href="#分析·清理大头" class="headerlink" title="分析·清理大头"></a>分析·清理大头</h3><h4 id="hiberfil-sys-【6G】"><a href="#hiberfil-sys-【6G】" class="headerlink" title="hiberfil.sys 【6G】"></a>hiberfil.sys 【6G】</h4><p>这个文件不能直接删除!</p>
+<p>使用管理员打开cmd，输入命令<strong>powercfg -h off</strong>关闭休眠功能，这个文件就会把空间还给硬盘。</p>
+<p>休眠和睡眠的区别是，睡眠是短暂的切断供电和马上恢复状态，但断电数据不保存，而休眠会先存入硬盘中。</p>
+<h4 id="pagefile-sys-【3G】"><a href="#pagefile-sys-【3G】" class="headerlink" title="pagefile.sys 【3G】"></a>pagefile.sys 【3G】</h4><p>pagefile.sys文件是操作系统的虚拟内存文件，如果用户经常运行大型程序，建议保留。</p>
+<p>我就保存吧，也不能直接删除，具体配置可以百度。</p>
+<h4 id="Installer-【6G】"><a href="#Installer-【6G】" class="headerlink" title="Installer 【6G】"></a>Installer 【6G】</h4><p>C:/Windows/Installer/</p>
+<p>C:\Windows\Installer文件夹建议不要做任何手动修改，因为所有基于 Windows Installer 安装机制安装的应用软件，相关的注册信息和有关的配置文件都会有保存在此处，建议不需要更改或删除Windows\Installer 文件夹中的任何数据，会存在系统无法正常使用的风险。</p>
+<p>但里面有一个文件是雷蛇鼠标的，占3.5G！</p>
+<p>Windows Installer文件清理工具是一款清理系统垃圾软件，专门用来清理Windows Installer文件的小软件，可以快速的扫描并且清理，释放磁盘空间，虽小巧功能但强大。使用方便无需安装。</p>
+<p><a target="_blank" rel="noopener" href="http://www.winwin7.com/Soft/456.html">http://www.winwin7.com/Soft/456.html</a></p>
 <h2 id="查看CPU温度"><a href="#查看CPU温度" class="headerlink" title="查看CPU温度"></a>查看CPU温度</h2><p>推荐一个非常好用的CPU温度显示工具，不是很大，非常的方便</p>
 <p># CoreTemp <a target="_blank" rel="noopener" href="https://www.alcpu.com/CoreTemp/">https://www.alcpu.com/CoreTemp/</a></p>
 <p>下载后，打开，在地址栏也有显示哦</p>
@@ -2331,7 +2347,7 @@ shell:::{87630419-6216-4ff8-a1f0-143562d16d5c}
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">298.5k</span>&nbsp;字
+                class="white-color">301.8k</span>&nbsp;字
             
             
             
