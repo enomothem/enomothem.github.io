@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://enomothem.com/posts/174b.html</loc>
+    <loc>http://enomothem.com/posts/3012.html</loc>
     
     <lastmod>2023-01-31</lastmod>
     
@@ -11,9 +11,9 @@
   </url>
   
   <url>
-    <loc>http://enomothem.com/posts/0.html</loc>
+    <loc>http://enomothem.com/posts/174b.html</loc>
     
-    <lastmod>2022-12-15</lastmod>
+    <lastmod>2023-01-31</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2547,6 +2547,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>http://enomothem.com/tags/1/</loc>
+    <lastmod>2023-01-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -2698,6 +2705,13 @@
   
   <url>
     <loc>http://enomothem.com/categories/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2023-01-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://enomothem.com/categories/PS/</loc>
     <lastmod>2023-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
