@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="通过Proxifier拦截小程序数据包, web安全,web攻防,blog,shell,linux,windows,Linux,Windows,物理,物理学,宇宙,反物质,字星河,博客,星河,Enomothem,enomothem,eonthem">
+    <meta name="keywords" content="Proxifier-拦截小程序数据包, web安全,web攻防,blog,shell,linux,windows,Linux,Windows,物理,物理学,宇宙,反物质,字星河,博客,星河,Enomothem,enomothem,eonthem">
     <meta name="description" content="真正的改变只能发生在原则层面">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>通过Proxifier拦截小程序数据包 | 字星河</title>
+    <title>Proxifier-拦截小程序数据包 | 字星河</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://lit.enomothem.com/source/libs/awesome/css/all.css">
@@ -41,8 +41,8 @@
     <script src="https://lit.enomothem.com/source/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -480,12 +480,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://lit.enomothem.com/banner/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://lit.enomothem.com/banner/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">通过Proxifier拦截小程序数据包</h1>
+                    <h1 class="description center-align post-title">Proxifier-拦截小程序数据包</h1>
                 </div>
             </div>
         </div>
@@ -640,7 +640,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    119
+                    189
                 </div>
                 
 
@@ -673,7 +673,10 @@
 <li>微信电脑版</li>
 <li>Burp Suite</li>
 </ul>
-<h2 id="Bx-简单使用"><a href="#Bx-简单使用" class="headerlink" title="Bx 简单使用"></a>Bx 简单使用</h2><p>配置</p>
+<h2 id="Bx-简单使用"><a href="#Bx-简单使用" class="headerlink" title="Bx 简单使用"></a>Bx 简单使用</h2><p>Burp配置</p>
+<p>导出证书，然后导入到IE</p>
+<p>控制面板-&gt;Internet选项-&gt;内容-&gt;证书-&gt;受信任的根证书颁发机构-&gt;导入-&gt;浏览-&gt;文件类型改为所有就可以看见证书了-&gt;选中证书确定即可</p>
+<p>Proxifier</p>
 <p>首先需要配置Proxifier，首先我们配置Proxy Servers代理服务器（BurpSuite默认监听127.0.0.1:8080）</p>
 <p><img src="https://lit.enomothem.com/zhixinghe/image-20230201161547609.png"></p>
 <p>之后再配置代理规则，Applications字段输入WeChatBrowser.exe;WeChatAppEx.exe; 然后Action选择我们刚刚配置的代理服务器并勾上Enable启用即可。</p>
@@ -925,9 +928,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="https://lit.enomothem.com/banner/1.jpg" class="responsive-img" alt="通过Proxifier拦截小程序数据包">
+                        <img src="https://lit.enomothem.com/banner/7.jpg" class="responsive-img" alt="Proxifier-拦截小程序数据包">
                         
-                        <span class="card-title">通过Proxifier拦截小程序数据包</span>
+                        <span class="card-title">Proxifier-拦截小程序数据包</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1291,7 +1294,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">307.3k</span>&nbsp;字
+                class="white-color">307.4k</span>&nbsp;字
             
             
             
