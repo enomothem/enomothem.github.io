@@ -673,15 +673,18 @@
 <p>R: 漏洞复现方法、具备的条件</p>
 <p>F: 漏洞修复计划。</p>
 </blockquote>
-<h4 id="基本信息"><a href="#基本信息" class="headerlink" title="== 基本信息"></a>== 基本信息</h4><p>下载Tomcat后在解压后的文件目录里有tomcat自带的webapp/docs和webapp/example文件夹，docs是tomcat的说明文档，example是tomcat自带的示例。</p>
+<p><strong>基本信息</strong></p>
+<p>下载Tomcat后在解压后的文件目录里有tomcat自带的webapp/docs和webapp/example文件夹，docs是tomcat的说明文档，example是tomcat自带的示例。</p>
 <p>漏洞分析：docs是文档，所以基本不存在风险，但是examples里面有session，而tomcat的session是共享的，这使得在不需要任何权限的情况下，可以通过examples的session示例对tomcat中的session进行修改，这样的话可能会造成某人通过examples篡改session，从而获取管理员权限等问题。</p>
 <p>修复计划：所以在使用tomcat部署应用的时候，建议先备份或者直接删掉webapp/docs和webapp/example文件夹。</p>
-<h4 id="OTS"><a href="#OTS" class="headerlink" title="== OTS"></a>== OTS</h4><ul>
+<p><strong>OTS</strong></p>
+<ul>
 <li>Tomcat</li>
 <li>NULL</li>
 <li>ALL version</li>
 </ul>
-<h2 id="R"><a href="#R" class="headerlink" title="R"></a>R</h2><h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>表单部分代码，接收用户输入的Name和Value值</p>
+<h2 id="R"><a href="#R" class="headerlink" title="R"></a>R</h2><p><strong>分析</strong></p>
+<p>表单部分代码，接收用户输入的Name和Value值</p>
 <pre class=" language-js"><code class="language-js">out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"&lt;P>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"&lt;form action="</span>"<span class="token punctuation">)</span><span class="token punctuation">;</span>
 out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span><span class="token function">encodeURL</span><span class="token punctuation">(</span><span class="token string">"SessionExample"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -711,11 +714,13 @@ String dataValue <span class="token operator">=</span> request<span class="token
 <span class="token punctuation">}</span>
 </code></pre>
 <p>用户通过表单提交Name和Value参数，然后通过request.getParameter（）函数获取这两个参数的值，再通过session.setAttribute() 函数将Name和Value的值写入Session中。</p>
-<h4 id="复现"><a href="#复现" class="headerlink" title="复现"></a>复现</h4><p>/examples/servlets/servlet/SessionExample</p>
+<p><strong>复现</strong></p>
+<p>/examples/servlets/servlet/SessionExample</p>
 <p>在Name of Session Attribute: 里输入 login</p>
 <p>在Value of Session Attribute:里输入 admin</p>
 <p>提交后显示login=admin已经写入session</p>
-<h4 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h4><p>首次打开因为没有Session被重定向到登入页面。</p>
+<p><strong>验证</strong></p>
+<p>首次打开因为没有Session被重定向到登入页面。</p>
 <p>利用样例漏洞后，再次打开index.jsp，显示成功登录。</p>
 <h2 id="F"><a href="#F" class="headerlink" title="F"></a>F</h2><p>删掉webapp/docs和webapp/example文件夹。</p>
 <p>对目录进行访问限制</p>
@@ -954,18 +959,17 @@ String dataValue <span class="token operator">=</span> request<span class="token
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/174b.html">
+                <a href="/posts/20f3.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://lit.enomothem.com/banner/0.jpg" class="responsive-img" alt="IRF01-Tomcat-example">
+                        <img src="https://lit.enomothem.com/banner/1.jpg" class="responsive-img" alt="通过Proxifier拦截小程序数据包">
                         
-                        <span class="card-title">IRF01-Tomcat-example</span>
+                        <span class="card-title">通过Proxifier拦截小程序数据包</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -975,27 +979,26 @@ String dataValue <span class="token operator">=</span> request<span class="token
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-31
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Web%E6%BC%8F%E6%B4%9E/" class="post-category">
-                                    Web漏洞
+                            <a href="/categories/SecTools/" class="post-category">
+                                    SecTools
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/IRF/">
-                        <span class="chip bg-color">IRF</span>
+                    <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                        <span class="chip bg-color">小程序</span>
                     </a>
                     
                 </div>
@@ -1329,7 +1332,7 @@ String dataValue <span class="token operator">=</span> request<span class="token
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">307.2k</span>&nbsp;字
+                class="white-color">307.3k</span>&nbsp;字
             
             
             
