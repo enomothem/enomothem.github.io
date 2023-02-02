@@ -259,9 +259,9 @@
             
             <tag> Pentesting </tag>
             
-            <tag> S2-045 </tag>
-            
             <tag> Struts2 </tag>
+            
+            <tag> S2-045 </tag>
             
         </tags>
       
@@ -1342,35 +1342,6 @@
     
     
     <entry>
-      <title>Linux-find命令查找文件</title>
-      <link href="posts/114f.html"/>
-      <url>posts/114f.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Ax-find命令使用"><a href="#Ax-find命令使用" class="headerlink" title="Ax find命令使用"></a>Ax find命令使用</h2><p>沿着文件层次结构向下遍历，匹配符合条件的文件，执行相应的操作。</p><p>find [-H] [-L] [-P] [-D debugopts] [-Olevel] [starting-point…] [expression]</p><h3 id="a-版本号"><a href="#a-版本号" class="headerlink" title="a  版本号"></a>a  版本号</h3><p><code>find --version</code> or <code>find -version</code></p><pre class=" language-sh"><code class="language-sh">find (GNU findutils) 4.7.0Copyright (C) 2019 Free Software Foundation, Inc.License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.This is free software: you are free to change and redistribute it.There is NO WARRANTY, to the extent permitted by law.Written by Eric B. Decker, James Youngman, and Kevin Dalley.Features enabled: D_TYPE O_NOFOLLOW(enabled) LEAF_OPTIMISATION FTS(FTS_CWDFD) CBO(level=2)</code></pre><h3 id="b-命令格式"><a href="#b-命令格式" class="headerlink" title="b  命令格式"></a>b  命令格式</h3><p>路径表示方法</p><ul><li>   ~ 表示$HOME目录</li><li>​    <strong>.</strong> 表示当前目录</li><li>​    / 表示根目录</li></ul><pre class=" language-shell"><code class="language-shell">-name&nbsp;&nbsp;&nbsp;filename &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查找名为filename的文件-perm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#按执行权限来查找-user&nbsp;&nbsp;&nbsp;&nbsp;username&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;#按文件属主来查找-group groupname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   #按组来查找-mtime&nbsp;&nbsp;&nbsp;-n +n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#按文件更改时间来查找文件，-n指n天以内，+n指n天以前-atime&nbsp;&nbsp;&nbsp;&nbsp;-n +n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#按文件访问时间来查找文件，-n指n天以内，+n指n天以前-ctime&nbsp;&nbsp;&nbsp;&nbsp;-n +n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#按文件创建时间来查找文件，-n指n天以内，+n指n天以前-nogroup &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查无有效属组的文件，即文件的属组在/etc/groups中不存在-nouser &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查无有效属主的文件，即文件的属主在/etc/passwd中不存-type&nbsp;&nbsp;&nbsp;&nbsp;b/d/c/p/l/f &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查是块设备、目录、字符设备、管道、符号链接、普通文件-size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n[c] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查长度为n块[或n字节]的文件-mount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查文件时不跨越文件系统mount点-follow &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#如果遇到符号链接文件，就跟踪链接所指的文件-prune &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#忽略某个目录</code></pre><h3 id="c-按名字查找"><a href="#c-按名字查找" class="headerlink" title="c  按名字查找"></a>c  按名字查找</h3><p>   在当前目录及子目录中，查找大写字母开头的txt文件<br>   <code>$ find . -name '[A-Z]*.txt' -print</code>　</p><p>   在/etc及其子目录中，查找host开头的文件<br>   <code>$ find /etc -name 'host*' -print</code> 　</p><p>   在$HOME目录及其子目录中，查找所有文件 　　<br>   <code>$ find ~ -name '*' -print</code> </p><p>  在当前目录及子目录中，查找不是out开头的txt文件 　　<br>   <code>$ find . -name "out*" -prune -o -name "*.txt" -print</code> </p><h3 id="d-按目录查找"><a href="#d-按目录查找" class="headerlink" title="d  按目录查找"></a>d  按目录查找</h3><p>在当前目录除democracy之外的子目录内搜索*.eon文件 </p><p><code>find . -path "./democracy" -prune -o -name "*.eon" -print</code></p><p><img src="https://lit.enomothem.com/brackets/image-20210609170529996.png"></p><p>在当前目录查找出democracy和science之外的目录中的.eon文件</p><p><code>find . \( -path "./democracy" -o -path "./science" \)  -a  -prune -o -name "*.eon" -print</code></p><p><img src="https://lit.enomothem.com/brackets/image-20210609172842798.png"></p><h3 id="e-按权限找"><a href="#e-按权限找" class="headerlink" title="e  按权限找"></a>e  按权限找</h3><p><code>find . -perm 755 -print</code></p><p><img src="https://lit.enomothem.com/brackets/image-20210609185658606.png"></p><h3 id="f-按类型找"><a href="#f-按类型找" class="headerlink" title="f 按类型找"></a>f 按类型找</h3><p><img src="https://lit.enomothem.com/brackets/image-20210609185829807.png"></p><h3 id="g-按时间找"><a href="#g-按时间找" class="headerlink" title="g  按时间找"></a>g  按时间找</h3><pre class=" language-shell"><code class="language-shell">  # 查找2天内被更改过的文件    $ find . -mtime -2 -type f -print 　　  # 查找2天前被更改过的文件   $ find . -mtime +2 -type f -print 　　  # 查找一天内被访问的文件   $ find . -atime -1 -type f -print 　　  # 查找一天前被访问的文件   $ find . -atime +1 -type f -print 　　  # 查找一天内状态被改变的文件   $ find . -ctime -1 -type f -print 　　 #  查找一天前状态被改变的文件   $ find . -ctime +1 -type f -print 　　  # 查找10分钟以前状态被改变的文件   $ find . -cmin +10 -type f -print </code></pre><h3 id="h-按大小"><a href="#h-按大小" class="headerlink" title="h 按大小"></a>h 按大小</h3><pre class=" language-shell"><code class="language-shell">  # 查找超过1M的文件   $ find / -size +1M -type f -print 　　  # 查找等于6字节的文件   $ find . -size 6c -print 　　  # 查找小于32k的文件   $ find . -size -32k -print </code></pre><p>执行命令</p><p>   1）查找 del.txt 并删除，删除前提示确认<br>   <code>$ find . -name 'del.txt' -ok rm {} \;</code> </p><p>   2） 查找 aa.txt 并备份为aa.txt.bak<br>   <code>$ find . -name 'aa.txt' -exec cp {} {}.bak \;</code></p><p>   3）查当前目录下的所有普通文件<br>   <code># find . -type f -exec ls -l {} \;</code></p><ol start="4"><li>在 /logs 目录中查找更改时间在5日以前的文件并删除它们<br><code>$ find logs -type f -mtime +5 -exec  -ok  rm {} \;</code></li></ol><p>  5）查询当天修改过的文件<br>     <code># find  ./  -mtime  -1  -type f  -exec  ls -l  {} \;</code></p><ol start="6"><li>查询文件并询问是否要显示</li></ol><p>​    <code># find  ./  -mtime  -1  -type f  -ok  ls -l  {} \;</code> </p><h2 id="Bx-参考"><a href="#Bx-参考" class="headerlink" title="Bx 参考"></a>Bx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><p>[2] <a href="https://blog.csdn.net/l_liangkk/article/details/81294260">https://blog.csdn.net/l_liangkk/article/details/81294260</a></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-            <tag> shell </tag>
-            
-            <tag> find </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Linux-cat命令</title>
       <link href="posts/d95c.html"/>
       <url>posts/d95c.html</url>
@@ -1392,6 +1363,35 @@
             <tag> shell </tag>
             
             <tag> cat </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux-find命令查找文件</title>
+      <link href="posts/114f.html"/>
+      <url>posts/114f.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Ax-find命令使用"><a href="#Ax-find命令使用" class="headerlink" title="Ax find命令使用"></a>Ax find命令使用</h2><p>沿着文件层次结构向下遍历，匹配符合条件的文件，执行相应的操作。</p><p>find [-H] [-L] [-P] [-D debugopts] [-Olevel] [starting-point…] [expression]</p><h3 id="a-版本号"><a href="#a-版本号" class="headerlink" title="a  版本号"></a>a  版本号</h3><p><code>find --version</code> or <code>find -version</code></p><pre class=" language-sh"><code class="language-sh">find (GNU findutils) 4.7.0Copyright (C) 2019 Free Software Foundation, Inc.License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.This is free software: you are free to change and redistribute it.There is NO WARRANTY, to the extent permitted by law.Written by Eric B. Decker, James Youngman, and Kevin Dalley.Features enabled: D_TYPE O_NOFOLLOW(enabled) LEAF_OPTIMISATION FTS(FTS_CWDFD) CBO(level=2)</code></pre><h3 id="b-命令格式"><a href="#b-命令格式" class="headerlink" title="b  命令格式"></a>b  命令格式</h3><p>路径表示方法</p><ul><li>   ~ 表示$HOME目录</li><li>​    <strong>.</strong> 表示当前目录</li><li>​    / 表示根目录</li></ul><pre class=" language-shell"><code class="language-shell">-name&nbsp;&nbsp;&nbsp;filename &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查找名为filename的文件-perm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#按执行权限来查找-user&nbsp;&nbsp;&nbsp;&nbsp;username&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;#按文件属主来查找-group groupname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   #按组来查找-mtime&nbsp;&nbsp;&nbsp;-n +n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#按文件更改时间来查找文件，-n指n天以内，+n指n天以前-atime&nbsp;&nbsp;&nbsp;&nbsp;-n +n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#按文件访问时间来查找文件，-n指n天以内，+n指n天以前-ctime&nbsp;&nbsp;&nbsp;&nbsp;-n +n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#按文件创建时间来查找文件，-n指n天以内，+n指n天以前-nogroup &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查无有效属组的文件，即文件的属组在/etc/groups中不存在-nouser &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查无有效属主的文件，即文件的属主在/etc/passwd中不存-type&nbsp;&nbsp;&nbsp;&nbsp;b/d/c/p/l/f &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查是块设备、目录、字符设备、管道、符号链接、普通文件-size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n[c] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查长度为n块[或n字节]的文件-mount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查文件时不跨越文件系统mount点-follow &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#如果遇到符号链接文件，就跟踪链接所指的文件-prune &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#忽略某个目录</code></pre><h3 id="c-按名字查找"><a href="#c-按名字查找" class="headerlink" title="c  按名字查找"></a>c  按名字查找</h3><p>   在当前目录及子目录中，查找大写字母开头的txt文件<br>   <code>$ find . -name '[A-Z]*.txt' -print</code>　</p><p>   在/etc及其子目录中，查找host开头的文件<br>   <code>$ find /etc -name 'host*' -print</code> 　</p><p>   在$HOME目录及其子目录中，查找所有文件 　　<br>   <code>$ find ~ -name '*' -print</code> </p><p>  在当前目录及子目录中，查找不是out开头的txt文件 　　<br>   <code>$ find . -name "out*" -prune -o -name "*.txt" -print</code> </p><h3 id="d-按目录查找"><a href="#d-按目录查找" class="headerlink" title="d  按目录查找"></a>d  按目录查找</h3><p>在当前目录除democracy之外的子目录内搜索*.eon文件 </p><p><code>find . -path "./democracy" -prune -o -name "*.eon" -print</code></p><p><img src="https://lit.enomothem.com/brackets/image-20210609170529996.png"></p><p>在当前目录查找出democracy和science之外的目录中的.eon文件</p><p><code>find . \( -path "./democracy" -o -path "./science" \)  -a  -prune -o -name "*.eon" -print</code></p><p><img src="https://lit.enomothem.com/brackets/image-20210609172842798.png"></p><h3 id="e-按权限找"><a href="#e-按权限找" class="headerlink" title="e  按权限找"></a>e  按权限找</h3><p><code>find . -perm 755 -print</code></p><p><img src="https://lit.enomothem.com/brackets/image-20210609185658606.png"></p><h3 id="f-按类型找"><a href="#f-按类型找" class="headerlink" title="f 按类型找"></a>f 按类型找</h3><p><img src="https://lit.enomothem.com/brackets/image-20210609185829807.png"></p><h3 id="g-按时间找"><a href="#g-按时间找" class="headerlink" title="g  按时间找"></a>g  按时间找</h3><pre class=" language-shell"><code class="language-shell">  # 查找2天内被更改过的文件    $ find . -mtime -2 -type f -print 　　  # 查找2天前被更改过的文件   $ find . -mtime +2 -type f -print 　　  # 查找一天内被访问的文件   $ find . -atime -1 -type f -print 　　  # 查找一天前被访问的文件   $ find . -atime +1 -type f -print 　　  # 查找一天内状态被改变的文件   $ find . -ctime -1 -type f -print 　　 #  查找一天前状态被改变的文件   $ find . -ctime +1 -type f -print 　　  # 查找10分钟以前状态被改变的文件   $ find . -cmin +10 -type f -print </code></pre><h3 id="h-按大小"><a href="#h-按大小" class="headerlink" title="h 按大小"></a>h 按大小</h3><pre class=" language-shell"><code class="language-shell">  # 查找超过1M的文件   $ find / -size +1M -type f -print 　　  # 查找等于6字节的文件   $ find . -size 6c -print 　　  # 查找小于32k的文件   $ find . -size -32k -print </code></pre><p>执行命令</p><p>   1）查找 del.txt 并删除，删除前提示确认<br>   <code>$ find . -name 'del.txt' -ok rm {} \;</code> </p><p>   2） 查找 aa.txt 并备份为aa.txt.bak<br>   <code>$ find . -name 'aa.txt' -exec cp {} {}.bak \;</code></p><p>   3）查当前目录下的所有普通文件<br>   <code># find . -type f -exec ls -l {} \;</code></p><ol start="4"><li>在 /logs 目录中查找更改时间在5日以前的文件并删除它们<br><code>$ find logs -type f -mtime +5 -exec  -ok  rm {} \;</code></li></ol><p>  5）查询当天修改过的文件<br>     <code># find  ./  -mtime  -1  -type f  -exec  ls -l  {} \;</code></p><ol start="6"><li>查询文件并询问是否要显示</li></ol><p>​    <code># find  ./  -mtime  -1  -type f  -ok  ls -l  {} \;</code> </p><h2 id="Bx-参考"><a href="#Bx-参考" class="headerlink" title="Bx 参考"></a>Bx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><p>[2] <a href="https://blog.csdn.net/l_liangkk/article/details/81294260">https://blog.csdn.net/l_liangkk/article/details/81294260</a></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> shell </tag>
+            
+            <tag> find </tag>
             
         </tags>
       
@@ -2201,9 +2201,9 @@
             
             <tag> Pentesting </tag>
             
-            <tag> Struts2 </tag>
-            
             <tag> S2-001 </tag>
+            
+            <tag> Struts2 </tag>
             
         </tags>
       
@@ -2726,35 +2726,6 @@
     
     
     <entry>
-      <title>Linux-cron坐享其成</title>
-      <link href="posts/5f27.html"/>
-      <url>posts/5f27.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="Linux-cron调度管理"><a href="#Linux-cron调度管理" class="headerlink" title="Linux-cron调度管理"></a><a href="">Linux-cron调度管理</a></h1><p><img src="https://lit.enomothem.com/brackets/20210206214240.png" alt="image-20210206214238867"></p><blockquote><p>怎样才能不需要手就能白嫖呢，什么，手都不需要？</p><p>是的，比如在次日凌晨抢限量礼包，你是否会夜里熬红了眼而且还抢不到，这就需要我们计划任务来完成。</p></blockquote><h2 id="Ax-cron命令"><a href="#Ax-cron命令" class="headerlink" title="Ax cron命令"></a>Ax cron命令</h2><p>cron命令是任务调度工具之一，在按照设定的时间自动执行命令或者脚本。利用一个叫cron表的文件，我们需要用crontab命令添加作业。比如每天备份是一个常见的运用。</p><p>cron表由6个条目组成</p><ul><li>分钟 0-59</li><li>小时 0-23</li><li>天 1-31</li><li>月份 1-12</li><li>工作日 0-6 从周日0开始</li><li>执行的命令或脚本</li></ul><p>用星号（*）表示每个时间段执行.</p><p>时间用逗号分隔 5，10代表5和10分钟执行</p><p>8-12 在8到12时间段</p><p>在分钟字段使用*/5 可以每5分钟运行一次命令。其它字段也是如此。</p><p><code>00 */1 * * 0 /home/script.sh</code></p><p>表示在周日的每个小时执行脚本 script.sh</p><h2 id="Bx-任务的增删改查"><a href="#Bx-任务的增删改查" class="headerlink" title="Bx 任务的增删改查"></a>Bx 任务的增删改查</h2><h3 id="a-编辑任务"><a href="#a-编辑任务" class="headerlink" title="a 编辑任务"></a>a 编辑任务</h3><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><p>使用<code>crontab -e</code>命令<code>编辑</code>cron表</p><p>一行添加一个任务。</p><h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>使用cron文本文件，例如创建一个task.cron</p><p>在文本中写入一个cron表再使用crontab命令将cron文件作为参数。</p><p><code>crontab task.cron</code></p><p>使用行内方式则无需创建文件，方法如下</p><pre class=" language-bash"><code class="language-bash">crontab<span class="token operator">&lt;&lt;</span><span class="token string">EOF02 * * * * /home/test.shEOF</span></code></pre><h3 id="b-删除任务"><a href="#b-删除任务" class="headerlink" title="b 删除任务"></a>b 删除任务</h3><p>如果只删除某条任务在编辑中修改即可</p><p>删除当前用户的所有任务即cron表</p><p><code>crontab -r</code></p><p><img src="https://lit.enomothem.com/brackets/20210205132707.png"></p><p>如果需要指定用户(需要root用户操作)</p><p><code>crontab -u enomothem -r</code></p><h3 id="c-查看任务"><a href="#c-查看任务" class="headerlink" title="c 查看任务"></a>c 查看任务</h3><p>查看任务可以在编辑中查看，也可以使用查看命令</p><p><code>crontab -l</code></p><p><img src="https://lit.enomothem.com/brackets/20210205132106.png"></p><p>指定用户</p><p><code>crontab -l -u enomothem</code></p><p><img src="https://lit.enomothem.com/brackets/20210205132049.png"></p><p>该用户中没有计划</p><h2 id="Cx-简单测试"><a href="#Cx-简单测试" class="headerlink" title="Cx 简单测试"></a>Cx 简单测试</h2><p>今天是2021年2月5日 friday，现在是 11：26，我要在30分的时候在/home下创建一个叫light的文件夹</p><pre class=" language-bash"><code class="language-bash">crontab<span class="token operator">&lt;&lt;</span><span class="token string">EOF30 11 5 2 5 mkdir /home/lightEOF</span></code></pre><p><img src="https://lit.enomothem.com/brackets/20210205113108.png"></p><p><img src="https://lit.enomothem.com/brackets/20210205113117.png"></p><h2 id="Dx-示例"><a href="#Dx-示例" class="headerlink" title="Dx 示例"></a>Dx 示例</h2><p>（1）创建一个每天每小时第二分钟执行/opt/shell中的test.sh脚本</p><p>​    <code>02 * * * * bash /opt/shell/test.sh</code></p><p>（2）在每天5、6、7小时执行脚本</p><p>​    <code>00 5,6,7 * * bash  /opt/shell/test.sh</code></p><p>（3）在每周日的每个小时执行较脚本</p><p>​    <code>00 */1 * * 0 bash /opt/shell/test.sh</code></p><p>（4）在每天凌晨2点关闭计算机</p><p>​    <code>00 02 * * * /sbin/shutdown -h</code></p><h2 id="Ex-应急响应"><a href="#Ex-应急响应" class="headerlink" title="Ex 应急响应"></a>Ex 应急响应</h2><p>在入侵检测的排查中，重点查看任务表，黑客通常运用此来权限维持。</p><p><code>crontab -l</code></p><h2 id="Fx-常用任务脚本"><a href="#Fx-常用任务脚本" class="headerlink" title="Fx 常用任务脚本"></a>Fx 常用任务脚本</h2><p>a 给服务器校准时间</p><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#给crontab添加任务</span><span class="token function">crontab</span> -e<span class="token comment" spellcheck="true">#每天凌晨1点执行一次bash脚本</span>0 1 * * *  /root/timeCheck.sh</code></pre><p>timecheck.sh</p><pre class=" language-bash"><code class="language-bash"><span class="token keyword">echo</span> <span class="token string">"------------------------------------------------------"</span> <span class="token operator">>></span> timeAdjustLog.log<span class="token punctuation">;</span><span class="token keyword">echo</span> -e <span class="token punctuation">$(</span>date <span class="token string">'+%Y-%m-%d %H:%M:%S %A'</span><span class="token punctuation">)</span> <span class="token string">"开始执行时间校准脚本! "</span> <span class="token operator">>></span> timeAdjustLog.log<span class="token punctuation">;</span>/usr/sbin/ntpdate -u ntp.ntsc.ac.cn <span class="token operator">>></span> timeAdjustLog.log<span class="token punctuation">;</span><span class="token keyword">echo</span> -e <span class="token string">"执行时间校准完毕! 校准后时间:"</span> <span class="token punctuation">$(</span>date <span class="token string">'+%Y-%m-%d %H:%M:%S %A'</span><span class="token punctuation">)</span> <span class="token operator">>></span> timeAdjustLog.log<span class="token punctuation">;</span></code></pre><h2 id="Gx-参考"><a href="#Gx-参考" class="headerlink" title="Gx 参考"></a>Gx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><p>[2] <a href="https://www.cnblogs.com/aeolian/p/13267755.html">https://www.cnblogs.com/aeolian/p/13267755.html</a></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-            <tag> shell </tag>
-            
-            <tag> cron </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Linux-wall终端聊天交互</title>
       <link href="posts/280f.html"/>
       <url>posts/280f.html</url>
@@ -2776,6 +2747,35 @@
             <tag> shell </tag>
             
             <tag> wall </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux-cron坐享其成</title>
+      <link href="posts/5f27.html"/>
+      <url>posts/5f27.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Linux-cron调度管理"><a href="#Linux-cron调度管理" class="headerlink" title="Linux-cron调度管理"></a><a href="">Linux-cron调度管理</a></h1><p><img src="https://lit.enomothem.com/brackets/20210206214240.png" alt="image-20210206214238867"></p><blockquote><p>怎样才能不需要手就能白嫖呢，什么，手都不需要？</p><p>是的，比如在次日凌晨抢限量礼包，你是否会夜里熬红了眼而且还抢不到，这就需要我们计划任务来完成。</p></blockquote><h2 id="Ax-cron命令"><a href="#Ax-cron命令" class="headerlink" title="Ax cron命令"></a>Ax cron命令</h2><p>cron命令是任务调度工具之一，在按照设定的时间自动执行命令或者脚本。利用一个叫cron表的文件，我们需要用crontab命令添加作业。比如每天备份是一个常见的运用。</p><p>cron表由6个条目组成</p><ul><li>分钟 0-59</li><li>小时 0-23</li><li>天 1-31</li><li>月份 1-12</li><li>工作日 0-6 从周日0开始</li><li>执行的命令或脚本</li></ul><p>用星号（*）表示每个时间段执行.</p><p>时间用逗号分隔 5，10代表5和10分钟执行</p><p>8-12 在8到12时间段</p><p>在分钟字段使用*/5 可以每5分钟运行一次命令。其它字段也是如此。</p><p><code>00 */1 * * 0 /home/script.sh</code></p><p>表示在周日的每个小时执行脚本 script.sh</p><h2 id="Bx-任务的增删改查"><a href="#Bx-任务的增删改查" class="headerlink" title="Bx 任务的增删改查"></a>Bx 任务的增删改查</h2><h3 id="a-编辑任务"><a href="#a-编辑任务" class="headerlink" title="a 编辑任务"></a>a 编辑任务</h3><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><p>使用<code>crontab -e</code>命令<code>编辑</code>cron表</p><p>一行添加一个任务。</p><h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>使用cron文本文件，例如创建一个task.cron</p><p>在文本中写入一个cron表再使用crontab命令将cron文件作为参数。</p><p><code>crontab task.cron</code></p><p>使用行内方式则无需创建文件，方法如下</p><pre class=" language-bash"><code class="language-bash">crontab<span class="token operator">&lt;&lt;</span><span class="token string">EOF02 * * * * /home/test.shEOF</span></code></pre><h3 id="b-删除任务"><a href="#b-删除任务" class="headerlink" title="b 删除任务"></a>b 删除任务</h3><p>如果只删除某条任务在编辑中修改即可</p><p>删除当前用户的所有任务即cron表</p><p><code>crontab -r</code></p><p><img src="https://lit.enomothem.com/brackets/20210205132707.png"></p><p>如果需要指定用户(需要root用户操作)</p><p><code>crontab -u enomothem -r</code></p><h3 id="c-查看任务"><a href="#c-查看任务" class="headerlink" title="c 查看任务"></a>c 查看任务</h3><p>查看任务可以在编辑中查看，也可以使用查看命令</p><p><code>crontab -l</code></p><p><img src="https://lit.enomothem.com/brackets/20210205132106.png"></p><p>指定用户</p><p><code>crontab -l -u enomothem</code></p><p><img src="https://lit.enomothem.com/brackets/20210205132049.png"></p><p>该用户中没有计划</p><h2 id="Cx-简单测试"><a href="#Cx-简单测试" class="headerlink" title="Cx 简单测试"></a>Cx 简单测试</h2><p>今天是2021年2月5日 friday，现在是 11：26，我要在30分的时候在/home下创建一个叫light的文件夹</p><pre class=" language-bash"><code class="language-bash">crontab<span class="token operator">&lt;&lt;</span><span class="token string">EOF30 11 5 2 5 mkdir /home/lightEOF</span></code></pre><p><img src="https://lit.enomothem.com/brackets/20210205113108.png"></p><p><img src="https://lit.enomothem.com/brackets/20210205113117.png"></p><h2 id="Dx-示例"><a href="#Dx-示例" class="headerlink" title="Dx 示例"></a>Dx 示例</h2><p>（1）创建一个每天每小时第二分钟执行/opt/shell中的test.sh脚本</p><p>​    <code>02 * * * * bash /opt/shell/test.sh</code></p><p>（2）在每天5、6、7小时执行脚本</p><p>​    <code>00 5,6,7 * * bash  /opt/shell/test.sh</code></p><p>（3）在每周日的每个小时执行较脚本</p><p>​    <code>00 */1 * * 0 bash /opt/shell/test.sh</code></p><p>（4）在每天凌晨2点关闭计算机</p><p>​    <code>00 02 * * * /sbin/shutdown -h</code></p><h2 id="Ex-应急响应"><a href="#Ex-应急响应" class="headerlink" title="Ex 应急响应"></a>Ex 应急响应</h2><p>在入侵检测的排查中，重点查看任务表，黑客通常运用此来权限维持。</p><p><code>crontab -l</code></p><h2 id="Fx-常用任务脚本"><a href="#Fx-常用任务脚本" class="headerlink" title="Fx 常用任务脚本"></a>Fx 常用任务脚本</h2><p>a 给服务器校准时间</p><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#给crontab添加任务</span><span class="token function">crontab</span> -e<span class="token comment" spellcheck="true">#每天凌晨1点执行一次bash脚本</span>0 1 * * *  /root/timeCheck.sh</code></pre><p>timecheck.sh</p><pre class=" language-bash"><code class="language-bash"><span class="token keyword">echo</span> <span class="token string">"------------------------------------------------------"</span> <span class="token operator">>></span> timeAdjustLog.log<span class="token punctuation">;</span><span class="token keyword">echo</span> -e <span class="token punctuation">$(</span>date <span class="token string">'+%Y-%m-%d %H:%M:%S %A'</span><span class="token punctuation">)</span> <span class="token string">"开始执行时间校准脚本! "</span> <span class="token operator">>></span> timeAdjustLog.log<span class="token punctuation">;</span>/usr/sbin/ntpdate -u ntp.ntsc.ac.cn <span class="token operator">>></span> timeAdjustLog.log<span class="token punctuation">;</span><span class="token keyword">echo</span> -e <span class="token string">"执行时间校准完毕! 校准后时间:"</span> <span class="token punctuation">$(</span>date <span class="token string">'+%Y-%m-%d %H:%M:%S %A'</span><span class="token punctuation">)</span> <span class="token operator">>></span> timeAdjustLog.log<span class="token punctuation">;</span></code></pre><h2 id="Gx-参考"><a href="#Gx-参考" class="headerlink" title="Gx 参考"></a>Gx 参考</h2><p>[1] <em>《Linux Shell脚本攻略》第二版 Shantanu Tushar\Sarath Lakshman 著</em></p><p>[2] <a href="https://www.cnblogs.com/aeolian/p/13267755.html">https://www.cnblogs.com/aeolian/p/13267755.html</a></p><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> shell </tag>
+            
+            <tag> cron </tag>
             
         </tags>
       
