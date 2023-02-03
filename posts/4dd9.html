@@ -41,8 +41,8 @@
     <script src="https://lit.enomothem.com/source/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -628,27 +628,27 @@
 <p><strong>复现</strong></p>
 <p><code>Actuator</code> 存在两个版本</p>
 <p>v1</p>
-<pre class=" language-json"><code class="language-json">/configprops # 显示所有@ConfigurationProperties
-/env # 公开 Spring 的ConfigurableEnvironment
-/health # 显示应用程序运行状况信息
-/httptrace # 显示 HTTP 跟踪信息
-/metrics # 显示当前应用程序的监控指标信息。
-/mappings # 显示所有@RequestMapping路径的整理列表
-/threaddump # 线程转储
+<pre class=" language-yaml"><code class="language-yaml">/configprops <span class="token comment" spellcheck="true"># 显示所有@ConfigurationProperties</span>
+/env <span class="token comment" spellcheck="true"># 公开 Spring 的ConfigurableEnvironment</span>
+/health <span class="token comment" spellcheck="true"># 显示应用程序运行状况信息</span>
+/httptrace <span class="token comment" spellcheck="true"># 显示 HTTP 跟踪信息</span>
+/metrics <span class="token comment" spellcheck="true"># 显示当前应用程序的监控指标信息。</span>
+/mappings <span class="token comment" spellcheck="true"># 显示所有@RequestMapping路径的整理列表</span>
+/threaddump <span class="token comment" spellcheck="true"># 线程转储</span>
 
-/heapdump # 堆转储
-/jolokia # JMX-HTTP桥<span class="token punctuation">,</span>它提供了一种访问JMX beans的替代方法
+/heapdump <span class="token comment" spellcheck="true"># 堆转储</span>
+/jolokia <span class="token comment" spellcheck="true"># JMX-HTTP桥,它提供了一种访问JMX beans的替代方法</span>
 </code></pre>
 <p>v2</p>
-<pre class=" language-json"><code class="language-json">/actuator/configprops # 显示所有@ConfigurationProperties
-/actuator/env # 公开 Spring 的ConfigurableEnvironment
-/actuator/health # 显示应用程序运行状况信息
-/actuator/httptrace # 显示 HTTP 跟踪信息
-/actuator/metrics # 显示当前应用程序的监控指标信息。
-/actuator/mappings # 显示所有@RequestMapping路径的整理列表
-/actuator/threaddump # 线程转储
-/actuator/heapdump # 堆转储
-/actuator/jolokia # JMX-HTTP桥<span class="token punctuation">,</span>它提供了一种访问JMX beans的替代方法
+<pre class=" language-yaml"><code class="language-yaml">/actuator/configprops <span class="token comment" spellcheck="true"># 显示所有@ConfigurationProperties</span>
+/actuator/env <span class="token comment" spellcheck="true"># 公开 Spring 的ConfigurableEnvironment</span>
+/actuator/health <span class="token comment" spellcheck="true"># 显示应用程序运行状况信息</span>
+/actuator/httptrace <span class="token comment" spellcheck="true"># 显示 HTTP 跟踪信息</span>
+/actuator/metrics <span class="token comment" spellcheck="true"># 显示当前应用程序的监控指标信息。</span>
+/actuator/mappings <span class="token comment" spellcheck="true"># 显示所有@RequestMapping路径的整理列表</span>
+/actuator/threaddump <span class="token comment" spellcheck="true"># 线程转储</span>
+/actuator/heapdump <span class="token comment" spellcheck="true"># 堆转储</span>
+/actuator/jolokia <span class="token comment" spellcheck="true"># JMX-HTTP桥,它提供了一种访问JMX beans的替代方法</span>
 </code></pre>
 <blockquote>
 <p>其实在实战中，最重要的就是heapdump文件，在这里文件里面理论上可以发现很多敏感的数据库之类的信息</p>
