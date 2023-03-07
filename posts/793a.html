@@ -572,14 +572,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-07-17
+                    2023-03-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.5k
+                    5.6k
                 </div>
                 
 
@@ -885,6 +885,17 @@ Alt+H 打开 “帮助” 菜单（help）
 <p>关于icon，我们可以制作自己的icon</p>
 <p>在线网站：<a target="_blank" rel="noopener" href="http://www.bitbug.net/">http://www.bitbug.net/</a></p>
 <p><img src="https://lit.enomothem.com/brackets/20210110133916.png"></p>
+<h2 id="Dos更改字符集"><a href="#Dos更改字符集" class="headerlink" title="Dos更改字符集"></a>Dos更改字符集</h2><p>默认的cmd是GBK字符集，使用时会遇见各种奇葩的乱码，所以我们需要改为utf-8</p>
+<p>一、修改注册表</p>
+<pre class=" language-shell"><code class="language-shell">win键+R，输入regedit，确定。
+按顺序找到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor。
+</code></pre>
+<p><img src="https://lit.enomothem.com/zhixinghe/image-20230304183228950.png"></p>
+<p>二、命令</p>
+<pre class=" language-shell"><code class="language-shell">win键+R，输入 cmd，确定。
+输入 chcp 65001
+</code></pre>
+<p>不行就管理员打开</p>
 <h2 id="Dos风格"><a href="#Dos风格" class="headerlink" title="Dos风格"></a>Dos风格</h2><p>把explorer结束，然后就啥也没有了，只能通过DOS打开东西；</p>
 <pre class=" language-shell"><code class="language-shell">找到它
 C:\Users\enomothem\Desktop>tasklist | findstr "explorer"
@@ -2228,7 +2239,7 @@ shell:::{87630419-6216-4ff8-a1f0-143562d16d5c}
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">320.3k</span>&nbsp;字
+                class="white-color">320.5k</span>&nbsp;字
             
             
             
