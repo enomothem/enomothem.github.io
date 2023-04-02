@@ -568,7 +568,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-01
+                    2023-03-29
                 </div>
                 
 
@@ -623,41 +623,27 @@
 <h4 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h4><p>一共4页，第一页是基本挑战，1-21关。第二页高级进阶，22-37关。第三页堆叠注入，38-53关。最后一页挑战，54-75关。</p>
 <p><img src="https://lit.enomothem.com/brackets/image-20220429125019601.png"></p>
 <h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><p>准备工具SQLmap、Firefox和Hackbar组件。</p>
-<h4 id="Mysql元数据"><a href="#Mysql元数据" class="headerlink" title="Mysql元数据"></a>Mysql元数据</h4><pre class=" language-txt"><code class="language-txt">SCHEMATA表：提供了当前mysql实例中所有数据库的信息。是show databases的结果取之此表。
-
+<h4 id="Mysql元数据"><a href="#Mysql元数据" class="headerlink" title="Mysql元数据"></a>Mysql元数据</h4><pre class=" language-mysql"><code class="language-mysql">SCHEMATA表：提供了当前mysql实例中所有数据库的信息。是show databases的结果取之此表。
 TABLES表：提供了关于数据库中的表的信息（包括视图）。详细表述了某个表属于哪个schema，表类型，表引擎，创建时间等信息。是show tables from schemaname的结果取之此表。
-
 COLUMNS表：提供了表中的列信息。详细表述了某张表的所有列以及每个列的信息。是show columns from schemaname.tablename的结果取之此表。
-
 STATISTICS表：提供了关于表索引的信息。是show index from schemaname.tablename的结果取之此表。
-
 USER_PRIVILEGES（用户权限）表：给出了关于全程权限的信息。该信息源自mysql.user授权表。是非标准表。
-
 SCHEMA_PRIVILEGES（方案权限）表：给出了关于方案（数据库）权限的信息。该信息来自mysql.db授权表。是非标准表。
-
 TABLE_PRIVILEGES（表权限）表：给出了关于表权限的信息。该信息源自mysql.tables_priv授权表。是非标准表。
-
 COLUMN_PRIVILEGES（列权限）表：给出了关于列权限的信息。该信息源自mysql.columns_priv授权表。是非标准表。
-
 CHARACTER_SETS（字符集）表：提供了mysql实例可用字符集的信息。是SHOW CHARACTER SET结果集取之此表。
 COLLATIONS表：提供了关于各字符集的对照信息。
-
 COLLATION_CHARACTER_SET_APPLICABILITY表：指明了可用于校对的字符集。这些列等效于SHOW COLLATION的前两个显示字段。
-
 TABLE_CONSTRAINTS表：描述了存在约束的表。以及表的约束类型。
-
 KEY_COLUMN_USAGE表：描述了具有约束的键列。
-
 ROUTINES表：提供了关于存储子程序（存储程序和函数）的信息。此时，ROUTINES表不包含自定义函数（UDF）。名为“mysql.proc name”的列指明了对应于INFORMATION_SCHEMA.ROUTINES表的mysql.proc表列。
-
 VIEWS表：给出了关于数据库中的视图的信息。需要有show views权限，否则无法查看视图信息。
-
 TRIGGERS表：提供了关于触发程序的信息。必须有super权限才能查看该表。
 </code></pre>
-<h4 id="信息"><a href="#信息" class="headerlink" title="信息"></a>信息</h4><pre class=" language-sql"><code class="language-sql">@<span class="token variable">@version_compile_os</span> <span class="token comment" spellcheck="true"># 系统版本</span>
-version<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 数据库版本</span>
-<span class="token keyword">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 用户</span>
-<span class="token keyword">database</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 当前数据库</span>
+<h4 id="信息"><a href="#信息" class="headerlink" title="信息"></a>信息</h4><pre class=" language-mysql"><code class="language-mysql">@@version_compile_os # 系统版本
+version() # 数据库版本
+user() # 用户
+database() # 当前数据库
 </code></pre>
 <h2 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h2><h3 id="Basic-Challenges"><a href="#Basic-Challenges" class="headerlink" title="Basic Challenges"></a>Basic Challenges</h3><blockquote>
 <p>这里我插入了输出查询语句的代码，方便观察。</p>
@@ -1693,7 +1679,7 @@ n - ASCII对应十进制
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">334.4k</span>&nbsp;字
+                class="white-color">336.1k</span>&nbsp;字
             
             
             
