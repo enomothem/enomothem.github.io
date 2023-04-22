@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>http://enomothem.com/posts/6ed2.html</loc>
+    
+    <lastmod>2023-04-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://enomothem.com/posts/7a52.html</loc>
     
     <lastmod>2023-04-21</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>http://enomothem.com/posts/691b.html</loc>
-    
-    <lastmod>2023-04-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://enomothem.com/posts/6ed2.html</loc>
     
     <lastmod>2023-04-13</lastmod>
     
@@ -3028,13 +3028,6 @@
   
   <url>
     <loc>http://enomothem.com/categories/Web%E6%BC%8F%E6%B4%9E/</loc>
-    <lastmod>2023-04-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://enomothem.com/categories/web%E6%BC%8F%E6%B4%9E/</loc>
     <lastmod>2023-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
