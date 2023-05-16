@@ -576,14 +576,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-01
+                    2023-05-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    238
+                    448
                 </div>
                 
 
@@ -633,6 +633,12 @@
 <p><img src="https://lit.enomothem.com/brackets/20210203155017.png"></p>
 <p>查看结果，全部关联。</p>
 <p><img src="https://lit.enomothem.com/brackets/20210203155026.png"></p>
+<h4 id="g-状态"><a href="#g-状态" class="headerlink" title="g 状态"></a>g 状态</h4><p>Screen 的状态有两种，Attached 和 Detached，分别表示前台运行和后台运行。</p>
+<p>使用 screen -r 会话名（或者会话编号）可以将 Detached 状态的屏幕会话状态修改为 前台运行 ，并同时切换到这个会话中。如果会话状态已经是Attached状态，使用命令 screen -r name（或者会话编号）将会报错：There is no screen to be resumed matching 767(会话编号).如果需要切换到状态为Attached 的会话下，需要先执行 screen -d 会话名 将会话状态修改为 Detached。将当前会话转为后台运行可以使用快捷键ctrl + a,d。</p>
+<p>解决方法如下：</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">screen</span> -D  -r ＜session-id<span class="token operator">></span>
+</code></pre>
+<p>也就是在 -r 前面加个 -D，先踢掉之前登录的用户，然后我们就可以正常登录了。</p>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
                 
             </div>
@@ -1203,7 +1209,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">337.2k</span>&nbsp;字
+                class="white-color">338k</span>&nbsp;字
             
             
             
